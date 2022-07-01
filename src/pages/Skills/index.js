@@ -37,13 +37,14 @@ const Skills = () => {
     ];
 
     return (
-        <SkillsMainStyled id="skills">
-                <div className="py-5">
+        <SkillsMainStyled >
+                <div className="">
                     <div className="container">
+                        <h2 class="title section-heading text-uppercase text-center">Skills</h2>
                         <AnimationOnScroll animateIn="animate__fadeInDown">
-                            <h2 class="title section-heading text-uppercase text-center">Skills</h2>
+                            <h3 className="section-subheading text-center ">Minhas habilidades</h3>
                         </AnimationOnScroll>
-                        <h3 className="section-subheading text-center ">Minhas habilidades</h3>
+                            <AnimationOnScroll animateIn="animate__fadeInUp">
                             <ul>
                                 {categoria.map((item) => (
                                 <SkillsList
@@ -54,6 +55,7 @@ const Skills = () => {
                                 />
                                 ))}
                             </ul>
+                            </AnimationOnScroll>
                             <div className="skills">
                                 {dataSkills.map((item, key) => {
                                     return(

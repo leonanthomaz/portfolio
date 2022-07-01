@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const NavbarMainStyled = styled.nav`
 
-height: 70px;
 position: fixed;
 width: 100%;
 z-index: 2;
@@ -50,7 +49,6 @@ box-shadow: ${props => props.theme.navbar_shadow};
     }
 
     .nav-item {
-        line-height: 30px;
         margin-right: 1.5rem;
 
         :after {
@@ -70,7 +68,6 @@ box-shadow: ${props => props.theme.navbar_shadow};
 
 
 @media (max-width: 760px){
-    height: 70px;
   
     .nav-menu{
         background: ${props => props.theme.background_navbar_mobile};

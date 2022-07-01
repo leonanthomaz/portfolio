@@ -22,6 +22,8 @@ body {
         scroll-behavior: smooth;
         scroll-snap-type: y mandatory;
         scrollbar-width: none; //for firefox
+        border-bottom: 2px solid gray;
+
         &::-webkit-scrollbar{
             display: none;
         }
@@ -30,7 +32,8 @@ body {
             background: ${props => props.theme.background};
             min-height: calc(100vh - 0px);
             scroll-snap-align: start;
-            padding: 5rem 0;
+            padding: 4.5rem 0;
+
         }
 
         h1{

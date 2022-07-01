@@ -2,7 +2,6 @@ import styled, { keyframes } from 'styled-components';
 import { bounceInRight } from 'react-animations';
 
 export const IntroMainStyled = styled.div`
-
 .intro{
   display: flex;
   justify-content: center;
@@ -175,7 +174,7 @@ export const IntroMainStyled = styled.div`
         
         .fa.icone {
             font-size: 56px;
-            color: yellow;
+            color: ${props => props.theme.intro_arrow};
             opacity: 1;
             animation: anima 1500ms ease infinite;
 

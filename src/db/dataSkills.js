@@ -41,7 +41,7 @@ export const frameworksDataSkills = [
         name: 'React',
         icon: <DiReact/>,
         level: 75,
-        description: 'Bla Bla Bla',
+        description: '',
     },
     {
         id: 2,

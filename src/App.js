@@ -25,11 +25,21 @@ const App = () => {
         <Navbar />
           <section className="sections">
             <Intro />
-            <Sobre />
+            <div id="sobre">
+            <Sobre  />
+            </div>
+            <div id="skills">
             <Skills />
+            </div>
+            <div id="portfolio">
             <Portfolio />
+            </div>
+            <div id="courses">
             <Cursos />
+            </div>
+            <div id="contact">
             <Contato />
+            </div>
             <Footer />
           </section>
       </Fragment>

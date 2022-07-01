@@ -7,13 +7,13 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 const Sobre = () => {
 
     return (
-        <SobreMainStyled id="sobre" >
-            <div className="py-5" >
+        <SobreMainStyled  >
+            <div className="" >
                 <div id="box" class="about container">
+                <h2 class="title section-heading text-uppercase text-center ">Sobre mim</h2>
                 <AnimationOnScroll animateIn="animate__fadeInDown">
-                    <h2 class="title section-heading text-uppercase text-center ">Sobre mim</h2>
+                    <h3 class="section-subheading text-center">Me conhecendo um pouco mais!</h3>
                 </AnimationOnScroll>
-                <h3 class="section-subheading text-center">Me conhecendo um pouco mais!</h3>
                 <div className="sobre-box">
                    
                     <div className="right">

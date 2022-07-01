@@ -61,79 +61,90 @@ a{
         .icon{
             font-size: 50px;
         }
+
+       
     }
 
 }
 
 .social-network{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        justify-content: center;
-        align-items: center;
 
-        .contact-items{
-        /* border: 2px solid red; */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 
-        padding: 10px;
+    @media (max-width: 760px){
         display: flex;
-        justify-content: center;
         flex-direction: column;
-        align-items: center;
-        width: auto;
-        text-align: center;
+    }
 
-        margin: 10px;
-        padding: 10px;
-        /* -moz-transition: all 0.5s;
-        -webkit-transition: all 0.5s;
-        transition: all 0.5s;
-        box-shadow: ${props => props.theme.navbar_shadow}; */
+    .contact-items-group{
+        display: grid;
+        grid-template-columns: 50px 50px 50px ;
+        gap: 10px;
 
-        :hover{
-        /* -moz-transform: scale(1.1);
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-        box-shadow: "4px 4px 5px #121214", */
-        }
+ 
+    
+        .contact-items{
+            display: block;
 
-        h4{
-            font-size: 16px;
-            padding-top: 10px;
-        }
+            h4{
+                font-size: 16px;
+                padding-top: 10px;
+            }   
 
-        h5{
-            font-size: 16px;
-            padding-bottom: 10px;
+            h5{
+                font-size: 16px;
+                padding-bottom: 10px;
 
-            @media (max-width: 760px){
-                display: none;
+                @media (max-width: 760px){
+                    display: none;
+                }
             }
-        }
 
-        .icon{
-            font-size: 50px;
-            border-radius: 100%;
-            color: ${props => props.theme.font_contact_icons};
-            background: ${props => props.theme.background_contact_icons};
-            padding: 5px 20px 5px 20px;
-            transition: all ease 1s;
-            :hover{
+            .icon{
+                font-size: 26px;
+                border-radius: 100%;
+                color: ${props => props.theme.font_contact_icons};
+                background: ${props => props.theme.background_contact_icons};
+                transition: all ease 1s;
+                padding: 5px;
+                padding-left: 12px;
+
+                :hover{
                 background: ${props => props.theme.background_contact_icons_hover};
                 transition: all ease 0.5s;
 
-            }
+                }
 
+                @media (max-width: 760px){
+                    color: ${props => props.theme.font};
+                    background: none;
+                    :hover{
+                        background: none;
+                    }
+                }
+
+            }
         }
 
     }
 
+    .address{
+        flex: 2;
+        flex-grow: 1;
+    }
+
 }
 
-.InfoPortfolio{
+
+/* .InfoPortfolio{
     cursor: pointer;
     text-align: center;
     font-size: 30px;
-}
+} */
 
 
 

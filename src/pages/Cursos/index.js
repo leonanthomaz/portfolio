@@ -7,13 +7,13 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 const Cursos = () => {
     
     return(
-       <CursosMainStyled id="courses">
-        <div className="py-5">
+       <CursosMainStyled>
+        <div className="">
             <div className="container text-center">
+                <h2 class="title section-heading text-uppercase text-center">Cursos</h2>
                 <AnimationOnScroll animateIn="animate__fadeInDown">
-                    <h2 class="title section-heading text-uppercase text-center">Cursos</h2>
+                  <h3 className="section-subheading ">Meus estudos</h3>
                 </AnimationOnScroll>
-                <h3 className="section-subheading ">Meus estudos</h3>
                 <div className="courses-box">
                     <Chrono items={items}
                       theme={{

@@ -39,13 +39,13 @@ const Contato = () => {
     }
 
     return (
-        <ContatoMainStyled id="contact">
-            <div className="py-5">
+        <ContatoMainStyled>
+            <div className="">
                 <div className="contact-main">
+                    <h2 class="title section-heading text-uppercase text-center">Deixe sua mensagem!</h2>
                     <AnimationOnScroll animateIn="animate__fadeInDown">
-                        <h2 class="title section-heading text-uppercase text-center">Deixe sua mensagem!</h2>
+                        <h3 className="section-subheading text-center">Retornarei assim que posssível</h3>
                     </AnimationOnScroll>
-                    <h3 className="section-subheading text-center">Retornarei assim que posssível</h3>
                     <div className="contact-box">
                         <div className="contact-form-box-main">
                             <div className="contact-form-box">                                

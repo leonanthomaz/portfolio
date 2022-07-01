@@ -39,14 +39,15 @@ const Portfolio = () => {
     ];
 
     return (
-        <PortfolioMainStyled id="portfolio">
-        <div class="container py-5">
+        <PortfolioMainStyled>
+        <div class="container">
             <div class="text-center">
-                <AnimationOnScroll animateIn="animate__fadeInDown">
                 <h2 class="title section-heading text-uppercase">Portfólio</h2>
+                <AnimationOnScroll animateIn="animate__fadeInDown">
+                    <h3 class="section-subheading ">Colocando o conhecimento em prática.</h3>
                 </AnimationOnScroll>
-                <h3 class="section-subheading ">Colocando o conhecimento em prática.</h3>
             </div>
+                <AnimationOnScroll animateIn="animate__fadeInUp">
                 <ul>
                     {categoria.map((item) => (
                     <PortfolioList
@@ -57,6 +58,7 @@ const Portfolio = () => {
                     />
                     ))}
                 </ul>
+                </AnimationOnScroll>
             <div className="portfolio-main">
                 {data && data.map((item, index)=>{
                     return(

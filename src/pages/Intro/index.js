@@ -3,7 +3,8 @@ import { IntroMainStyled } from "./IntroStyles";
 import foto from '../../assets/img/leonanrm2.png'
 import foto2 from '../../assets/img/leonanm32.png'
 import Typewriter from 'typewriter-effect';
-import { BouncyDivInLeft } from "../../utils/AnimationsStyles";
+import { BouncyDivInLeft, BouncyDiv } from "../../utils/AnimationsStyles";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 
 import { useThemeContext } from '../../contexts/Theme';
@@ -30,7 +31,9 @@ const Intro = () => {
                <div className="right">
                     <div className="wrapper">
                         <h1>Bem vindo ao meu portfólio!</h1>
-                        <h2>Leonan Thomaz</h2>
+                        <BouncyDiv>
+                            <h2>Leonan Thomaz</h2>
+                        </BouncyDiv>
                         <h4> 
                         <Typewriter 
                         options={{ 

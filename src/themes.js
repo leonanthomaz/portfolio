@@ -33,6 +33,7 @@ export const darkTheme = {
     background_contact: "#c5c5c5f5",
     background_contact_icons: "yellow",
     background_contact_icons_hover: "green",
+    intro_arrow: "yellow",
 
   }
   
@@ -70,5 +71,6 @@ export const darkTheme = {
     background_contact: "#c5c5c5f5",
     background_contact_icons: "#121214",
     background_contact_icons_hover: "green",
+    intro_arrow: "crimson",
 
   }
