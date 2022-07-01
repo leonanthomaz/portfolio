@@ -5,7 +5,7 @@ export const PortfolioData = [
       id: 1,
       title: "Saturno",
       subtitle: "ChatBox",
-      img: "clapper2.jpg",
+      img: "https://leonanthomaz.vercel.app/src/assets/img/portfolio/clapper2.jpg",
       description: "Projeto inspirado da aula online do professor Bonieky Lacerda. Neste desafio, pude me inteirar mais sobre a biblioteca React, principalmente sobre os Hooks e Props.",
       date: "Setembro 2021",
       technology: "React, Firebase",
