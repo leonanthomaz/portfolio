@@ -98,6 +98,7 @@ ul {
             padding-top: 30px;
             
         }
+        
         p{
             font-style: italic;
             text-align: center;

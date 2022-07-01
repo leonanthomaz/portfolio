@@ -63,13 +63,14 @@ const Portfolio = () => {
                 {data && data.map((item, index)=>{
                     return(
                     <Fragment key={index}>                   
-                            <div className="portfolio-box" >
+                            <div className="portfolio-box text-center" >
                                 <AnimationOnScroll animateIn="animate__fadeIn">
                                 <div className="portfolio-img">
-                                        <img src={require(`../../assets/img/portfolio/${item.img}`)} alt={item.title} onClick={()=>handleFind(item.id)}/>
+                                    <img src={item.img} alt={item.title} onClick={()=>handleFind(item.id)}/>
                                 </div>
                                 <h4>{item.title}</h4> 
-                                <p>{item.description}</p>
+                                <p>{item.preview}</p>
+                                <strong>{item.technology}</strong> 
                                 </AnimationOnScroll>
                                 {list.map((e)=>{
                                     if(e.id === item.id){
@@ -99,7 +100,7 @@ const Portfolio = () => {
                                                     }}>{e.title}</h1>
                                                 <h4 style={{textAlign: 'center', fontStyle: 'italic'}}>{e.title}</h4>
                                                 <div className="" style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                                                    <img src={e.img} alt={e.title} style={{width: '70%'}} />
+                                                    <img src={e.img2 ? e.img2 : e.img} alt={e.title} style={{width: '70%'}} />
                                                 </div>
                                                 <div style={{textAlign: 'center', border: '2px solid white', marginTop: '10px'}}>
                                                     <p>{e.description}</p>
