@@ -66,7 +66,7 @@ const Portfolio = () => {
                             <div className="portfolio-box" >
                                 <AnimationOnScroll animateIn="animate__fadeIn">
                                 <div className="portfolio-img">
-                                        <img src={`${item.img}`} alt={item.title} onClick={()=>handleFind(item.id)}/>
+                                        <img src={require(`../../assets/img/portfolio/${item.img}`)} alt={item.title} onClick={()=>handleFind(item.id)}/>
                                 </div>
                                 <h4>{item.title}</h4> 
                                 <p>{item.description}</p>
