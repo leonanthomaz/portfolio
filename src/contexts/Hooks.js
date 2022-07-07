@@ -4,9 +4,9 @@ import {
         PortfolioData, 
         PortfolioDataWEB,
         APIListData,
-        EstudoListData,
+        // EstudoListData,
         EcommerceListData,
-        PublicidadeListData,
+        // PublicidadeListData,
         SistemasListData
 } from "../db/dataPortfolio";
 import { webSkills, 
@@ -60,15 +60,15 @@ export const HooksContextProvider = ({children}) => {
         case "api":
         setData(APIListData);
         break;
-        case "estudos":
-        setData(EstudoListData);
-        break;
+        // case "estudos":
+        // setData(EstudoListData);
+        // break;
         case "ecommerce":
         setData(EcommerceListData);
         break;
-        case "publicidade":
-        setData(PublicidadeListData);
-        break;
+        // case "publicidade":
+        // setData(PublicidadeListData);
+        // break;
         case "sistemas":
         setData(SistemasListData);
         break;

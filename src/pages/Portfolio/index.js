@@ -18,18 +18,18 @@ const Portfolio = () => {
             id: "api",
             title: "API's",
         },
-        {
-            id: "estudos",
-            title: "Estudos",
-        },
+        // {
+        //     id: "estudos",
+        //     title: "Estudos",
+        // },
         {
             id: "ecommerce",
             title: "E-Commerce",
         },
-        {
-            id: "publicidade",
-            title: "Publicidade",
-        },
+        // {
+        //     id: "publicidade",
+        //     title: "Publicidade",
+        // },
         {
             id: "sistemas",
             title: "Sistemas",

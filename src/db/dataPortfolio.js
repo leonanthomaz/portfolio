@@ -19,8 +19,8 @@ import Yakisoba2 from '../assets/img/portfolio/yda2.png';
 export const PortfolioData = [
     {
       id: 1,
-      title: "Desgin Galeria",
-      subtitle: "Projeto de estudo",
+      title: "Design Galeria",
+      subtitle: "Galeria de fotos",
       img: TemplateGaleria,
       img2: TemplateGaleria,
       preview: "Desgin de uma galeria de fotos",
@@ -33,7 +33,7 @@ export const PortfolioData = [
     {
       id: 2,
       title: "Design Nike",
-      subtitle: "Projeto de estudo",
+      subtitle: "Card promocional",
       img: TemplateNike,
       img2: TemplateNike,
       preview: "Desenvolvido em HTML e CSS",
@@ -46,7 +46,7 @@ export const PortfolioData = [
     {
       id: 3,
       title: "Design GloboPlay",
-      subtitle: "Desafio",
+      subtitle: "Desafio VX",
       img: TemplateGlobo,
       img2: TemplateGlobo,
       preview: "Implementado em HTML e CSS",
@@ -57,16 +57,6 @@ export const PortfolioData = [
       github: "https://github.com/leonanthomaz/Template-GloboPlay"
     },
 
-  ];
-
-  /*Aqui*/
-  export const PortfolioDataWEB = [
-    {
-      id: 1,
-      title: "Web Social Media App",
-      img: "https://cdn.dribbble.com/users/5031392/screenshots/15467520/media/c36b3b15b25b1e190d081abdbbf947cf.png?compress=1&resize=1200x900",
-    },
-   
   ];
 
   /*Aqui*/
@@ -97,37 +87,6 @@ export const PortfolioData = [
       technology: "React, JavaScript, CSS e HTML5",
       url: "https://brasilcovid.herokuapp.com/",
       github: "https://github.com/leonanthomaz/BrasilCovid"
-    },
-    
-  ];
-
-  /*Aqui*/
-  export const EstudoListData = [
-    {
-      id: 1,
-      title: "Brasil Covid",
-      subtitle: "API de estatísticas da Covid no Brasil",
-      img: BrasilCovid1,
-      img2: BrasilCovid2,
-      preview: "API de informações sobre a Covid-19",
-      description: "API básica, contendo os números da pandemia do Covid-19 por Estados brasileiros. Neste mini-projeto pude desenvolver ainda mais minhas habilidades com Axios e Hooks.",
-      date: "Junho 2021",
-      technology: "React, JavaScript, CSS e HTML5",
-      url: "https://brasilcovid.herokuapp.com/",
-      github: "https://github.com/leonanthomaz/BrasilCovid"
-    },
-
-    {
-      id: 2,
-      title: "Jupter",
-      subtitle: "Chat App",
-      img: Jupter,
-      preview: "Aplicativo desenvolvido em PHP",
-      description: "Projeto desenvolvido em PHP e Javascript (JQuery). Trata-se de um aplicativo de conversas, tendo como front-end Bootstrap, CSS e backend PHP.",
-      date: "Março 2022",
-      technology: "PHP e Javascript",
-      url: "https://jupterapp.000webhostapp.com/",
-      github: "https://github.com/leonanthomaz/chat-php"
     },
     
   ];
@@ -172,11 +131,6 @@ export const PortfolioData = [
     },
   ];
 
-      /*Aqui*/
-  export const PublicidadeListData = [
-    
-    
-  ];
 
   /*Aqui*/
   export const SistemasListData = [
