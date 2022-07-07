@@ -113,8 +113,13 @@ ul {
         }
 
         .skills-description{
+            display: block;
             color: black;
-        }     
+        } 
+        
+        .hidden{
+            display: none;
+        }
     }
 
 

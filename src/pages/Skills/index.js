@@ -1,13 +1,18 @@
-import React, { Fragment, useContext } from "react";
+import React, { Fragment, useContext, useState } from "react";
 import { SkillsMainStyled } from "../Skills/SkillsStyles";
 import SkillsList from "../SkillsList";
 import Progressbar from './Progressbar';
 import { HooksContext } from "../../contexts/Hooks";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import {BsArrowDown} from 'react-icons/bs';
 
 const Skills = () => {
     const { handleFindSkills, selectedSkills, setSelectedSkills, dataSkills } = useContext(HooksContext);
-    // console.log(selectedSkills)
+    const [ openList, setOpenList ] = useState(false)
+
+    const handleOpenList = () => {
+        setOpenList(!openList)
+    }
 
     const categoria = [
         {
@@ -74,6 +79,10 @@ const Skills = () => {
                                                 
                                                 <div className="skills-level">
                                                     <Progressbar bgcolor={item.level >= 70 ? "#99ff66" : "orange"} progress={item.level} height={20} />
+                                                </div>
+                                                <BsArrowDown onClick={setOpenList}/>
+                                                <div className={openList ? "skills-description" : "hidden"}>
+                                                    <li>{item.description}</li>
                                                 </div>
                                             </div>
                                     </Fragment>
