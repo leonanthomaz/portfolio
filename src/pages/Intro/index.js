@@ -25,9 +25,12 @@ const Intro = () => {
                <div className="right">
                     <div className="wrapper">
                         <h1>Bem vindo ao meu portfólio!</h1>
-                        <BouncyDiv>
+                        {/* <BouncyDiv>
                             <h2>Leonan Thomaz</h2>
-                        </BouncyDiv>
+                        </BouncyDiv> */}
+                        <AnimationOnScroll animateIn="animate__fadeIn">
+                            <h2>Leonan Thomaz</h2>
+                        </AnimationOnScroll>
                         <h4> 
                         <Typewriter 
                         options={{ 
