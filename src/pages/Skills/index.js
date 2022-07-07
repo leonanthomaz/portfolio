@@ -80,15 +80,17 @@ const Skills = () => {
                                                 <div className="skills-level">
                                                     <Progressbar bgcolor={item.level >= 70 ? "#99ff66" : "orange"} progress={item.level} height={20} />
                                                 </div>
-                                                { openList 
+                                                <div className="arrows">
+                                                { openList === false
                                                 ? 
                                                 <BsArrowDown onClick={handleOpenList}/> 
                                                 : 
                                                 <BsBoxArrowUp onClick={handleOpenList}/>
                                                 }
-                                                <div className={openList ? "skills-description" : "hidden"}>
-                                                    <li>{item.description}</li>
                                                 </div>
+                                                <ul className={openList ? "skills-description" : "hidden"}>
+                                                    <li>{item.description}</li>
+                                                </ul>
                                             </div>
                                     </Fragment>
                                     )
