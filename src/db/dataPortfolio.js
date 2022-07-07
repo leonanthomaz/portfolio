@@ -93,18 +93,18 @@ export const PortfolioData = [
 
   /*Aqui*/
   export const EcommerceListData = [
-    {
-      id: 1,
-      title: "Pizzaria",
-      subtitle: "Loja Virtual (Projeto descontinuado)",
-      img: CasaDoSalgado1,
-      img2: CasaDoSalgado2,
-      description: "Consiste em um e-commerce virtual, escrito em PHP com base de dados MySQL, para o seguimento comercial, onde o usuário tem a disposição o cardápio virtual dividido por página. Ao abrir sessão, o cliente tem a disposição o carrinho de compras bloqueado pelas condições de horário de funcionamento e realização de login, área privada, onde pode alterar seus dados de maneira completa, redefinição de senha e exclusão de conta. O cliente ainda pode, ao finalizar a compra, acompanhar o status da sua entrega em tempo real. O projeto ainda conta com área administrativa, onde o administrador com acesso tem total controle de todo o site, podendo manipular dados de clientes e produtos, bem como alterar o status da entrega, espelhado diretamente para o cliente.",
-      date: "Dezembro 2021",
-      technology: "HTML, PHP, JavaScript, Bootstrap, CSS e MySQL",
-      url: "https://casadosalgadoabv.000webhostapp.com/",
-      github: "https://github.com/leonanthomaz/CasaDoSalgado"
-    },
+    // {
+    //   id: 1,
+    //   title: "Pizzaria",
+    //   subtitle: "Loja Virtual (Projeto descontinuado)",
+    //   img: CasaDoSalgado1,
+    //   img2: CasaDoSalgado2,
+    //   description: "Consiste em um e-commerce virtual, escrito em PHP com base de dados MySQL, para o seguimento comercial, onde o usuário tem a disposição o cardápio virtual dividido por página. Ao abrir sessão, o cliente tem a disposição o carrinho de compras bloqueado pelas condições de horário de funcionamento e realização de login, área privada, onde pode alterar seus dados de maneira completa, redefinição de senha e exclusão de conta. O cliente ainda pode, ao finalizar a compra, acompanhar o status da sua entrega em tempo real. O projeto ainda conta com área administrativa, onde o administrador com acesso tem total controle de todo o site, podendo manipular dados de clientes e produtos, bem como alterar o status da entrega, espelhado diretamente para o cliente.",
+    //   date: "Dezembro 2021",
+    //   technology: "HTML, PHP, JavaScript, Bootstrap, CSS e MySQL",
+    //   url: "https://casadosalgadoabv.000webhostapp.com/",
+    //   github: "https://github.com/leonanthomaz/CasaDoSalgado"
+    // },
     {
       id: 2,
       title: "Casa do Salgado",
