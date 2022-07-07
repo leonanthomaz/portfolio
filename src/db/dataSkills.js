@@ -5,16 +5,17 @@ import {
     DiBootstrap,
     DiGit,
     DiHeroku,
-    DiSass,
     DiReact,
     DiGithubBadge,
     DiNpm,
     DiVisualstudio,
     DiPhp,
     DiNodejsSmall,
-    DiNodejs,
     DiHtml5,
     DiMysql,
+    DiFirebase,
+    DiNodejs,
+    DiSass,
  } from 'react-icons/di';
 
 export const webSkills = [
@@ -33,6 +34,13 @@ export const webSkills = [
         level: 80,
         description: 'Bla Bla Bla',
     },
+    {
+        id: 3,
+        name: 'Sass',
+        icon: <DiSass/>,
+        level: 60,
+        description: 'Bla Bla Bla',
+    },
 ]
 
 export const frameworksDataSkills = [
@@ -46,10 +54,18 @@ export const frameworksDataSkills = [
     {
         id: 2,
         name: 'Node',
-        icon: <DiNodejsSmall/>,
+        icon: <DiNodejs/>,
         level: 60,
         description: 'Bla Bla Bla',
     },
+    {
+        id: 3,
+        name: 'Bootstrap',
+        icon: <DiBootstrap/>,
+        level: 80,
+        description: 'Bla Bla Bla',
+    },
+    
 ]
 
 export const toolsDataSkills = [
@@ -57,6 +73,13 @@ export const toolsDataSkills = [
         id: 1,
         name: 'VSC',
         icon: <DiVisualstudio/>,
+        level: 80,
+        description: 'Bla Bla Bla',
+    },
+    {
+        id: 2,
+        name: 'NPM',
+        icon: <DiNpm/>,
         level: 80,
         description: 'Bla Bla Bla',
     },
@@ -75,6 +98,13 @@ export const databasesDataSkills = [
         name: 'MongoDB',
         icon: <DiMongodb/>,
         level: 70,
+        description: 'Conhecimentos de querys e requisições via node',
+    },
+    {
+        id: 3,
+        name: 'Firebase',
+        icon: <DiFirebase/>,
+        level: 60,
         description: 'Conhecimentos de querys e requisições via node',
     },
 ]
