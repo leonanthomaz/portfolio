@@ -12,6 +12,10 @@ ul {
     justify-content: center;
     padding-top: 1rem;
 
+    ::before {
+    content: "✔ ";
+    }
+
     @media (max-width: 760px){
       margin: 10px 0;
       gap: 10px;
@@ -115,6 +119,8 @@ ul {
         .skills-description{
             display: block;
             color: black;
+            text-align: center;
+            font-size: 20px;
         } 
         
         .hidden{

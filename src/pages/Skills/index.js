@@ -4,7 +4,7 @@ import SkillsList from "../SkillsList";
 import Progressbar from './Progressbar';
 import { HooksContext } from "../../contexts/Hooks";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import {BsArrowDown} from 'react-icons/bs';
+import {BsArrowDown, BsBoxArrowUp} from 'react-icons/bs';
 
 const Skills = () => {
     const { handleFindSkills, selectedSkills, setSelectedSkills, dataSkills } = useContext(HooksContext);
@@ -80,7 +80,12 @@ const Skills = () => {
                                                 <div className="skills-level">
                                                     <Progressbar bgcolor={item.level >= 70 ? "#99ff66" : "orange"} progress={item.level} height={20} />
                                                 </div>
-                                                <BsArrowDown onClick={setOpenList}/>
+                                                { openList 
+                                                ? 
+                                                <BsArrowDown onClick={handleOpenList}/> 
+                                                : 
+                                                <BsBoxArrowUp onClick={handleOpenList}/>
+                                                }
                                                 <div className={openList ? "skills-description" : "hidden"}>
                                                     <li>{item.description}</li>
                                                 </div>
