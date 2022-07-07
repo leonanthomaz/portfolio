@@ -71,7 +71,7 @@ box-shadow: ${props => props.theme.navbar_shadow};
   
     .nav-menu{
         background: ${props => props.theme.background_navbar_mobile};
-        border: 1px solid #5f5f5fef;
+        border: 1px solid #bbbbbb;
         width: 250px;
         position: absolute;
         left: -400px;
