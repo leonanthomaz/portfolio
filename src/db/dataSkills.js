@@ -25,7 +25,7 @@ export const webSkills = [
         name: 'HTML',
         icon: <DiHtml5/>,
         level: 90,
-        description: 'Bla Bla Bla',
+        description: '<li>Marcações</li><li>Estilos</li><li>Design</li>',
     },
     {
         id: 2,
@@ -74,7 +74,7 @@ export const toolsDataSkills = [
         name: 'VSC',
         icon: <DiVisualstudio/>,
         level: 80,
-        description: 'Bla Bla Bla',
+        description: '',
     },
     {
         id: 2,

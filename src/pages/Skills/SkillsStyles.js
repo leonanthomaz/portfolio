@@ -117,6 +117,7 @@ ul {
         .skills-description{
             display: block;
             color: black;
+            margin-top: 10px;
 
             ul {
                 list-style: none;

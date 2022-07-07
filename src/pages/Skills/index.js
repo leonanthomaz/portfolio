@@ -88,9 +88,9 @@ const Skills = () => {
                                                 <BsBoxArrowUp onClick={handleOpenList}/>
                                                 }
                                                 </div>
-                                                <ul className={openList ? "skills-description" : "hidden"}>
-                                                    <li>{item.description}</li>
-                                                </ul>
+                                                <div className={openList ? "skills-description" : "hidden"}>
+                                                    <ul>{item.description}</ul>
+                                                </div>
                                             </div>
                                     </Fragment>
                                     )
