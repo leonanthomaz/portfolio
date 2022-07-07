@@ -89,7 +89,9 @@ const Skills = () => {
                                                 }
                                                 </div>
                                                 <div className={openList ? "skills-description" : "hidden"}>
-                                                    <ul>{item.description}</ul>
+                                                    <ul>
+                                                        <li>{item.description}</li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                     </Fragment>
