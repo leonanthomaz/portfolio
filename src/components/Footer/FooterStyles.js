@@ -106,15 +106,16 @@ a{
 
             .icon{
                 font-size: 26px;
-                border-radius: 100%;
-                color: ${props => props.theme.font_contact_icons};
-                background: ${props => props.theme.background_contact_icons};
+                /* border-radius: 100%; */
+                color: ${props => props.theme.font};
+                /* color: ${props => props.theme.font_contact_icons}; */
+                /* background: ${props => props.theme.background_contact_icons}; */
                 transition: all ease 1s;
                 padding: 5px;
                 padding-left: 12px;
 
                 :hover{
-                background: ${props => props.theme.background_contact_icons_hover};
+                /* background: ${props => props.theme.background_contact_icons_hover}; */
                 transition: all ease 0.5s;
 
                 }

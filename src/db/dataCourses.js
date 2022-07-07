@@ -2,9 +2,9 @@ export const items = [{
         
   title: "2012",
   cardTitle: "Senac",
-  url: "www.senac.com",
+  url: "https://www.rj.senac.br/",
   cardSubtitle: "WebDesign",
-  cardDetailedText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. .",
+  cardDetailedText: "Em meu primeiro curso na área, estudei lógica de programação, linguagens e tecnologias de design, HTML, CSS, Photoshop, Dreamwork, Flash, entre outras.",
   media: {
     type: "IMAGE",
     source: {
@@ -14,57 +14,53 @@ export const items = [{
 },
 {
   title: "2021",
-  cardTitle: "Senac",
-  url: "www.senac.com",
-  cardSubtitle: "WebDesign",
-  cardDetailedText: "Curso namoral.",
+  cardTitle: "Alfahelix",
+  url: "https://drive.google.com/file/d/1kydV6Cvvhb-hAiVhXemE6HhelJTpNgMI/view?usp=sharing",
+  cardSubtitle: "Introdução ao jQuery",
+  cardDetailedText: "Curso introdutório a biblioteca jQuery.",
   media: {
     type: "IMAGE",
     source: {
-      url: "https://s.udemycdn.com/meta/default-meta-image-v2.png"
+      url: "https://alfahelix.com.br/wp-content/uploads/2020/10/40047948_2639697829587723_7376828758646325248_n-1.jpg"
     }
   },
-  
+},
+{
+  title: "2021",
+  cardTitle: "Innovation One",
+  url: "https://hermes.digitalinnovation.one/certificates/F5024C02.pdf",
+  cardSubtitle: "Desenvolvimento avançado com JavaScript ES6",
+  cardDetailedText: "Curso Javascript contendo práticas avançadas da linguagem.",
+  media: {
+    type: "IMAGE",
+    source: {
+      url: "https://www.projetodraft.com/wp-content/uploads/2019/12/digital-innovation-one.jpg"
+    }
+  },
+},
+{
+  title: "2021",
+  cardTitle: "Innovation One",
+  url: "https://hermes.digitalinnovation.one/certificates/0AFF04F6.pdf",
+  cardSubtitle: "Práticas avançadas em projetos com ReactJS",
+  cardDetailedText: "Curso de aperfeiçoamento e práticas em React JS",
+  media: {
+    type: "IMAGE",
+    source: {
+      url: "https://www.projetodraft.com/wp-content/uploads/2019/12/digital-innovation-one.jpg"
+    }
+  },
 },
 {
   title: "2022",
-  cardTitle: "Senac",
-  url: "www.senac.com",
-  cardSubtitle: "WebDesign",
-  cardDetailedText: "Curso namoral.",
+  cardTitle: "Udemy",
+  url: "https://www.udemy.com/certificate/UC-d509df22-2b22-4153-a9ad-a34fb3d88837/",
+  cardSubtitle: "Desenvolvimento Web",
+  cardDetailedText: "Curso completo de Desenvolvimento Web, contendo HTML5, CSS3, SASS, Bootstrap, JS, ES6, PHP 7, MySQL, JQuery, MVC, APIs",
   media: {
     type: "IMAGE",
     source: {
-      url: "https://www.projetodraft.com/wp-content/uploads/2019/12/digital-innovation-one.jpg"
+      url: "https://www.design24horas.com/wp-content/uploads/2019/03/udemy-1260x640.png"
     }
-  },
-  
-},
-{
-  title: "2022",
-  cardTitle: "Senac",
-  url: "www.senac.com",
-  cardSubtitle: "WebDesign",
-  cardDetailedText: "Curso namoral.",
-  media: {
-    type: "IMAGE",
-    source: {
-      url: "https://www.projetodraft.com/wp-content/uploads/2019/12/digital-innovation-one.jpg"
-    }
-  },
-  
-},
-      {
-  title: "2022",
-  cardTitle: "Senac",
-  url: "www.senac.com",
-  cardSubtitle: "WebDesign",
-  cardDetailedText: "Curso namoral.",
-  media: {
-    type: "IMAGE",
-    source: {
-      url: "https://www.projetodraft.com/wp-content/uploads/2019/12/digital-innovation-one.jpg"
-    }
-  },
-  
-}, []];
+  }, 
+},[]];
