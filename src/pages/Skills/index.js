@@ -80,7 +80,7 @@ const Skills = () => {
                                                 <div className="skills-level">
                                                     <Progressbar bgcolor={item.level >= 70 ? "#99ff66" : "orange"} progress={item.level} height={20} />
                                                 </div>
-                                                <div className="arrows py-3">
+                                                {/* <div className="arrows py-3">
                                                 { openList === false
                                                 ? 
                                                 <BsArrowDown BsBoxArrowUp onClick={handleOpenList}/> 
@@ -92,7 +92,7 @@ const Skills = () => {
                                                     <ul>
                                                         <li>{item.description}</li>
                                                     </ul>
-                                                </div>
+                                                </div> */}
                                             </div>
                                     </Fragment>
                                     )
