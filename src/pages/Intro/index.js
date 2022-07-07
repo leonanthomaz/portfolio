@@ -4,6 +4,7 @@ import foto from '../../assets/img/leonanrm2.png'
 import foto2 from '../../assets/img/leonanm32.png'
 import Typewriter from 'typewriter-effect';
 import { BouncyDivInLeft, BouncyDiv } from "../../utils/AnimationsStyles";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Intro = () => {
     const theme = localStorage.getItem('theme');
