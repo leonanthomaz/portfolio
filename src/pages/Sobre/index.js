@@ -8,7 +8,7 @@ const Sobre = () => {
 
     return (
         <SobreMainStyled  >
-            <div className="" >
+            <div className="mt-5 py-4" >
                 <div id="box" class="about container">
                 <h2 class="title section-heading text-uppercase text-center ">Sobre mim</h2>
                 <AnimationOnScroll animateIn="animate__fadeInDown">

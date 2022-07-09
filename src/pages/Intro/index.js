@@ -11,7 +11,7 @@ const Intro = () => {
 
     return (
         <IntroMainStyled>
-            <div className="intro">
+            <div className="intro mt-5">
                 <BouncyDivInLeft>
                 <div className="left">
                     <div className="imgContainer">

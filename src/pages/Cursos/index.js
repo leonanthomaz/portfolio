@@ -8,7 +8,7 @@ const Cursos = () => {
     
     return(
        <CursosMainStyled>
-        <div className="">
+        <div className="mt-5 py-4">
             <div className="container text-center">
                 <h2 class="title section-heading text-uppercase text-center">Cursos</h2>
                 <AnimationOnScroll animateIn="animate__fadeInDown">

@@ -43,7 +43,7 @@ const Skills = () => {
 
     return (
         <SkillsMainStyled >
-                <div className="">
+                <div className="mt-5 py-4">
                     <div className="container">
                         <h2 class="title section-heading text-uppercase text-center">Skills</h2>
                         <AnimationOnScroll animateIn="animate__fadeInDown">

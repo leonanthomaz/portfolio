@@ -40,7 +40,7 @@ const Contato = () => {
 
     return (
         <ContatoMainStyled>
-            <div className="">
+            <div className="mt-5 py-4">
                 <div className="contact-main">
                     <h2 class="title section-heading text-uppercase text-center">Deixe sua mensagem!</h2>
                     <AnimationOnScroll animateIn="animate__fadeInDown">

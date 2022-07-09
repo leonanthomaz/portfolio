@@ -32,8 +32,7 @@ body {
             background: ${props => props.theme.background};
             min-height: calc(100vh - 0px);
             scroll-snap-align: start;
-            padding: 4.5rem 0;
-
+            border: 2px solid red;
         }
 
         h1{
