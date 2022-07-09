@@ -1,17 +1,18 @@
-export const items = [{
+export const items = [
+//   {
         
-  title: "2012",
-  cardTitle: "Senac",
-  url: "https://www.rj.senac.br/",
-  cardSubtitle: "WebDesign",
-  cardDetailedText: "Em meu primeiro curso na área, estudei lógica de programação, linguagens e tecnologias de design, HTML, CSS, Photoshop, Dreamwork, Flash, entre outras.",
-  media: {
-    type: "IMAGE",
-    source: {
-      url: "https://pbs.twimg.com/profile_images/960497646099103745/lBIIJifQ_400x400.jpg"
-    }
-  },
-},
+//   title: "2012",
+//   cardTitle: "Senac",
+//   url: "https://www.rj.senac.br/",
+//   cardSubtitle: "WebDesign",
+//   cardDetailedText: "Em meu primeiro curso na área, estudei lógica de programação, linguagens e tecnologias de design, HTML, CSS, Photoshop, Dreamwork, Flash, entre outras.",
+//   media: {
+//     type: "IMAGE",
+//     source: {
+//       url: "https://pbs.twimg.com/profile_images/960497646099103745/lBIIJifQ_400x400.jpg"
+//     }
+//   },
+// },
 {
   title: "2021",
   cardTitle: "Alfahelix",

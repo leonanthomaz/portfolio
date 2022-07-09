@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const PortfolioMainStyled = styled.div`
-
+font-family: 'Josefin Sans', sans-serif;
 
 ul {
     margin: 10px;
@@ -38,10 +38,10 @@ ul {
     }
 
     .portfolio-box{
-        padding: 10px;
+        padding: 15px;
         margin: 10px;
-        box-shadow: 0px 4px 5px 0px #00000040;
-
+        box-shadow: ${props => props.theme.box_shadow_portfolio};
+        border-radius: 10px;
         /* :hover{
             box-shadow: 5px 0px 5px #00000040;
         } */
@@ -92,16 +92,56 @@ ul {
                 }
             }
         }
+
+        .portfolio-img-hover{
+            background-color: #ffff006e;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            width: 300px;
+            height: 150px;
+            margin-top: -150px;
+            opacity: 0;
+            transition: all ease 0.5s;
+            cursor: pointer;
+
+            &:hover{
+                opacity: 1;
+                transition: all ease 0.5s;
+            }
+
+            @media (max-width: 760px){
+                display: none;
+                /* width: 85%;
+                margin: auto;
+                height: 150px;
+                margin-top: -150px; */
+            }
+
+            .portfolio-img-icon{
+                font-size: 50px;
+                color: #444444;
+                display: flex;
+                justify-content: center;
+                margin-top: 20%;
+            }
+        }
         
         h4{
             text-align: center;
             padding-top: 30px;
-            
+            font-family: 'Lobster', cursive;
         }
         
         p{
-            font-style: italic;
             text-align: center;
+            padding: 5px;
+            border-radius: 10px;
+            box-shadow: 0 0 2px #bbbbbbe5;
+        }
+
+        strong{
+            padding: 5px;
         }
     }
 }

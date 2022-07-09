@@ -20,7 +20,7 @@ const Cursos = () => {
                         primary: '#292929',
                         secondary: '#ffd900',
                         cardBgColor: '#ecececea',
-                        cardForeColor: 'black',
+                        cardForeColor: '#7c7c7ce5',
                         titleColor: '#ffd900',
                         titleColorActive: '#292929',
                       }}
@@ -31,7 +31,7 @@ const Cursos = () => {
                         title: '1.5rem',
                       }}
                      mode="VERTICAL_ALTERNATING"
-                     cardHeight={150}
+                     cardHeight={120}
                      scrollable={{ scrollbar: true }}
                     />
                 </div>

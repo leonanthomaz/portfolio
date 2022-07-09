@@ -5,6 +5,7 @@ import { Modal } from "react-bootstrap";
 import { HooksContext } from "../../contexts/Hooks";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import foto from '../../assets/img/portfolio/clapper1.jpg';
+import { TbHandClick } from "react-icons/tb";
 
 const Portfolio = () => {
     const { show, handleFind, list, handleClose, setSelected, selected, data } = useContext(HooksContext);
@@ -62,16 +63,21 @@ const Portfolio = () => {
             <div className="portfolio-main">
                 {data && data.map((item, index)=>{
                     return(
-                    <Fragment key={index}>                   
+                    <Fragment key={index}>
+                        <AnimationOnScroll animateIn="animate__fadeIn">
+                   
                             <div className="portfolio-box text-center" >
-                                <AnimationOnScroll animateIn="animate__fadeIn">
                                 <div className="portfolio-img">
                                     <img src={item.img} alt={item.title} onClick={()=>handleFind(item.id)}/>
+                                </div>
+                                <div className="portfolio-img-hover" onClick={()=>handleFind(item.id)}>
+                                    <div className="portfolio-img-icon">
+                                        <TbHandClick/>
+                                    </div>
                                 </div>
                                 <h4>{item.title}</h4> 
                                 <p>{item.preview}</p>
                                 <strong>{item.technology}</strong> 
-                                </AnimationOnScroll>
                                 {list.map((e)=>{
                                     if(e.id === item.id){
                                         return(
@@ -81,7 +87,7 @@ const Portfolio = () => {
                                             centered
                                             show={show} 
                                             onHide={handleClose}
-                                            style={{background: '#14141498'}}                    
+                                            style={{background: '#14141498', fontFamily: 'Josefin Sans'}}                    
                                             >
                                             <Modal.Body style={{background: '#ecececce', padding: '30px'}}>
                                                 <i class="fa-solid fa-xmark" 
@@ -96,13 +102,14 @@ const Portfolio = () => {
                                                     textAlign: 'center', 
                                                     marginTop: '20px',
                                                     borderBottom: '2px solid',
-                                                    lineHeight: '5rem'
-                                                    }}>{e.title}</h1>
-                                                <h4 style={{textAlign: 'center', fontStyle: 'italic'}}>{e.title}</h4>
+                                                    lineHeight: '5rem',
+                                                    fontWeight: 900
+                                                    }}>{e.title}</h1><br/>
+                                                <h4 style={{textAlign: 'center'}}>{e.subtitle}</h4><br/>
                                                 <div className="" style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                                                     <img src={e.img2 ? e.img2 : e.img} alt={e.title} style={{width: '70%'}} />
-                                                </div>
-                                                <div style={{textAlign: 'center', border: '2px solid white', marginTop: '10px'}}>
+                                                </div><br/>
+                                                <div style={{textAlign: 'center', padding: '20px'}}>
                                                     <p>{e.description}</p>
                                                 </div>
                                                 <ul style={{
@@ -111,8 +118,8 @@ const Portfolio = () => {
                                                     marginTop: '10px',
                                                     padding: '20px'
                                                     }}>
-                                                        <strong>Data: </strong><span style={{fontStyle: 'italic'}}>{e.date}</span><br />
-                                                        <strong>Tecnologias: </strong><span style={{fontStyle: 'italic'}}>{e.technology}</span>
+                                                        <strong>Data: </strong><span>{e.date}</span><br />
+                                                        <strong>Tecnologias: </strong><span>{e.technology}</span>
                                                 </ul>
                                                 <div style={{ textAlign: 'center'}}>
                                                     <a style={{
@@ -139,6 +146,8 @@ const Portfolio = () => {
                                     }
                                 })}                  
                             </div>
+                        </AnimationOnScroll>
+
                     </Fragment>
                     )
                 })}

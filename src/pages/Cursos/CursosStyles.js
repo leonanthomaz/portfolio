@@ -9,11 +9,11 @@ export const CursosMainStyled = styled.div`
 
     .card-title{
         text-align: center;
-        font-size: 42px;
+        font-size: 32px;
         padding-bottom: 0.5rem;
 
         @media (max-width: 760px){
-            font-size: 26px;
+            font-size: 24px;
         }
     }
 

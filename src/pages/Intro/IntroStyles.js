@@ -101,7 +101,7 @@ export const IntroMainStyled = styled.div`
       h1 {
         font-size: 60px;
         margin: 10px 0;
-        color: #fed136;
+        color: ${props => props.theme.h1};
         font-family: 'Lobster', cursive;
         
         @media (max-width:1000px){

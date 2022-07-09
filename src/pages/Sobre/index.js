@@ -17,15 +17,24 @@ const Sobre = () => {
                 <div className="sobre-box">
                    
                     <div className="right">
-                    <p class="description my-5">Graduado em Análise e Desenvolvimento de sistemas, sempre fui fascinado por tecnologia.<br/><br/>
-
-                    Durante minha graduação, sempre busquei ampliar meus conhecimentos e hoje busco me manter sempre atualizado por meio de um aprendizado contínuo. Gosto de ler, ficar atento as notícias e as novidades, principalmente as relacionadas com a área de tecnologia. Encaro minha profissão como um grande hobby, sendo assim útil e ao mesmo tempo agradável para mim.<br/><br/>
-
-                    Dentre minhas habilidades, destaco as linguagem de programação PHP e Javascript, sendo capaz de construir aplicações simples, como SPA (Single Page Application) e projetos um pouco mais avançados, como lógica de Web Commerce, comunicação via API e banco de dados.<br/><br/> 
-
-                    Possuo domínio em Desenvolvimento Web (HTML5 e CSS3), conhecimentos em linguagem de programação (PHP e JavaScript), noções de frameworks (React e Node JS) e banco de dados (MySQL e MongoDB).<br/><br/>
-
-                    Mantenho o aprendizado contínuo, me atualizando, afim de desenvolver ainda mais os meus conhecimentos na área.
+                    <p class="description my-5">
+                        Graduado em Análise e Desenvolvimento de sistemas, sempre fui fascinado por tecnologia.
+                        <br/><br/>
+                        Durante minha graduação, sempre busquei ampliar meus conhecimentos e hoje busco me
+                        manter sempre atualizado por meio de um aprendizado contínuo. Gosto de ler, ficar atento às
+                        notícias e às novidades, principalmente as relacionadas com a área de tecnologia. Encaro
+                        minha profissão como um grande hobby, sendo assim útil e ao mesmo tempo agradável para
+                        mim.
+                        <br/><br/>
+                        Dentre minhas habilidades, destaco as linguagem de programação PHP e Javascript, sendo
+                        capaz de construir aplicações simples, como SPA (Single Page Application) e projetos um pouco
+                        mais avançados, como lógica de Web Commerce, comunicação via API e banco de dados.
+                        Possuo domínio em Desenvolvimento Web (HTML5 e CSS3), conhecimentos em linguagem de
+                        programação (PHP e JavaScript), noções de frameworks (React e Node JS) e banco de dados
+                        (MySQL e MongoDB).
+                        <br/><br/>
+                        Gosto de desafios e resolver problemas, tenho um bom senso prático e boa capacidade de
+                        foco e atenção aos detalhes.
                     </p>
                     </div>
                     <AnimationOnScroll animateIn="animate__fadeInRight">
