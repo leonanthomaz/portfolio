@@ -1,12 +1,9 @@
 import React, { useEffect } from "react";
 import { createContext, useState } from "react";
 import { 
-        PortfolioData, 
-        PortfolioDataWEB,
+        DesignData, 
         APIListData,
-        // EstudoListData,
         EcommerceListData,
-        // PublicidadeListData,
         SistemasListData
 } from "../db/dataPortfolio";
 import { webSkills, 
@@ -24,7 +21,7 @@ export const HooksContextProvider = ({children}) => {
 
     const [ click, setClick ] = useState(false);
 
-    const [selected, setSelected] = useState("web");
+    const [selected, setSelected] = useState("api");
     const [selectedSkills, setSelectedSkills] = useState("web");
     
     const [data, setData] = useState([]);
@@ -54,26 +51,20 @@ export const HooksContextProvider = ({children}) => {
 
     useEffect(() => {
     switch (selected) {
-        case "web":
-        setData(PortfolioData);
-        break;
         case "api":
         setData(APIListData);
         break;
-        // case "estudos":
-        // setData(EstudoListData);
-        // break;
+        case "design":
+        setData(DesignData);
+        break;
         case "ecommerce":
         setData(EcommerceListData);
         break;
-        // case "publicidade":
-        // setData(PublicidadeListData);
-        // break;
         case "sistemas":
         setData(SistemasListData);
         break;
         default:
-        setData(PortfolioData);
+        setData(APIListData);
     }
     }, [selected]);
 

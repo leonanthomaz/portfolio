@@ -12,25 +12,17 @@ const Portfolio = () => {
 
     const categoria = [
         {
-            id: "web",
-            title: "WEB App's",
+            id: "api",
+            title: "API",
         },
         {
-            id: "api",
-            title: "API's",
+            id: "design",
+            title: "Design",
         },
-        // {
-        //     id: "estudos",
-        //     title: "Estudos",
-        // },
         {
             id: "ecommerce",
             title: "E-Commerce",
         },
-        // {
-        //     id: "publicidade",
-        //     title: "Publicidade",
-        // },
         {
             id: "sistemas",
             title: "Sistemas",

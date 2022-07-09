@@ -17,8 +17,39 @@ import Pizzaria1 from '../assets/img/portfolio/pizzaria1.png';
 import Pizzaria2 from '../assets/img/portfolio/pizzaria2.png';
 
 
-  /*Aqui*/
-export const PortfolioData = [
+  /*API'S*/
+  export const APIListData = [
+    {
+      id: 1,
+      title: "Clapperboard",
+      subtitle: "Consumindo API de filmes (TMDB)",
+      img: ClapperBoard1,
+      img2: ClapperBoard2,
+      preview: "Sistema de consultas de filmes",
+      description: "Sistema de consultas de filmes, consumindo API TMDB e utilização de Context API e Hooks para renderização de componentes.",
+      date: "Atualmente",
+      technology: "React, Javascript, HTML e CSS (Styled-Components)",
+      url: "https://clapperboard.vercel.app/",
+      github: "https://github.com/leonanthomaz/clapperboard"
+    },
+    {
+      id: 2,
+      title: "Brasil Covid",
+      subtitle: "API de estatísticas da Covid no Brasil",
+      img: BrasilCovid1,
+      img2: BrasilCovid2,
+      preview: "API de informações sobre a Covid-19",
+      description: "API básica, contendo os números da pandemia do Covid-19 por Estados brasileiros. Neste mini-projeto pude desenvolver ainda mais minhas habilidades com Axios e Hooks.",
+      date: "Junho 2021",
+      technology: "React, JavaScript, CSS e HTML5",
+      url: "https://brasilcovid.herokuapp.com/",
+      github: "https://github.com/leonanthomaz/BrasilCovid"
+    },
+    
+  ];
+
+  /*Design*/
+  export const DesignData = [
     {
       id: 1,
       title: "Design Galeria",
@@ -61,39 +92,7 @@ export const PortfolioData = [
 
   ];
 
-  /*Aqui*/
-
-  export const APIListData = [
-    {
-      id: 1,
-      title: "Clapperboard",
-      subtitle: "Consumindo API de filmes (TMDB)",
-      img: ClapperBoard1,
-      img2: ClapperBoard2,
-      preview: "Sistema de consultas de filmes",
-      description: "Sistema de consultas de filmes, consumindo API TMDB e utilização de Context API e Hooks para renderização de componentes.",
-      date: "Atualmente",
-      technology: "React, Javascript, HTML e CSS (Styled-Components)",
-      url: "https://clapperboard.vercel.app/",
-      github: "https://github.com/leonanthomaz/clapperboard"
-    },
-    {
-      id: 2,
-      title: "Brasil Covid",
-      subtitle: "API de estatísticas da Covid no Brasil",
-      img: BrasilCovid1,
-      img2: BrasilCovid2,
-      preview: "API de informações sobre a Covid-19",
-      description: "API básica, contendo os números da pandemia do Covid-19 por Estados brasileiros. Neste mini-projeto pude desenvolver ainda mais minhas habilidades com Axios e Hooks.",
-      date: "Junho 2021",
-      technology: "React, JavaScript, CSS e HTML5",
-      url: "https://brasilcovid.herokuapp.com/",
-      github: "https://github.com/leonanthomaz/BrasilCovid"
-    },
-    
-  ];
-
-  /*Aqui*/
+  /*E-Commerce*/
   export const EcommerceListData = [
     {
       id: 1,
@@ -134,7 +133,7 @@ export const PortfolioData = [
   ];
 
 
-  /*Aqui*/
+  /*App's*/
   export const SistemasListData = [
     {
       id: 1,
