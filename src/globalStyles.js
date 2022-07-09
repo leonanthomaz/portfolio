@@ -30,9 +30,9 @@ body {
 
         > *{
             background: ${props => props.theme.background};
-            min-height: calc(100vh - 0px);
+            min-height: calc(100vh - 70px);
             scroll-snap-align: start;
-            border: 2px solid red;
+            border: 2px solid transparent;
         }
 
         h1{
