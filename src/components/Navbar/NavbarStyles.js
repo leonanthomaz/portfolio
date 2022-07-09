@@ -24,44 +24,43 @@ box-shadow: ${props => props.theme.navbar_shadow};
         margin-top: 15px;
         text-transform: uppercase;
 
+
         a{
             color: ${props => props.theme.font_navbar};
             text-decoration: none;
-            transition: all ease 1s;
+            transition: all ease 0.1s;
 
 
-            :visited {
+            &:visited {
                 color: ${props => props.theme.font_navbar};
-                transition: all ease 1s;
+                transition: all ease 0.1s;
             }
             
-            :hover   {
+            &:hover   {
                 color: ${props => props.theme.font_navbar_hover};
                 text-decoration: ${props => props.theme.overline_navbar_hover};
-                transition: all ease 1s;
+                transition: all ease 0.1s;
+                font-weight: bold;
+            }
+            
+            &:active{
+                color: #ffdd40;
             }
 
-            :active  {
-                color: yellow;
-                
+            :not(:disabled):not(.disabled):active:focus{
+                text-decoration: ${props => props.theme.overline_navbar_hover};
+
             }
+
         }
     }
 
     .nav-item {
         margin-right: 1.5rem;
 
-        :after {
-        content: "";
-            display: block;
-            height: 3px;
-            width: 0;
-            background: transparent;
-            transition: width 0.7s ease, background-color 0.5s ease;
-        }
-
-        .active {
-            color: #ffdd40;
+        &:focus{
+                color: red;
+                font-weight: bold;
         }
     }
 }

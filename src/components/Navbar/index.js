@@ -20,7 +20,7 @@ const Navbar = () => {
               <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
             </div>
             <div className={click ? "nav-menu active" : "nav-menu"}>
-              <ul>
+              <ul className="">
                 <li className="nav-item" onClick={handleClick}><a href="#">Home</a></li>
                 <li className="nav-item" onClick={handleClick}><a href="#sobre">Sobre</a></li>
                 <li className="nav-item" onClick={handleClick}><a href="#skills">Skills</a></li>
