@@ -62,7 +62,7 @@ export const frameworksDataSkills = [
         id: 3,
         name: 'Bootstrap',
         icon: <DiBootstrap/>,
-        level: 80,
+        level: 70,
         description: 'Bla Bla Bla',
     },
     
@@ -131,14 +131,14 @@ export const versionDataSkills = [
         id: 1,
         name: 'Git',
         icon: <DiGit/>,
-        level: 90,
+        level: 70,
         description: 'Bla Bla Bla',
     },
     {
         id: 2,
         name: 'GitHub',
         icon: <DiGithubBadge/>,
-        level: 90,
+        level: 80,
         description: 'Bla Bla Bla',
     },
 ]
