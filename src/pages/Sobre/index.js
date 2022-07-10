@@ -1,6 +1,6 @@
 import React from "react";
 import { SobreMainStyled } from "./SobreStyles";
-import curriculo from '../../assets/documents/Leonan-Curriculo.pdf';
+import curriculo from '../../assets/documents/Curriculo-Leonan-Thomaz.pdf';
 import foto  from '../../assets/img/programador.png'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
