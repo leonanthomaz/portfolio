@@ -27,7 +27,7 @@ import Pizzaria2 from '../assets/img/portfolio/pizzaria2.png';
       img2: ClapperBoard2,
       preview: "Sistema de consultas de filmes",
       description: "Sistema de consultas de filmes, consumindo API TMDB e utilização de Context API e Hooks para renderização de componentes.",
-      date: "Atualmente",
+      date: "Maio 2022",
       technology: "React, Javascript, HTML e CSS (Styled-Components)",
       url: "https://clapperboard.vercel.app/",
       github: "https://github.com/leonanthomaz/clapperboard"
@@ -97,7 +97,7 @@ import Pizzaria2 from '../assets/img/portfolio/pizzaria2.png';
     {
       id: 1,
       title: "Pizzaria",
-      subtitle: "Projeto de estudos",
+      subtitle: "E-commerce (Estudos)",
       img: Pizzaria1,
       img2: Pizzaria2,
       description: "Trata-se de um projeto de estudos, onde implemento um ecommerce virtual, desenvolvido em React. Utilizo Context API e Hooks para o a construção da lógica do carrinho.",
@@ -112,7 +112,7 @@ import Pizzaria2 from '../assets/img/portfolio/pizzaria2.png';
       subtitle: "Loja Virtual",
       img: CasaDoSalgado1,
       img2: CasaDoSalgado2,
-      description: "Consiste em um e-commerce virtual, escrito em PHP com base de dados MySQL, para o seguimento comercial, onde o usuário tem a disposição o cardápio virtual dividido por página. Ao abrir sessão, o cliente tem a disposição o carrinho de compras bloqueado pelas condições de horário de funcionamento e realização de login, área privada, onde pode alterar seus dados de maneira completa, redefinição de senha e exclusão de conta. O cliente ainda pode, ao finalizar a compra, acompanhar o status da sua entrega em tempo real. O projeto ainda conta com área administrativa, onde o administrador com acesso tem total controle de todo o site, podendo manipular dados de clientes e produtos, bem como alterar o status da entrega, espelhado diretamente para o cliente.",
+      description: "E-commerce virtual, escrito em PHP com base de dados MySQL, para o seguimento comercial, onde o usuário tem a disposição o cardápio virtual dividido por página. Ao abrir sessão, o cliente tem a disposição o carrinho de compras bloqueado pelas condições de horário de funcionamento e realização de login, área privada, onde pode alterar seus dados de maneira completa, redefinição de senha e exclusão de conta. O cliente ainda pode, ao finalizar a compra, acompanhar o status da sua entrega em tempo real. O projeto ainda conta com área administrativa, onde o administrador com acesso tem total controle de todo o site, podendo manipular dados de clientes e produtos, bem como alterar o status da entrega, espelhado diretamente para o cliente.",
       date: "Dezembro 2021",
       technology: "HTML, PHP, JavaScript, Bootstrap, CSS e MySQL",
       url: "https://casadosalgadoabv.000webhostapp.com/",
@@ -121,19 +121,19 @@ import Pizzaria2 from '../assets/img/portfolio/pizzaria2.png';
     {
       id: 3,
       title: "Yakisoba do Alto",
-      subtitle: "Loja Virtual (Projeto descontinuado)",
+      subtitle: "Cardapio virtual",
       img: Yakisoba1,
       img2: Yakisoba2,
-      description: "Consiste em um e-commerce virtual, escrito em PHP com base de dados MySQL, para o seguimento comercial, onde o usuário tem a disposição o cardápio virtual dividido por página. Ao abrir sessão, o cliente tem a disposição o carrinho de compras bloqueado pelas condições de horário de funcionamento e realização de login, área privada, onde pode alterar seus dados de maneira completa, redefinição de senha e exclusão de conta. O cliente ainda pode, ao finalizar a compra, acompanhar o status da sua entrega em tempo real. O projeto ainda conta com área administrativa, onde o administrador com acesso tem total controle de todo o site, podendo manipular dados de clientes e produtos, bem como alterar o status da entrega, espelhado diretamente para o cliente.",
-      date: "Dezembro 2021",
-      technology: "HTML, PHP, JavaScript, Bootstrap, CSS e MySQL",
+      description: "Template de um dos meus primeiros mini projetos. Consiste em um cardapio virtual, manipulação de páginas com JQuery e integração via Whatsapp.",
+      date: "Junho 2021",
+      technology: "HTML, CSS, JavaScript e JQuery",
       url: "https://casadosalgadoabv.000webhostapp.com/",
       github: "https://github.com/leonanthomaz/CasaDoSalgado"
     },
   ];
 
 
-  /*App's*/
+  /*Sistemas*/
   export const SistemasListData = [
     {
       id: 1,
