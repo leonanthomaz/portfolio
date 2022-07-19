@@ -7,8 +7,8 @@ height: 100vh;
 transition: all ease 1s;
 
 .loader {
-    border: ${props => props.theme.color_border}; /* Vermelho - light ou amarelo - dark*/
-    border-top: 8px solid #fbff00; 
+    border: 8px solid #3a3a3a; /**/
+    border-top: ${props => props.theme.color_border};
     animation: spin 0.8s linear infinite;
     border-radius: 50%;
     z-index: 9999999;
