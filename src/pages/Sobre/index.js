@@ -28,10 +28,10 @@ const Sobre = () => {
                         <br/><br/>
                         Dentre minhas principais soft skills estão: resolução de problemas; apto a trabalhar sob pressão; facilidade em aprendizado e organização e planejamento.
                         <br/><br/>
-                        Quanto as minhas habilidades em tecnologia, possuo excelentes conhecimentos em front-end, como HTML, CSS (Sass),
+                        Quanto as minhas habilidades em tecnologia, possuo excelentes conhecimentos em front-end, como HTML, CSS,
                         linguagem de programação JavaScript (variáveis, objetos, arrays, manipulação do DOM, etc.) e framework React (componentes, libs, hooks, context). 
                         Em back-end, possuo conhecimentos em Node JS (express) e PHP (procedural, PDO), 
-                        ferramentas de versionamento Git e Github (principais queries) e noções de banco de dados Mongo DB e MySQL (nível DDL, operações CRUD e consultas básicas).
+                        ferramentas de versionamento Git e Github (principais queries) e noções em pré-processadores de estilo (SASS e SCSS) e de banco de dados Mongo DB e MySQL (nível DDL, operações CRUD e consultas básicas).
                         <br/><br/>
                         Gosto de desafios e resolver problemas, tenho um bom senso prático e boa capacidade de
                         foco e atenção aos detalhes.
