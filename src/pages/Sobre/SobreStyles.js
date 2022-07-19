@@ -2,6 +2,11 @@ import styled from 'styled-components'
 
 export const SobreMainStyled = styled.nav`
 
+.sobre{
+    margin-top: 70px;
+
+}
+
 a{
     text-decoration: none;
     text-align: center;

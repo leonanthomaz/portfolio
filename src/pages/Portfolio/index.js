@@ -33,7 +33,7 @@ const Portfolio = () => {
 
     return (
         <PortfolioMainStyled>
-        <div class="container mt-5 py-4">
+        <div class="portfolio">
             <div class="text-center">
                 <h2 class="title section-heading text-uppercase">Portfólio</h2>
                 <AnimationOnScroll animateIn="animate__fadeInDown">

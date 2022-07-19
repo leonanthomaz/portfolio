@@ -2,7 +2,18 @@ import styled from "styled-components";
 
 export const CursosMainStyled = styled.div`
 
+.cursos{
+    margin-top: 70px;
+
+}
+
 .courses-box{
+
+    .cursos{
+        border: 2px solid red;
+        margin-top: 70px;
+
+    }
 
     height: 70vh;
     width: 100%;

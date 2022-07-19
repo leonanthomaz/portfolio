@@ -8,7 +8,7 @@ const Sobre = () => {
 
     return (
         <SobreMainStyled  >
-            <div className="mt-5 py-4" >
+            <div className="sobre" >
                 <div id="box" class="about container">
                 <h2 class="title section-heading text-uppercase text-center ">Sobre mim</h2>
                 <AnimationOnScroll animateIn="animate__fadeInDown">
@@ -18,20 +18,20 @@ const Sobre = () => {
                    
                     <div className="right">
                     <p class="description my-5">
-                        Graduado em Análise e Desenvolvimento de sistemas, sempre fui fascinado por tecnologia.
+                        Me chamo Leonan Thomaz e sou formado em Análise e Desenvolvimento de Sistemas pela universidade Estácio de Sá.
                         <br/><br/>
-                        Durante minha graduação, sempre busquei ampliar meus conhecimentos e hoje busco me
+                        Durante meu curso, sempre busquei ampliar meus conhecimentos e hoje busco me
                         manter sempre atualizado por meio de um aprendizado contínuo. Gosto de ler, ficar atento às
                         notícias e às novidades, principalmente as relacionadas com a área de tecnologia. Encaro
                         minha profissão como um grande hobby, sendo assim útil e ao mesmo tempo agradável para
                         mim.
                         <br/><br/>
-                        Dentre minhas habilidades, destaco as linguagem de programação PHP e Javascript, sendo
-                        capaz de construir aplicações simples, como SPA (Single Page Application) e projetos um pouco
-                        mais avançados, como lógica de Web Commerce, comunicação via API e banco de dados.
-                        Possuo domínio em Desenvolvimento Web (HTML5 e CSS3), conhecimentos em linguagem de
-                        programação (PHP e JavaScript), noções de frameworks (React e Node JS) e banco de dados
-                        (MySQL e MongoDB).
+                        Dentre minhas principais soft skills estão: resolução de problemas; apto a trabalhar sob pressão; facilidade em aprendizado e organização e planejamento.
+                        <br/><br/>
+                        Quanto as minhas habilidades em tecnologia, possuo excelentes conhecimentos em front-end, como HTML, CSS (Sass),
+                        linguagem de programação JavaScript (variáveis, objetos, arrays, manipulação do DOM, etc.) e framework React (componentes, libs, hooks, context). 
+                        Em back-end, possuo conhecimentos em Node JS (express) e PHP (procedural, PDO), 
+                        ferramentas de versionamento Git e Github (principais queries) e noções de banco de dados Mongo DB e MySQL (nível DDL, operações CRUD e consultas básicas).
                         <br/><br/>
                         Gosto de desafios e resolver problemas, tenho um bom senso prático e boa capacidade de
                         foco e atenção aos detalhes.

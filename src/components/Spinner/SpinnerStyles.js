@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 export const SpinnerClass = styled.div`
-background: ${props => props.theme.background};
+background: ${props => props.theme.background_spinner};
+width: 100vw;
+height: 100vh;
+transition: all ease 1s;
 
 .loader {
     border: 8px solid #3a3a3a; /* Vermelho e cinza*/

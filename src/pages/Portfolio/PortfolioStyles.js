@@ -1,6 +1,11 @@
 import styled from 'styled-components'
 
 export const PortfolioMainStyled = styled.div`
+
+.portfolio{
+    margin-top: 70px;
+
+}
 font-family: 'Josefin Sans', sans-serif;
 
 ul {
@@ -40,6 +45,7 @@ ul {
     .portfolio-box{
         padding: 15px;
         margin: 10px;
+        background: ${props => props.theme.background_portfolio};
         box-shadow: ${props => props.theme.box_shadow_portfolio};
         border-radius: 10px;
         /* :hover{

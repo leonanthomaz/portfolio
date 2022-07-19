@@ -111,7 +111,7 @@ export const HooksContextProvider = ({children}) => {
     if (window) {
             setTimeout(() => {
                 setLoading(false)
-            }, 0); 
+            }, 3000); 
         } 
     }
     handleScroll()

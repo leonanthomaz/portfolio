@@ -1,6 +1,11 @@
 import styled from 'styled-components'
 
 export const ContatoMainStyled = styled.div`
+
+.contato{
+    margin-top: 70px;
+}
+
 .contact-main{
     padding: 1.5rem;
 
@@ -19,6 +24,7 @@ export const ContatoMainStyled = styled.div`
                 margin: auto;
                 width: 500px;
                 height: auto;
+                background: ${props => props.theme.background_contact_form};
                 box-shadow: ${props => props.theme.contact_form_shadow};
                 border-radius: 10px; 
                 border: 1px solid white;

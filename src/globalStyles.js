@@ -13,7 +13,6 @@ body {
 }
 
 .App{
-    min-height: 100vh;
 
     .sections{
         color: ${props => props.theme.font};
@@ -22,7 +21,6 @@ body {
         scroll-behavior: smooth;
         scroll-snap-type: y mandatory;
         scrollbar-width: none; //for firefox
-        border-bottom: 2px solid gray;
 
         &::-webkit-scrollbar{
             display: none;
@@ -33,9 +31,6 @@ body {
             min-height: calc(100vh - 70px);
             scroll-snap-align: start;
             border: 2px solid transparent;
-        }
-
-        h1{
         }
 
         h2{

@@ -21,12 +21,12 @@ const Navbar = () => {
             </div>
             <div className={click ? "nav-menu active" : "nav-menu"}>
               <ul className="">
-                <li className="nav-item" onClick={handleClick}><a href="#">Home</a></li>
-                <li className="nav-item" onClick={handleClick}><a href="#sobre">Sobre</a></li>
-                <li className="nav-item" onClick={handleClick}><a href="#skills">Skills</a></li>
-                <li className="nav-item" onClick={handleClick}><a href="#portfolio">Portfólio</a></li>
-                <li className="nav-item" onClick={handleClick}><a href="#courses">Cursos</a></li>
-                <li className="nav-item" onClick={handleClick}><a href="#contact">Contato</a></li>
+                <li onClick={handleClick}><a href="#">Início</a></li>
+                <li onClick={handleClick}><a href="#sobre">Sobre</a></li>
+                <li onClick={handleClick}><a href="#skills">Skills</a></li>
+                <li onClick={handleClick}><a href="#portfolio">Portfólio</a></li>
+                <li onClick={handleClick}><a href="#courses">Cursos</a></li>
+                <li onClick={handleClick}><a href="#contact">Contato</a></li>
               </ul>
             </div>
             <div className="nav-theme-box" onClick={changeTheme}>

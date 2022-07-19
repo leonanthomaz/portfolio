@@ -1,104 +1,74 @@
-import React, { useContext} from "react";
-import { FooterMainStyled } from "./FooterStyles";
-import Info from "../InfoConfig";
-import { HooksContext } from "../../contexts/Hooks";
+import React from 'react';
+import {
+  FaFacebook,
+  FaInstagram,
+  FaYoutube,
+  FaTwitter,
+  FaLinkedin,
+  FaGithub,
+  FaGoogle
+} from 'react-icons/fa';
+import {
+  FooterContainer,
+  FooterWrap,
+  SocialMedia,
+  SocialMediaWrap,
+  SocialLogo,
+  SocialIcons,
+  SocialIconLink
+} from './FooterStyles';
 
 const Footer = () => {
-    const { handleShowModalInfo } = useContext(HooksContext);
+  return (
+    <FooterContainer>
+      <FooterWrap>
+        <SocialMedia>
+          <SocialMediaWrap>
+            <SocialLogo >
+                <p>© 2022 Copyright: Leonan Thomaz</p>
+                <span>Design by <a href="https://www.linkedin.com/in/leonanthomaz" target="_blank">@leonan.thomaz</a></span><br/>
+            </SocialLogo>
+            <SocialIcons>
+                
+              {/* <SocialIconLink href='/' target='_blank' aria-label='Facebook'>
+                <FaFacebook />
+              </SocialIconLink>
 
-    return (
-        <FooterMainStyled>
-            <div className="container pt-4">
-                <div className="mb-4">
+              <SocialIconLink href='/' target='_blank' aria-label='Instagram'>
+                <FaInstagram />
+              </SocialIconLink> */}
 
-                    <h2 className="text-center py-3">Contato</h2>
-                    <div className="contact-group">
-                        <a href="https://api.whatsapp.com/send?phone=5521998090928">
-                        <div className="contact-items">
-                            <div className="icon">
-                                <i className="fa-brands fa-whatsapp"></i>
-                            </div>
-                            <h4>Whatsapp</h4>
-                            <h5>(21) 99809-0928</h5>
-                        </div>
-                        </a>
+              {/* <SocialIconLink href='/' target='_blank' aria-label='Youtube'>
+                <FaYoutube />
+              </SocialIconLink> */}
 
-                        <a href="mailto:leonan.thomaz@gmail.com? Subject: Olá! Gostaria de falar com você!m&body=Conteúdo da mensagem">
-                        <div className="contact-items">
-                            <div className="icon">
-                                <i class="fa-solid fa-at"></i>
-                            </div>
-                            <h4>E-mail</h4>
-                            <h5>leonan.thomaz@gmail.com</h5>
-                        </div>
-                        </a>
+              <SocialIconLink href='mailto:leonan.thomaz@gmail.com? Subject: Olá! Gostaria de falar com você!m&body=Conteúdo da mensagem' target='_blank' aria-label='Google'>
+                <FaGoogle />
+              </SocialIconLink>
 
-                        <a href="https://goo.gl/maps/7DTPtgHYjsT3ZyEN9" >
-                        <div className="contact-items">
-                            <div className="icon">
-                                <i className="fa-solid fa-location-dot"></i>
-                            </div>
-                            <h4>Localização</h4>
-                            <h5>Estrada do Tijuaçu<br/>
-                                Alto da Boa Vista <br/>
-                                Rio de Janeiro - RJ
-                            </h5>
-                        </div>
-                        </a>
-                    </div>
+              <SocialIconLink href='https://github.com/leonanthomaz/' target='_blank' aria-label='Github'>
+                <FaGithub />
+              </SocialIconLink>
+              
+              <SocialIconLink href='https://www.linkedin.com/in/leonanthomaz' target='_blank' aria-label='Linkedin'>
+                <FaLinkedin />
+              </SocialIconLink>
 
-                    <div className="social-network">
+              <SocialIconLink
+                href='//www.twitter.com/leonanthomaz'
+                target='_blank'
+                aria-label='Twitter'
+                rel='noopener noreferrer'
+              >
+                <FaTwitter />
+              </SocialIconLink>
 
-                        <div className="address text-center p-5">
-                            © 2022 Copyright: Leonan Thomaz <br />
-                            Design by <a href="https://www.linkedin.com/in/leonan-thomaz-921027163/" target="_blank">@leonan.thomaz</a>
-                        </div>
-
-                        <div className="contact-items-group">
-
-                        <a href="https://github.com/leonanthomaz/">
-                        <div className="contact-items">
-                            <div className="icon">
-                                <i className="fa-brands fa-github"></i>
-                            </div>
-                            {/* <h4>Github</h4> */}
-                            {/* <h5>@leonanthomaz/</h5> */}
-                        </div>
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/leonan-thomaz-921027163/">
-                        <div className="contact-items">
-                            <div className="icon">
-                                <i className="fa-brands fa-linkedin"></i>
-                            </div>
-                            {/* <h4>Linkedin</h4> */}
-                            {/* <h5>@leonan-thomaz-921027163/</h5> */}
-                        </div>
-                        </a>
-
-                        <a href="mailto:leonan.thomaz@gmail.com? Subject: Olá! Gostaria de falar com você!m&body=Conteúdo da mensagem">
-                        <div className="contact-items">
-                            <div className="icon">
-                                <i className="fab fa-google"></i>
-                            </div>
-                            {/* <h4>Google+</h4> */}
-                            {/* <h5>@leonanthomaz</h5> */}
-                        </div>
-                        </a>
-                        </div>
-
-                    </div>
-                    
-                    {/* <div className="InfoPortfolio">
-                        <i class="fa-solid fa-gear" onClick={handleShowModalInfo}></i>
-                        <Info />
-                    </div> */}
-
-                </div>
-            </div>
-            
-        </FooterMainStyled>
-    )
-}
+            </SocialIcons>
+          </SocialMediaWrap>
+        </SocialMedia>
+      </FooterWrap>
+    </FooterContainer>
+  );
+};
 
 export default Footer;

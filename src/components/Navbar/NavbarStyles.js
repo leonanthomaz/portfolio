@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const NavbarMainStyled = styled.nav`
 
+
 position: fixed;
 width: 100%;
 z-index: 2;
@@ -24,8 +25,9 @@ box-shadow: ${props => props.theme.navbar_shadow};
         margin-top: 15px;
         text-transform: uppercase;
 
-
+      
         a{
+            margin-right: 1.5rem;
             color: ${props => props.theme.font_navbar};
             text-decoration: none;
             transition: all ease 0.1s;
@@ -45,24 +47,17 @@ box-shadow: ${props => props.theme.navbar_shadow};
             
             &:active{
                 color: #ffdd40;
-            }
+            } 
+            
 
-            :not(:disabled):not(.disabled):active:focus{
-                text-decoration: ${props => props.theme.overline_navbar_hover};
-
-            }
+            &:focus{
+                color: #ffdd40;
+            } 
+            
 
         }
     }
 
-    .nav-item {
-        margin-right: 1.5rem;
-
-        &:focus{
-                color: red;
-                font-weight: bold;
-        }
-    }
 }
 
 
@@ -84,10 +79,12 @@ box-shadow: ${props => props.theme.navbar_shadow};
         left: 0px;
         transition: all 0.5s ease;
         
+        
     }
     .nav-item.active {
         color: #ffdd40;
         border: none;
+        
     }
     .nav-icon{
         display: block;

@@ -24,7 +24,7 @@ export const webSkills = [
         id: 1,
         name: 'HTML',
         icon: <DiHtml5/>,
-        level: 90,
+        level: 80,
         description: "",
     },
     {

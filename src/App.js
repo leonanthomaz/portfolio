@@ -1,9 +1,10 @@
 import React, { Fragment, useContext} from "react";
 import { HooksContext } from "./contexts/Hooks";
 
-import GlobalStyle from './globalStyles';
+import GlobalStyle from './GlobalStyles';
 
 import Navbar from './components/Navbar';
+import Local from "./components/Local";
 import Footer from "./components/Footer";
 import Loader from './components/Spinner';
 
@@ -26,22 +27,23 @@ const App = () => {
           <section className="sections">
             <Intro />
             <div id="sobre">
-            <Sobre  />
+              <Sobre  />
             </div>
             <div id="skills">
-            <Skills />
+              <Skills />
             </div>
             <div id="portfolio">
-            <Portfolio />
+              <Portfolio />
             </div>
             <div id="courses">
-            <Cursos />
+              <Cursos />
             </div>
             <div id="contact">
-            <Contato />
+              <Contato />
             </div>
-            <Footer />
           </section>
+          <Local />
+          <Footer />
       </Fragment>
       }
     </div>
