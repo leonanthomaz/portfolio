@@ -1,7 +1,7 @@
 import React, { Fragment, useContext} from "react";
 import { HooksContext } from "./contexts/Hooks";
 
-import GlobalStyle from './GlobalStyles.js';
+import GlobalStyle from './globalStyles.js';
 
 import Navbar from './components/Navbar';
 import Local from "./components/Local";
