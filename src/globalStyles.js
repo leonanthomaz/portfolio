@@ -17,7 +17,7 @@ body {
     .sections{
         color: ${props => props.theme.font};
         width: 100%;
-        height: calc(100vh - 70px);
+        min-height: calc(100vh - 70px);
         scroll-behavior: smooth;
         scroll-snap-type: y mandatory;
         scrollbar-width: none; //for firefox
@@ -28,7 +28,7 @@ body {
 
         > *{
             background: ${props => props.theme.background};
-            height: calc(100vh - 70px);
+            min-height: calc(100vh - 70px);
             scroll-snap-align: start;
             border: 2px solid transparent;
         }
