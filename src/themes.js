@@ -60,7 +60,7 @@ export const lightTheme = {
 
   //spinner
   background_spinner: "#ffffff",
-
+  color_border: "8px solid crimson"
 }
 
 
@@ -129,5 +129,6 @@ export const darkTheme = {
 
   //spinner
   background_spinner: "#121214",
+  color_border: "8px solid #3a3a3a"
 }
 
