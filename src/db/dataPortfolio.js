@@ -15,7 +15,8 @@ import Yakisoba1 from '../assets/img/portfolio/yda1.png';
 import Yakisoba2 from '../assets/img/portfolio/yda2.png';
 import Pizzaria1 from '../assets/img/portfolio/pizzaria1.png';
 import Pizzaria2 from '../assets/img/portfolio/pizzaria2.png';
-
+import Pegasus1 from '../assets/img/portfolio/pegasus1.png';
+import Pegasus2 from '../assets/img/portfolio/pegasus2.png';
 
   /*API'S*/
   export const APIListData = [
@@ -137,6 +138,20 @@ import Pizzaria2 from '../assets/img/portfolio/pizzaria2.png';
   export const SistemasListData = [
     {
       id: 1,
+      title: "Pégasus",
+      subtitle: "Rede Social",
+      img: Pegasus1,
+      img2: Pegasus2,
+      preview: "Rede social desenvolvida em React, Node e MongoDB",
+      description: "Inspirado em aulas online, construí esta rede social em MERN (Mongo, Express, React e Node). Utilizo context api e reducer para login e renderização das informações do usuário e MongoDB como banco de dados.",
+      date: "Julho 2022",
+      technology: "MERN (Mongo, Express, React e Node)",
+      url: "https://pegasus-front-end.vercel.app/",
+      github: "https://github.com/leonanthomaz/PegasusFrontEnd",
+      github: "https://github.com/leonanthomaz/PegasusBackEnd"
+    },
+    {
+      id: 2,
       title: "Saturno",
       subtitle: "ChatBox",
       img: Saturno1,
@@ -149,7 +164,7 @@ import Pizzaria2 from '../assets/img/portfolio/pizzaria2.png';
       github: "https://github.com/leonanthomaz/Saturno"
     },
     {
-      id: 2,
+      id: 3,
       title: "Galleon",
       subtitle: "Blog",
       img: Galleon,
@@ -162,7 +177,7 @@ import Pizzaria2 from '../assets/img/portfolio/pizzaria2.png';
       github: "https://github.com/leonanthomaz/Saturno"
     },
     {
-      id: 3,
+      id: 4,
       title: "Jupter",
       subtitle: "Chat App",
       img: Jupter,
