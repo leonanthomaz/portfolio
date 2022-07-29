@@ -148,7 +148,7 @@ import Pegasus2 from '../assets/img/portfolio/pegasus2.png';
       technology: "MERN (Mongo, Express, React e Node)",
       url: "https://pegasus-front-end.vercel.app/",
       github: "https://github.com/leonanthomaz/PegasusFrontEnd",
-      github: "https://github.com/leonanthomaz/PegasusBackEnd"
+      github2: "https://github.com/leonanthomaz/PegasusBackEnd"
     },
     {
       id: 2,

@@ -130,6 +130,14 @@ const Portfolio = () => {
                                                         color: 'white',
                                                         textDecoration: 'none',
                                                         }} target="_blank" href={e.github}>Repositório</a>
+                                                    {e.github2 ? <a style={{
+                                                        background: 'red', 
+                                                        padding: '10px',
+                                                        margin: '10px',
+                                                        borderRadius: '7px',
+                                                        color: 'white',
+                                                        textDecoration: 'none',
+                                                        }} target="_blank" href={e.github2}>Repositório (backend)</a> : ""}
                                                 </div>
                             
                                             </Modal.Body >
