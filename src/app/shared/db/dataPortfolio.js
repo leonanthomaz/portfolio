@@ -149,7 +149,7 @@ import PopCorn2 from '../assets/img/portfolio/popcorn2.png';
       date: "Julho 2022",
       technology: "MERN (Mongo, Express, React e Node)",
       url: "https://pegasus-front-end.vercel.app/",
-      github: "https://github.com/leonanthomaz/PegasusFrontEnd",
+      github: "https://github.com/leonanthomaz/pegasus",
     },
     {
       id: 2,
