@@ -24,7 +24,7 @@ body{
             > *{
                 background: ${props => props.theme.background};
                 width: 100%;
-                min-height: calc(100vh - 70px);
+                /* min-height: calc(100vh - 70px); */
                 scroll-snap-align: start;
                 border: 4px solid transparent;
             }
