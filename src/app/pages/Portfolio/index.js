@@ -52,7 +52,7 @@ export const Portfolio = () => {
 
     return (
         <P.Container>
-            <ETitle title={'Portfólio'} subtitle={'Colocando meus conhecimentos em prática'}/>
+            <ETitle title={'Portfólio'} subtitle={'Conhecimentos em prática!'}/>
             <P.MenuPortfolioGroup>
                 <P.MenuPortfolio>
                     {category.map((item) => (
