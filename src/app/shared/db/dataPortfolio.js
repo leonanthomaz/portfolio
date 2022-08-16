@@ -63,7 +63,7 @@ import PopCorn2 from '../assets/img/portfolio/popcorn2.png';
       description: "Design de uma galeria de fotos, utilizando HTML e estilização em SASS.",
       date: "Junho 2022",
       technology: "HTML e SASS",
-      url: "https://github.com/leonanthomaz/GaleriaSass",
+      url: "",
       github: "https://github.com/leonanthomaz/GaleriaSass"
     },
     {
@@ -76,7 +76,7 @@ import PopCorn2 from '../assets/img/portfolio/popcorn2.png';
       description: "Pequeno projeto de um card promocional.",
       date: "Maio 2022",
       technology: "HTML e CSS",
-      url: "https://github.com/leonanthomaz/Template-Nike",
+      url: "",
       github: "https://github.com/leonanthomaz/Template-Nike"
     },
     {
@@ -89,7 +89,7 @@ import PopCorn2 from '../assets/img/portfolio/popcorn2.png';
       description: "Desafio de implementação de um card promocional da GloboPlay. Desenvolvido em HTML, CSS e estruturas com a ferramenta Figma.",
       date: "Maio 2022",
       technology: "HTML e CSS",
-      url: "https://github.com/leonanthomaz/Template-GloboPlay",
+      url: "",
       github: "https://github.com/leonanthomaz/Template-GloboPlay"
     },
 
@@ -106,7 +106,7 @@ import PopCorn2 from '../assets/img/portfolio/popcorn2.png';
       description: "Trata-se de um projeto de estudos, onde implemento um ecommerce virtual, desenvolvido em React. Utilizo Context API e Hooks para o a construção da lógica do carrinho.",
       date: "Julho 2022",
       technology: "React, Styled-Components",
-      url: "https://github.com/leonanthomaz/ProjetoPizzariaDoAlto",
+      url: "",
       github: "https://github.com/leonanthomaz/ProjetoPizzariaDoAlto"
     },
     {
@@ -130,8 +130,8 @@ import PopCorn2 from '../assets/img/portfolio/popcorn2.png';
       description: "Template de um dos meus primeiros mini projetos. Consiste em um cardapio virtual, manipulação de páginas com JQuery e integração via Whatsapp.",
       date: "Junho 2021",
       technology: "HTML, CSS, JavaScript e JQuery",
-      url: "https://casadosalgadoabv.000webhostapp.com/",
-      github: "https://github.com/leonanthomaz/CasaDoSalgado"
+      url: "",
+      github: "https://github.com/leonanthomaz/YakisobaDoAlto"
     },
   ];
 

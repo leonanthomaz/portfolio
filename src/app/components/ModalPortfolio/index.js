@@ -59,6 +59,7 @@ export const ModalPortfolio = ({show,
                             <strong>Tecnologias: </strong><span>{technology}</span>
                     </ul>
                     <div style={{ textAlign: 'center'}}>
+                        {url != "" ? 
                         <a style={{
                             background: 'red', 
                             padding: '10px',
@@ -67,6 +68,7 @@ export const ModalPortfolio = ({show,
                             color: 'white',
                             textDecoration: 'none',
                             }} target="_blank" href={url}>Visitar Site</a>
+                        : ""}
                         <a style={{
                             background: 'red', 
                             padding: '10px',
