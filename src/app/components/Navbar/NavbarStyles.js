@@ -102,7 +102,7 @@ cursor: pointer;
 
 @media(max-width: 760px){
     margin-top: -46px;
-    margin-right: 30px;
+    margin-right: 20px;
 }
 `
 export const ThemeIcon = styled.div`

@@ -1,11 +1,9 @@
-import React, { Fragment, useContext, useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import * as S from './SkillsStyles';
 // import SkillsList from "../SkillsList";
 import Progressbar from '../../shared/utils/progressbar_skills';
-// import { HooksContext } from "../../contexts/Hooks";
 import { category } from '../../shared/utils/category_skills';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import {BsArrowDown, BsArrowUp} from 'react-icons/bs';
 import { webSkills, 
   frameworksDataSkills, 
   toolsDataSkills,

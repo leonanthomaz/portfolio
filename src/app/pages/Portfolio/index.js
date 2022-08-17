@@ -1,8 +1,6 @@
-import React, { useContext, Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import * as P from './PortfolioStyles';
 import { PortfolioList } from '../../components/Cards/CardPortfolio';
-import { Modal } from "react-bootstrap";
-import { TbHandClick } from "react-icons/tb";
 import { category } from '../../shared/utils/category_portfolio';
 import { 
     DesignData, 

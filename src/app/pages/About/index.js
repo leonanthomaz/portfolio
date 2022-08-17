@@ -3,7 +3,6 @@ import * as A from "./AboutStyles";
 import curriculo from '../../shared/assets/documents/Curriculo-Leonan-Thomaz.pdf';
 import foto  from '../../shared/assets/img/programador.png'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import { BiCodeBlock } from "react-icons/bi";
 import { ETitle } from "../../components/Elements/title";
 
 export const About = () => {

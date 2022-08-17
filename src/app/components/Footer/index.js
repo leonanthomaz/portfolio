@@ -1,8 +1,8 @@
 import React from 'react';
 import {
-  FaFacebook,
-  FaInstagram,
-  FaYoutube,
+//   FaFacebook,
+//   FaInstagram,
+//   FaYoutube,
   FaTwitter,
   FaLinkedin,
   FaGithub,

@@ -2,9 +2,8 @@ import React, { useContext } from 'react'
 import { PortfolioContext } from '../../shared/context/portfolio';
 import { useThemeContext } from '../../shared/context/theme';
 import * as N from './NavbarStyles';
-import { GrClose } from "react-icons/gr";
 import { BiMenu } from "react-icons/bi";
-import { BsMoonStars, BsSunFill } from "react-icons/bs";
+import { BsMoonStars } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import { FaSun } from "react-icons/fa";
 

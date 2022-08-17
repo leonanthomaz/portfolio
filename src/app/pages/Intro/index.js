@@ -3,9 +3,7 @@ import * as I from "./IntroStyles";
 import foto_colorida from '../../shared/assets/img/leonan-color.png'
 import foto_sem_cor from '../../shared/assets/img/leonan-uncolor.png'
 import Typewriter from 'typewriter-effect';
-// import { BouncyDivInLeft, BouncyDiv } from "../../shared/utils/animations";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import { FaAngleDoubleDown } from "react-icons/fa";
 
 export const Intro = () => {
     const theme = localStorage.getItem('theme') || null

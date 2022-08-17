@@ -1,6 +1,5 @@
 import React from "react";
 import * as CS from "./CoursesStyles";
-import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { ETitle } from "../../components/Elements/title";
 import { items } from '../../shared/db/dataCourses'
 

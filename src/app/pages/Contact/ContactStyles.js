@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { BiCodeBlock } from "react-icons/bi";
 
 export const Container = styled.div`
 width: 100%;

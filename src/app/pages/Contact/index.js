@@ -1,10 +1,8 @@
-import React, { useRef, useState, useContext } from 'react';
+import React, { useRef, useState } from 'react';
 import * as C from './ContactStyles'
 import emailjs from '@emailjs/browser';
-import { Modal } from "react-bootstrap";
 import checked from '../../shared/assets/img/checked.png';
 import erroricon from '../../shared/assets/img/error-icon.png';
-import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { ETitle } from "../../components/Elements/title";
 import { ModalContact } from '../../components/ModalContact';
 
