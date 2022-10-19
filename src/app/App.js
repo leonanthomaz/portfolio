@@ -10,9 +10,6 @@ import ClipLoader from "react-spinners/ClipLoader";
 
 export const App = () => {
   const { loading, setLoading, closeNavbar } = useContext(PortfolioContext) 
-  // let [loading, setLoading] = useState(true);
-
-  // console.log(localStorage.getItem('theme'))
 
   useEffect(()=>{
     setTimeout(()=>{
