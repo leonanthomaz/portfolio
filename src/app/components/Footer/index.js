@@ -6,8 +6,10 @@ import {
   FaTwitter,
   FaLinkedin,
   FaGithub,
-  FaGoogle
+  FaGoogle,
+  FaMapMarkerAlt
 } from 'react-icons/fa';
+
 import * as F from './FooterStyles';
 
 export const Footer = () => {

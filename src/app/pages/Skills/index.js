@@ -1,8 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react";
 import * as S from './SkillsStyles';
 // import SkillsList from "../SkillsList";
-import Progressbar from '../../shared/utils/progressbar_skills';
-import { category } from '../../shared/utils/category_skills';
+import Progressbar from '../../sharing/utils/progressbar_skills';
+import { category } from '../../sharing/utils/category_skills';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { webSkills, 
   frameworksDataSkills, 
@@ -10,9 +10,10 @@ import { webSkills,
   databasesDataSkills,
   languageDataSkills,
   versionDataSkills
-} from "../../shared/db/dataSkills";
+} from "../../sharing/db/dataSkills";
 import { SkillsList } from "../../components/Cards/CardSkills";
 import { ETitle } from "../../components/Elements/title";
+import { Footer } from "../../components/Footer";
 
 export const Skills = () => {
     const [ openList, setOpenList ] = useState(false)
@@ -58,30 +59,30 @@ export const Skills = () => {
 
     return (
       <S.Container>
-          <ETitle title={'Skills'} subtitle={'Minhas habilidades'}/>
-          <AnimationOnScroll animateIn="animate__fadeInUp">
-          
+          <ETitle title={'Skills'} subtitle={'Algumas das habilidades que possuo'}/>
+
+          {/* <AnimationOnScroll animateIn="animate__fadeInUp"> */}
           <S.MenuSkillsGroup>
             <S.MenuSkills>
-                {category.map((item) => (
+                {category.map((item, index) => (
                 <SkillsList
                     id={item.id}
                     title={item.title}
                     active={selectedSkills === item.id}
                     setSelectedSkills={setSelectedSkills}
+                    key={index}
                 />
                 ))}
             </S.MenuSkills>
           </S.MenuSkillsGroup>
-
-          </AnimationOnScroll>
+          {/* </AnimationOnScroll> */}
 
           <S.Wrapper>
             {dataSkills.map((item, key) => {
               return(
                 <Fragment key={key}>
                   <S.Grid>
-                  <AnimationOnScroll animateIn="animate__fadeIn">
+                  {/* <AnimationOnScroll animateIn="animate__fadeIn"> */}
                     <S.SkillsItems onClick={()=>handleFindSkills(item.id)}>
                       
                         <div className="skills-header">
@@ -92,18 +93,17 @@ export const Skills = () => {
                                 <h3>{item.name}</h3>
                           </div>
                         </div>
-                          
-                      
                       <div className="skills-level">
                         <Progressbar bgcolor={item.level >= 70 ? "#99ff66" : "orange"} progress={item.level} height={20} />
                       </div>
                     </S.SkillsItems>
-                  </AnimationOnScroll>
+                  {/* </AnimationOnScroll> */}
                   </S.Grid>
                 </Fragment>
                 )
             })} 
           </S.Wrapper>
+          <Footer/>
       </S.Container>
     )
 }

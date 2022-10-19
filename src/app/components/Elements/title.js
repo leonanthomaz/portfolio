@@ -8,6 +8,10 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
+color: ${props => props.theme.font_title_el};
+padding-top: 80px;
+font-family: 'Dela Gothic One', cursive;
+text-transform: uppercase;
 `;
 
 export const Icon = styled(BiCodeBlock)`
@@ -22,6 +26,9 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
+color: ${props => props.theme.font};
+font-family: 'Didact Gothic', sans-serif;
+
 `;
 
 export const Hr = styled.hr`
@@ -30,7 +37,7 @@ max-width: 500px;
 margin: auto;
 margin-top: 10px;
 
-`
+`;
 
 export const ETitle = ({title, subtitle}) => {
 

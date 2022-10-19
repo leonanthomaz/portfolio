@@ -5,6 +5,7 @@ import { GrClose } from "react-icons/gr";
 export const ModalPortfolio = ({show,
     handleClose,
     id,
+    index,
     subtitle,
     title,
     img,
@@ -19,6 +20,7 @@ export const ModalPortfolio = ({show,
     return (
         <div>
             <Modal 
+                key={index}
                 size="lg"
                 aria-labelledby="contained-modal-title-vcenter"
                 centered

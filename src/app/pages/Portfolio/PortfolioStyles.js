@@ -3,9 +3,8 @@ import { BiCodeBlock } from "react-icons/bi";
 
 export const Container = styled.div`
 width: 100%;
-height: auto;
-margin-top: 70px;
-
+min-height: 100vh;
+background: ${props => props.theme.background};
 `;
 
 export const MenuPortfolioGroup = styled.div`
@@ -40,7 +39,6 @@ export const Wrapper = styled.div`
 
     @media (max-width: 1200px){
         grid-template-columns: 350px 350px; 
-
     }
 
     @media (max-width: 760px){
@@ -63,6 +61,8 @@ export const Box = styled.div`
         margin-top: 10px;
         font-size: 24px;
         font-weight: 700;
+        color: ${props => props.theme.h4_portfolio};
+
     }
 
     p{
@@ -79,9 +79,38 @@ export const Box = styled.div`
         font-size: 12px;
     }
 
+    .btn-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
 
+        button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: ${props => props.theme.btn_background_main};
+            color: ${props => props.theme.btn_font_main};
+            font-weight: 700;
+            border: none;
+            padding: 5px;
+            width: 120px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all .1s linear;
+                        -webkit-transition: all .1s linear;
+                        -moz-transition: all .1s linear;
+
+            :hover{
+                color: white;
+                background: green;
+                transition: all .1s linear;
+                        -webkit-transition: all .1s linear;
+                        -moz-transition: all .1s linear;
+            }
+        }
+    }
 `;
-
 
 export const ImgContainer = styled.div`
     display: flex;
@@ -103,8 +132,6 @@ export const ImgContainer = styled.div`
             box-shadow: "4px 4px 5px #121214";
             opacity: 1;
             border-radius: 5px;
-
-
         }
     }
 

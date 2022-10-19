@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
-export const Container = styled.footer`
-  background: ${props => props.theme.background};
+export const Container = styled.div`
+width: 100%;
+height: auto;
+/* padding-top: 80px; */
+/* background: ${props => props.theme.background}; */
 `;
 
 export const Wrapper = styled.div`
@@ -74,8 +77,6 @@ export const SocialLogo = styled.div`
         
     }
 
-    
-
   /* color: #fff; */
   /* justify-self: start;
   cursor: pointer;
@@ -85,6 +86,19 @@ export const SocialLogo = styled.div`
   align-items: center;
   margin-bottom: 16px;
   font-weight: bold; */
+`;
+
+export const Address = styled.div`
+  font-size: 12px;
+  
+  i{
+    color: white;
+  }
+`;
+
+export const Icon = styled.div`
+font-size: 32px;
+color: ${props => props.theme.font_icon};
 `;
 
 export const SocialIcons = styled.div`

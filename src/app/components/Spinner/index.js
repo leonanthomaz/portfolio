@@ -1,7 +1,7 @@
 import React from "react";
 import { SpinnerClass } from './SpinnerStyles';
 
-const Loader = () =>{
+export const Spinner = () =>{
     return(
         <>
         <SpinnerClass>
@@ -10,5 +10,3 @@ const Loader = () =>{
         </>
     )
 }
-
-export default Loader;

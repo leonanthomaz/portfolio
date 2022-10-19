@@ -1,19 +1,20 @@
 import React from "react";
 import * as CS from "./CoursesStyles";
+import { items } from '../../sharing/db/dataCourses'
 import { ETitle } from "../../components/Elements/title";
-import { items } from '../../shared/db/dataCourses'
+import { Footer } from "../../components/Footer";
 
 export const Courses = () => {
     
     return (
         <CS.Container>
-            <ETitle title={'Cursos'} subtitle={'Um pouco sobre meus estudos'}/>
+            <ETitle title={'Cursos'} subtitle={'Cursos e Bootcamps que já fiz'}/>
             <div className="courses-box">
                 <CS.Courses>
                   <CS.Wrapper>
-                    {items && items.map((item => {
+                    {items && items.map((item, index) => {
                         return(
-                            <CS.Item>
+                            <CS.Item key={index}>
                                 <CS.ItemImg>
                                     <img src={item.urlImg} alt=''/>
                                 </CS.ItemImg>
@@ -29,10 +30,11 @@ export const Courses = () => {
                                 </CS.ItemURL>
                             </CS.Item>
                         )
-                    }))}
+                    })}
                   </CS.Wrapper>
                 </CS.Courses>                
             </div>
+            <Footer/>
         </CS.Container>
     )
 }

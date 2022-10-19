@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
 width: 100%;
 height: auto;
-margin-top: 70px;
-
+background: ${props => props.theme.background};
+padding-bottom: 50px;
 `;
 
 export const Wrapper = styled.div`
@@ -12,19 +12,18 @@ display: grid;
 grid-template-columns: 350px 350px 350px; 
 justify-content: center;
 gap: 10px;
-/* border: 2px solid green; */
+padding-top: 20px;
 
 @media (max-width: 1200px){
     grid-template-columns: 350px 350px; 
-
 }
 
 @media (max-width: 760px){
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    grid-template-columns: 300px; 
 }
 `;
+
+
 
 export const Item = styled.div`
 
@@ -35,14 +34,18 @@ box-shadow: ${props => props.theme.box_shadow_portfolio};
 border-radius: 10px;
 color: ${props => props.theme.font};
 text-align: center;
+align-items: center;
+
 
 a{
     text-decoration: none;
     color: ${props => props.theme.font};
 }
 
-@media(max-width: 760px){
-}
+/* @media(max-width: 760px){
+    width: auto;
+    height: auto;
+} */
 `;
 
 export const Title = styled.div`

@@ -3,9 +3,8 @@ import { BiCodeBlock } from "react-icons/bi";
 
 export const Container = styled.div`
 width: 100%;
-height: auto;
-margin-top: 70px;
-
+min-height: 100vh;
+background: ${props => props.theme.background};
 `;
 
 
@@ -35,20 +34,22 @@ export const MenuSkills = styled.ul`
 
 export const Wrapper = styled.div`
 display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-gap: 5px;
-padding: 5px;
-padding-top: 2rem;
+    grid-template-columns: 350px 350px 350px; 
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    /* border: 2px solid green; */
 
-@media (max-width: 760px){
-    grid-template-columns: 1fr 1fr;
-    /* border: 2px solid red; */
-}
+    @media (max-width: 1200px){
+        grid-template-columns: 350px 350px; 
 
-@media (max-width: 570px){
-   display: flex;
-   flex-direction: column;
-}
+    }
+
+    @media (max-width: 760px){
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
 `;
 
 export const Grid = styled.div`
@@ -98,6 +99,7 @@ export const SkillsItems = styled.div`
         padding: 10px;
         color: black;
         text-align: center;
+        color: ${props => props.theme.skills_font};
 
         h3{
             padding-bottom: 1rem;

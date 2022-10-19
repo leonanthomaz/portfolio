@@ -3,9 +3,8 @@ import { BiCodeBlock } from "react-icons/bi";
 
 export const Container = styled.div`
 width: 100%;
-height: auto;
-margin-top: 70px;
-
+min-height: 100vh;
+background: ${props => props.theme.background};
 `;
 
 export const Courses = styled.div`

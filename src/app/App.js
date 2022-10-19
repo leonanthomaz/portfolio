@@ -1,51 +1,34 @@
-import { GlobalStyles } from "./shared/styles/GlobalStyles";
 
-import { Navbar } from "./components/Navbar";
-
-import { Intro } from "./pages/Intro";
-import { About } from "./pages/About";
-import { Skills } from "./pages/Skills";
-import { Portfolio } from "./pages/Portfolio";
-import { Courses } from "./pages/Courses";
-import { Contact } from "./pages/Contact";
-import { Info } from "./components/Info";
-
-import { Footer } from './components/Footer';
-import { useContext } from "react";
-import { PortfolioContext } from "./shared/context/portfolio";
+import React, { useContext, CSSProperties, useState, useEffect, Fragment  } from 'react';
+import { Spinner } from './components/Spinner';
+import { Menu } from './components/Menu';
+import { PortfolioContext } from './sharing/context/portfolio';
+import { AppRouter } from './sharing/routes/AppRouter';
+import ClipLoader from "react-spinners/ClipLoader";
 
 
-const App = () => {
-  const { closeNavbar } = useContext(PortfolioContext)
+
+export const App = () => {
+  const { loading, setLoading, closeNavbar } = useContext(PortfolioContext) 
+  // let [loading, setLoading] = useState(true);
+
+  // console.log(localStorage.getItem('theme'))
+
+  useEffect(()=>{
+    setTimeout(()=>{
+      setLoading(false)
+    },1000)
+  },[])
   
-  return (
-    <div className="App" onClick={closeNavbar}>
-      <GlobalStyles/>
-      <Navbar/>
-      <section >
-        <div id="intro">
-          <Intro/>
-        </div>
-        <div id="about">
-          <About/>
-        </div>
-        <div id="skills">
-          <Skills/>
-        </div>
-        <div id="portfolio">
-          <Portfolio/>
-        </div>
-        <div id="courses">
-          <Courses/>
-        </div>
-        <div id="contact">
-          <Contact/>
-          <Info/>
-        </div>
-      </section>
-      <Footer/>
-    </div>
-  );
+  return(
+    <Fragment>
+      { loading ?  
+      <Spinner/> : 
+      <div className="app" onClick={()=>closeNavbar()}> 
+        <Menu/>
+        <AppRouter/>
+      </div> 
+    }
+    </Fragment>
+  )
 }
-
-export default App;
