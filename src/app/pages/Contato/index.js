@@ -49,7 +49,7 @@ export const Contato = () => {
     return (
         <div>
             <C.Container>
-            <ETitle title={'Deixe sua mensagem!'} subtitle={'Responderei assim que possível!'}/>
+            <ETitle title={'Deixe sua mensagem!'} subtitle={'Retornarei assim que possível!'}/>
             <C.FormBox>
             <C.Form ref={form} onSubmit={sendEmail} id="formContact">
                 <div className="label-float">

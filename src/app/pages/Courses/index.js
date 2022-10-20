@@ -3,6 +3,7 @@ import * as CS from "./CoursesStyles";
 import { items } from '../../sharing/db/dataCourses'
 import { ETitle } from "../../components/Elements/title";
 import { Footer } from "../../components/Footer";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 export const Courses = () => {
     
@@ -14,6 +15,7 @@ export const Courses = () => {
                   <CS.Wrapper>
                     {items && items.map((item, index) => {
                         return(
+                            <AnimationOnScroll animateIn="animate__fadeIn">
                             <CS.Item key={index}>
                                 <CS.ItemImg>
                                     <img src={item.urlImg} alt=''/>
@@ -29,6 +31,7 @@ export const Courses = () => {
                                     <a href={item.url}>Ver Certificado</a>
                                 </CS.ItemURL>
                             </CS.Item>
+                            </AnimationOnScroll>
                         )
                     })}
                   </CS.Wrapper>

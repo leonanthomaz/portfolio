@@ -1,17 +1,18 @@
 import React from "react";
 import { ETitle } from "../Elements/title";
 import * as T from './TourStyles'
-import tst from '../../sharing/img/FotoJet.jpg'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 export const Tour = () =>{
+    const imgPath = process.env.REACT_APP_IMGPATH
+
     return(
         <T.Container>
             <ETitle title={'Minha trajetória'}/>
             <T.Wrapper>
                 <T.Left>
                     <AnimationOnScroll animateIn="animate__fadeInLeft">
-                    <T.ImgContainer style={{backgroundImage: "url(" + tst + ")"}}>
+                    <T.ImgContainer style={{backgroundImage: "url(" + imgPath + 'FotoJet.jpg' + ")"}}>
                         <T.ImgWrapper>
                             <T.Info>
                                 <T.Description>

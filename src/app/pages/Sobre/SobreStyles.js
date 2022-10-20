@@ -25,7 +25,7 @@ export const Left = styled.div`
 flex: 1.5;
 width: auto;
 height: auto;
-text-indent: 5px;
+/* text-indent: 5px; */
 display: flex;
 justify-content: center;
 

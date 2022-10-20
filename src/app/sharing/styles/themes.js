@@ -12,8 +12,9 @@ export const lightTheme = {
   boxfont: "#ffffff",
   box_shadow: "0.1em 0.4em 0.2em #414141",
 
-  btn_background_main: "crimson",
-  btn_font_main: "white",
+  //Botões padrão
+  btn_background_main: "yellow",
+  btn_font_main: "#121214",
 
   //Elements
   font_title_el: "crimson",
@@ -101,8 +102,9 @@ export const darkTheme = {
   boxfont: "#121214",
   box_shadow: "0.1em 0.4em 0.4em 0.1em #bbbbbb",
 
-  btn_background_main: "yellow",
-  btn_font_main: "#292929",
+  //Botões padrão
+  btn_background_main: "crimson",
+  btn_font_main: "#ffffff",
 
   //Elements
   font_title_el: "#fbff00",

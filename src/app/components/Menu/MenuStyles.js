@@ -111,7 +111,18 @@ cursor: pointer;
 
 `
 export const ThemeIcon = styled.div`
-/* color: ${({ theme }) => (theme === 'dark' ? 'white' : 'yellow')}; */
 margin-top: -2px;
+`;
 
+export const Active = styled.div`
+/* background: crimson; */
+background: ${({ theme }) => (theme === 'dark' ? 'crimson' : 'white')};
+width: 20px;
+height: 20px;
+border-radius: 50%;
+margin-right: ${({ theme }) => (theme === 'dark' ? '35px' : '')};
+margin-left: ${({ theme }) => (theme === 'light' ? '35px' : '')};
+transition: all ease-in-out 0.5s;
+
+margin-top: 2px;
 `;

@@ -12,6 +12,34 @@ color: ${props => props.theme.font_title_el};
 padding-top: 80px;
 font-family: 'Dela Gothic One', cursive;
 text-transform: uppercase;
+
+
+`;
+
+export const H1 = styled.h1`
+
+    font-size: 35px;
+
+    @media(max-width: 760px){
+        font-size: 30px;
+    }
+
+    @media(max-width: 500px){
+        font-size: 20px;
+    }
+`;
+
+export const H3 = styled.h3`
+
+    font-size: 30px;
+
+    @media(max-width: 760px){
+        font-size: 25px;
+    }
+
+    @media(max-width: 500px){
+        font-size: 16px;
+    }
 `;
 
 export const Icon = styled(BiCodeBlock)`
@@ -44,11 +72,11 @@ export const ETitle = ({title, subtitle}) => {
     return (
     <div>
         <Title>
-        <Icon/><h1>{title}</h1>
+            <Icon/><H1>{title}</H1>
         </Title>
         <AnimationOnScroll animateIn="animate__fadeIn">
         <SubTitle>
-        <h3>{subtitle}</h3>
+            <H3>{subtitle}</H3>
         </SubTitle>
         </AnimationOnScroll>
         <Hr/>

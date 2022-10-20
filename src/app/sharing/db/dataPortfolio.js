@@ -1,25 +1,27 @@
-// import ClapperBoard1 from '../img/portfolio/clapper1.jpg';
-// import ClapperBoard2 from '../img/portfolio/clapper2.jpg';
-import BrasilCovid1 from '../img/portfolio/brasilcovid2.png';
-import BrasilCovid2 from '../img/portfolio/brasilcovid2.png';
-import CasaDoSalgado1 from '../img/portfolio/cds1.png';
-import CasaDoSalgado2 from '../img/portfolio/cds2.png';
-import Saturno1 from '../img/portfolio/saturno1.png';
-import Saturno2 from '../img/portfolio/saturno2.png';
-import Jupter from '../img/portfolio/jupter1.png';
-import TemplateGaleria from '../img/portfolio/template-galeria1.png';
-import TemplateNike from '../img/portfolio/template-nike1.png';
-import TemplateGlobo from '../img/portfolio/template-globo.png';
-import Galleon from '../img/portfolio/galleon.png';
-import Yakisoba1 from '../img/portfolio/yda1.png';
-import Yakisoba2 from '../img/portfolio/yda2.png';
-import Pizzaria1 from '../img/portfolio/pizzaria1.png';
-import Pizzaria2 from '../img/portfolio/pizzaria2.png';
-import Pegasus1 from '../img/portfolio/pegasus1.png';
-import Pegasus2 from '../img/portfolio/pegasus2.png';
-import PopCorn1 from '../img/portfolio/popcorn1.png';
-import PopCorn2 from '../img/portfolio/popcorn2.png';
-import Eleicoes from '../img/portfolio/eleicoes.png';
+// import ClapperBoard1 from '../assets/img/portfolio/clapper1.jpg';
+// import ClapperBoard2 from '../assets/img/portfolio/clapper2.jpg';
+import BrasilCovid1 from '../assets/img/portfolio/brasilcovid1.png';
+import BrasilCovid2 from '../assets/img/portfolio/brasilcovid2.png';
+import CasaDoSalgado1 from '../assets/img/portfolio/cds1.png';
+import CasaDoSalgado2 from '../assets/img/portfolio/cds2.png';
+import Saturno1 from '../assets/img/portfolio/saturno1.png';
+import Saturno2 from '../assets/img/portfolio/saturno2.png';
+import Jupter from '../assets/img/portfolio/jupter1.png';
+import TemplateGaleria from '../assets/img/portfolio/template-galeria1.png';
+import TemplateNike from '../assets/img/portfolio/template-nike1.png';
+import TemplateGlobo from '../assets/img/portfolio/template-globo.png';
+import Galleon from '../assets/img/portfolio/galleon.png';
+import Yakisoba1 from '../assets/img/portfolio/yda1.png';
+import Yakisoba2 from '../assets/img/portfolio/yda2.png';
+import Pizzaria1 from '../assets/img/portfolio/pizzaria1.png';
+import Pizzaria2 from '../assets/img/portfolio/pizzaria2.png';
+import Pegasus1 from '../assets/img/portfolio/pegasus1.png';
+import Pegasus2 from '../assets/img/portfolio/pegasus2.png';
+import PopCorn1 from '../assets/img/portfolio/popcorn1.png';
+import PopCorn2 from '../assets/img/portfolio/popcorn2.png';
+import Eleicoes from '../assets/img/portfolio/eleicoes.png';
+import BN from '../assets/img/portfolio/bn.png';
+
 // import Manutencao from '../assets/img/construcao.png';
 
 
@@ -117,8 +119,8 @@ import Eleicoes from '../img/portfolio/eleicoes.png';
       id: 1,
       title: "Beleza da Natureza",
       subtitle: "E-commerce (Estudos)",
-      img: Pizzaria1,
-      img2: Pizzaria2,
+      img: BN,
+      img2: '',
       description: "Trata-se de um projeto de estudos, onde implemento um ecommerce virtual, desenvolvido em React. Utilizo Context API e Hooks, CRUD do carrinho em localStorage e consumo de dados via banco de dados (MongoBD). Projeto em andamento.",
       date: "Outubro 2022",
       technology: "MERN (Mongo, Express, React e Node)",

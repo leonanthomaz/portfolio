@@ -71,8 +71,9 @@ export const Portfolio = () => {
             {data && data.map((item, index) => {
                 return(
                     <Fragment key={index}>
+                        <AnimationOnScroll animateIn="animate__fadeInUp">
                         <P.Box>
-                            {/* <AnimationOnScroll animateIn="animate__fadeIn"> */}
+                            <AnimationOnScroll animateIn="animate__fadeInUp">
                                 <P.ImgContainer>
                                     <img src={item.img} alt={item.title} onClick={()=>handleFind(item.id)}/>
                                 </P.ImgContainer>
@@ -85,7 +86,7 @@ export const Portfolio = () => {
                                 <div className="btn-container">
                                     <button onClick={()=>handleFind(item.id)}>Ver mais</button>
                                 </div>
-                            {/* </AnimationOnScroll> */}
+                            </AnimationOnScroll>
 
                             {list.map((e, index)=>{
                                 if(e.id === item.id){
@@ -109,7 +110,8 @@ export const Portfolio = () => {
                                     )
                                 }
                             })} 
-                        </P.Box>                  
+                        </P.Box>   
+                        </AnimationOnScroll>               
                     </Fragment>
                 )
             })} 
