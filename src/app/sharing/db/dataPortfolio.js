@@ -19,6 +19,7 @@ import Pegasus1 from '../img/portfolio/pegasus1.png';
 import Pegasus2 from '../img/portfolio/pegasus2.png';
 import PopCorn1 from '../img/portfolio/popcorn1.png';
 import PopCorn2 from '../img/portfolio/popcorn2.png';
+import Eleicoes from '../img/portfolio/eleicoes.png';
 // import Manutencao from '../assets/img/construcao.png';
 
 
@@ -28,8 +29,8 @@ import PopCorn2 from '../img/portfolio/popcorn2.png';
       id: 1,
       title: "Eleição 2022",
       subtitle: "Eleições presidenciais (Feito por mim)",
-      img: PopCorn1,
-      img2: PopCorn2,
+      img: Eleicoes,
+      img2: '',
       preview: "Números da apuração presidencial do Brasil - 2022",
       description: "Card onde apresenta números dos dois candidatos a presidência da República do dia 30/10/2022, consumindo API do TSE.",
       date: "Outubro 2022",
