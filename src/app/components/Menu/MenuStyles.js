@@ -116,7 +116,7 @@ margin-top: -2px;
 
 export const Active = styled.div`
 /* background: crimson; */
-background: ${({ theme }) => (theme === 'dark' ? 'crimson' : 'white')};
+background: ${({ theme }) => (theme === 'dark' ? '#121214' : '#ffffff')};
 width: 20px;
 height: 20px;
 border-radius: 50%;
