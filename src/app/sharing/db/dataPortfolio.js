@@ -37,8 +37,8 @@ import BN from '../assets/img/portfolio/bn.png';
       description: "Card onde apresenta números dos dois candidatos a presidência da República do dia 30/10/2022, consumindo API do TSE.",
       date: "Outubro 2022",
       technology: "React, Javascript, HTML e CSS",
-      url: "https://popcorn-two.vercel.app/",
-      github: "https://github.com/leonanthomaz/popcorn"
+      url: "https://eleicoes2022-two.vercel.app/",
+      github: "https://github.com/leonanthomaz/eleicoes2022"
     },
     {
       id: 2,
