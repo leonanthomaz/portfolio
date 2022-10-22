@@ -20,7 +20,7 @@ import Pegasus2 from '../assets/img/portfolio/pegasus2.png';
 import PopCorn1 from '../assets/img/portfolio/popcorn1.png';
 import PopCorn2 from '../assets/img/portfolio/popcorn2.png';
 import EleicoesST from '../assets/img/portfolio/eleicoes-st.png';
-import EleicoesPT from '../assets/img/portfolio/eleicoes-st.png';
+import EleicoesPT from '../assets/img/portfolio/eleicoes-pt.png';
 import BN from '../assets/img/portfolio/bn.png';
 
 // import Manutencao from '../assets/img/construcao.png';
