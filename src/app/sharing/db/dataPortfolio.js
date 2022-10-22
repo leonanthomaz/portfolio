@@ -19,7 +19,8 @@ import Pegasus1 from '../assets/img/portfolio/pegasus1.png';
 import Pegasus2 from '../assets/img/portfolio/pegasus2.png';
 import PopCorn1 from '../assets/img/portfolio/popcorn1.png';
 import PopCorn2 from '../assets/img/portfolio/popcorn2.png';
-import Eleicoes from '../assets/img/portfolio/eleicoes.png';
+import EleicoesST from '../assets/img/portfolio/eleicoes-st.png';
+import EleicoesPT from '../assets/img/portfolio/eleicoes-st.png';
 import BN from '../assets/img/portfolio/bn.png';
 
 // import Manutencao from '../assets/img/construcao.png';
@@ -29,19 +30,32 @@ import BN from '../assets/img/portfolio/bn.png';
   export const APIListData = [
     {
       id: 1,
-      title: "Eleições 2022",
+      title: "Eleições 2022 - 2º Turno",
       subtitle: "Eleições presidenciais",
-      img: Eleicoes,
+      img: EleicoesST,
       img2: '',
-      preview: "Números da apuração presidencial do Brasil - segundo turno 2022",
-      description: "Card onde apresenta estatísticas dos dois candidatos a presidência da República do dia 30/10/2022, consumindo API do TSE.",
+      preview: "Números da apuração presidencial do Brasil - segundo turno - 2022",
+      description: "Portal onde apresenta estatísticas dos dois candidatos a presidência da República do dia 30/10/2022, consumindo API do TSE.",
       date: "Outubro 2022",
       technology: "React, Javascript, HTML e CSS",
       url: "https://eleicoes2022-segundo-turno.vercel.app/",
-      github: "https://github.com/leonanthomaz/eleicoes2022"
+      github: "https://github.com/leonanthomaz/eleicoes2022-segundoTurno"
     },
     {
       id: 2,
+      title: "Eleições 2022 - 1º Turno",
+      subtitle: "Eleições presidenciais",
+      img: EleicoesPT,
+      img2: '',
+      preview: "Números da apuração presidencial do Brasil - primeiro turno - 2022",
+      description: "Portal onde apresenta estatísticas dos candidatos a presidência da República do dia 02/10/2022, consumindo API do TSE.",
+      date: "Outubro 2022",
+      technology: "React, Javascript, HTML e CSS",
+      url: "https://eleicoes2022-primeiro-turno.vercel.app/",
+      github: "https://github.com/leonanthomaz/eleicoes2022-primeiroTurno"
+    },
+    {
+      id: 3,
       title: "PopCorn",
       subtitle: "Catálogo de Filmes ",
       img: PopCorn1,
@@ -54,7 +68,7 @@ import BN from '../assets/img/portfolio/bn.png';
       github: "https://github.com/leonanthomaz/popcorn"
     },
     {
-      id: 3,
+      id: 4,
       title: "Brasil Covid",
       subtitle: "API de estatísticas da Covid no Brasil (Estudos)",
       img: BrasilCovid1,
