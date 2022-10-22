@@ -29,21 +29,21 @@ import BN from '../assets/img/portfolio/bn.png';
   export const APIListData = [
     {
       id: 1,
-      title: "Eleição 2022",
-      subtitle: "Eleições presidenciais (Feito por mim)",
+      title: "Eleições 2022",
+      subtitle: "Eleições presidenciais",
       img: Eleicoes,
       img2: '',
-      preview: "Números da apuração presidencial do Brasil - 2022",
-      description: "Card onde apresenta números dos dois candidatos a presidência da República do dia 30/10/2022, consumindo API do TSE.",
+      preview: "Números da apuração presidencial do Brasil - segundo turno 2022",
+      description: "Card onde apresenta estatísticas dos dois candidatos a presidência da República do dia 30/10/2022, consumindo API do TSE.",
       date: "Outubro 2022",
       technology: "React, Javascript, HTML e CSS",
-      url: "https://eleicoes2022-two.vercel.app/",
+      url: "https://eleicoes2022-segundo-turno.vercel.app/",
       github: "https://github.com/leonanthomaz/eleicoes2022"
     },
     {
       id: 2,
       title: "PopCorn",
-      subtitle: "Catálogo de Filmes (Feito por mim)",
+      subtitle: "Catálogo de Filmes ",
       img: PopCorn1,
       img2: PopCorn2,
       preview: "Sistema de consultas de filmes com comentários",
@@ -100,7 +100,7 @@ import BN from '../assets/img/portfolio/bn.png';
     {
       id: 3,
       title: "Design GloboPlay",
-      subtitle: "Desafio Card Promocional (Feito por mim)",
+      subtitle: "Desafio Card Promocional ",
       img: TemplateGlobo,
       img2: TemplateGlobo,
       preview: "Implementado em HTML e CSS",
@@ -130,7 +130,7 @@ import BN from '../assets/img/portfolio/bn.png';
     {
       id: 2,
       title: "Casa do Salgado",
-      subtitle: "E-commerce (Feito por mim)",
+      subtitle: "E-commerce ",
       img: CasaDoSalgado1,
       img2: CasaDoSalgado2,
       description: "E-commerce virtual, escrito em PHP com base de dados MySQL, para o seguimento comercial, onde o usuário tem a disposição o cardápio virtual dividido por página. Ao abrir sessão, o cliente tem a disposição o carrinho de compras bloqueado pelas condições de horário de funcionamento e realização de login, área privada, onde pode alterar seus dados de maneira completa, redefinição de senha e exclusão de conta. O cliente ainda pode, ao finalizar a compra, acompanhar o status da sua entrega em tempo real. O projeto ainda conta com área administrativa, onde o administrador com acesso tem total controle de todo o site, podendo manipular dados de clientes e produtos, bem como alterar o status da entrega, espelhado diretamente para o cliente.",
@@ -142,7 +142,7 @@ import BN from '../assets/img/portfolio/bn.png';
     {
       id: 3,
       title: "Yakisoba do Alto",
-      subtitle: "Cardapio virtual (Feito por mim)",
+      subtitle: "Cardapio virtual ",
       img: Yakisoba1,
       img2: Yakisoba2,
       description: "Template de um dos meus primeiros mini projetos. Consiste em um cardapio virtual, manipulação de páginas com JQuery e integração via Whatsapp.",
@@ -198,7 +198,7 @@ import BN from '../assets/img/portfolio/bn.png';
     {
       id: 4,
       title: "Jupter",
-      subtitle: "Chat App (Feito por mim)",
+      subtitle: "Chat App ",
       img: Jupter,
       preview: "Aplicativo desenvolvido em PHP",
       description: "Projeto desenvolvido em PHP e Javascript (JQuery). Trata-se de um aplicativo de conversas, tendo como front-end Bootstrap, CSS e backend PHP.",
