@@ -12,7 +12,7 @@ scroll-behavior: smooth;
 background: ${props => props.theme.background_navbar};
 color: ${props => props.theme.font_navbar};
 box-shadow: ${props => props.theme.navbar_shadow};
-z-index: 999999;
+z-index: 999;
 
 `;
 

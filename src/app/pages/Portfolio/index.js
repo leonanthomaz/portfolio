@@ -72,7 +72,7 @@ export const Portfolio = () => {
                         <P.Box>
                             {/* <AnimationOnScroll animateIn="animate__fadeInUp"> */}
                                 <P.ImgContainer>
-                                    <img src={item.img} alt={item.title} onClick={()=>handleFind(item.id)}/>
+                                    <img src={item.img} alt={item.title}/>
                                 </P.ImgContainer>
                                 
                                 <h4>{item.title}</h4> 

@@ -54,6 +54,18 @@ export const Box = styled.div`
     box-shadow: ${props => props.theme.box_shadow_portfolio};
     border-radius: 10px;
     color: ${props => props.theme.font};
+
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+
+    :hover{
+        -moz-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        box-shadow: "4px 4px 5px #121214";
+        border-radius: 5px;
+    }
     
     h4{
         text-align: center;
@@ -117,19 +129,9 @@ export const ImgContainer = styled.div`
 
     img{
         width: 100%;
-        -moz-transition: all 0.5s;
-        -webkit-transition: all 0.5s;
-        transition: all 0.5s;
-        opacity: 0.8;
-        cursor: pointer;
 
         :hover{
-            -moz-transform: scale(1.1);
-            -webkit-transform: scale(1.1);
-            transform: scale(1.1);
             box-shadow: "4px 4px 5px #121214";
-            opacity: 1;
-            border-radius: 5px;
         }
     }
 
