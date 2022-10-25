@@ -81,7 +81,10 @@ export const SkillsHome = () =>{
                     </SH.ItemDW>
            
                 </SH.Box>
-                <a href="/skills">Ver lista completa</a>
+                <SH.ButtonContainer>
+                <SH.Button to='/skills'>Ver lista completa</SH.Button>
+
+                </SH.ButtonContainer>
             </SH.Wrapper>
         </SH.Container>
     )

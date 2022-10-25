@@ -4,38 +4,29 @@ import styled from "styled-components";
 export const Container = styled.div`
 background: ${props => props.theme.background};
 color: ${props => props.theme.font};
-
-
-
+height: auto;
 `;
 
-
-export const Wrapper = styled.div`
-border: 2px solid red;
-margin: auto;
-
-width: 800px;
-height: 500px;
-
-@media (max-width: 760px){
-    width: 500px;
-    height: 200px;
-}
-
-@media (max-width: 375px){
-    width: 300px;
-    height: 100px;
-}
-
-`;
 
 export const SplideContainer = styled.div`
+border-radius: 20px;
+
+width: 600px;
+height: auto;
+margin: auto;
+
+@media (max-width: 760px){
+    max-width: 400px;
+}
+
+@media (max-width: 500px){
+    max-width: 350px;
+}
 
 img{
     width: 100%;
-    max-height: 550px;
-    min-height: 300px;
-    z-index: 1;
+    border-radius: 20px;
+
 }
 `;
 

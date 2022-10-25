@@ -11,6 +11,7 @@ import img2 from '../../sharing/assets/img/destaques/popcorn.png';
 import img3 from '../../sharing/assets/img/destaques/bn.png';
 import img4 from '../../sharing/assets/img/destaques/cds.png';
 import img5 from '../../sharing/assets/img/destaques/eleicoes-pt.png';
+import { Button } from "react-bootstrap";
 
 // import img1 from '../../sharing/assets/img/portfolio/d.png';
 // import img2 from '../../sharing/assets/img/portfolio/cds2.png';
@@ -52,22 +53,22 @@ export const Tour = () =>{
     return(
         <T.Container>
             <ETitle title={'Destaques'}/>
-            <T.Wrapper>
-                <T.SplideContainer>
-                    <Splide aria-label="My Favorite Images">
-                        { lista.map((e, i)=>{
-                            return(
-                                <SplideSlide>
-                                    <a href="#" key={i}>
-                                        <img src={e.img} alt={e.name}/>
-                                    </a>
-                                </SplideSlide>
-                            )
-                        })}
-                    </Splide>
-                    <button>Ver mais</button>
-                </T.SplideContainer>
-            </T.Wrapper>
+            <T.SplideContainer>
+                <Splide aria-label="My Favorite Images">
+                    { lista.map((e, i)=>{
+                        return(
+                            <SplideSlide>
+                                <a href="#" key={i}>
+                                    <img src={e.img} alt={e.name}/>
+                                </a>
+                            </SplideSlide>
+                        )
+                    })}
+                </Splide>
+                <T.ButtonContainer>
+                    <T.Button>Ver mais</T.Button>
+                </T.ButtonContainer>
+            </T.SplideContainer>
         </T.Container>
     )
 }
