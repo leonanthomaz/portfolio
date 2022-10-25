@@ -5,37 +5,30 @@ export const Container = styled.div`
 background: ${props => props.theme.background};
 color: ${props => props.theme.font};
 
-
-
+/* display: flex;
+justify-content: center; */
 `;
 
+export const Left = styled.div`
+`;
+
+export const Right = styled.div`
+/* border: 2px solid red; */
+`;
 
 export const Wrapper = styled.div`
-border: 2px solid red;
-margin: auto;
+display: grid;
+grid-template-columns: 500px 500px;
+justify-content: center;
+align-items: center;
+/* border: 2px solid red; */
+gap: 10px;
+padding-top: 20px;
 
-width: 800px;
-height: 500px;
 
-@media (max-width: 760px){
-    width: 500px;
-    height: 200px;
-}
-
-@media (max-width: 375px){
-    width: 300px;
-    height: 100px;
-}
-
-`;
-
-export const SplideContainer = styled.div`
-
-img{
-    width: 100%;
-    max-height: 550px;
-    min-height: 300px;
-    z-index: 1;
+@media(max-width: 760px){
+    display: flex;
+    flex-direction: column;
 }
 `;
 
@@ -44,8 +37,8 @@ export const ImgContainer = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
 
-    width: 100%;
-    height: max-content;
+    width: 500px;
+    height: 500px;
 
     @media (max-width: 760px){
         width: 300px;

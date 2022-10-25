@@ -3,8 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
 width: 100%;
 height: auto;
-/* padding-top: 80px; */
-/* background: ${props => props.theme.background}; */
 `;
 
 export const Wrapper = styled.div`
@@ -76,16 +74,6 @@ export const SocialLogo = styled.div`
         align-items: center;
         
     }
-
-  /* color: #fff; */
-  /* justify-self: start;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  margin-bottom: 16px;
-  font-weight: bold; */
 `;
 
 export const Address = styled.div`

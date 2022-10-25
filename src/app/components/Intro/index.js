@@ -9,24 +9,27 @@ export const Intro = () => {
     const imgPath = process.env.REACT_APP_IMGPATH
 
     return (
-      <I.Container>
+      <I.Container >
+        <I.FeaturedVertical>
+          <I.FeaturedHorizontal>
         <I.Box>
 
           <I.Left>
-            <I.ImgContainer>
-              {theme  === 'dark' || theme  === null ? 
+            <I.ImgContainer background={imgPath + 'back-js.png'}>
+              <img src={imgPath + 'leonan-color.png'} alt="" />
+              {/* {theme  === 'dark' || theme  === null ? 
                 <img src={imgPath + 'leonan-color.png'} alt="" />
               : <img src={imgPath + 'leonan-uncolor.png'} alt="" />
-              }
+              } */}
             </I.ImgContainer>
           </I.Left>
 
           <I.Right>
+          
             <I.Wrapper>
-              <h1>Bem vindo ao meu portfólio!</h1>
-              
+              {/* <h2>Bem vindo ao meu portfólio!</h2> */}
               <AnimationOnScroll animateIn="animate__fadeIn">
-                  <h2>Leonan Thomaz</h2>
+                  <h1>Leonan Thomaz</h1>
               </AnimationOnScroll>
               <h4> 
               <Typewriter 
@@ -39,17 +42,18 @@ export const Intro = () => {
               /> 
               </h4>
                 
-                <div className="arrow-down">
-                  <a href="#sobre">
-                      <i className="fa fa-angle-double-down icone"></i>
-                  </a>
-                </div>
+              <div className="arrow-down">
                 <a href="#sobre">
                   <I.Arrow/>
                 </a>
-            </I.Wrapper>      
+              </div>
+             
+            </I.Wrapper>  
+            
           </I.Right>
         </I.Box>
+          </I.FeaturedHorizontal>
+        </I.FeaturedVertical>
       </I.Container>
 
     )

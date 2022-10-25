@@ -13,8 +13,6 @@ import TemplateGlobo from '../assets/img/portfolio/template-globo.png';
 import Galleon from '../assets/img/portfolio/galleon.png';
 import Yakisoba1 from '../assets/img/portfolio/yda1.png';
 import Yakisoba2 from '../assets/img/portfolio/yda2.png';
-import Pizzaria1 from '../assets/img/portfolio/pizzaria1.png';
-import Pizzaria2 from '../assets/img/portfolio/pizzaria2.png';
 import Pegasus1 from '../assets/img/portfolio/pegasus1.png';
 import Pegasus2 from '../assets/img/portfolio/pegasus2.png';
 import PopCorn1 from '../assets/img/portfolio/popcorn1.png';

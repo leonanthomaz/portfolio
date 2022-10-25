@@ -21,7 +21,7 @@ export const Courses = () => {
                                     <img src={item.urlImg} alt=''/>
                                 </CS.ItemImg>
                                 <CS.ItemTitle>
-                                    <h1>{item.title}</h1>
+                                    <h2>{item.title}</h2>
                                     <h3>{item.cardSubtitle}</h3>
                                 </CS.ItemTitle>
                                 <CS.ItemText>

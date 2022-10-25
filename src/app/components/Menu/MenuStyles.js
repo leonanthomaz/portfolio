@@ -19,6 +19,7 @@ z-index: 9;
 export const Left = styled.div`
 display: flex;
 `;
+
 export const Right = styled.div`
 position: absolute;
 right: 0;
@@ -63,6 +64,10 @@ color: ${props => props.theme.font_navbar};
 .inativo{
     color: ${props => props.theme.font_navbar};
     text-decoration: none;
+
+    :hover{
+        color: yellow;
+    }
 }
 
 
@@ -91,9 +96,7 @@ border: 1px solid transparent;
 @media(max-width: 760px){
     line-height: 35px;
 }
-`
-
-
+`;
 
 export const ThemeContainer = styled.div`
 /* border: 2px solid red; */
@@ -107,16 +110,25 @@ background: ${({ theme }) => (theme === 'dark' ? 'white' : 'black')};
 color: ${({ theme }) => (theme === 'dark' ? 'black' : 'white')};
 transition: all 0.5s ease;
 cursor: pointer;
+border: 3px solid linear-gradient(45 deg, red, blue);
+/* animation: spin 0.8s linear forwards; */
 
 
-`
+/* @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+} */
+
+`;
+
 export const ThemeIcon = styled.div`
 margin-top: -2px;
+
 `;
 
 export const Active = styled.div`
 /* background: crimson; */
-background: ${({ theme }) => (theme === 'dark' ? '#121214' : '#ffffff')};
+background: ${({ theme }) => (theme === 'dark' ? '#252525' : '#ffffff')};
 width: 20px;
 height: 20px;
 border-radius: 50%;

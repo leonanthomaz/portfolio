@@ -36,14 +36,14 @@ export const ModalPortfolio = ({show,
                     cursor: 'pointer'
                     }} onClick={handleClose}
                     />
-                    <h1 style={{
+                    <h2 style={{
                         color: '#14141498', 
                         textAlign: 'center', 
                         marginTop: '20px',
                         borderBottom: '2px solid',
                         lineHeight: '5rem',
                         fontWeight: 900
-                        }}>{title}</h1><br/>
+                        }}>{title}</h2><br/>
                     <h4 style={{textAlign: 'center'}}>{subtitle}</h4><br/>
                     <div className="" style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                         <img src={img2 ? img2 : img} alt={title} style={{width: '70%'}} />

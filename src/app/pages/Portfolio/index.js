@@ -44,7 +44,6 @@ export const Portfolio = () => {
     }, [selected]);
 
     const handleFind = (id) => {
-        // console.log(id)
         const item = data.filter(e => e.id === id)
         setList(item)
         handleShow()
@@ -53,27 +52,25 @@ export const Portfolio = () => {
     return (
         <P.Container>
             <ETitle title={'Portfólio'} subtitle={'Conhecimentos em prática!'}/>
-            <P.MenuPortfolioGroup>
-                <P.MenuPortfolio>
-                    {category.map((item, index) => (
-                    <PortfolioList
-                        title={item.title}
-                        active={selected === item.id}
-                        setSelected={setSelected}
-                        id={item.id}
-                        key={index}
-                    />
-                    ))}
-                </P.MenuPortfolio>
-            </P.MenuPortfolioGroup>
+            <P.MenuPortfolio>
+                {category.map((item, index) => (
+                <PortfolioList
+                    title={item.title}
+                    active={selected === item.id}
+                    setSelected={setSelected}
+                    id={item.id}
+                    key={index}
+                />
+                ))}
+            </P.MenuPortfolio>
 
           <P.Wrapper>
             {data && data.map((item, index) => {
                 return(
                     <Fragment key={index}>
-                        <AnimationOnScroll animateIn="animate__fadeInUp">
+                        {/* <AnimationOnScroll animateIn="animate__fadeInUp"> */}
                         <P.Box>
-                            <AnimationOnScroll animateIn="animate__fadeInUp">
+                            {/* <AnimationOnScroll animateIn="animate__fadeInUp"> */}
                                 <P.ImgContainer>
                                     <img src={item.img} alt={item.title} onClick={()=>handleFind(item.id)}/>
                                 </P.ImgContainer>
@@ -86,7 +83,7 @@ export const Portfolio = () => {
                                 <div className="btn-container">
                                     <button onClick={()=>handleFind(item.id)}>Ver mais</button>
                                 </div>
-                            </AnimationOnScroll>
+                            {/* </AnimationOnScroll> */}
 
                             {list.map((e, index)=>{
                                 if(e.id === item.id){
@@ -111,7 +108,7 @@ export const Portfolio = () => {
                                 }
                             })} 
                         </P.Box>   
-                        </AnimationOnScroll>               
+                        {/* </AnimationOnScroll>                */}
                     </Fragment>
                 )
             })} 

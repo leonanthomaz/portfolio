@@ -21,9 +21,11 @@ export const Sobre = () => {
                   ferramentas de versionamento Git e Github (principais queries) e noções em outras linguagens, como Python e C#.
                   e de banco de dados Mongo DB e MySQL (nível DDL, operações CRUD e consultas básicas)</p>
               <p>Atualmente estou em busca de uma oportunidade em Desenvolvimento WEB.</p>
+            <AnimationOnScroll animateIn="animate__bounceIn">
               <A.LinkCurriculum>
                   <a className="btn" href={curriculo} download>Baixe meu curriculo</a>
               </A.LinkCurriculum>
+              </AnimationOnScroll>
             </A.Text>
           </A.Left>
           <A.Right>

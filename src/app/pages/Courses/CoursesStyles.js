@@ -55,10 +55,10 @@ img{
 export const ItemTitle = styled.div`
 text-align: center;
 
-h1{
+h2{
     font-size: 18px;
     padding-top: 10px;
-    color: ${props => props.theme.font_courses_h1};
+    color: ${props => props.theme.font_courses_h2};
     /* color: yellow; */
     /* color: gray */
 }

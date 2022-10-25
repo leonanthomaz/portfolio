@@ -34,12 +34,12 @@ export const useThemeContext = () => {
     if (isDarkTheme === 'dark') {
       setIsDarkTheme('light');
       localStorage.setItem('theme', 'light');
-      window.location.reload(false);
+      // window.location.reload(false);
     }
     if (isDarkTheme === 'light') {
       setIsDarkTheme('dark');
       localStorage.setItem('theme', 'dark');
-      window.location.reload(false);
+      // window.location.reload(false);
     }
   }
 

@@ -1,0 +1,17 @@
+a{
+    color: #c2c2c29f;
+    color: linear-gradient(red, #1d1d81);
+    color: linear-gradient("#1d1d81", red);
+    color: #252525;
+    color: #350235;
+
+
+    color: rgba(0, 0, 0, 0.68);
+    
+    color: #f7f7f7;
+
+    color: rgba(255, 255, 255, 0.5);
+
+    color: whitesmoke;
+
+}

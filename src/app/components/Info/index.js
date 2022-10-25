@@ -9,7 +9,7 @@ import { ETitle } from '../../components/Elements/title'
 export const Info = () => {
     return (
         <IF.Container>
-            <ETitle title={'Pode me chamar!'} subtitle={'Estou a disposição!'}/>
+            <ETitle title={'Me chame para um café!'} subtitle={'Estou a disposição!'}/>
             <IF.Wrapper>
                 <AnimationOnScroll animateIn="animate__fadeInUp">
                     <IF.Item>

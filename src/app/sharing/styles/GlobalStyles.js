@@ -17,7 +17,7 @@ export const GlobalStyles = createGlobalStyle`
         scroll-snap-type: y mandatory;
         scrollbar-width: none; //for firefox
         background: ${props => props.theme.background};
-
+        
                 
         &::-webkit-scrollbar{
                 display: none;
@@ -34,22 +34,14 @@ export const GlobalStyles = createGlobalStyle`
         }
 
         h3{
-            font-family: 'Didact Gothic', sans-serif;
+            font-family: 'Dela Gothic One', cursive;
             color: ${props => props.theme.h3};
         }
 
-        .btn{
-            text-decoration: none;
-            color: ${props => props.theme.btn_font};
-            background-color: ${props => props.theme.btn_background};
-            transition: all ease 1s;
-            
-            :hover{
-                transition: all ease 0.5s;
-                background-color: #ffff2e;
-                color: ${props => props.theme.btn_font_hover};
-            }
-        }        
+        h4{
+            font-family: 'Didact Gothic', sans-serif;
+            color: ${props => props.theme.h4};
+        }       
     } 
 }
 

@@ -60,7 +60,7 @@ export const SkillsItems = styled.div`
   width: 250px;
   padding: 15px;
   background: ${props => props.theme.skills_background_box};
-  box-shadow: ${props => props.theme.navbar_shadow};
+  box-shadow: ${props => props.theme.box_shadow_skills};
   border-radius: 7px;
   transition: all ease 0.5s;
   /* -webkit-transition: -webkit-transform .5s ease; */

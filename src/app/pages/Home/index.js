@@ -7,13 +7,14 @@ import { Sobre } from "../Sobre";
 import { Footer } from "../../components/Footer";
 import { Tour } from "../../components/Tour";
 import { Info } from "../../components/Info";
+import { SkillsHome } from "../../components/SkillsHome";
 
 export const Home = () => {
   return (
         <H.Container>
             <Intro/>
-            {/* <H.Parallax/> */}
             <Sobre/>
+            <SkillsHome/>
             <Tour/>
             <Info />
             <Footer/>

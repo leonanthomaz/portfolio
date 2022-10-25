@@ -5,11 +5,9 @@ export const Container = styled.div`
 width: 100%;
 min-height: 100vh;
 background: ${props => props.theme.background};
-`;
-
-export const MenuPortfolioGroup = styled.div`
 
 `;
+
 
 export const MenuPortfolio = styled.ul`
     margin: 10px;
@@ -35,6 +33,7 @@ export const Wrapper = styled.div`
     grid-template-columns: 350px 350px 350px; 
     justify-content: center;
     gap: 10px;
+    
     /* border: 2px solid green; */
 
     @media (max-width: 1200px){
@@ -89,8 +88,8 @@ export const Box = styled.div`
             display: flex;
             justify-content: center;
             align-items: center;
-            background: ${props => props.theme.btn_background_main};
-            color: ${props => props.theme.btn_font_main};
+            background: linear-gradient(to top right, #ff4747a9, #fdfa288f);
+            color: ${props => props.theme.font};
             font-weight: 700;
             border: none;
             padding: 5px;
@@ -102,8 +101,7 @@ export const Box = styled.div`
                         -moz-transition: all .1s linear;
 
             :hover{
-                color: white;
-                background: green;
+                background: linear-gradient(to top right, #fdfa288f, #ff4747a9);
                 transition: all .1s linear;
                         -webkit-transition: all .1s linear;
                         -moz-transition: all .1s linear;

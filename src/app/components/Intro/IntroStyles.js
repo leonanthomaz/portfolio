@@ -4,16 +4,39 @@ import { FaAngleDoubleDown } from "react-icons/fa";
 export const Container = styled.div`
 width: 100%;
 height: auto;
-padding-top: 80px;
 background: ${props => props.theme.background};
+background-image: url('https://w7.pngwing.com/pngs/620/868/png-transparent-computer-background-computer-keyboard-science-and-technology.png');
+background-attachment: fixed;
+background-size: cover;
+background-repeat: no-repeat;
+
+@media(max-width: 760px){
+    background-image: url('https://wallpaperforu.com/wp-content/uploads/2020/10/food-wallpaper-20100313234829-scaled.jpg');
+    /* background-image: url('https://w7.pngwing.com/pngs/620/868/png-transparent-computer-background-computer-keyboard-science-and-technology.png'); */
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 `;
 
 export const Box = styled.div`
+padding-top: 80px;
+/* background-color: ${props => props.theme.background_intro}; */
+height: 100vh;
+display: grid;
+grid-template-columns: auto auto;
+justify-content: center;
+align-items: center;
 
-display: flex;
-justify-content: space-around;
+@media(max-height: 450px){
+    padding-top: 50px;
+    justify-content: none;
+}
 
-@media(max-width: 760px){
+@media(max-width: 600px){
+    display: flex;
     justify-content: center;
     flex-direction: column;
 }
@@ -22,39 +45,36 @@ justify-content: space-around;
 
 export const Left = styled.div`
 flex: 1;
-
 display: flex;
 justify-content: center;
-padding-top: 20px;
 `;
 
 export const ImgContainer = styled.div`
-width: 500px;
-height: 500px;
+width: 480px;
+height: 480px;
 background: ${props => props.theme.background_intro_photo};
 border-radius: 50%;
-margin-left: 20px;
-
-      
-@media (max-width:1000px){
-    width: 400px;
-    height: 400px;
-}
-
-@media (max-width:760px){
-    width: 230px;
-    height: 230px;
-    margin-top: 20px;
-}
+margin-left: 10px;
 
 img {
     height: 100%;
 }
 
+@media(max-height: 500px) or (max-width: 900px){
+    width: 280px;
+    height: 280px;
+}
+
+@media (max-width: 760px){
+    width: 250px;
+    height: 250px;
+    margin-top: 20px;
+}
+
 `;
 
 export const Right = styled.div`
-flex: 2;
+flex: 3.5;
 `;
 
 export const Wrapper = styled.div`
@@ -66,11 +86,31 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 padding-top: 10px;
+text-align: start;
+
+@media (max-width: 760px){
+    text-align: center;
+    padding-left: 0;
+    align-items: center;
+    width: 100%;
+}
 
 h1{
-    font-size: 60px;
+    font-size: 50px;
     margin: 10px 0;
     color: ${props => props.theme.h1};
+    font-family: 'Dela Gothic One', cursive;
+    text-transform: uppercase;
+
+    @media (max-width:1000px){
+        font-size: 30px;
+    }
+}
+
+h2{
+    font-size: 60px;
+    margin: 10px 0;
+    color: ${props => props.theme.h2};
     font-family: 'Lobster', cursive;
 
     @media (max-width:1000px){
@@ -83,7 +123,7 @@ h1{
     }
 }
 
-h2 {
+h3{
     font-size: 55px;
     font-family: 'Dela Gothic One', cursive;
     color: ${props => props.theme.h2};
@@ -98,7 +138,7 @@ h2 {
     }
 }
 
-h4 {
+h4{
     font-size: 30px;
     padding-top: 10px;
 
@@ -115,25 +155,19 @@ h4 {
     }
 }
 
-@media (max-width:760px){
-    padding-left: 0;
-    align-items: center;
-    width: 100%;
-    height: 50%;
+.arrow-down{
+    text-align: center;
 }
 `;
 
 export const Arrow = styled(FaAngleDoubleDown)`
- text-align: center;
 
- font-size: 56px;
+font-size: 56px;
 color: ${props => props.theme.intro_arrow};
 opacity: 1;
 animation: anima 1500ms ease infinite;
 
-@media (min-width:1200px){
-    float: left;
-    margin-left: 300px;
+@media (min-width: 1200px){
     margin-top: 3rem;
     font-size: 76px;
 }
@@ -151,3 +185,30 @@ animation: anima 1500ms ease infinite;
 
 `;
 
+export const FeaturedHorizontal = styled.div`
+
+width: 100%;
+height: 100vh;
+background-image: ${props => props.theme.background_horizontal};
+
+display: flex;
+flex-direction: column;
+justify-content: center;    
+
+
+/* @media(max-width: 760px){
+    background-image: none;
+} */
+
+`;
+
+export const FeaturedVertical = styled.div`
+
+width: 100%;
+height: 100vh;
+background-image: ${props => props.theme.background_vertical};
+  
+/* @media(max-width: 760px){
+    background-image: none;
+} */
+`;

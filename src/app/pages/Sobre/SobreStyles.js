@@ -10,9 +10,12 @@ display: grid;
 grid-template-columns: 500px 500px;
 justify-content: center;
 align-items: center;
-/* border: 2px solid red; */
 padding: 20px;
 
+@media (max-width: 1000px){
+    grid-template-columns: 350px 350px;
+
+}
 
 @media (max-width: 760px){
     display: flex;
@@ -25,7 +28,6 @@ export const Left = styled.div`
 flex: 1.5;
 width: auto;
 height: auto;
-/* text-indent: 5px; */
 display: flex;
 justify-content: center;
 
@@ -60,19 +62,12 @@ font-size: 16px;
 
 `;
 
-
-
-
 export const ImgContainer = styled.div`
 max-width: 800px;
 
 img{
     width: 100%;
 }
-
-/* @media (max-width: 760px){
-    display: none;
-} */
 `;
 
 export const LinkCurriculum = styled.div`
@@ -81,26 +76,25 @@ text-align: center;
 margin-top: 20px;
 border-radius: 20px;
 font-weight: 700;
-max-width: 200px;
+width: 200px;
 
 background: ${props => props.theme.btn_background_main};
-
-
+transition: all .1s linear;
+                        -webkit-transition: all .1s linear;
+                        -moz-transition: all .1s linear;
+:hover{
+    width: 220px;
+    transition: all .1s linear;
+                        -webkit-transition: all .1s linear;
+                        -moz-transition: all .1s linear;
+}
 
 a{
     color: ${props => props.theme.btn_font_main};
     font-weight: 700;
-    
+
     :hover{
-        color: ${props => props.theme.btn_font_main};
+        color: ${props => props.theme.btn_font_main_hover};
     }
 }
-/* @media (min-width: 760px){
-    margin-top: -150px;
-
-} */
-
-/* @media (max-width: 1000px){
-    margin-right: 50%;
-} */
 `;
