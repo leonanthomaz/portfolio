@@ -9,6 +9,7 @@ background-image: url('https://w7.pngwing.com/pngs/620/868/png-transparent-compu
 background-attachment: fixed;
 background-size: cover;
 background-repeat: no-repeat;
+z-index: 1;
 
 @media(max-width: 760px){
     background-image: url('https://wallpaperforu.com/wp-content/uploads/2020/10/food-wallpaper-20100313234829-scaled.jpg');
@@ -17,6 +18,8 @@ background-repeat: no-repeat;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    z-index: 1;
+
 }
 
 `;

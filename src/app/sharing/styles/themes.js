@@ -28,9 +28,10 @@ export const lightTheme = {
   icon_navbar: "#252525",
   font_navbar_active: "red",
   font_navbar: "#252525",
-  background_navbar_mobile: "whitesmokefa",
+  background_navbar_mobile: "whitesmoke",
   font_navbar_hover: "gray",
   navbar_shadow: "4px 4px 5px #00000040",
+  font_navbar_hover: "crimson",
 
   //intro
   background_intro_photo: "crimson",
@@ -125,6 +126,7 @@ export const darkTheme = {
   icon_navbar: "whitesmoke",
   background_navbar_mobile: "#1b1b1bfa",
   navbar_shadow: "2px 2px 3px #252525",
+  font_navbar_hover: "yellow",
 
   //intro
   font_intro_Typewriter: "#fbff00",

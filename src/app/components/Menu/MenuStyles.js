@@ -12,7 +12,7 @@ scroll-behavior: smooth;
 background: ${props => props.theme.background_navbar};
 color: ${props => props.theme.font_navbar};
 box-shadow: ${props => props.theme.navbar_shadow};
-z-index: 9;
+z-index: 999999;
 
 `;
 
@@ -66,7 +66,7 @@ color: ${props => props.theme.font_navbar};
     text-decoration: none;
 
     :hover{
-        color: yellow;
+        color: ${props => props.theme.font_navbar_hover};
     }
 }
 
