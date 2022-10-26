@@ -66,6 +66,7 @@ font-size: 32px;
 color: ${props => props.theme.font_icon};
 
 `
+
 export const Location = styled.div`
 /* border: 2px solid red; */
 max-width: 500px;

@@ -1,12 +1,14 @@
 import React, { useRef, useState } from 'react';
-import * as C from './ContatoStyles'
+import * as C from './ContactStyles'
 import emailjs from '@emailjs/browser';
 import { ETitle } from "../../components/Elements/title";
 import { Footer } from "../../components/Footer";
 
 import { ModalContact } from '../../components/ModalContact';
+import { Info } from '../../components/Info';
+import { InfoContact } from '../../components/InfoContact';
 
-export const Contato = () => {
+export const Contact = () => {
 
     const imgPath = process.env.REACT_APP_IMGPATH
     let checked = imgPath + 'checked.png'
@@ -80,6 +82,7 @@ export const Contato = () => {
             checked={checked}
             erroricon={erroricon}
              />
+             <InfoContact/>
              <Footer/>
             </C.Container>
         </div>

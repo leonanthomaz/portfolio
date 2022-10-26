@@ -7,7 +7,7 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 export const Intro = () => {
     const theme = localStorage.getItem('theme') || null
     const imgPath = process.env.REACT_APP_IMGPATH
-
+    
     return (
       <I.Container >
         <I.FeaturedVertical>
@@ -28,9 +28,7 @@ export const Intro = () => {
           
             <I.Wrapper>
               {/* <h2>Bem vindo ao meu portfólio!</h2> */}
-              <AnimationOnScroll animateIn="animate__fadeIn">
-                  <h1>Leonan Thomaz</h1>
-              </AnimationOnScroll>
+              <h1>Leonan Thomaz</h1>
               <h4> 
               <Typewriter 
               options={{ 

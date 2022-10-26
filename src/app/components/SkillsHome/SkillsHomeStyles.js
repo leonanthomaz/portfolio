@@ -36,11 +36,14 @@ margin: 10px;
 
 export const Box = styled.div`
 display: grid;
-grid-template-columns: auto auto auto;
+grid-template-columns: auto auto;
+justify-content: center;
 gap: 10px;
 padding: 20px;
 
-@media(max-width: 760px){
+
+
+@media(max-width: 900px){
     display: flex;
     flex-direction: column;
 }
@@ -49,9 +52,12 @@ padding: 20px;
 export const ItemDW = styled.div`
 /* border: 2px solid red; */
 box-shadow: ${props => props.theme.box_shadow_portfolio};
+padding: 20px;
 
 display: flex;
 flex-direction: column;
+
+height: auto;
 
 @media(max-width: 760px){
     display: flex;
@@ -64,16 +70,40 @@ export const Left = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
+`;
+
+export const LeftHeader = styled.div`
+/* border: 2px solid red; */
+display: flex;
+flex-direction: column;
+`;
+
+export const TitleContainer = styled.div`
+/* border: 2px solid red; */
+text-align: center;
+padding: 5px;
+`;
+
+export const IconsContainer = styled.div`
+/* box-shadow: 0px 0px 16px -8px rgba(204, 47, 252, 0.5); */
+display: flex;
 flex-direction: row;
-flex: 1;
+padding: 8px;
+
 `;
 
 export const Right = styled.div`
 /* border: 2px solid purple; */
-flex: 3.5;
 display: flex;
 flex-direction: row;
 `;
+
+
+export const Title = styled.h2`
+/* border: 2px solid red; */
+/* padding: 10px; */
+`;
+
 
 
 export const Text = styled.div`

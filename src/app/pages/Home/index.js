@@ -1,11 +1,10 @@
 
 import React from "react";
-import { Navbar } from "../../components/Menu";
 import * as H from './HomeStyles'
 import { Intro } from '../../components/Intro'
-import { Sobre } from "../Sobre";
+import { Sobre } from "../About";
 import { Footer } from "../../components/Footer";
-import { Tour } from "../../components/Tour";
+import { Top } from "../../components/Top";
 import { Info } from "../../components/Info";
 import { SkillsHome } from "../../components/SkillsHome";
 
@@ -15,7 +14,7 @@ export const Home = () => {
             <Intro/>
             <Sobre/>
             <SkillsHome/>
-            <Tour/>
+            <Top/>
             <Info />
             <Footer/>
         </H.Container>

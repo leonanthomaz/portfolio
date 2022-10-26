@@ -1,5 +1,5 @@
 import React from "react";
-import * as A from "./SobreStyles";
+import * as A from "./AboutStyles";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { ETitle } from "../../components/Elements/title";
 import curriculo from '../../sharing/assets/doc/Curriculo-Leonan-Thomaz.pdf'
@@ -9,18 +9,21 @@ export const Sobre = () => {
 
     return (
       <A.Container id="sobre">
-        <ETitle title={'Sobre'} subtitle={'Um pouco sobre mim'}/>
+        <AnimationOnScroll animateIn="animate__backInLeft">
+          <ETitle title={'Sobre'} subtitle={'Um pouco sobre mim'}/>
+        </AnimationOnScroll>
         <A.Wrapper>
           <A.Left>
             <A.Text>
               <p>Olá!</p>
-              <p>Me chamo Leonan Thomaz e sou formado em Análise e Desenvolvimento de Sistemas pela Estácio de Sá.</p> 
-              <p>Possuo excelentes conhecimentos em front-end, como HTML, CSS,
-                  linguagem de programação JavaScript (variáveis, objetos, arrays, manipulação do DOM, etc.) e framework React (componentes, libs, hooks, context). 
-                  Em back-end, possuo conhecimentos em Node JS (express) e PHP (procedural, PDO), 
-                  ferramentas de versionamento Git e Github (principais queries) e noções em outras linguagens, como Python e C#.
-                  e de banco de dados Mongo DB e MySQL (nível DDL, operações CRUD e consultas básicas)</p>
-              <p>Atualmente estou em busca de uma oportunidade em Desenvolvimento WEB.</p>
+              <p>Me chamo Leonan Thomaz e sou formado em Análise e Desenvolvimento de Sistemas pela Estácio de Sá.</p>
+              <p>Sempre fui apaixonado por tecnologia. Meu primeiro curso na área foi há 12 anos atrás, quando tive meu primeiro contato com HTML. EM 2019, iniciei oficialmente minha jornada, na área em que sempre fui apaixonado.</p>
+                <p>Hoje, busco aperfeiçoar meus conhecimentos na área de frontend, onde tenho mais afinidade.</p> 
+              <p>
+                Tenho profunda satisfação em ver meus projetos se adaptando em diversas telas, de diferentes dispositivos.
+              </p>
+              <p>Conheça minhas habilidades e projetos logo abaixo!</p>
+              
             <AnimationOnScroll animateIn="animate__bounceIn">
               <A.LinkCurriculum>
                   <a className="btn" href={curriculo} download>Baixe meu curriculo</a>

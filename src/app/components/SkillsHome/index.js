@@ -10,6 +10,9 @@ import {
     DiReact,
     DiHtml5,
     DiNodejs,
+    DiNodejsSmall,
+    DiPhp,
+    DiDatabase
 } from 'react-icons/di';
 
 
@@ -20,71 +23,89 @@ export const SkillsHome = () =>{
 
     return(
         <SH.Container>
-            <ETitle title={'Principais Skills'}/>
+            <AnimationOnScroll animateIn="animate__backInLeft">
+                <ETitle title={'Principais Skills'}/>
+            </AnimationOnScroll>
             <SH.Wrapper>
                 <SH.Box>
                     <SH.ItemDW>
                         <SH.Left>
-
-                            <AnimationOnScroll animateIn="animate__zoomInUp">
-                                <SH.Icon>
-                                    <DiHtml5/>
-                                </SH.Icon>
-                            </AnimationOnScroll> 
-                            <AnimationOnScroll animateIn="animate__zoomInUp">
-                                <SH.Icon>
-                                    <DiJsBadge/>
-                                </SH.Icon>
-                            </AnimationOnScroll>
-                            <AnimationOnScroll animateIn="animate__zoomInUp">
-                                <SH.Icon>
-                                    <DiCss3/>
-                                </SH.Icon>
-                            </AnimationOnScroll>
-                            
+                            <SH.LeftHeader>
+                                <SH.TitleContainer>
+                                    <SH.Title>Front-End</SH.Title>
+                                </SH.TitleContainer>
+                                <SH.IconsContainer>
+                                    <AnimationOnScroll animateIn="animate__zoomInUp">
+                                        <SH.Icon>
+                                            <DiHtml5/>
+                                        </SH.Icon>
+                                    </AnimationOnScroll> 
+                                    <AnimationOnScroll animateIn="animate__zoomInUp">
+                                        <SH.Icon>
+                                            <DiJsBadge/>
+                                        </SH.Icon>
+                                    </AnimationOnScroll>
+                                    <AnimationOnScroll animateIn="animate__zoomInUp">
+                                        <SH.Icon>
+                                            <DiCss3/>
+                                        </SH.Icon>
+                                    </AnimationOnScroll>
+                                </SH.IconsContainer>
+                                
+                            </SH.LeftHeader>
                         </SH.Left>
                         <SH.Right>
                             <SH.Text>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            <p>Possuo excelentes conhecimentos em como HTML, CSS,
+                                linguagem de programação JavaScript (variáveis, objetos, arrays, manipulação do DOM, etc.) e framework React (componentes, libs, hooks, context). 
+                            </p>
                             </SH.Text>
                         </SH.Right>
                     </SH.ItemDW>
 
                     <SH.ItemDW>
                         <SH.Left>
-                            <AnimationOnScroll animateIn="animate__zoomInUp">
-                                <SH.Icon>
-                                    <DiReact/>
-                                </SH.Icon>
-                            </AnimationOnScroll>
+                            <SH.LeftHeader>
+                                <SH.TitleContainer>
+                                    <SH.Title>Back-End</SH.Title>
+                                </SH.TitleContainer>
+                                <SH.IconsContainer>
+
+                                    <AnimationOnScroll animateIn="animate__zoomInUp">
+                                        <SH.Icon>
+                                            <DiNodejsSmall/>
+                                        </SH.Icon>
+                                    </AnimationOnScroll> 
+                                    <AnimationOnScroll animateIn="animate__zoomInUp">
+                                        <SH.Icon>
+                                            <DiPhp/>
+                                        </SH.Icon>
+                                    </AnimationOnScroll> 
+                                    <AnimationOnScroll animateIn="animate__zoomInUp">
+                                        <SH.Icon>
+                                            <DiDatabase/>
+                                        </SH.Icon>
+                                    </AnimationOnScroll> 
+                                    
+                                </SH.IconsContainer>
+                                
+                            </SH.LeftHeader>
                         </SH.Left>
                         <SH.Right>
                             <SH.Text>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            <p>
+                                Em back-end, possuo conhecimentos em Node JS e PHP (procedural), ferramentas de versionamento Git e Github e noções de banco de dados Mongo DB e MySQL.
+                            </p>
                             </SH.Text>
                         </SH.Right>
                     </SH.ItemDW>
 
-                    <SH.ItemDW>
-                        <SH.Left>
-                            <AnimationOnScroll animateIn="animate__zoomInUp">
-                                <SH.Icon>
-                                    <DiNodejs/>
-                                </SH.Icon>
-                            </AnimationOnScroll>    
-                        </SH.Left>
-                        <SH.Right>
-                            <SH.Text>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            </SH.Text>
-                        </SH.Right>
-                    </SH.ItemDW>
-           
                 </SH.Box>
-                <SH.ButtonContainer>
-                <SH.Button to='/skills'>Ver lista completa</SH.Button>
 
+                <SH.ButtonContainer>
+                    <SH.Button to='/skills'>Ver lista completa</SH.Button>
                 </SH.ButtonContainer>
+
             </SH.Wrapper>
         </SH.Container>
     )

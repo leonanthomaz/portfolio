@@ -10,10 +10,12 @@ a{
     
     color: #f7f7f7;
 
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(204, 47, 252, 0.5);
 
     color: whitesmoke;
 
     color: #9b9b9b;
+
+    box-shadow: 2px 2px 4px 2px #8f048f;
 
 }

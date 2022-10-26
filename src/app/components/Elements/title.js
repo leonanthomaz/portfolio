@@ -18,18 +18,19 @@ text-transform: uppercase;
 
 export const TitleMain = styled.h2`
 
-    font-size: 35px;
+    font-size: 40px;
+
+    @media(max-width: 900px){
+        font-size: 35px;
+    }
 
     @media(max-width: 760px){
         font-size: 30px;
     }
 
-    @media(max-width: 500px){
-        font-size: 20px;
-    }
-
     @media(max-height: 400px){
         font-size: 25px;
+        text-align: center;
     }
 `;
 
@@ -77,7 +78,7 @@ export const ETitle = ({title, subtitle}) => {
     <div>
         <Title>
            
-            <Icon/><TitleMain> <AnimationOnScroll animateIn="animate__backInLeft">{title}</AnimationOnScroll></TitleMain>
+            <Icon/><TitleMain>{title}</TitleMain>
         </Title>
         <AnimationOnScroll animateIn="animate__fadeIn">
         <SubTitle>

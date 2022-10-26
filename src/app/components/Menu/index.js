@@ -1,12 +1,10 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 
 import { PortfolioContext } from '../../sharing/context/portfolio';
 import { useThemeContext } from '../../sharing/context/theme';
 import * as M from './MenuStyles';
 import { BiMenu } from "react-icons/bi";
-import { BsMoonStars } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
-import { FaSun } from "react-icons/fa";
 
 import { NavLink } from 'react-router-dom';
 
@@ -14,12 +12,6 @@ export const Menu = () => {
     const { click, handleClick } = useContext(PortfolioContext)
     const { changeTheme } = useThemeContext()
     const theme = localStorage.getItem('theme') || 'dark'
-    const [ activeTheme, setActiveTheme ] = useState(false)
-
-    const changeActiveTheme = () =>{
-        setActiveTheme(!activeTheme)
-        changeTheme()
-    }
 
     return (
         <M.Container>
@@ -45,10 +37,10 @@ export const Menu = () => {
                 <NavLink className={({isActive})=>{ return isActive ? 'ativo' : 'inativo' }} onClick={handleClick} to='/skills' 
                 ><M.MenuLi>Skills</M.MenuLi></NavLink>
 
-                <NavLink className={({isActive})=>{ return isActive ? 'ativo' : 'inativo' }} onClick={handleClick} to='/cursos' 
+                <NavLink className={({isActive})=>{ return isActive ? 'ativo' : 'inativo' }} onClick={handleClick} to='/courses' 
                 ><M.MenuLi>Cursos</M.MenuLi></NavLink>
 
-                <NavLink className={({isActive})=>{ return isActive ? 'ativo' : 'inativo' }} onClick={handleClick} to='/contato' 
+                <NavLink className={({isActive})=>{ return isActive ? 'ativo' : 'inativo' }} onClick={handleClick} to='/contact' 
                 ><M.MenuLi>Contato</M.MenuLi></NavLink>
 
             </M.Menu>

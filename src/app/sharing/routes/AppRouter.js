@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { Contato } from "../../pages/Contato";
+import { Contact } from "../../pages/Contact";
 import { Courses } from "../../pages/Courses";
 import { Home } from "../../pages/Home";
 import { Portfolio } from "../../pages/Portfolio";
@@ -13,8 +13,8 @@ export const AppRouter = () => {
             <Route path="/home" exact element={<Home/>}/>
             <Route path="/portfolio" exact element={<Portfolio/>}/>
             <Route path="/skills" exact element={<Skills/>}/>
-            <Route path="/cursos" exact element={<Courses/>}/>
-            <Route path="/contato" exact element={<Contato/>}/>
+            <Route path="/courses" exact element={<Courses/>}/>
+            <Route path="/contact" exact element={<Contact/>}/>
        </Routes>
     )
 }

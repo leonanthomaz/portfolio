@@ -4,8 +4,9 @@ export const lightTheme = {
   background: "whitesmoke",
   font: "#252525",
   button: "#252525",
-  h1: "crimson",
-  h2: "crimson",
+  h1: "#fbff00 ",
+  h1_mobile: "crimson",
+  h2: "#fbff00",
   h3: "#252525",
   h4: "gray",
   hr: "3px solid #979797",
@@ -29,7 +30,6 @@ export const lightTheme = {
   font_navbar_active: "red",
   font_navbar: "#252525",
   background_navbar_mobile: "whitesmoke",
-  font_navbar_hover: "gray",
   navbar_shadow: "4px 4px 5px #00000040",
   font_navbar_hover: "crimson",
 
@@ -39,8 +39,8 @@ export const lightTheme = {
   font_intro_Typewriter: "crimson",
   background_intro: "#dbd5d5d6",
 
-  background_vertical: "linear-gradient(to right, whitesmoke 20%, transparent 80%)",
-  background_horizontal: "linear-gradient(to top, whitesmoke 20%, transparent 80%)",
+  background_vertical: "linear-gradient(to right, whitesmoke 10%, transparent 80%)",
+  background_horizontal: "linear-gradient(to top, whitesmoke 10%, transparent 80%)",
   //tour
   font_tour: "whitesmoke",
 
@@ -101,6 +101,7 @@ export const darkTheme = {
   font: "whitesmoke",
   button: "whitesmoke",
   h1: "whitesmoke",
+  h1_mobile: "#fbff00",
   h2: "#fed136",
   h3: "whitesmoke",
   h4: "whitesmoke",
@@ -119,7 +120,6 @@ export const darkTheme = {
 
   //navbar  
   background_navbar: "#252525",
-  font_navbar_hover: "#ececec",
   overline_navbar_hover: "overline 3px yellow",
   font_navbar: "whitesmoke",
   font_navbar_active: "yellow",
@@ -134,8 +134,8 @@ export const darkTheme = {
   intro_arrow: "yellow",
   background_intro: "#1b1b1be7",
 
-  background_vertical: "linear-gradient(to top, #252525 10%, transparent 90%)",
-  background_horizontal: "linear-gradient(to right, #252525 10%, transparent 90%)",
+  background_vertical: "linear-gradient(to top, #252525 10%, transparent 80%)",
+  background_horizontal: "linear-gradient(to right, #252525 10%, transparent 80%)",
 
   
   //tour

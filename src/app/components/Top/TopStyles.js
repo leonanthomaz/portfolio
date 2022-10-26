@@ -11,7 +11,7 @@ height: auto;
 export const SplideContainer = styled.div`
 border-radius: 20px;
 z-index: 1;
-
+padding-top: 20px;
 width: 600px;
 height: auto;
 margin: auto;

@@ -1,25 +1,24 @@
 import styled from "styled-components";
 import { FaAngleDoubleDown } from "react-icons/fa";
 
+
 export const Container = styled.div`
 width: 100%;
 height: auto;
 background: ${props => props.theme.background};
-background-image: url('https://w7.pngwing.com/pngs/620/868/png-transparent-computer-background-computer-keyboard-science-and-technology.png');
+background-image: url('https://media.zicxa.com/2126183');
 background-attachment: fixed;
 background-size: cover;
 background-repeat: no-repeat;
 z-index: 1;
 
 @media(max-width: 760px){
-    background-image: url('https://wallpaperforu.com/wp-content/uploads/2020/10/food-wallpaper-20100313234829-scaled.jpg');
-    /* background-image: url('https://w7.pngwing.com/pngs/620/868/png-transparent-computer-background-computer-keyboard-science-and-technology.png'); */
+    background-image: url('https://www.papeldeparede.etc.br/fotos/wp-content/uploads/Teclado8.jpg');
+    /* background-image: none; */
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    z-index: 1;
-
 }
 
 `;
@@ -107,6 +106,10 @@ h1{
 
     @media (max-width:1000px){
         font-size: 30px;
+    }
+
+    @media (max-width: 760px){
+        color: ${props => props.theme.h1_mobile};
     }
 }
 

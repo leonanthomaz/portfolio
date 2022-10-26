@@ -1,67 +1,69 @@
 import React from 'react'
-import * as IF from './InfoStyles'
+import * as IFC from './InfoContactStyles'
 import { BsWhatsapp } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
 import { FaMapMarkerAlt, FaLinkedin } from "react-icons/fa";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import { ETitle } from '../../components/Elements/title'
+import { ETitle } from '../Elements/title'
 
-export const Info = () => {
+export const InfoContact = () => {
     return (
-        <IF.Container>
+        <IFC.Container>
             <AnimationOnScroll animateIn="animate__backInLeft">
                 <ETitle title={'Me chame para um café!'} subtitle={'Estou a disposição!'}/>
             </AnimationOnScroll>
-            <IF.Wrapper>
+            <IFC.Wrapper>
                 <AnimationOnScroll animateIn="animate__fadeInUp">
-                    <IF.Item>
+                    <IFC.Item>
                         <a href="https://api.whatsapp.com/send?phone=5521998090928">
-                        <IF.Icon>
+                        <IFC.Icon>
                             <BsWhatsapp/>
-                        </IF.Icon>
-                        <IF.Title>Whatsapp</IF.Title>
-                        <IF.Subtitle>(21) 99809-0928</IF.Subtitle>
+                        </IFC.Icon>
+                        <IFC.Title>Whatsapp</IFC.Title>
+                        <IFC.Subtitle>(21) 99809-0928</IFC.Subtitle>
                         </a>
-                    </IF.Item>
+                    </IFC.Item>
                 </AnimationOnScroll>
 
                 <AnimationOnScroll animateIn="animate__fadeInUp">
-                <IF.Item>
+                <IFC.Item>
                     <a href="https://www.linkedin.com/in/leonanthomaz">
-                    <IF.Icon>
+                    <IFC.Icon>
                         <FaLinkedin/>
-                    </IF.Icon>
-                    <IF.Title>LinkedIn</IF.Title>
-                    <IF.Subtitle>@leonanthomaz</IF.Subtitle>
+                    </IFC.Icon>
+                    <IFC.Title>LinkedIn</IFC.Title>
+                    <IFC.Subtitle>@leonanthomaz</IFC.Subtitle>
                     </a>
-                </IF.Item>
+                </IFC.Item>
                 </AnimationOnScroll>
 
                 <AnimationOnScroll animateIn="animate__fadeInUp">
-                <IF.Item>
+                <IFC.Item>
                     <a href="mailto:leonan.thomaz@gmail.com? Subject: Olá! Gostaria de falar com você!m&body=Conteúdo da mensagem">
-                    <IF.Icon>
+                    <IFC.Icon>
                         <SiGmail/>
-                    </IF.Icon>
-                    <IF.Title>E-mail</IF.Title>
-                    <IF.Subtitle>leonan.thomaz@gmail.com</IF.Subtitle>
+                    </IFC.Icon>
+                    <IFC.Title>E-mail</IFC.Title>
+                    <IFC.Subtitle>leonan.thomaz@gmail.com</IFC.Subtitle>
                     </a>
-                </IF.Item>
+                </IFC.Item>
                 </AnimationOnScroll> 
-            </IF.Wrapper>
-            <IF.Location>
-                <IF.Item>
+            </IFC.Wrapper>
+
+            <IFC.Location>
+                <IFC.Item>
                     <a href="https://goo.gl/maps/7DTPtgHYjsT3ZyEN9" >
-                    <IF.Icon>
+                    <IFC.Icon>
                         <FaMapMarkerAlt/>
-                    </IF.Icon>
-                    <IF.Title>Localização</IF.Title>
-                    <IF.SubtitleLocation>Estrada do Tijuaçu
+                    </IFC.Icon>
+                    <IFC.Title>Localização</IFC.Title>
+                    <IFC.SubtitleLocation>Estrada do Tijuaçu
                             Alto da Boa Vista
-                            Rio de Janeiro - RJ</IF.SubtitleLocation>
+                            Rio de Janeiro - RJ</IFC.SubtitleLocation>
                     </a>
-                </IF.Item>
-            </IF.Location>
-        </IF.Container>
+                </IFC.Item>
+            </IFC.Location>
+
+        </IFC.Container>
     )
 }
