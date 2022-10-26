@@ -80,6 +80,9 @@ export const Box = styled.div`
         color: ${props => props.theme.font_portfolio_h2};
         font-family: 'Wendy One', sans-serif;
         font-weight: 500;
+        /* border: 2px solid red; */
+        padding: 5px;
+        border-bottom: ${props => props.theme.borderbottom_portfolio};
     }
 
     p{
@@ -88,6 +91,9 @@ export const Box = styled.div`
         font-size: 14px;
         margin-top: 5px;
         font-family: 'Josefin Sans', sans-serif;
+        /* border: 2px solid red; */
+        padding: 5px;
+        /* box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;     */
     }
 
     span{
@@ -96,13 +102,15 @@ export const Box = styled.div`
         margin-top: 5px;
         font-size: 12px;
         font-family: 'Roboto', sans-serif;
+        padding: 7px;
+        /* border: 2px solid red; */
     }
 
     .btn-container{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 10px;
+        margin-top: 15px;
 
         button{
             display: flex;

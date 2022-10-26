@@ -21,7 +21,7 @@ line-height: '5rem';
 font-family: 'Wendy One', sans-serif;
 font-weight: 500;
 font-size: 40px;
-
+border-bottom: ${props => props.theme.borderbottom_portfolio};
 `;
 
 export const SubtitleContainer = styled.div`
@@ -33,7 +33,7 @@ justify-content: center;
 export const Subtitle = styled.span`
 /* text-align: center; */
 font-size: 20px;
-
+padding: 10px;
 `;
 
 export const ContainerImg = styled.div`

@@ -37,7 +37,7 @@ export const ModalPortfolio = ({show,
                         <GrClose 
                         style={{color: '#14141498', 
                         float: 'right', 
-                        fontSize: '30px',
+                        fontSize: '20px',
                         cursor: 'pointer'
                         }} onClick={handleClose}
                         />

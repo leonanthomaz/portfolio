@@ -82,6 +82,7 @@ export const lightTheme = {
   btn_font: "whitesmoke",
   btn_font_hover: "#252525",
   font_portfolio_h2: "#252525",
+  borderbottom_portfolio: "3px solid gray",
 
 
   //cursos
@@ -193,6 +194,7 @@ export const darkTheme = {
   btn_font: "#252525",
   btn_font_hover: "#252525",
   font_portfolio_h2: "yellow",
+  borderbottom_portfolio: "3px solid crimson",
 
   //cursos
   font_courses_h2: "yellow",
