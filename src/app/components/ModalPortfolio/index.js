@@ -23,7 +23,7 @@ export const ModalPortfolio = ({show,
             <Modal 
                 key={index}
                 size="md"
-                aria-labelledby="contained-modal-title-vcenter"
+                aria-labelledby="Modal exibindo detalhes do projeto"
                 centered
                 show={show} 
                 onHide={handleClose}

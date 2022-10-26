@@ -13,10 +13,10 @@ height: 40px;
 `;
 
 export const Title = styled.h2`
-color: '#14141498'; 
+color: #14141498; 
 text-align: center; 
-margin-top: '20px';
-border-bottom: '2px solid';
+margin-top: 20px;
+border-bottom: 2px solid;
 line-height: '5rem';
 font-family: 'Wendy One', sans-serif;
 font-weight: 500;
