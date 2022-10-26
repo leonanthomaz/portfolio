@@ -56,9 +56,8 @@ export const SkillsHome = () =>{
                         </SH.Left>
                         <SH.Right>
                             <SH.Text>
-                            <p>Possuo excelentes conhecimentos em HTML, CSS,
+                                Possuo excelentes conhecimentos em HTML, CSS,
                                 linguagem de programação JavaScript (variáveis, objetos, arrays, manipulação do DOM, etc.) e framework React (componentes, libs, hooks, context). 
-                            </p>
                             </SH.Text>
                         </SH.Right>
                     </SH.ItemDW>
@@ -93,9 +92,7 @@ export const SkillsHome = () =>{
                         </SH.Left>
                         <SH.Right>
                             <SH.Text>
-                            <p>
                                 Em back-end, possuo conhecimentos em Node JS e PHP (procedural), ferramentas de versionamento Git e Github e noções de banco de dados Mongo DB e MySQL.
-                            </p>
                             </SH.Text>
                         </SH.Right>
                     </SH.ItemDW>

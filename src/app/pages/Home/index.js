@@ -7,6 +7,7 @@ import { Footer } from "../../components/Footer";
 import { Top } from "../../components/Top";
 import { Info } from "../../components/Info";
 import { SkillsHome } from "../../components/SkillsHome";
+// import { Github } from "../../components/Github";
 
 export const Home = () => {
   return (
@@ -14,6 +15,7 @@ export const Home = () => {
             <Intro/>
             <Sobre/>
             <SkillsHome/>
+            {/* <Github/> */}
             <Top/>
             <Info title={'Me chame para um café!'} />
             <Footer/>
