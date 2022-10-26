@@ -12,8 +12,6 @@ color: ${props => props.theme.font_title_el};
 padding-top: 80px;
 font-family: 'Dela Gothic One', cursive;
 text-transform: uppercase;
-
-
 `;
 
 export const TitleMain = styled.h2`
@@ -36,10 +34,10 @@ export const TitleMain = styled.h2`
 
 export const H3 = styled.h3`
 
-    font-size: 30px;
+    font-size: 24px;
 
     @media(max-width: 760px){
-        font-size: 25px;
+        font-size: 20px;
     }
 
     @media(max-width: 500px){
@@ -48,9 +46,18 @@ export const H3 = styled.h3`
 `;
 
 export const Icon = styled(BiCodeBlock)`
-font-size: 32px;
-margin: 10px;
+margin: 5px;
 color: ${props => props.theme.font};
+
+font-size: 40px;
+
+@media(max-width: 760px){
+    font-size: 40px;
+}
+
+@media(max-width: 500px){
+    font-size: 30px;
+}
 
 `;
 
@@ -60,7 +67,9 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 color: ${props => props.theme.font};
-font-family: 'Didact Gothic', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+
 
 `;
 
@@ -77,15 +86,11 @@ export const ETitle = ({title, subtitle}) => {
     return (
     <div>
         <Title>
-           
             <Icon/><TitleMain>{title}</TitleMain>
         </Title>
-        <AnimationOnScroll animateIn="animate__fadeIn">
         <SubTitle>
             <H3>{subtitle}</H3>
-            {/* <AnimationOnScroll animateIn="animate__fadeInRight"></AnimationOnScroll> */}
         </SubTitle>
-        </AnimationOnScroll>
         <Hr/>
     </div>
     )

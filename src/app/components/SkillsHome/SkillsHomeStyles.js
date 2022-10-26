@@ -12,11 +12,11 @@ export const Icon = styled.div`
 border-radius: 10px;
 padding: 10px;
 font-size: 100px;
-color: ${props => props.theme.font};
+color: ${props => props.theme.skillsh_font_icon};
 transition: all ease 0.2s;
 
 &:hover{
-color: ${props => props.theme.font_footer_hover};
+color: ${props => props.theme.skillsh_font_icon_hover};
 transition: all ease 0.2s;
 }
 
@@ -82,6 +82,8 @@ export const TitleContainer = styled.div`
 /* border: 2px solid red; */
 text-align: center;
 padding: 5px;
+font-family: 'Roboto', sans-serif;
+
 `;
 
 export const IconsContainer = styled.div`
@@ -100,15 +102,16 @@ flex-direction: row;
 
 
 export const Title = styled.h2`
-/* border: 2px solid red; */
-/* padding: 10px; */
+font-family: 'Wendy One', sans-serif;
+
 `;
 
 
 
-export const Text = styled.div`
+export const Text = styled.p`
 /* border: 2px solid red; */
 padding: 10px;
+font-family: 'Josefin Sans', sans-serif;
 `;
 
 export const ButtonContainer = styled.div`

@@ -68,22 +68,19 @@ export const Portfolio = () => {
             {data && data.map((item, index) => {
                 return(
                     <Fragment key={index}>
-                        {/* <AnimationOnScroll animateIn="animate__fadeInUp"> */}
                         <P.Box>
-                            {/* <AnimationOnScroll animateIn="animate__fadeInUp"> */}
-                                <P.ImgContainer>
-                                    <img src={item.img} alt={item.title}/>
-                                </P.ImgContainer>
-                                
-                                <h4>{item.title}</h4> 
-                                <p>{item.preview}</p>
-                                <div className="text-center">
-                                    <span>{item.technology}</span>
-                                </div>
-                                <div className="btn-container">
-                                    <button onClick={()=>handleFind(item.id)}>Ver mais</button>
-                                </div>
-                            {/* </AnimationOnScroll> */}
+                            <P.ImgContainer>
+                                <img src={item.img} alt={item.title}/>
+                            </P.ImgContainer>
+                            
+                            <h2>{item.title}</h2> 
+                            <p>{item.preview}</p>
+                            <div className="text-center">
+                                <span>{item.technology}</span>
+                            </div>
+                            <div className="btn-container">
+                                <button onClick={()=>handleFind(item.id)}>Ver mais</button>
+                            </div>
 
                             {list.map((e, index)=>{
                                 if(e.id === item.id){
@@ -108,7 +105,6 @@ export const Portfolio = () => {
                                 }
                             })} 
                         </P.Box>   
-                        {/* </AnimationOnScroll>                */}
                     </Fragment>
                 )
             })} 

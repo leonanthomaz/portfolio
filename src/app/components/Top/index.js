@@ -57,7 +57,7 @@ export const Top = () =>{
                     })}
                 </Splide>
                 <T.ButtonContainer>
-                    <T.Button>Mais detalhes</T.Button>
+                    <T.Button to='/portfolio'>Mais detalhes</T.Button>
                 </T.ButtonContainer>
             </T.SplideContainer>
         </T.Container>

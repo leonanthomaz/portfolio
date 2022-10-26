@@ -33,14 +33,14 @@ export const webSkills = [
         id: 2,
         name: 'CSS',
         icon: <DiCss3/>,
-        level: 80,
+        level: 90,
         description: 'Bla Bla Bla',
     },
     {
         id: 3,
         name: 'Javascript',
         icon: <DiJsBadge/>,
-        level: 85,
+        level: 90,
         description: 'Bla Bla Bla',
     },
 ]
@@ -99,14 +99,14 @@ export const databasesDataSkills = [
         id: 2,
         name: 'MongoDB',
         icon: <DiMongodb/>,
-        level: 70,
+        level: 80,
         description: 'Conhecimentos de querys e requisições via node',
     },
     {
         id: 3,
         name: 'SQL Server',
         icon: <DiDatabase/>,
-        level: 70,
+        level: 75,
         description: 'Conhecimentos de querys e requisições via node',
     },
 ]
@@ -116,21 +116,21 @@ export const languageDataSkills = [
         id: 1,
         name: 'Javascript',
         icon: <DiJsBadge/>,
-        level: 85,
+        level: 90,
         description: 'Bla Bla Bla',
     },
     {
         id: 2,
         name: 'PHP',
         icon: <DiPhp/>,
-        level: 70,
+        level: 80,
         description: 'Bla Bla Bla',
     },
     {
         id: 3,
         name: 'Python',
         icon: <DiPython/>,
-        level: 60,
+        level: 70,
         description: 'Bla Bla Bla',
     }
 ]

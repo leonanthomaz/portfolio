@@ -1,6 +1,7 @@
 import React from 'react'
 import { Modal } from "react-bootstrap";
 import { GrClose } from "react-icons/gr";
+import * as MPS from './MPStyles'
 
 export const ModalPortfolio = ({show,
     handleClose,
@@ -21,66 +22,50 @@ export const ModalPortfolio = ({show,
         <div>
             <Modal 
                 key={index}
-                size="lg"
+                size="md"
                 aria-labelledby="contained-modal-title-vcenter"
                 centered
                 show={show} 
                 onHide={handleClose}
                 style={{background: '#14141498', fontFamily: 'Josefin Sans'}}                    
                 >
-                <Modal.Body style={{background: '#ecececce', padding: '30px'}}>
-                    <GrClose 
-                    style={{color: '#14141498', 
-                    float: 'right', 
-                    fontSize: '30px',
-                    cursor: 'pointer'
-                    }} onClick={handleClose}
-                    />
-                    <h2 style={{
-                        color: '#14141498', 
-                        textAlign: 'center', 
-                        marginTop: '20px',
-                        borderBottom: '2px solid',
-                        lineHeight: '5rem',
-                        fontWeight: 900
-                        }}>{title}</h2><br/>
-                    <h4 style={{textAlign: 'center'}}>{subtitle}</h4><br/>
-                    <div className="" style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                        <img src={img2 ? img2 : img} alt={title} style={{width: '70%'}} />
-                    </div><br/>
-                    <div style={{textAlign: 'center', padding: '20px'}}>
-                        <p>{description}</p>
-                    </div>
-                    <ul style={{
-                        textAlign: 'center',
-                        listStyle: 'none',
-                        marginTop: '10px',
-                        padding: '20px'
-                        }}>
-                            <strong>Data: </strong><span>{date}</span><br />
-                            <strong>Tecnologias: </strong><span>{technology}</span>
-                    </ul>
-                    <div style={{ textAlign: 'center'}}>
-                        {url != "" ? 
-                        <a style={{
-                            background: 'red', 
-                            padding: '10px',
-                            margin: '10px',
-                            borderRadius: '7px',
-                            color: 'white',
-                            textDecoration: 'none',
-                            }} target="_blank" href={url}>Visitar Site</a>
-                        : ""}
-                        <a style={{
-                            background: 'red', 
-                            padding: '10px',
-                            margin: '10px',
-                            borderRadius: '7px',
-                            color: 'white',
-                            textDecoration: 'none',
-                            }} target="_blank" href={github}>Repositório</a>
-                    </div>
+                <Modal.Body style={{background: '#ecececce', padding: '20px'}}>
+                
+                <MPS.Container>
 
+                    <MPS.Header>
+                        <GrClose 
+                        style={{color: '#14141498', 
+                        float: 'right', 
+                        fontSize: '30px',
+                        cursor: 'pointer'
+                        }} onClick={handleClose}
+                        />
+                    </MPS.Header>
+                    
+                    <MPS.Title>{title}</MPS.Title>
+                    
+                    <MPS.SubtitleContainer>
+                        <MPS.Subtitle>{subtitle}</MPS.Subtitle>
+                    </MPS.SubtitleContainer>
+
+                    <MPS.ContainerImg>
+                        <img src={img2 ? img2 : img} alt={title} loading='lazy' />
+                    </MPS.ContainerImg>
+
+                    <MPS.Description>{description}</MPS.Description>
+
+                    <MPS.Date>
+                        <strong>Data: </strong><span>{date}</span><br />
+                        <strong>Tecnologias: </strong><span>{technology}</span>
+                    </MPS.Date>
+
+                    <MPS.ContainerButton>
+                        <MPS.Button target="_blank" href={url}>Visitar Site</MPS.Button>
+                        <MPS.Button target="_blank" href={github}>Repositório</MPS.Button>
+                    </MPS.ContainerButton>
+                    
+                    </MPS.Container>
                 </Modal.Body >
             </Modal>
         </div>

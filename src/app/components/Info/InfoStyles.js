@@ -50,14 +50,18 @@ a{
 
 export const Title = styled.div`
 font-size: 24px;
+font-family: 'Montserrat', sans-serif;
 
 `
 export const Subtitle = styled.div`
 font-size: 16px;
+font-family: 'Josefin Sans', sans-serif;
+
 `
 
 export const SubtitleLocation = styled.div`
 font-size: 16px;
+font-family: 'Josefin Sans', sans-serif;
 `
 
 

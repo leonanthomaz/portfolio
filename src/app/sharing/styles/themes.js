@@ -4,8 +4,8 @@ export const lightTheme = {
   background: "whitesmoke",
   font: "#252525",
   button: "#252525",
-  h1: "#fbff00 ",
-  h1_mobile: "crimson",
+  h1: "crimson",
+  h1_mobile: "#fbff00",
   h2: "#fbff00",
   h3: "#252525",
   h4: "gray",
@@ -39,8 +39,8 @@ export const lightTheme = {
   font_intro_Typewriter: "crimson",
   background_intro: "#dbd5d5d6",
 
-  background_vertical: "linear-gradient(to right, whitesmoke 10%, transparent 80%)",
-  background_horizontal: "linear-gradient(to top, whitesmoke 10%, transparent 80%)",
+  background_vertical: "linear-gradient(to left, whitesmoke 0%, transparent 70%)",
+  background_horizontal: "linear-gradient(to top, whitesmoke 5%, transparent 70%)",
   //tour
   font_tour: "whitesmoke",
 
@@ -48,8 +48,14 @@ export const lightTheme = {
   box_shadow_about: "0px 0px 16px -8px rgba(0, 0, 0, 0.68)",
   webkit: "0px 0px 16px -8px rgba(255, 255, 255, 0.68)",
 
+  
+  //Skills Home
+  skillsh_font_icon: "crimson",
+  skillsh_font_icon_hover: "gray",
+
   //skills
   skills_font: "#252525",
+  skills_icon: "crimson",
   skills_background_box: "whitesmoke",
   box_shadow_skills: "0px 0px 16px -8px rgba(0, 0, 0, 0.68)",
   webkit_skills: "0px 0px 16px -8px rgba(255, 255, 255, 0.68)",
@@ -75,6 +81,8 @@ export const lightTheme = {
   btn_background: "#252525",
   btn_font: "whitesmoke",
   btn_font_hover: "#252525",
+  font_portfolio_h2: "#252525",
+
 
   //cursos
   font_courses_h2: "gray",
@@ -100,7 +108,7 @@ export const darkTheme = {
   background: "#252525",
   font: "whitesmoke",
   button: "whitesmoke",
-  h1: "whitesmoke",
+  h1: "#fbff00",
   h1_mobile: "#fbff00",
   h2: "#fed136",
   h3: "whitesmoke",
@@ -134,8 +142,8 @@ export const darkTheme = {
   intro_arrow: "yellow",
   background_intro: "#1b1b1be7",
 
-  background_vertical: "linear-gradient(to top, #252525 10%, transparent 80%)",
-  background_horizontal: "linear-gradient(to right, #252525 10%, transparent 80%)",
+  background_vertical: "linear-gradient(to top, #252525 0%, transparent 70%)",
+  background_horizontal: "linear-gradient(to right, #252525 5%, transparent 70%)",
 
   
   //tour
@@ -145,8 +153,15 @@ export const darkTheme = {
   box_shadow_about: "0px 0px 16px -8px rgba(255, 255, 255, 0.68)",
   webkit: "0px 0px 16px -8px rgba(255, 255, 255, 0.5)",
 
+
+  //Skills Home
+  skillsh_font_icon: "yellow",
+  skillsh_font_icon_hover: "gray",
+
+
   //skills  
-  skills_font: "#dac400fd",
+  skills_font: "whitesmoke",
+  skills_icon: "yellow",
   skills_background_box: "#252525",
   box_shadow_skills: "0px 0px 16px -8px rgba(255, 255, 255, 0.68)",
   webkit_skills: "0px 0px 16px -8px rgba(255, 255, 255, 0.5)",
@@ -157,12 +172,12 @@ export const darkTheme = {
 
   font_contact: "whitesmoke",
   font_contact_icons: "#252525",
-  contact_form_shadow: "0.4em 0.3em 0.7em #ffff",
+  contact_form_shadow: "0px 0px 16px -8px rgba(255, 255, 255, 0.68)",
   btn_background_contact: "yellow",
 
 
   background_contact_form: "#252525",
-  border_input_contact: "1px 0px 2px 2px solid whitesmoke",
+  border_input_contact: "0px 0px 16px -8px rgba(255, 255, 255, 0.68)",
   background_contact_label: "#252525",
   background_contact_icons: "yellow",
   background_contact_icons_hover: "green",
@@ -177,6 +192,7 @@ export const darkTheme = {
   btn_background: "whitesmoke",
   btn_font: "#252525",
   btn_font_hover: "#252525",
+  font_portfolio_h2: "yellow",
 
   //cursos
   font_courses_h2: "yellow",

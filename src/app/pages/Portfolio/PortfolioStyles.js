@@ -59,6 +59,11 @@ export const Box = styled.div`
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
 
+    /* font-family: 'Dela Gothic One', cursive;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif; */
+
     :hover{
         -moz-transform: scale(1.1);
         -webkit-transform: scale(1.1);
@@ -67,20 +72,22 @@ export const Box = styled.div`
         border-radius: 5px;
     }
     
-    h4{
+    h2{
         text-align: center;
         margin-top: 10px;
         font-size: 24px;
         font-weight: 700;
-        color: ${props => props.theme.h4_portfolio};
-
+        color: ${props => props.theme.font_portfolio_h2};
+        font-family: 'Wendy One', sans-serif;
+        font-weight: 500;
     }
 
     p{
         text-align: center;
-        font-style: italic;
+        /* font-style: italic; */
         font-size: 14px;
         margin-top: 5px;
+        font-family: 'Josefin Sans', sans-serif;
     }
 
     span{
@@ -88,6 +95,7 @@ export const Box = styled.div`
         font-weight: 700;
         margin-top: 5px;
         font-size: 12px;
+        font-family: 'Roboto', sans-serif;
     }
 
     .btn-container{

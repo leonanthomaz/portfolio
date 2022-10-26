@@ -51,7 +51,7 @@ export const Contact = () => {
     return (
         <div>
             <C.Container>
-            <ETitle title={'Deixe sua mensagem!'} subtitle={'Retornarei assim que possível!'}/>
+            <ETitle title={'Deixe uma mensagem!'} subtitle={'Retornarei assim que possível!'}/>
             <C.FormBox>
             <C.Form ref={form} onSubmit={sendEmail} id="formContact">
                 <div className="label-float">
@@ -82,7 +82,7 @@ export const Contact = () => {
             checked={checked}
             erroricon={erroricon}
              />
-             <InfoContact/>
+             <Info title={'Contato'}/>
              <Footer/>
             </C.Container>
         </div>

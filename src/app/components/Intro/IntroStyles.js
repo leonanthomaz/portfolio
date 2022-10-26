@@ -6,7 +6,7 @@ export const Container = styled.div`
 width: 100%;
 height: auto;
 background: ${props => props.theme.background};
-background-image: url('https://media.zicxa.com/2126183');
+background-image: url('https://programadoresbrasil.com.br/wp-content/uploads/2022/07/computador.jpg');
 background-attachment: fixed;
 background-size: cover;
 background-repeat: no-repeat;
@@ -49,6 +49,10 @@ export const Left = styled.div`
 flex: 1;
 display: flex;
 justify-content: center;
+
+@media(max-height: 760px){
+    flex: 1;
+}
 `;
 
 export const ImgContainer = styled.div`
@@ -71,12 +75,18 @@ img {
     width: 250px;
     height: 250px;
     margin-top: 20px;
+    margin-left: 0px;
 }
 
 `;
 
 export const Right = styled.div`
 flex: 3.5;
+
+@media(max-height: 760px){
+    /* flex: 2; */
+}
+
 `;
 
 export const Wrapper = styled.div`
@@ -108,9 +118,9 @@ h1{
         font-size: 30px;
     }
 
-    @media (max-width: 760px){
+    /* @media (max-width: 760px){
         color: ${props => props.theme.h1_mobile};
-    }
+    } */
 }
 
 h2{

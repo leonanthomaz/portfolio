@@ -51,6 +51,7 @@ export const Text = styled.div`
 -webkit-box-shadow: ${props => props.theme.webkit};
 box-shadow: ${props => props.theme.box_shadow_portfolio};
 padding: 35px;
+font-family: 'Josefin Sans', sans-serif;
 
 font-size: 16px;
 

@@ -82,7 +82,7 @@ export const SkillsItems = styled.div`
     }
 
     .skills-icon{
-    color: ${props => props.theme.skills_font};
+    color: ${props => props.theme.skills_icon};
     font-size: 70px;
     /* border: 2px solid red; */
     padding: 5px;
@@ -103,6 +103,8 @@ export const SkillsItems = styled.div`
 
         h3{
             padding-bottom: 1rem;
+            font-family: 'Wendy One', sans-serif;
+
             @media (max-width: 760px){
                 font-size: 20px;
             }

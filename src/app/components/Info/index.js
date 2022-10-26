@@ -6,11 +6,11 @@ import { FaMapMarkerAlt, FaLinkedin } from "react-icons/fa";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { ETitle } from '../../components/Elements/title'
 
-export const Info = () => {
+export const Info = ({ title, subtitle }) => {
     return (
         <IF.Container>
             <AnimationOnScroll animateIn="animate__backInLeft">
-                <ETitle title={'Me chame para um café!'} subtitle={'Estou a disposição!'}/>
+                <ETitle title={title} subtitle={subtitle}/>
             </AnimationOnScroll>
             <IF.Wrapper>
                 <AnimationOnScroll animateIn="animate__fadeInUp">

@@ -58,9 +58,8 @@ export const Skills = () => {
 
     return (
       <S.Container>
-          <ETitle title={'Skills'} subtitle={'Algumas das habilidades que possuo'}/>
+          <ETitle title={'Skills'} subtitle={'Habilidades que possuo'}/>
 
-          {/* <AnimationOnScroll animateIn="animate__fadeInUp"> */}
           <S.MenuSkillsGroup>
             <S.MenuSkills>
                 {category.map((item, index) => (
@@ -74,14 +73,12 @@ export const Skills = () => {
                 ))}
             </S.MenuSkills>
           </S.MenuSkillsGroup>
-          {/* </AnimationOnScroll> */}
 
           <S.Wrapper>
             {dataSkills.map((item, key) => {
               return(
                 <Fragment key={key}>
                   <S.Grid>
-                  {/* <AnimationOnScroll animateIn="animate__fadeIn"> */}
                     <S.SkillsItems onClick={()=>handleFindSkills(item.id)}>
                       
                         <div className="skills-header">
@@ -96,7 +93,6 @@ export const Skills = () => {
                         <Progressbar bgcolor={item.level >= 70 ? "#99ff66" : "orange"} progress={item.level} height={20} />
                       </div>
                     </S.SkillsItems>
-                  {/* </AnimationOnScroll> */}
                   </S.Grid>
                 </Fragment>
                 )

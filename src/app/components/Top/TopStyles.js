@@ -12,12 +12,12 @@ export const SplideContainer = styled.div`
 border-radius: 20px;
 z-index: 1;
 padding-top: 20px;
-width: 600px;
+width: 700px;
 height: auto;
 margin: auto;
 
 @media (max-width: 760px){
-    max-width: 400px;
+    max-width: 500px;
 }
 
 @media (max-width: 500px){
@@ -89,26 +89,21 @@ export const ButtonContainer = styled.div`
 `;
 
 export const Button = styled(Link)`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: ${props => props.theme.btn_background_main};
-    color: ${props => props.theme.btn_font_main};
-    font-weight: 700;
-    border: none;
-    padding: 5px;
-    width: 120px;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: all .1s linear;
-                -webkit-transition: all .1s linear;
-                -moz-transition: all .1s linear;
+border-radius: 20px;
+padding: 10px;
+background: ${props => props.theme.btn_background_main};
+text-decoration: none;
+font-weight: 700;
 
-    :hover{
+background: ${props => props.theme.btn_background_main};
+color: ${props => props.theme.btn_font_main};
+
+:hover{
         color: white;
         background: green;
         transition: all .1s linear;
                 -webkit-transition: all .1s linear;
                 -moz-transition: all .1s linear;
     }
+
 `;

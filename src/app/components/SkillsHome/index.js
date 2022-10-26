@@ -56,7 +56,7 @@ export const SkillsHome = () =>{
                         </SH.Left>
                         <SH.Right>
                             <SH.Text>
-                            <p>Possuo excelentes conhecimentos em como HTML, CSS,
+                            <p>Possuo excelentes conhecimentos em HTML, CSS,
                                 linguagem de programação JavaScript (variáveis, objetos, arrays, manipulação do DOM, etc.) e framework React (componentes, libs, hooks, context). 
                             </p>
                             </SH.Text>

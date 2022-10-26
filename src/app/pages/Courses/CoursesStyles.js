@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { BiCodeBlock } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
 width: 100%;
@@ -56,9 +57,11 @@ export const ItemTitle = styled.div`
 text-align: center;
 
 h2{
-    font-size: 18px;
+    font-size: 28px;
     padding-top: 10px;
     color: ${props => props.theme.font_courses_h2};
+    font-family: 'Wendy One', sans-serif;
+
     /* color: yellow; */
     /* color: gray */
 }
@@ -67,32 +70,39 @@ h3{
     font-size: 18px; 
     color: ${props => props.theme.font_courses_h3};
     /* color: #bebebe */
+    font-family: 'Montserrat', sans-serif;
+
 }
 `;
 
 export const ItemText = styled.div`
 text-align: center;
 padding-top: 10px;
+font-family: 'Josefin Sans', sans-serif;
 
 `;
 
-export const ItemURL = styled.div`
-text-align: center;
-padding-top: 15px;
-transition: all ease 0.2s;
-font-size: 14px; 
+export const ItemURLContainer = styled.div`
+display: flex;
+justify-content: center;
+`;
 
-a{
-    background: crimson;
+export const ItemURL = styled(Link)`
+border-radius: 20px;
+padding: 10px;
+background: ${props => props.theme.btn_background_main};
+text-decoration: none;
+font-weight: 700;
+
+background: ${props => props.theme.btn_background_main};
+color: ${props => props.theme.btn_font_main};
+
+:hover{
     color: white;
-    padding: 5px;
-    text-decoration: none;
-    border-radius: 5px;
-
-    :hover{
-        transition: all ease 0.2s;
-        background: black;
-        color: yellow;
-    }
+    background: green;
+    transition: all .1s linear;
+            -webkit-transition: all .1s linear;
+            -moz-transition: all .1s linear;
 }
+
 `;

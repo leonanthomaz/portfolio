@@ -15,7 +15,7 @@ export const Courses = () => {
                   <CS.Wrapper>
                     {items && items.map((item, index) => {
                         return(
-                            <AnimationOnScroll animateIn="animate__fadeIn">
+                            // <AnimationOnScroll animateIn="animate__fadeIn">
                             <CS.Item key={index}>
                                 <CS.ItemImg>
                                     <img src={item.urlImg} alt=''/>
@@ -27,11 +27,16 @@ export const Courses = () => {
                                 <CS.ItemText>
                                  <p>{item.cardDetailedText}</p>
                                 </CS.ItemText>
-                                <CS.ItemURL>
-                                    <a href={item.url}>Ver Certificado</a>
-                                </CS.ItemURL>
+
+                                <CS.ItemURLContainer>
+                                    <CS.ItemURL href={item.url}>
+                                        Ver Certificado
+                                    </CS.ItemURL>
+                                </CS.ItemURLContainer>
+                                
+                                
                             </CS.Item>
-                            </AnimationOnScroll>
+                            // </AnimationOnScroll>
                         )
                     })}
                   </CS.Wrapper>

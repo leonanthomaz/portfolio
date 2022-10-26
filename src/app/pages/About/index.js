@@ -16,13 +16,25 @@ export const Sobre = () => {
           <A.Left>
             <A.Text>
               <p>Olá!</p>
-              <p>Me chamo Leonan Thomaz e sou formado em Análise e Desenvolvimento de Sistemas pela Estácio de Sá.</p>
-              <p>Sempre fui apaixonado por tecnologia. Meu primeiro curso na área foi há 12 anos atrás, quando tive meu primeiro contato com HTML. EM 2019, iniciei oficialmente minha jornada, na área em que sempre fui apaixonado.</p>
-                <p>Hoje, busco aperfeiçoar meus conhecimentos na área de frontend, onde tenho mais afinidade.</p> 
               <p>
-                Tenho profunda satisfação em ver meus projetos se adaptando em diversas telas, de diferentes dispositivos.
+              Me chamo Leonan Thomaz e sou formado em Análise e Desenvolvimento de Sistemas pela Estácio de Sá.
               </p>
-              <p>Conheça minhas habilidades e projetos logo abaixo!</p>
+
+              <p>
+              Sempre fui apaixonado por tecnologia. Meu primeiro curso na área foi há 12 anos atrás, quando tive meu primeiro contato com HTML, mas foi a partir de 2019, que ingressei oficialmente nesta área quando dei início à minha graduação.
+              </p>
+
+              <p>
+              Hoje, busco aperfeiçoar meus conhecimentos na área de frontend, onde tenho maior afinidade.
+              </p>
+
+              <p>
+              Tenho profunda satisfação em ver meus projetos adaptados em diversos tipos de telas e dispositivos, progredindo a cada nova habilidade conquistada.
+              </p>
+
+              <p>
+              Você pode conhecer meus projetos clicando nos links logo abaixo.
+              </p>
               
             <AnimationOnScroll animateIn="animate__bounceIn">
               <A.LinkCurriculum>

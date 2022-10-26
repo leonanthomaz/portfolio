@@ -15,7 +15,7 @@ export const Home = () => {
             <Sobre/>
             <SkillsHome/>
             <Top/>
-            <Info />
+            <Info title={'Me chame para um café!'} />
             <Footer/>
         </H.Container>
   );

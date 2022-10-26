@@ -17,6 +17,11 @@ export const GlobalStyles = createGlobalStyle`
         scroll-snap-type: y mandatory;
         scrollbar-width: none; //for firefox
         background: ${props => props.theme.background};
+
+        /* font-family: 'Dela Gothic One', cursive;
+        font-family: 'Josefin Sans', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Roboto', sans-serif; */
         
                 
         &::-webkit-scrollbar{
@@ -34,12 +39,12 @@ export const GlobalStyles = createGlobalStyle`
         }
 
         h3{
-            font-family: 'Dela Gothic One', cursive;
+            font-family: 'Montserrat', sans-serif;
             color: ${props => props.theme.h3};
         }
 
         h4{
-            font-family: 'Didact Gothic', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             color: ${props => props.theme.h4};
         }       
     } 
