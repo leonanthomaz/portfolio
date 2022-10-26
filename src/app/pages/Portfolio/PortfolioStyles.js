@@ -106,6 +106,11 @@ export const Box = styled.div`
         /* border: 2px solid red; */
     }
 
+    .date{
+        font-family: 'Josefin Sans', sans-serif;
+        color: gray;
+    }
+
     .btn-container{
         display: flex;
         justify-content: center;

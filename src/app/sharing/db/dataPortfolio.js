@@ -1,5 +1,3 @@
-// import ClapperBoard1 from '../assets/img/portfolio/clapper1.jpg';
-// import ClapperBoard2 from '../assets/img/portfolio/clapper2.jpg';
 import BrasilCovid1 from '../assets/img/portfolio/brasilcovid1.png';
 import BrasilCovid2 from '../assets/img/portfolio/brasilcovid2.png';
 import CasaDoSalgado1 from '../assets/img/portfolio/cds1.png';
@@ -20,8 +18,8 @@ import PopCorn2 from '../assets/img/portfolio/popcorn2.png';
 import EleicoesST from '../assets/img/portfolio/eleicoes-st.png';
 import EleicoesPT from '../assets/img/portfolio/eleicoes-pt.png';
 import BN from '../assets/img/portfolio/bn.png';
-
-// import Manutencao from '../assets/img/construcao.png';
+import Dmu from '../assets/img/portfolio/2001-1.png';
+import Dmu2 from '../assets/img/portfolio/2001-2.png';
 
 
   /*API'S*/
@@ -32,7 +30,7 @@ import BN from '../assets/img/portfolio/bn.png';
       subtitle: "Eleições presidenciais",
       img: EleicoesST,
       img2: '',
-      preview: "Números da apuração presidencial do Brasil - segundo turno - 2022",
+      preview: "Apuração em tempo real da eleição presidencial do segundo turno - 2022",
       description: "Portal onde apresenta estatísticas dos dois candidatos a presidência da República do dia 30/10/2022, consumindo API do TSE.",
       date: "Outubro 2022",
       technology: "React, Javascript, HTML e CSS",
@@ -45,7 +43,7 @@ import BN from '../assets/img/portfolio/bn.png';
       subtitle: "Eleições presidenciais",
       img: EleicoesPT,
       img2: '',
-      preview: "Números da apuração presidencial do Brasil - primeiro turno - 2022",
+      preview: "Apuração em tempo real da eleição presidencial do primeiro turno - 2022",
       description: "Portal onde apresenta estatísticas dos candidatos a presidência da República do dia 02/10/2022, consumindo API do TSE.",
       date: "Outubro 2022",
       technology: "React, Javascript, HTML e CSS",
@@ -68,11 +66,11 @@ import BN from '../assets/img/portfolio/bn.png';
     {
       id: 4,
       title: "Brasil Covid",
-      subtitle: "API de estatísticas da Covid no Brasil (Estudos)",
+      subtitle: "API de estatísticas da Covid no Brasil",
       img: BrasilCovid1,
       img2: BrasilCovid2,
       preview: "API de informações sobre a Covid-19",
-      description: "API básica, contendo os números da pandemia do Covid-19 por Estados brasileiros. Neste mini-projeto pude desenvolver ainda mais minhas habilidades com Axios e Hooks.",
+      description: "API contendo os números da pandemia do Covid-19 por Estados brasileiros.",
       date: "Junho 2021",
       technology: "React, JavaScript, CSS e HTML5",
       url: "https://brasilcovid.herokuapp.com/",
@@ -112,7 +110,7 @@ import BN from '../assets/img/portfolio/bn.png';
     {
       id: 3,
       title: "Design GloboPlay",
-      subtitle: "Desafio Card Promocional ",
+      subtitle: "Desafio - Card Promocional ",
       img: TemplateGlobo,
       img2: TemplateGlobo,
       preview: "Implementado em HTML e CSS",
@@ -121,6 +119,19 @@ import BN from '../assets/img/portfolio/bn.png';
       technology: "HTML e CSS",
       url: "",
       github: "https://github.com/leonanthomaz/Template-GloboPlay"
+    },
+    {
+      id: 4,
+      title: "Template - Ideia 2001",
+      subtitle: "Desafio - Página inicial da empresa ",
+      img: Dmu,
+      img2: Dmu2,
+      preview: "Implementado em HTML e CSS",
+      description: "Desafio de implementação da tela inicial da empresa Ideia 2001, onde pude praticar minhas habilidades em responsividade. Desenvolvido em HTML, CSS e estruturas com a ferramenta Figma.",
+      date: "Outubro 2022",
+      technology: "HTML e CSS",
+      url: "",
+      github: "https://github.com/leonanthomaz/Teste-2001-LeonanThomaz"
     },
 
   ];
@@ -191,7 +202,7 @@ import BN from '../assets/img/portfolio/bn.png';
       description: "Projeto inspirado da aula online do professor Bonieky Lacerda. Neste desafio, pude me inteirar mais sobre a biblioteca React, principalmente sobre os Hooks e Props.",
       date: "Setembro 2021",
       technology: "React, Firebase",
-      url: "https://saturno.herokuapp.com/",
+      url: "",
       github: "https://github.com/leonanthomaz/Saturno"
     },
     {
@@ -204,8 +215,8 @@ import BN from '../assets/img/portfolio/bn.png';
       description: "Sistema constrúido em Node JS, do backend ao frontend, utilizando a engine Handlebars para as views..",
       date: "Setembro 2021",
       technology: "React, Firebase",
-      url: "https://saturno.herokuapp.com/",
-      github: "https://github.com/leonanthomaz/Saturno"
+      url: "",
+      github: "https://github.com/leonanthomaz/Galleon"
     },
     {
       id: 4,

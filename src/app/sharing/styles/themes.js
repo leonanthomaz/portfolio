@@ -81,7 +81,7 @@ export const lightTheme = {
   btn_background: "#252525",
   btn_font: "whitesmoke",
   btn_font_hover: "#252525",
-  font_portfolio_h2: "#252525",
+  font_portfolio_h2: "crimson",
   borderbottom_portfolio: "3px solid gray",
 
 

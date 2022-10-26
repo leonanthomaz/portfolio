@@ -75,8 +75,12 @@ export const Portfolio = () => {
                             
                             <h2>{item.title}</h2> 
                             <p>{item.preview}</p>
+                           
                             <div className="text-center">
                                 <span>{item.technology}</span>
+                            </div>
+                            <div className="date text-center">
+                                <span>{item.date}</span>
                             </div>
                             <div className="btn-container">
                                 <button onClick={()=>handleFind(item.id)}>Ver mais</button>

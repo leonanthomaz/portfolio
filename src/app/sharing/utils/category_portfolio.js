@@ -5,7 +5,7 @@ export const category = [
     },
     {
         id: "design",
-        title: "Design",
+        title: "Lading Pages",
     },
     {
         id: "ecommerce",
