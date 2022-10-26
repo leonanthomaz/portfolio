@@ -63,7 +63,7 @@ justify-content: center;
 padding: 20px;
 `;
 
-export const Button = styled(Link)`
+export const Button = styled.a`
 border-radius: 10px;
 padding: 7px;
 margin: 5px;

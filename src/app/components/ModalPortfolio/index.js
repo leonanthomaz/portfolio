@@ -61,8 +61,8 @@ export const ModalPortfolio = ({show,
                     </MPS.Date>
 
                     <MPS.ContainerButton>
-                        {url ?  <MPS.Button  href={url}>Visitar Site</MPS.Button> : ''}
-                        <MPS.Button  href={github}>Repositório</MPS.Button>
+                        {url ?  <MPS.Button aria-label={title} href={url} target="_blank">Visitar Site</MPS.Button> : ''}
+                        <MPS.Button aria-label={title} href={github} target="_blank">Repositório</MPS.Button>
                     </MPS.ContainerButton>
                     
                     </MPS.Container>
