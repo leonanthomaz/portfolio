@@ -21,25 +21,25 @@ export const Footer = () => {
                     <F.SocialMediaWrap>
                         <F.SocialLogo >
                             <p>© 2022 Copyright: Leonan Thomaz</p>
-                            <span>Design by <a href="https://www.linkedin.com/in/leonanthomaz" target="_blank">@leonan.thomaz</a></span><br/>
+                            <span>Design by <a href="https://www.linkedin.com/in/leonanthomaz" >@leonan.thomaz</a></span><br/>
                         </F.SocialLogo>
 
                         <F.SocialIcons>
-                            <F.SocialIconLink href='mailto:leonan.thomaz@gmail.com? Subject: Olá! Gostaria de falar com você!m&body=Conteúdo da mensagem' target='_blank' aria-label='Google'>
+                            <F.SocialIconLink href='mailto:leonan.thomaz@gmail.com? Subject: Olá! Gostaria de falar com você!m&body=Conteúdo da mensagem'  aria-label='Google'>
                                 <FaGoogle />
                             </F.SocialIconLink>
 
-                            <F.SocialIconLink href='https://github.com/leonanthomaz/' target='_blank' aria-label='Github'>
+                            <F.SocialIconLink href='https://github.com/leonanthomaz/'  aria-label='Github'>
                                 <FaGithub />
                             </F.SocialIconLink>
                             
-                            <F.SocialIconLink href='https://www.linkedin.com/in/leonanthomaz' target='_blank' aria-label='Linkedin'>
+                            <F.SocialIconLink href='https://www.linkedin.com/in/leonanthomaz'  aria-label='Linkedin'>
                                 <FaLinkedin />
                             </F.SocialIconLink>
 
                             <F.SocialIconLink
                                 href='//www.twitter.com/leonanthomaz'
-                                target='_blank'
+                                
                                 aria-label='Twitter'
                                 rel='noopener noreferrer'
                             >
