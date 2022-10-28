@@ -19,16 +19,15 @@ export const TitleMain = styled.h2`
     font-size: 40px;
 
     @media(max-width: 900px){
-        font-size: 35px;
-    }
-
-    @media(max-width: 760px){
         font-size: 30px;
     }
 
-    @media(max-height: 400px){
+    @media(max-width: 760px){
         font-size: 25px;
-        text-align: center;
+    }
+
+    @media(max-height: 400px){
+        font-size: 20px;
     }
 `;
 

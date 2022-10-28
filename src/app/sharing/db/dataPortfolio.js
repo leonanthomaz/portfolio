@@ -144,7 +144,7 @@ import Dmu2 from '../assets/img/portfolio/2001-2.png';
       subtitle: "E-commerce (Estudos)",
       img: BN,
       img2: '',
-      description: "Trata-se de um projeto de estudos, onde implemento um ecommerce virtual, desenvolvido em React. Utilizo Context API e Hooks, CRUD do carrinho em localStorage e consumo de dados via banco de dados (MongoBD). Projeto em andamento.",
+      description: "E-commerce virtual, desenvolvido em MERN (Mongo, Express, React e Node). Utilizo Context API e Hooks, libs como styled-components e axios, armazenamento em localStorage e consumo de dados via MongoBD. Estou implementando sistema de login e desenvolvimento do checkout. Projeto em andamento.",
       date: "Outubro 2022",
       technology: "MERN (Mongo, Express, React e Node)",
       url: "https://belezadanatureza.vercel.app/",

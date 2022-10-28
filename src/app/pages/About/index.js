@@ -10,7 +10,7 @@ export const Sobre = () => {
     return (
       <A.Container id="sobre">
         <AnimationOnScroll animateIn="animate__backInLeft">
-          <ETitle title={'Sobre'} subtitle={'Um pouco sobre mim'}/>
+          <ETitle title={'Sobre Mim'} subtitle={'Um pouco sobre minha trajetória'}/>
         </AnimationOnScroll>
         <A.Wrapper>
           <A.Left>

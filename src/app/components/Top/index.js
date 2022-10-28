@@ -44,10 +44,16 @@ export const Top = () =>{
     return(
         <T.Container>
             <AnimationOnScroll animateIn="animate__backInLeft">
-                <ETitle title={'Projetos em Destaque'}/>
+                <ETitle title={'Destaques'} subtitle={'Projetos desenvolvidos de maior destaque'}/>
             </AnimationOnScroll>
             <T.SplideContainer>
-                <Splide aria-label="My Favorite Images">
+                <Splide options={ {
+                        rewind: true,
+                        type   : 'loop',
+                        gap   : '1rem',
+                        wheel: true,
+                        autoplay: true
+                    } } aria-label="My Favorite Images">
                     { lista.map((e, i)=>{
                         return(
                             <SplideSlide key={i}>

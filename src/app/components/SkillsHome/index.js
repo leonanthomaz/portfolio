@@ -24,7 +24,7 @@ export const SkillsHome = () =>{
     return(
         <SH.Container>
             <AnimationOnScroll animateIn="animate__backInLeft">
-                <ETitle title={'Principais Skills'}/>
+                <ETitle title={'Habilidades'} subtitle={'Do front ao back!'}/>
             </AnimationOnScroll>
             <SH.Wrapper>
                 <SH.Box>
@@ -56,8 +56,9 @@ export const SkillsHome = () =>{
                         </SH.Left>
                         <SH.Right>
                             <SH.Text>
-                                Possuo excelentes conhecimentos em HTML, CSS,
-                                linguagem de programação JavaScript (variáveis, objetos, arrays, manipulação do DOM, etc.) e framework React (componentes, libs, hooks, context). 
+                                Possuo excelentes conhecimentos em HTML (semântica, acessibilidade e SEO), CSS (flexbox, grid, media queries),
+                                linguagem de programação JavaScript (variáveis, objetos, arrays, laços, etc.)
+                                 e framework React (componentes, libs, hooks, context). Possuo conhecimentos em pré-processadores SASS e SCSS.
                             </SH.Text>
                         </SH.Right>
                     </SH.ItemDW>
@@ -92,7 +93,7 @@ export const SkillsHome = () =>{
                         </SH.Left>
                         <SH.Right>
                             <SH.Text>
-                                Em back-end, possuo conhecimentos em Node JS e PHP (procedural), ferramentas de versionamento Git e Github e noções de banco de dados Mongo DB e MySQL.
+                                Em back-end, possuo conhecimentos em Node JS (express) e PHP (procedural), ferramentas de versionamento Git e Github e noções de banco de dados Mongo DB e MySQL.
                             </SH.Text>
                         </SH.Right>
                     </SH.ItemDW>

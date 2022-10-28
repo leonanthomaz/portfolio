@@ -4,7 +4,7 @@ export const lightTheme = {
   background: "whitesmoke",
   font: "#252525",
   button: "#252525",
-  h1: "crimson",
+  h1: "#252525",
   h1_mobile: "#fbff00",
   h2: "#fbff00",
   h3: "#252525",
@@ -39,7 +39,7 @@ export const lightTheme = {
   font_intro_Typewriter: "crimson",
   background_intro: "#dbd5d5d6",
 
-  background_vertical: "linear-gradient(to left, whitesmoke 0%, transparent 70%)",
+  background_vertical: "linear-gradient(to left, whitesmoke 0%, transparent 50%)",
   background_horizontal: "linear-gradient(to top, whitesmoke 5%, transparent 70%)",
   //tour
   font_tour: "whitesmoke",

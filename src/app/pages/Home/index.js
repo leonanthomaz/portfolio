@@ -17,7 +17,7 @@ export const Home = () => {
             <SkillsHome/>
             {/* <Github/> */}
             <Top/>
-            <Info title={'Me chame para um café!'} />
+            <Info title={'Fale comigo!'} subtitle={'Me coloco a disposição para tirar sua dúvida!'} />
             <Footer/>
         </H.Container>
   );
