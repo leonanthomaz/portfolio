@@ -39,8 +39,8 @@ export const lightTheme = {
   font_intro_Typewriter: "crimson",
   background_intro: "#dbd5d5d6",
 
-  background_vertical: "linear-gradient(to left, whitesmoke 0%, transparent 50%)",
-  background_horizontal: "linear-gradient(to top, whitesmoke 5%, transparent 70%)",
+  background_vertical: "linear-gradient(to top, whitesmoke 5%, transparent 80%)",
+  background_horizontal: "linear-gradient(to right, whitesmoke 10%, transparent 60%)",
   //tour
   font_tour: "whitesmoke",
 
@@ -143,7 +143,7 @@ export const darkTheme = {
   intro_arrow: "yellow",
   background_intro: "#1b1b1be7",
 
-  background_vertical: "linear-gradient(to top, #252525 5%, transparent 80%)",
+  background_vertical: "linear-gradient(to top, #252525 3%, transparent 100%)",
   background_horizontal: "linear-gradient(to right, #252525 10%, transparent 60%)",
 
   
