@@ -215,9 +215,9 @@ flex-direction: column;
 justify-content: center;    
 
 
-/* @media(max-width: 760px){
+@media(max-width: 760px){
     background-image: none;
-} */
+}
 
 `;
 
