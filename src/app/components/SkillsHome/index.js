@@ -24,7 +24,7 @@ export const SkillsHome = () =>{
     return(
         <SH.Container>
             <AnimationOnScroll animateIn="animate__backInLeft">
-                <ETitle title={'Habilidades'} subtitle={'Do front ao back!'}/>
+                <ETitle title={'Competências'} subtitle={'Do front ao back!'}/>
             </AnimationOnScroll>
             <SH.Wrapper>
                 <SH.Box>

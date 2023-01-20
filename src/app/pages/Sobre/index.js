@@ -33,7 +33,7 @@ export const Sobre = () => {
               </p>
 
               <p>
-              Logo abaixo estão minhas principais habilidades e competências!
+              Veja abaixo minhas principais competências e habilidades!
               </p>
               
             <AnimationOnScroll animateIn="animate__bounceIn">
