@@ -21,23 +21,28 @@ export const Top = () =>{
     let lista = [
         {
             img: img1,
-            name: 'Imagem 1'
+            name: 'eleicoes-segundo-turno',
+            url: 'https://eleicoes2022-segundo-turno.vercel.app/'
         }, 
         {
             img: img2,
-            name: 'Imagem 2'
+            name: 'popcorn',
+            url: 'https://popcorn-two.vercel.app/'
         },
         {
             img: img3,
-            name: 'Imagem 3'
+            name: 'beleza_da_natureza',
+            url: 'https://belezadanatureza.vercel.app/'
         },
         {
             img: img4,
-            name: 'Imagem 3'
+            name: 'casa_do_salgado',
+            url: 'https://casadosalgadoabv.000webhostapp.com/'
         },
         {
             img: img5,
-            name: 'Imagem 3'
+            name: 'eleicoes-primeiro-turno',
+            url: 'https://eleicoes2022-primeiro-turno.vercel.app/'
         },
     ]
 
@@ -57,14 +62,13 @@ export const Top = () =>{
                     { lista.map((e, i)=>{
                         return(
                             <SplideSlide key={i}>
-                                <img src={e.img} alt={e.name}/>
+                                <a href={e.url}>
+                                    <img src={e.img} alt={e.name}/>
+                                </a>
                             </SplideSlide>
                         )
                     })}
                 </Splide>
-                <T.ButtonContainer>
-                    <T.Button to='/portfolio'>Mais detalhes</T.Button>
-                </T.ButtonContainer>
             </T.SplideContainer>
         </T.Container>
     )

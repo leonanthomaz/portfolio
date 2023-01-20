@@ -1,8 +1,8 @@
 import React from "react";
-import * as A from "./AboutStyles";
+import * as A from "./SobreStyles";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { ETitle } from "../../components/Elements/title";
-import curriculo from '../../sharing/assets/doc/Curriculo-Leonan-Thomaz.pdf'
+import curriculo from '../../sharing/assets/doc/curriculo-leonan-thomaz.pdf'
 
 export const Sobre = () => {
     const imgPath = process.env.REACT_APP_IMGPATH

@@ -3,10 +3,10 @@ import * as C from './ContactStyles'
 import emailjs from '@emailjs/browser';
 import { ETitle } from "../../components/Elements/title";
 import { Footer } from "../../components/Footer";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 import { ModalContact } from '../../components/ModalContact';
 import { Info } from '../../components/Info';
-import { InfoContact } from '../../components/InfoContact';
 
 export const Contact = () => {
 
@@ -50,8 +50,10 @@ export const Contact = () => {
 
     return (
         <div>
-            <C.Container>
-            <ETitle title={'Deixe uma mensagem!'} subtitle={'Retornarei assim que possível!'}/>
+            <C.Container id="contact">
+            <AnimationOnScroll animateIn="animate__backInLeft">
+                <ETitle title={'Deixe uma mensagem!'} subtitle={'Retornarei assim que possível!'}/>
+            </AnimationOnScroll>
             <C.FormBox>
             <C.Form ref={form} onSubmit={sendEmail} id="formContact">
                 <div className="label-float">

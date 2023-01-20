@@ -5,13 +5,19 @@ import { useThemeContext } from '../../sharing/context/theme';
 import * as M from './MenuStyles';
 import { BiMenu } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
-
-import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
 
 export const Menu = () => {
     const { click, handleClick } = useContext(PortfolioContext)
     const { changeTheme } = useThemeContext()
     const theme = localStorage.getItem('theme') || 'dark'
+    const [ ativa, setAtiva ] = useState(false);
+
+    const changeLink = () => {
+        if(setAtiva(ativa)){
+            setAtiva(!ativa)
+        }
+    }
 
     return (
         <M.Container>
@@ -28,20 +34,11 @@ export const Menu = () => {
 
             <M.Menu click={click}>
 
-                <NavLink className={({isActive})=>{ return isActive ? 'ativo' : 'inativo' }} onClick={handleClick} to='/home' 
-                ><M.MenuLi>Início</M.MenuLi></NavLink>
-
-                <NavLink className={({isActive})=>{ return isActive ? 'ativo' : 'inativo' }} onClick={handleClick} to='/portfolio' 
-                ><M.MenuLi>Portfólio</M.MenuLi></NavLink>
-
-                <NavLink className={({isActive})=>{ return isActive ? 'ativo' : 'inativo' }} onClick={handleClick} to='/skills' 
-                ><M.MenuLi>Skills</M.MenuLi></NavLink>
-
-                <NavLink className={({isActive})=>{ return isActive ? 'ativo' : 'inativo' }} onClick={handleClick} to='/courses' 
-                ><M.MenuLi>Cursos</M.MenuLi></NavLink>
-
-                <NavLink className={({isActive})=>{ return isActive ? 'ativo' : 'inativo' }} onClick={handleClick} to='/contact' 
-                ><M.MenuLi>Contato</M.MenuLi></NavLink>
+                <M.MenuLi className="nav-item" onClick={handleClick}><a onClick={changeLink} ativa={ativa} href="#">Home</a></M.MenuLi>
+                <M.MenuLi className="nav-item" onClick={handleClick}><a onClick={changeLink} ativa={ativa} href="#sobre">Sobre</a></M.MenuLi>
+                <M.MenuLi className="nav-item" onClick={handleClick}><a onClick={changeLink} href="#skills" ativa={ativa}>Skills</a></M.MenuLi>
+                <M.MenuLi className="nav-item" onClick={handleClick}><a onClick={changeLink} href="#portfolio" ativa={ativa}>Portfólio</a></M.MenuLi>
+                <M.MenuLi className="nav-item" onClick={handleClick}><a href="#contact">Contato</a></M.MenuLi>
 
             </M.Menu>
             

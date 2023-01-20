@@ -1,12 +1,15 @@
 
-import React, { useContext, CSSProperties, useState, useEffect, Fragment  } from 'react';
+import React, { useContext, useEffect, Fragment  } from 'react';
 import { Spinner } from './components/Spinner';
 import { Menu } from './components/Menu';
 import { PortfolioContext } from './sharing/context/portfolio';
-import { AppRouter } from './sharing/routes/AppRouter';
-import ClipLoader from "react-spinners/ClipLoader";
-
-
+import { Intro } from './components/Intro';
+import { Skills } from './pages/Skills';
+import { Sobre } from './pages/Sobre';
+import { Portfolio } from './pages/Portfolio';
+import { Contact } from './pages/Contact';
+import { SkillsHome } from './components/SkillsHome';
+import { Top } from './components/Top';
 
 export const App = () => {
   const { loading, setLoading, closeNavbar } = useContext(PortfolioContext) 
@@ -23,7 +26,13 @@ export const App = () => {
       <Spinner/> : 
       <div className="app" onClick={()=>closeNavbar()}> 
         <Menu/>
-        <AppRouter/>
+        <Intro/>
+        <Sobre/>
+        <SkillsHome/>
+        <Skills/>
+        <Top/>
+        <Portfolio/>
+        <Contact/>
       </div> 
     }
     </Fragment>

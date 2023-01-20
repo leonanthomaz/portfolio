@@ -50,8 +50,10 @@ export const Portfolio = () => {
     }
 
     return (
-        <P.Container>
-            <ETitle title={'Portfólio'} subtitle={'Conhecimentos em prática!'}/>
+        <P.Container id="portfolio">
+            <AnimationOnScroll animateIn="animate__backInLeft">
+                <ETitle title={'Portfólio'} subtitle={'Conhecimentos em prática!'}/>
+            </AnimationOnScroll>
             <P.MenuPortfolio>
                 {category.map((item, index) => (
                 <PortfolioList
@@ -113,7 +115,6 @@ export const Portfolio = () => {
                 )
             })} 
             </P.Wrapper>
-            <Footer/>
         </P.Container>
     )
 }

@@ -5,7 +5,7 @@ export const lightTheme = {
   font: "#252525",
   button: "#252525",
   h1: "#252525",
-  h1_mobile: "#fbff00",
+  h1_mobile: "crimson",
   h2: "#fbff00",
   h3: "#252525",
   h4: "gray",
@@ -109,7 +109,7 @@ export const darkTheme = {
   background: "#252525",
   font: "whitesmoke",
   button: "whitesmoke",
-  h1: "#fbff00",
+  h1: "whitesmoke",
   h1_mobile: "#fbff00",
   h2: "#fed136",
   h3: "whitesmoke",
@@ -143,8 +143,8 @@ export const darkTheme = {
   intro_arrow: "yellow",
   background_intro: "#1b1b1be7",
 
-  background_vertical: "linear-gradient(to top, #252525 0%, transparent 70%)",
-  background_horizontal: "linear-gradient(to right, #252525 5%, transparent 70%)",
+  background_vertical: "linear-gradient(to top, #252525 5%, transparent 80%)",
+  background_horizontal: "linear-gradient(to right, #252525 10%, transparent 60%)",
 
   
   //tour

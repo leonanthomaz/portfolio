@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { NavLink } from "react-router-dom";
 
 export const Container = styled.div`
 position: fixed;
@@ -95,6 +93,11 @@ border: 1px solid transparent;
 
 @media(max-width: 760px){
     line-height: 35px;
+}
+
+a{
+    color: ${props => props.theme.font_navbar};
+    text-decoration: none;
 }
 `;
 

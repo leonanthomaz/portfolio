@@ -57,8 +57,10 @@ export const Skills = () => {
   }
 
     return (
-      <S.Container>
-          <ETitle title={'Skills'} subtitle={'Habilidades que possuo'}/>
+      <S.Container id="skills">
+        <AnimationOnScroll animateIn="animate__backInLeft">
+            <ETitle title={'Skills'} subtitle={'Habilidades que possuo'}/>
+        </AnimationOnScroll>
 
           <S.MenuSkillsGroup>
             <S.MenuSkills>
@@ -98,7 +100,6 @@ export const Skills = () => {
                 )
             })} 
           </S.Wrapper>
-          <Footer/>
       </S.Container>
     )
 }

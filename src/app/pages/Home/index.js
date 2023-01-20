@@ -11,7 +11,7 @@ import { SkillsHome } from "../../components/SkillsHome";
 
 export const Home = () => {
   return (
-        <H.Container>
+        <H.Container id="#">
             <Intro/>
             <Sobre/>
             <SkillsHome/>

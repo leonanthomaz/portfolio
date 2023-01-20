@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 
@@ -31,7 +30,7 @@ transition: all ease 0.2s;
 
 export const Wrapper = styled.div`
 /* border: 2px solid green; */
-margin: 10px;
+//margin: 10px;
 `;
 
 export const Box = styled.div`
@@ -40,7 +39,6 @@ grid-template-columns: auto auto;
 justify-content: center;
 gap: 10px;
 padding: 20px;
-
 
 
 @media(max-width: 900px){
@@ -121,24 +119,5 @@ justify-content: center;
 padding-top: 20px;
 `;
 
-export const Button = styled(Link)`
-border-radius: 20px;
-padding: 10px;
-background: ${props => props.theme.btn_background_main};
-text-decoration: none;
-font-weight: 700;
-
-background: ${props => props.theme.btn_background_main};
-color: ${props => props.theme.btn_font_main};
-
-:hover{
-        color: white;
-        background: green;
-        transition: all .1s linear;
-                -webkit-transition: all .1s linear;
-                -moz-transition: all .1s linear;
-    }
-
-`;
 
 

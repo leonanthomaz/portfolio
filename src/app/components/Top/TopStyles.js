@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -86,24 +85,4 @@ export const ButtonContainer = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-`;
-
-export const Button = styled(Link)`
-border-radius: 20px;
-padding: 10px;
-background: ${props => props.theme.btn_background_main};
-text-decoration: none;
-font-weight: 700;
-
-background: ${props => props.theme.btn_background_main};
-color: ${props => props.theme.btn_font_main};
-
-:hover{
-        color: white;
-        background: green;
-        transition: all .1s linear;
-                -webkit-transition: all .1s linear;
-                -moz-transition: all .1s linear;
-    }
-
 `;

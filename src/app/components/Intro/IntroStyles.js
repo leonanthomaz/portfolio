@@ -6,20 +6,22 @@ export const Container = styled.div`
 width: 100%;
 height: auto;
 background: ${props => props.theme.background};
-background-image: url('https://programadoresbrasil.com.br/wp-content/uploads/2022/07/computador.jpg');
+
+/* background-image: url(${({ theme }) => (theme === 'dark' ? 'https://img.freepik.com/vetores-premium/fundo-preto-na-cadeia-de-blocos-para-tecnologia_1302-8575.jpg?w=2000' : 'https://www.castecnologia.com.br/wp-content/uploads/2014/08/background.png')}); */
+
+background-image: url('https://img.freepik.com/vetores-gratis/fundo-de-formas-abstratas-brancas_79603-1362.jpg?w=2000');
 background-attachment: fixed;
 background-size: cover;
 background-repeat: no-repeat;
 z-index: 1;
 
-@media(max-width: 760px){
+/* @media(max-width: 760px){
     background-image: url('https://www.papeldeparede.etc.br/fotos/wp-content/uploads/Teclado8.jpg');
-    /* background-image: none; */
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-}
+} */
 
 `;
 
@@ -115,6 +117,7 @@ h1{
     text-transform: uppercase;
 
     @media (max-width:1000px){
+        color: ${props => props.theme.h1_mobile};
         font-size: 30px;
     }
 

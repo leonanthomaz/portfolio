@@ -8,7 +8,7 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 export const Courses = () => {
     
     return (
-        <CS.Container>
+        <CS.Container id="courses">
             <ETitle title={'Cursos'} subtitle={'Cursos e Bootcamps que já fiz'}/>
             <div className="courses-box">
                 <CS.Courses>

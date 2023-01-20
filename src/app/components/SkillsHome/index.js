@@ -93,17 +93,12 @@ export const SkillsHome = () =>{
                         </SH.Left>
                         <SH.Right>
                             <SH.Text>
-                                Em back-end, possuo conhecimentos em Node JS (express) e PHP (procedural), ferramentas de versionamento Git e Github e noções de banco de dados Mongo DB e MySQL.
+                                Em back-end, possuo conhecimentos em PHP (procedural), Node JS e noções de banco de dados MySQL, Mongo DB e SQL Server (consultas a nivel DML). Possuo também conhecimentos em ferramentas de versionamento Git e Github
                             </SH.Text>
                         </SH.Right>
                     </SH.ItemDW>
 
                 </SH.Box>
-
-                <SH.ButtonContainer>
-                    <SH.Button to='/skills'>Ver lista completa</SH.Button>
-                </SH.ButtonContainer>
-
             </SH.Wrapper>
         </SH.Container>
     )
