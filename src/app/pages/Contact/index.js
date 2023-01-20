@@ -52,7 +52,7 @@ export const Contact = () => {
         <div>
             <C.Container id="contact">
             <AnimationOnScroll animateIn="animate__backInLeft">
-                <ETitle title={'Deixe uma mensagem!'} subtitle={'Retornarei assim que possível!'}/>
+                <ETitle title={'Dúvidas?'} subtitle={'Deixe sua mensagem!'}/>
             </AnimationOnScroll>
             <C.FormBox>
             <C.Form ref={form} onSubmit={sendEmail} id="formContact">

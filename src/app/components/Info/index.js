@@ -10,7 +10,7 @@ export const Info = ({ title, subtitle }) => {
     return (
         <IF.Container>
             <AnimationOnScroll animateIn="animate__backInLeft">
-                <ETitle title={title} subtitle={subtitle}/>
+                <ETitle title={'Contato'} subtitle={'Responderei o mais rápido possível!'}/>
             </AnimationOnScroll>
             <IF.Wrapper>
                 <AnimationOnScroll animateIn="animate__fadeInUp">

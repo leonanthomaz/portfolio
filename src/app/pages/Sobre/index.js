@@ -25,7 +25,7 @@ export const Sobre = () => {
               </p>
 
               <p>
-              Hoje, busco aperfeiçoar meus conhecimentos na área de frontend, onde tenho maior afinidade.
+              Hoje, busco aperfeiçoar meus conhecimentos, sempre me mantendo atualizado na área.
               </p>
 
               <p>
@@ -33,7 +33,7 @@ export const Sobre = () => {
               </p>
 
               <p>
-              Você pode conhecer meus projetos clicando nos links logo abaixo.
+              Logo abaixo estão minhas principais habilidades e competências!
               </p>
               
             <AnimationOnScroll animateIn="animate__bounceIn">
