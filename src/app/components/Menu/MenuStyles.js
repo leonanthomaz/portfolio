@@ -99,6 +99,14 @@ a{
     color: ${props => props.theme.font_navbar};
     text-decoration: none;
 
+    &.active {
+        text-decoration: none;
+        color: ${props => props.theme.font_navbar_active};
+        transition: all ease 0.1s;
+        font-weight: 700;
+        text-decoration: 3px solid overline;
+    }
+
     :hover{
         text-decoration: none;
         color: ${props => props.theme.font_navbar_active};

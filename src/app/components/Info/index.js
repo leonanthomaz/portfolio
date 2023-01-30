@@ -5,10 +5,11 @@ import { SiGmail } from "react-icons/si";
 import { FaMapMarkerAlt, FaLinkedin } from "react-icons/fa";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { ETitle } from '../../components/Elements/title'
+import { VscGithub } from "react-icons/vsc";
 
 export const Info = ({ title, subtitle }) => {
     return (
-        <IF.Container>
+        <IF.Container id="contact">
             <AnimationOnScroll animateIn="animate__backInLeft">
                 <ETitle title={'Contato'} subtitle={'Responderei o mais rápido possível!'}/>
             </AnimationOnScroll>
@@ -39,29 +40,16 @@ export const Info = ({ title, subtitle }) => {
 
                 <AnimationOnScroll animateIn="animate__fadeInUp">
                 <IF.Item>
-                    <a href="mailto:leonan.thomaz@gmail.com? Subject: Olá! Gostaria de falar com você!m&body=Conteúdo da mensagem">
+                    <a href="https://github.com/leonanthomaz">
                     <IF.Icon>
-                        <SiGmail/>
+                        <VscGithub/>
                     </IF.Icon>
-                    <IF.Title>E-mail</IF.Title>
-                    <IF.Subtitle>leonan.thomaz@gmail.com</IF.Subtitle>
+                    <IF.Title>Github</IF.Title>
+                    <IF.Subtitle>leonanthomaz</IF.Subtitle>
                     </a>
                 </IF.Item>
                 </AnimationOnScroll> 
             </IF.Wrapper>
-            <IF.Location>
-                <IF.Item>
-                    <a href="https://goo.gl/maps/7DTPtgHYjsT3ZyEN9" >
-                    <IF.Icon>
-                        <FaMapMarkerAlt/>
-                    </IF.Icon>
-                    <IF.Title>Localização</IF.Title>
-                    <IF.SubtitleLocation>Estrada do Tijuaçu
-                            Alto da Boa Vista
-                            Rio de Janeiro - RJ</IF.SubtitleLocation>
-                    </a>
-                </IF.Item>
-            </IF.Location>
         </IF.Container>
     )
 }
