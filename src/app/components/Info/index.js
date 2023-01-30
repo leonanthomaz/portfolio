@@ -28,6 +28,18 @@ export const Info = ({ title, subtitle }) => {
 
                 <AnimationOnScroll animateIn="animate__fadeInUp">
                 <IF.Item>
+                    <a href="mailto:leonan.thomaz@gmail.com? Subject: Olá! Gostaria de falar com você!m&body=Conteúdo da mensagem">
+                    <IF.Icon>
+                        <SiGmail/>
+                    </IF.Icon>
+                    <IF.Title>E-mail</IF.Title>
+                    <IF.Subtitle>leonan.thomaz@gmail.com</IF.Subtitle>
+                    </a>
+                </IF.Item>
+                </AnimationOnScroll> 
+
+                <AnimationOnScroll animateIn="animate__fadeInUp">
+                <IF.Item>
                     <a href="https://www.linkedin.com/in/leonanthomaz">
                     <IF.Icon>
                         <FaLinkedin/>

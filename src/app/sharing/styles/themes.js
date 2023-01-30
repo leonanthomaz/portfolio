@@ -167,6 +167,8 @@ export const darkTheme = {
   box_shadow_skills: "0px 0px 16px -8px rgba(255, 255, 255, 0.68)",
   webkit_skills: "0px 0px 16px -8px rgba(255, 255, 255, 0.5)",
 
+  //skills-home
+  skills_home_background_box: "#343434",
 
   //contato
   background_contact: "#c5c5c5f5",
@@ -177,9 +179,9 @@ export const darkTheme = {
   btn_background_contact: "yellow",
 
 
-  background_contact_form: "#252525",
+  background_contact_form: "#343434",
   border_input_contact: "0px 0px 16px -8px rgba(255, 255, 255, 0.68)",
-  background_contact_label: "#252525",
+  background_contact_label: "#343434",
   background_contact_icons: "yellow",
   background_contact_icons_hover: "green",
 

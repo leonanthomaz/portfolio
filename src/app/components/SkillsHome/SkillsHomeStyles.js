@@ -31,14 +31,16 @@ transition: all ease 0.2s;
 export const Wrapper = styled.div`
 /* border: 2px solid green; */
 //margin: 10px;
+
 `;
 
 export const Box = styled.div`
 display: grid;
 grid-template-columns: auto auto;
 justify-content: center;
-gap: 10px;
+gap: 20px;
 padding: 20px;
+
 
 
 @media(max-width: 900px){
@@ -56,6 +58,8 @@ display: flex;
 flex-direction: column;
 margin: auto;
 height: 450px;
+background: ${props => props.theme.skills_home_background_box};
+
 
 @media(max-width: 760px){
     display: flex;

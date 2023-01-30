@@ -9,14 +9,10 @@ padding-bottom: 50px;
 
 export const Wrapper = styled.div`
 display: grid;
-grid-template-columns: 350px 350px 350px; 
+grid-template-columns: 350px 350px; 
 justify-content: center;
 gap: 10px;
 padding-top: 20px;
-
-@media (max-width: 1200px){
-    grid-template-columns: 350px 350px; 
-}
 
 @media (max-width: 760px){
     grid-template-columns: 300px; 
