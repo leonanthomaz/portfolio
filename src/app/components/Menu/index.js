@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 
 import { PortfolioContext } from '../../sharing/context/portfolio';
 import { useThemeContext } from '../../sharing/context/theme';
@@ -11,13 +11,6 @@ export const Menu = () => {
     const { click, handleClick } = useContext(PortfolioContext)
     const { changeTheme } = useThemeContext()
     const theme = localStorage.getItem('theme') || 'dark'
-    const [ ativa, setAtiva ] = useState(false);
-
-    const changeLink = () => {
-        if(setAtiva(ativa)){
-            setAtiva(!ativa)
-        }
-    }
 
     return (
         <M.Container>
@@ -34,10 +27,10 @@ export const Menu = () => {
 
             <M.Menu click={click}>
 
-                <M.MenuLi className="nav-item" onClick={handleClick}><a onClick={changeLink} ativa={ativa} href="#">Home</a></M.MenuLi>
-                <M.MenuLi className="nav-item" onClick={handleClick}><a onClick={changeLink} ativa={ativa} href="#sobre">Sobre</a></M.MenuLi>
-                <M.MenuLi className="nav-item" onClick={handleClick}><a onClick={changeLink} href="#skills" ativa={ativa}>Skills</a></M.MenuLi>
-                <M.MenuLi className="nav-item" onClick={handleClick}><a onClick={changeLink} href="#portfolio" ativa={ativa}>Portfólio</a></M.MenuLi>
+                <M.MenuLi className="nav-item" onClick={handleClick}><a href="#">Home</a></M.MenuLi>
+                <M.MenuLi className="nav-item" onClick={handleClick}><a href="#sobre">Sobre</a></M.MenuLi>
+                <M.MenuLi className="nav-item" onClick={handleClick}><a href="#skills">Skills</a></M.MenuLi>
+                <M.MenuLi className="nav-item" onClick={handleClick}><a href="#portfolio">Portfólio</a></M.MenuLi>
                 <M.MenuLi className="nav-item" onClick={handleClick}><a href="#contact">Contato</a></M.MenuLi>
 
             </M.Menu>

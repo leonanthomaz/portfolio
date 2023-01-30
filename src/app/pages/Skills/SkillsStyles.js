@@ -3,7 +3,6 @@ import { BiCodeBlock } from "react-icons/bi";
 
 export const Container = styled.div`
 width: 100%;
-min-height: 100vh;
 background: ${props => props.theme.background};
 `;
 
@@ -65,9 +64,11 @@ export const SkillsItems = styled.div`
   transition: all ease 0.5s;
   /* -webkit-transition: -webkit-transform .5s ease; */
   gap: 10px;
-  margin: 7px;
-  margin: auto;
+  margin: 7px auto;
 
+    @media (max-width: 760px){
+       
+    }
   
 
   .skills-header{

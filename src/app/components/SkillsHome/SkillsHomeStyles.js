@@ -51,11 +51,11 @@ export const ItemDW = styled.div`
 /* border: 2px solid red; */
 box-shadow: ${props => props.theme.box_shadow_portfolio};
 padding: 20px;
-
+max-width: 500px;
 display: flex;
 flex-direction: column;
-
-height: auto;
+margin: auto;
+height: 450px;
 
 @media(max-width: 760px){
     display: flex;

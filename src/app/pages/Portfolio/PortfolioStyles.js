@@ -3,7 +3,6 @@ import { BiCodeBlock } from "react-icons/bi";
 
 export const Container = styled.div`
 width: 100%;
-min-height: 100vh;
 background: ${props => props.theme.background};
 
 `;
@@ -54,10 +53,18 @@ export const Box = styled.div`
     box-shadow: ${props => props.theme.box_shadow_portfolio};
     border-radius: 10px;
     color: ${props => props.theme.font};
-
+    max-width: 450px;
     -moz-transition: all 0.5s;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
+
+    @media (max-width: 760px){
+       margin: auto;
+    }
+
+    @media (max-width: 500px){
+       margin: 10px;
+    }
 
     /* font-family: 'Dela Gothic One', cursive;
     font-family: 'Josefin Sans', sans-serif;

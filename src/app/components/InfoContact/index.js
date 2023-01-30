@@ -5,6 +5,7 @@ import { SiGmail } from "react-icons/si";
 import { FaMapMarkerAlt, FaLinkedin } from "react-icons/fa";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { ETitle } from '../Elements/title'
+import { VscGithub } from "react-icons/vsc";
 
 export const InfoContact = () => {
     return (
@@ -45,6 +46,18 @@ export const InfoContact = () => {
                     </IFC.Icon>
                     <IFC.Title>E-mail</IFC.Title>
                     <IFC.Subtitle>leonan.thomaz@gmail.com</IFC.Subtitle>
+                    </a>
+                </IFC.Item>
+                </AnimationOnScroll> 
+
+                <AnimationOnScroll animateIn="animate__fadeInUp">
+                <IFC.Item>
+                    <a href="https://github.com/leonanthomaz">
+                    <IFC.Icon>
+                        <VscGithub/>
+                    </IFC.Icon>
+                    <IFC.Title>Github</IFC.Title>
+                    <IFC.Subtitle>leonanthomaz</IFC.Subtitle>
                     </a>
                 </IFC.Item>
                 </AnimationOnScroll> 

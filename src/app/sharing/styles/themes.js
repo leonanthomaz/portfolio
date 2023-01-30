@@ -163,7 +163,7 @@ export const darkTheme = {
   //skills  
   skills_font: "whitesmoke",
   skills_icon: "yellow",
-  skills_background_box: "#252525",
+  skills_background_box: "#343434",
   box_shadow_skills: "0px 0px 16px -8px rgba(255, 255, 255, 0.68)",
   webkit_skills: "0px 0px 16px -8px rgba(255, 255, 255, 0.5)",
 
@@ -185,7 +185,7 @@ export const darkTheme = {
 
   //portfolio
   h4_portfolio: "yellow",
-  background_portfolio: "#252525",
+  background_portfolio: "#343434",
   box_shadow_portfolio: "0px 0px 16px -8px rgba(255, 255, 255, 0.68)",
   btn_lists_box_shadow: "0.3em 0.2em 0.5em whitesmoke",
   portfolio_shadow: "4px 4px 5px #bbbbbb",
@@ -194,7 +194,7 @@ export const darkTheme = {
   btn_font: "#252525",
   btn_font_hover: "#252525",
   font_portfolio_h2: "yellow",
-  borderbottom_portfolio: "3px solid crimson",
+  borderbottom_portfolio: "1px solid crimson",
 
   //cursos
   font_courses_h2: "yellow",

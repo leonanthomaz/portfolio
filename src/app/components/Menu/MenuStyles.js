@@ -51,7 +51,7 @@ text-align: center;
 margin-left: 20px;
 color: ${props => props.theme.font_navbar};
 
-.ativo{
+/* .ativo{
     text-decoration: none;
     color: ${props => props.theme.font_navbar_active};
     transition: all ease 0.1s;
@@ -66,7 +66,7 @@ color: ${props => props.theme.font_navbar};
     :hover{
         color: ${props => props.theme.font_navbar_hover};
     }
-}
+} */
 
 
 
@@ -98,6 +98,14 @@ border: 1px solid transparent;
 a{
     color: ${props => props.theme.font_navbar};
     text-decoration: none;
+
+    :hover{
+        text-decoration: none;
+        color: ${props => props.theme.font_navbar_active};
+        transition: all ease 0.1s;
+        font-weight: 700;
+        text-decoration: 3px solid overline;
+    }
 }
 `;
 
