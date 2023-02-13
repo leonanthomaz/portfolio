@@ -88,6 +88,11 @@ padding: 10px;
     border-radius: 10%;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .label-float input:required:invalid + label:before{
     content: '*';
 }

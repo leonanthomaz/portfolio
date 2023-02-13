@@ -57,19 +57,19 @@ export const Contact = () => {
             <C.FormBox>
             <C.Form ref={form} onSubmit={sendEmail} id="formContact">
                 <div className="label-float">
-                    <input value={values} name="name" type="text" placeholder=" " required/>
+                    <input value={values} name="name" type="text" placeholder=" " required minLength={3}/>
                     <label>Nome</label>
                 </div>
                 <div className="label-float">
-                    <input value={values} name="subject" type="text" placeholder=" " required/>
+                    <input value={values} name="subject" type="text" placeholder=" " required minLength={5}/>
                     <label>Assunto</label>
                 </div>
                 <div className="label-float">
-                    <input value={values} name="telephone" type="text" placeholder=" " required/>
+                    <input value={values} name="telephone" type="number" placeholder=" " required min={11}/>
                     <label>Telefone</label>
                 </div>
                 <div className="label-float">
-                    <input value={values} name="message" className="textarea" type="text" placeholder=" " required/>
+                    <input value={values} name="message" className="textarea" type="text" placeholder=" " minLength={12}/>
                     <label>Mensagem</label>
                 </div>
                 <div className='text-center py-3'>
