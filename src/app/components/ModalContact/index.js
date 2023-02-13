@@ -36,7 +36,7 @@ export const ModalContact = ({
                     <div style={{ marginTop: '50px'}}>
                         <h2 style={{color: 'red'}}>{status.mensagem}</h2>
                         <img style={{width: '80px', marginTop: '20px'}} src={erroricon} alt='Ícone sucesso' />
-                        <h4 style={{ marginTop: '20px'}}>Tente novamente mais tarde...</h4>
+                        <h5 style={{ marginTop: '20px'}}>Tente novamente!</h5>
                     </div> 
                     }
                 </div>

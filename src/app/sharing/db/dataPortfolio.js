@@ -120,19 +120,19 @@ import Dmu2 from '../assets/img/portfolio/2001-2.png';
       url: "",
       github: "https://github.com/leonanthomaz/Template-GloboPlay"
     },
-    {
-      id: 4,
-      title: "Template - Ideia 2001",
-      subtitle: "Desafio - Página inicial da empresa ",
-      img: Dmu,
-      img2: Dmu2,
-      preview: "Implementado em HTML e CSS",
-      description: "Desafio de implementação da tela inicial da empresa Ideia 2001, onde pude praticar minhas habilidades em responsividade. Desenvolvido em HTML, CSS e estruturas com a ferramenta Figma.",
-      date: "Outubro 2022",
-      technology: "HTML e CSS",
-      url: "",
-      github: "https://github.com/leonanthomaz/Teste-2001-LeonanThomaz"
-    },
+    // {
+    //   id: 4,
+    //   title: "Template - Ideia 2001",
+    //   subtitle: "Desafio - Página inicial da empresa ",
+    //   img: Dmu,
+    //   img2: Dmu2,
+    //   preview: "Implementado em HTML e CSS",
+    //   description: "Desafio de implementação da tela inicial da empresa Ideia 2001, onde pude praticar minhas habilidades em responsividade. Desenvolvido em HTML, CSS e estruturas com a ferramenta Figma.",
+    //   date: "Outubro 2022",
+    //   technology: "HTML e CSS",
+    //   url: "",
+    //   github: "https://github.com/leonanthomaz/Teste-2001-LeonanThomaz"
+    // },
 
   ];
 
@@ -162,18 +162,18 @@ import Dmu2 from '../assets/img/portfolio/2001-2.png';
       url: "https://casadosalgadoabv.000webhostapp.com/",
       github: "https://github.com/leonanthomaz/CasaDoSalgado"
     },
-    {
-      id: 3,
-      title: "Yakisoba do Alto",
-      subtitle: "Cardapio virtual ",
-      img: Yakisoba1,
-      img2: Yakisoba2,
-      description: "Template de um dos meus primeiros mini projetos. Consiste em um cardapio virtual, manipulação de páginas com JQuery e integração via Whatsapp.",
-      date: "Junho 2021",
-      technology: "HTML, CSS, JavaScript e JQuery",
-      url: "",
-      github: "https://github.com/leonanthomaz/YakisobaDoAlto"
-    },
+    // {
+    //   id: 3,
+    //   title: "Yakisoba do Alto",
+    //   subtitle: "Cardapio virtual ",
+    //   img: Yakisoba1,
+    //   img2: Yakisoba2,
+    //   description: "Template de um dos meus primeiros mini projetos. Consiste em um cardapio virtual, manipulação de páginas com JQuery e integração via Whatsapp.",
+    //   date: "Junho 2021",
+    //   technology: "HTML, CSS, JavaScript e JQuery",
+    //   url: "",
+    //   github: "https://github.com/leonanthomaz/YakisobaDoAlto"
+    // },
   ];
 
 
@@ -189,7 +189,7 @@ import Dmu2 from '../assets/img/portfolio/2001-2.png';
       description: "Inspirado em aulas online, construí esta rede social em MERN (Mongo, Express, React e Node). Utilizo context api e reducer para login e renderização das informações do usuário e MongoDB como banco de dados.",
       date: "Julho 2022",
       technology: "MERN (Mongo, Express, React e Node)",
-      url: "https://pegasus-front-end.vercel.app/",
+      url: "",
       github: "https://github.com/leonanthomaz/pegasus",
     },
     {
@@ -205,31 +205,31 @@ import Dmu2 from '../assets/img/portfolio/2001-2.png';
       url: "",
       github: "https://github.com/leonanthomaz/Saturno"
     },
-    {
-      id: 3,
-      title: "Galleon",
-      subtitle: "Blog (Estudos)",
-      img: Galleon,
-      img2: Galleon,
-      preview: "Sistema de um blog",
-      description: "Sistema constrúido em Node JS, do backend ao frontend, utilizando a engine Handlebars para as views..",
-      date: "Setembro 2021",
-      technology: "React, Firebase",
-      url: "",
-      github: "https://github.com/leonanthomaz/Galleon"
-    },
-    {
-      id: 4,
-      title: "Jupter",
-      subtitle: "Chat App ",
-      img: Jupter,
-      preview: "Aplicativo desenvolvido em PHP",
-      description: "Projeto desenvolvido em PHP e Javascript (JQuery). Trata-se de um aplicativo de conversas, tendo como front-end Bootstrap, CSS e backend PHP.",
-      date: "Março 2022",
-      technology: "PHP e Javascript",
-      url: "https://jupterapp.000webhostapp.com/",
-      github: "https://github.com/leonanthomaz/chat-php"
-    },
+    // {
+    //   id: 3,
+    //   title: "Galleon",
+    //   subtitle: "Blog (Estudos)",
+    //   img: Galleon,
+    //   img2: Galleon,
+    //   preview: "Sistema de um blog",
+    //   description: "Sistema constrúido em Node JS, do backend ao frontend, utilizando a engine Handlebars para as views..",
+    //   date: "Setembro 2021",
+    //   technology: "React, Firebase",
+    //   url: "",
+    //   github: "https://github.com/leonanthomaz/Galleon"
+    // },
+    // {
+    //   id: 4,
+    //   title: "Jupter",
+    //   subtitle: "Chat App ",
+    //   img: Jupter,
+    //   preview: "Aplicativo desenvolvido em PHP",
+    //   description: "Projeto desenvolvido em PHP e Javascript (JQuery). Trata-se de um aplicativo de conversas, tendo como front-end Bootstrap, CSS e backend PHP.",
+    //   date: "Março 2022",
+    //   technology: "PHP e Javascript",
+    //   url: "https://jupterapp.000webhostapp.com/",
+    //   github: "https://github.com/leonanthomaz/chat-php"
+    // },
     
   ];
 

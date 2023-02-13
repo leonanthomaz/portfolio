@@ -19,7 +19,11 @@ export const Contact = () => {
     const handleCloseModalContact = () => setShowModalContact(false);
     const handleShowModalContact = () => setShowModalContact(true);
 
-    const form = useRef();    
+    const form = useRef(); 
+    const n = useRef();   
+    const a = useRef();   
+    const t = useRef();   
+    const m = useRef();   
     const [ values, setValues ] = useState(form.current)
     const [ status, setStatus ] = useState({
         type: '',
@@ -28,25 +32,65 @@ export const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault()
-        emailjs.sendForm('service_6lh3joz', 'template_1sogban', form.current, 'p8wpY9wEmPZdsAgdo')
-        .then((result) => {
-            console.log('SUCCESS!', result.text);
-            setValues('')
-            setStatus({
-                type: 'sucesso',
-                mensagem: 'Mensagem enviada com sucesso!'
-            })
-            handleShowModalContact()
-        }, (error) => {
-            console.log('FAILED...', error.text);
-            setValues('')
+        let celular = t.current.value.replace( /\D/g , "");
+        if (celular.length == 11){
+            celular = celular.replace(/^(\d{2})(\d)/g,"($1) $2"); 
+            celular.replace(/(\d)(\d{4})$/,"$1-$2");
+            // console.log(celular)
+
+            emailjs.sendForm('service_6lh3joz', 'template_1sogban', form.current, 'p8wpY9wEmPZdsAgdo')
+            .then((result) => {
+                console.log('SUCCESS!', result.text);
+                setValues('')
+                setStatus({
+                    type: 'sucesso',
+                    mensagem: 'Mensagem enviada com sucesso!'
+                })
+                handleShowModalContact()
+            }, (error) => {
+                console.log('FAILED...', error.text);
+                setValues('')
+                setStatus({
+                    type: 'erro',
+                    mensagem: 'Falha ao enviar a mensagem.'
+                })
+                handleShowModalContact()
+            });
+          } else {
             setStatus({
                 type: 'erro',
-                mensagem: 'Falha ao enviar a mensagem.'
+                mensagem: 'Digite um telefone válido!'
             })
             handleShowModalContact()
-        });
+          }
+        
+        
+        
+        // console.log(n.current.value, a.current.value, t.current.value, m.current.value)
+
     }
+
+    // const sendEmail = (e) => {
+    //     e.preventDefault()
+    //     emailjs.sendForm('service_6lh3joz', 'template_1sogban', form.current, 'p8wpY9wEmPZdsAgdo')
+    //     .then((result) => {
+    //         console.log('SUCCESS!', result.text);
+    //         setValues('')
+    //         setStatus({
+    //             type: 'sucesso',
+    //             mensagem: 'Mensagem enviada com sucesso!'
+    //         })
+    //         handleShowModalContact()
+    //     }, (error) => {
+    //         console.log('FAILED...', error.text);
+    //         setValues('')
+    //         setStatus({
+    //             type: 'erro',
+    //             mensagem: 'Falha ao enviar a mensagem.'
+    //         })
+    //         handleShowModalContact()
+    //     });
+    // }
 
     return (
         <div>
@@ -57,19 +101,19 @@ export const Contact = () => {
             <C.FormBox>
             <C.Form ref={form} onSubmit={sendEmail} id="formContact">
                 <div className="label-float">
-                    <input value={values} name="name" type="text" placeholder=" " required minLength={3}/>
+                    <input value={values} ref={n} name="name" type="text" placeholder=" " required minLength={3}/>
                     <label>Nome</label>
                 </div>
                 <div className="label-float">
-                    <input value={values} name="subject" type="text" placeholder=" " required minLength={5}/>
+                    <input value={values} ref={a} name="subject" type="text" placeholder=" " required minLength={5}/>
                     <label>Assunto</label>
                 </div>
                 <div className="label-float">
-                    <input value={values} name="telephone" type="number" placeholder=" " required min={11}/>
+                    <input value={values} ref={t} name="telephone" type="number"  placeholder=" " required/>
                     <label>Telefone</label>
                 </div>
                 <div className="label-float">
-                    <input value={values} name="message" className="textarea" type="text" placeholder=" " minLength={12}/>
+                    <input value={values} ref={m} name="message" className="textarea" type="text" placeholder=" " required minLength={12}/>
                     <label>Mensagem</label>
                 </div>
                 <div className='text-center py-3'>
