@@ -12,7 +12,8 @@ import {
     DiNodejs,
     DiNodejsSmall,
     DiPhp,
-    DiDatabase
+    DiDatabase,
+    DiJava
 } from 'react-icons/di';
 
 
@@ -73,7 +74,7 @@ export const SkillsHome = () =>{
 
                                     <AnimationOnScroll animateIn="animate__zoomInUp">
                                         <SH.Icon>
-                                            <DiNodejsSmall/>
+                                            <DiJava/>
                                         </SH.Icon>
                                     </AnimationOnScroll> 
                                     <AnimationOnScroll animateIn="animate__zoomInUp">
@@ -93,7 +94,7 @@ export const SkillsHome = () =>{
                         </SH.Left>
                         <SH.Right>
                             <SH.Text>
-                                Em back-end, possuo conhecimentos em PHP (procedural e orientado a objetos), Node JS e noções de banco de dados MySQL, Mongo DB e SQL Server (a nível de consultas). Possuo também conhecimentos em ferramentas de versionamento Git e Github
+                                Em back-end, possuo conhecimentos em PHP (procedural e orientado a objetos), Node JS e noções de banco de dados MySQL, Mongo DB e SQL Server (a nível de consultas e CRUD). Atualmente estou expandindo meus conhedimentos na linguagem Java.
                             </SH.Text>
                         </SH.Right>
                     </SH.ItemDW>
