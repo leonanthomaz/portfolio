@@ -74,17 +74,17 @@ export const SkillsHome = () =>{
 
                                     <AnimationOnScroll animateIn="animate__zoomInUp">
                                         <SH.Icon>
-                                            <DiJava/>
-                                        </SH.Icon>
-                                    </AnimationOnScroll> 
-                                    <AnimationOnScroll animateIn="animate__zoomInUp">
-                                        <SH.Icon>
                                             <DiPhp/>
                                         </SH.Icon>
                                     </AnimationOnScroll> 
                                     <AnimationOnScroll animateIn="animate__zoomInUp">
                                         <SH.Icon>
                                             <DiDatabase/>
+                                        </SH.Icon>
+                                    </AnimationOnScroll> 
+                                    <AnimationOnScroll animateIn="animate__zoomInUp">
+                                        <SH.Icon>
+                                            <DiNodejsSmall/>
                                         </SH.Icon>
                                     </AnimationOnScroll> 
                                     
@@ -94,7 +94,7 @@ export const SkillsHome = () =>{
                         </SH.Left>
                         <SH.Right>
                             <SH.Text>
-                                Em back-end, possuo conhecimentos em PHP (procedural e orientado a objetos), Node JS e noções de banco de dados MySQL, Mongo DB e SQL Server (a nível de consultas e CRUD). Atualmente estou expandindo meus conhedimentos na linguagem Java.
+                                Em back-end, possuo conhecimentos em PHP (procedural e orientado a objetos), Node JS, noções em banco de dados MySQL e Mongo DB (a nível de consultas).
                             </SH.Text>
                         </SH.Right>
                     </SH.ItemDW>
