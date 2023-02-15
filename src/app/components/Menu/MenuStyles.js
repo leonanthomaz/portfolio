@@ -32,6 +32,7 @@ margin-right: 30px;
 export const Icon = styled.div`
 display: none;
 color: ${({ theme }) => (theme === null || theme === 'dark' ? 'white' : 'black')};
+cursor: pointer;
 
 @media(max-width: 760px){
     display: block;

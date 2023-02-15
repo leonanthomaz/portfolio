@@ -38,7 +38,7 @@ export const Sobre = () => {
               
             <AnimationOnScroll animateIn="animate__bounceIn">
               <A.LinkCurriculum>
-                  <a className="btn" href={curriculo} download>Baixe meu curriculo</a>
+                  <a className="btn" aria-labeledby="Botão para baixar curriculo de Leonan Thomaz" href={curriculo} download>Baixe meu curriculo</a>
               </A.LinkCurriculum>
               </AnimationOnScroll>
             </A.Text>
@@ -46,7 +46,7 @@ export const Sobre = () => {
           <A.Right>
             <AnimationOnScroll animateIn="animate__fadeInRight">
                 <A.ImgContainer>
-                  <img src={imgPath + 'programador.png'} alt="" />
+                  <img src={imgPath + 'programador.png'} alt="Desenho minimalista de um programador" />
                 </A.ImgContainer>
             </AnimationOnScroll>
           </A.Right>

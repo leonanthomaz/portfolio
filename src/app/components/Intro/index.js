@@ -29,7 +29,7 @@ export const Intro = () => {
             <I.Wrapper>
               {/* <h2>Bem vindo ao meu portfólio!</h2> */}
               <h1>Leonan Thomaz</h1>
-              <h4> 
+              <h2> 
               <Typewriter 
               options={{ 
               strings:["Desenvolvedor WEB", "Desenvolvedor Front-End", "Desenvolvedor Back-End"],
@@ -38,11 +38,11 @@ export const Intro = () => {
               loop:true
               }}
               /> 
-              </h4>
+              </h2>
                 
               <div className="arrow-down">
                 <a href="#sobre">
-                  <I.Arrow/>
+                  <I.Arrow aria-labeledby="Seta para ir para a seção Sobre"/>
                 </a>
               </div>
              

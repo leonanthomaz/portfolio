@@ -15,14 +15,9 @@ export const Menu = () => {
     return (
         <M.Container>
             <M.Left>
-                <M.Icon click={click} theme={theme}>
-                {click ? <AiOutlineClose style={{
-                    cursor: 'pointer'
-                }}
-                onClick={handleClick} 
-                /> : <BiMenu onClick={handleClick} style={{
-                    cursor: 'pointer'
-                }}/> }
+
+            <M.Icon click={click} theme={theme} aria-label={click ? "Abrir Menu" : "Abrir Menu" } id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded={click ? true : false }>
+                {click ? <AiOutlineClose onClick={handleClick}/> : <BiMenu onClick={handleClick}/> }
             </M.Icon>
 
             <M.Menu click={click}>

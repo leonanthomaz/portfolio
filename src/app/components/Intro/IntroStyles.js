@@ -127,37 +127,6 @@ h1{
 }
 
 h2{
-    font-size: 60px;
-    margin: 10px 0;
-    color: ${props => props.theme.h2};
-    font-family: 'Lobster', cursive;
-
-    @media (max-width:1000px){
-        font-size: 40px;
-    }
-
-    @media (max-width:760px){
-        font-size: 30px;
-        margin-top: 10px;
-    }
-}
-
-h3{
-    font-size: 55px;
-    font-family: 'Dela Gothic One', cursive;
-    color: ${props => props.theme.h2};
-
-    @media (max-width:1000px){
-        font-size: 45px;
-    }
-
-    @media (max-width:760px){
-        font-size: 30px;
-        margin-top: 10px;
-    }
-}
-
-h4{
     font-size: 30px;
     padding-top: 10px;
 
