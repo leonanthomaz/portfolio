@@ -13,7 +13,7 @@ export const ModalContact = ({
         <div>
         <Modal 
             size="md"
-            aria-labelledby="contained-modal-title-vcenter"
+            aria-labelledby="Modal do projeto"
             centered
             show={showModalContact} 
             onHide={handleCloseModalContact}

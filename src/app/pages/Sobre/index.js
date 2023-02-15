@@ -38,7 +38,7 @@ export const Sobre = () => {
               
             <AnimationOnScroll animateIn="animate__bounceIn">
               <A.LinkCurriculum>
-                  <a className="btn" aria-labeledby="Botão para baixar curriculo de Leonan Thomaz" href={curriculo} download>Baixe meu curriculo</a>
+                  <a className="btn" aria-labelledby="Botão para baixar curriculo de Leonan Thomaz" href={curriculo} download>Baixe meu curriculo</a>
               </A.LinkCurriculum>
               </AnimationOnScroll>
             </A.Text>

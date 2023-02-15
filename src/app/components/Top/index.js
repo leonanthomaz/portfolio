@@ -61,9 +61,9 @@ export const Top = () =>{
                     } } aria-label="My Favorite Images">
                     { lista.map((e, i)=>{
                         return(
-                            <SplideSlide key={i} aria-labeledby={`Slide das principais habilidades`}>
+                            <SplideSlide key={i} aria-labelledby={`Slide das principais habilidades`}>
                                 <a href={e.url}>
-                                    <img src={e.img} alt={e.name} loading="lazy" aria-labeledby={`Imagem editada, mostrando a versão Web e Mobile do projeto: ${e.name}`}/>
+                                    <img src={e.img} alt={e.name} loading="lazy" aria-labelledby={`Imagem editada, mostrando a versão Web e Mobile do projeto: ${e.name}`}/>
                                 </a>
                             </SplideSlide>
                         )

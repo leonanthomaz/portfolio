@@ -38,17 +38,17 @@ export const SkillsHome = () =>{
                                 <SH.IconsContainer>
                                     <AnimationOnScroll animateIn="animate__zoomInUp">
                                         <SH.Icon>
-                                            <DiHtml5 aria-labeledby="Ícone da linguagem HTML"/>
+                                            <DiHtml5 aria-labelledby="Ícone da linguagem HTML"/>
                                         </SH.Icon>
                                     </AnimationOnScroll> 
                                     <AnimationOnScroll animateIn="animate__zoomInUp">
                                         <SH.Icon>
-                                            <DiJsBadge aria-labeledby="Ícone da linguagem Javascript"/>
+                                            <DiJsBadge aria-labelledby="Ícone da linguagem Javascript"/>
                                         </SH.Icon>
                                     </AnimationOnScroll>
                                     <AnimationOnScroll animateIn="animate__zoomInUp">
                                         <SH.Icon>
-                                            <DiCss3 aria-labeledby="Ícone da linguagem CSS"/>
+                                            <DiCss3 aria-labelledby="Ícone da linguagem CSS"/>
                                         </SH.Icon>
                                     </AnimationOnScroll>
                                 </SH.IconsContainer>
@@ -74,17 +74,17 @@ export const SkillsHome = () =>{
 
                                     <AnimationOnScroll animateIn="animate__zoomInUp">
                                         <SH.Icon>
-                                            <DiPhp aria-labeledby="Ícone da linguagem PHP"/>
+                                            <DiPhp aria-labelledby="Ícone da linguagem PHP"/>
                                         </SH.Icon>
                                     </AnimationOnScroll> 
                                     <AnimationOnScroll animateIn="animate__zoomInUp">
                                         <SH.Icon>
-                                            <DiDatabase aria-labeledby="Ícone da linguagem MySQL"/>
+                                            <DiDatabase aria-labelledby="Ícone da linguagem MySQL"/>
                                         </SH.Icon>
                                     </AnimationOnScroll> 
                                     <AnimationOnScroll animateIn="animate__zoomInUp">
                                         <SH.Icon>
-                                            <DiNodejsSmall aria-labeledby="Ícone da linguagem Node JS"/>
+                                            <DiNodejsSmall aria-labelledby="Ícone da linguagem Node JS"/>
                                         </SH.Icon>
                                     </AnimationOnScroll> 
                                     

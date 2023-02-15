@@ -84,15 +84,15 @@ export const Skills = () => {
                     <S.SkillsItems onClick={()=>handleFindSkills(item.id)}>
                       
                         <div className="skills-header">
-                            <div className="skills-icon" aria-labeledby={`Ícone da habilidade ${item.name}`}>
+                            <div className="skills-icon" aria-labelledby={`Ícone da habilidade ${item.name}`}>
                                 {item.icon}
                             </div>
-                            <div className="skills-name" aria-labeledby={`Nome da habilidade ${item.name}`}>
+                            <div className="skills-name" aria-labelledby={`Nome da habilidade ${item.name}`}>
                                 <h3>{item.name}</h3>
                           </div>
                         </div>
                       <div className="skills-level">
-                        <Progressbar bgcolor={item.level >= 70 ? "#99ff66" : "orange"} progress={item.level} height={20}  aria-labeledby={`Nível da habilidade ${item.level}`}/>
+                        <Progressbar bgcolor={item.level >= 70 ? "#99ff66" : "orange"} progress={item.level} height={20}  aria-labelledby={`Nível da habilidade ${item.level}`}/>
                       </div>
                     </S.SkillsItems>
                   </S.Grid>
