@@ -34,8 +34,8 @@ export const Intro = () => {
               </h2>
                 
               <div className="arrow-down">
-                <a href="#sobre">
-                  <I.Arrow aria-labelledby="Seta para ir para a seção Sobre"/>
+                <a href="#sobre" aria-labelledby="Seta para ir para a seção Sobre">
+                  <I.Arrow/>
                 </a>
               </div>
              

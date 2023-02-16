@@ -17,7 +17,7 @@ export const App = () => {
   useEffect(()=>{
     setTimeout(()=>{
       setLoading(false)
-    },0)
+    }, 1000)
   },[])
   
   return(
