@@ -14,14 +14,13 @@ export const Intro = () => {
 
           <I.Left>
             <I.ImgContainer background={imgPath + 'back-js.webp'}>
-              <img src={imgPath + 'leonan-color.webp'} alt="" />
+              <img src={imgPath + 'leonan-color.webp'} alt="Foto de Leonan Thomaz no tema introdutório" loading='lazy' />
             </I.ImgContainer>
           </I.Left>
 
           <I.Right>
           
             <I.Wrapper>
-              {/* <h2>Bem vindo ao meu portfólio!</h2> */}
               <h1>Leonan Thomaz</h1>
               <h2> 
               <Typewriter 
