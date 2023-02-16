@@ -2,10 +2,8 @@ import React from "react";
 import * as I from "./IntroStyles";
 
 import Typewriter from 'typewriter-effect';
-import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 export const Intro = () => {
-    const theme = localStorage.getItem('theme') || null
     const imgPath = process.env.REACT_APP_IMGPATH
     
     return (
@@ -15,12 +13,8 @@ export const Intro = () => {
         <I.Box>
 
           <I.Left>
-            <I.ImgContainer background={imgPath + 'back-js.png'}>
-              <img src={imgPath + 'leonan-color.png'} alt="" />
-              {/* {theme  === 'dark' || theme  === null ? 
-                <img src={imgPath + 'leonan-color.png'} alt="" />
-              : <img src={imgPath + 'leonan-uncolor.png'} alt="" />
-              } */}
+            <I.ImgContainer background={imgPath + 'back-js.webp'}>
+              <img src={imgPath + 'leonan-color.webp'} alt="" />
             </I.ImgContainer>
           </I.Left>
 

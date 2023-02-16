@@ -6,17 +6,13 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css/skyblue';
 
 
-import img1 from '../../sharing/assets/img/destaques/eleicoes-st.png';
-import img2 from '../../sharing/assets/img/destaques/popcorn.png';
-import img3 from '../../sharing/assets/img/destaques/bn.png';
-import img4 from '../../sharing/assets/img/destaques/cds.png';
-import img5 from '../../sharing/assets/img/destaques/eleicoes-pt.png';
-
-
-{/* <AnimationOnScroll animateIn="animate__fadeInLeft"></AnimationOnScroll> */}
+import img1 from '../../sharing/assets/img/destaques/eleicoes-st.webp';
+import img2 from '../../sharing/assets/img/destaques/popcorn.webp';
+import img3 from '../../sharing/assets/img/destaques/bn.webp';
+import img4 from '../../sharing/assets/img/destaques/cds.webp';
+import img5 from '../../sharing/assets/img/destaques/eleicoes-pt.webp';
 
 export const Top = () =>{
-    const imgPath = process.env.REACT_APP_IMGPATH
 
     let lista = [
         {

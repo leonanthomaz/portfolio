@@ -9,7 +9,7 @@ export const items = [
 //   media: {
 //     type: "IMAGE",
 //     source: {
-//       url: "https://pbs.twimg.com/profile_images/960497646099103745/lBIIJifQ_400x400.jpg"
+//       url: "https://pbs.twimg.com/profile_images/960497646099103745/lBIIJifQ_400x400.webp"
 //     }
 //   },
 // },
@@ -22,7 +22,7 @@ export const items = [
   media: {
     type: "IMAGE",
     source: {
-      url: "https://alfahelix.com.br/wp-content/uploads/2020/10/40047948_2639697829587723_7376828758646325248_n-1.jpg"
+      url: "https://alfahelix.com.br/wp-content/uploads/2020/10/40047948_2639697829587723_7376828758646325248_n-1.webp"
     }
   },
 },
@@ -35,7 +35,7 @@ export const items = [
   media: {
     type: "IMAGE",
     source: {
-      url: "https://www.projetodraft.com/wp-content/uploads/2019/12/digital-innovation-one.jpg"
+      url: "https://www.projetodraft.com/wp-content/uploads/2019/12/digital-innovation-one.webp"
     }
   },
 },
@@ -48,7 +48,7 @@ export const items = [
   media: {
     type: "IMAGE",
     source: {
-      url: "https://www.projetodraft.com/wp-content/uploads/2019/12/digital-innovation-one.jpg"
+      url: "https://www.projetodraft.com/wp-content/uploads/2019/12/digital-innovation-one.webp"
     }
   },
 },
@@ -61,7 +61,7 @@ export const items = [
   media: {
     type: "IMAGE",
     source: {
-      url: "https://www.design24horas.com/wp-content/uploads/2019/03/udemy-1260x640.png"
+      url: "https://www.design24horas.com/wp-content/uploads/2019/03/udemy-1260x640.webp"
     }
   }, 
 },[]];

@@ -11,8 +11,8 @@ import { Info } from '../../components/Info';
 export const Contact = () => {
 
     const imgPath = process.env.REACT_APP_IMGPATH
-    let checked = imgPath + 'checked.png'
-    let erroricon = imgPath + 'error-icon.png'
+    let checked = imgPath + 'checked.webp'
+    let erroricon = imgPath + 'error-icon.webp'
 
     /**/
     const [showModalContact, setShowModalContact] = useState(false);
@@ -33,7 +33,7 @@ export const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault()
         let celular = t.current.value.replace( /\D/g , "");
-        if (celular.length == 11){
+        if (celular.length === 11){
             celular = celular.replace(/^(\d{2})(\d)/g,"($1) $2"); 
             celular.replace(/(\d)(\d{4})$/,"$1-$2");
             // console.log(celular)

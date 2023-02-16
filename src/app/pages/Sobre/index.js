@@ -46,7 +46,7 @@ export const Sobre = () => {
           <A.Right>
             <AnimationOnScroll animateIn="animate__fadeInRight">
                 <A.ImgContainer>
-                  <img src={imgPath + 'programador.png'} alt="Desenho minimalista de um programador" />
+                  <img src={imgPath + 'programador.webp'} alt="Desenho minimalista de um programador" />
                 </A.ImgContainer>
             </AnimationOnScroll>
           </A.Right>

@@ -7,16 +7,16 @@ width: 100%;
 height: auto;
 background: ${props => props.theme.background};
 
-/* background-image: url(${({ theme }) => (theme === 'dark' ? 'https://img.freepik.com/vetores-premium/fundo-preto-na-cadeia-de-blocos-para-tecnologia_1302-8575.jpg?w=2000' : 'https://www.castecnologia.com.br/wp-content/uploads/2014/08/background.png')}); */
+/* background-image: url(${({ theme }) => (theme === 'dark' ? 'https://img.freepik.com/vetores-premium/fundo-preto-na-cadeia-de-blocos-para-tecnologia_1302-8575.webp?w=2000' : 'https://www.castecnologia.com.br/wp-content/uploads/2014/08/background.webp')}); */
 
-background-image: url('https://img.freepik.com/vetores-gratis/fundo-de-formas-abstratas-brancas_79603-1362.jpg?w=2000');
+background-image: url('https://img.freepik.com/vetores-gratis/fundo-de-formas-abstratas-brancas_79603-1362.webp?w=2000');
 background-attachment: fixed;
 background-size: cover;
 background-repeat: no-repeat;
 z-index: 1;
 
 /* @media(max-width: 760px){
-    background-image: url('https://www.papeldeparede.etc.br/fotos/wp-content/uploads/Teclado8.jpg');
+    background-image: url('https://www.papeldeparede.etc.br/fotos/wp-content/uploads/Teclado8.webp');
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
