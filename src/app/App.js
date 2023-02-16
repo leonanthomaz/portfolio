@@ -15,10 +15,8 @@ export const App = () => {
   const { loading, setLoading, closeNavbar } = useContext(PortfolioContext) 
 
   useEffect(()=>{
-    setTimeout(()=>{
-      setLoading(false)
-    }, 500)
-  },[])
+    setLoading(false)
+  },[loading])
   
   return(
     <Fragment>

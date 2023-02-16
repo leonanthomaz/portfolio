@@ -14,6 +14,8 @@ padding-top: 20px;
 width: 700px;
 height: auto;
 margin: auto;
+border-radius: 20px;
+
 
 @media (max-width: 760px){
     max-width: 500px;
@@ -25,8 +27,8 @@ margin: auto;
 
 img{
     width: 100%;
+    height: auto;
     border-radius: 20px;
-
 }
 `;
 
