@@ -59,7 +59,7 @@ export const Top = () =>{
                         return(
                             <SplideSlide key={i} aria-labelledby={`Slide das principais habilidades`}>
                                 <a href={e.url}>
-                                    <img src={e.img} alt={e.name} loading="lazy" aria-labelledby={`Imagem editada, mostrando a versão Web e Mobile do projeto: ${e.name}`} width="inherit" height="inherit"/>
+                                    <img src={e.img} alt={e.name} loading="lazy" aria-labelledby={`Imagem editada, mostrando a versão Web e Mobile do projeto: ${e.name}`}/>
                                 </a>
                             </SplideSlide>
                         )
