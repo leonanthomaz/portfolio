@@ -22,11 +22,11 @@ export const Menu = () => {
 
             <M.Menu click={click}>
 
-                <M.MenuLi className="nav-item" onClick={handleClick}><a href="#">Home</a></M.MenuLi>
-                <M.MenuLi className="nav-item" onClick={handleClick}><a href="#sobre">Sobre</a></M.MenuLi>
-                <M.MenuLi className="nav-item" onClick={handleClick}><a href="#skills">Skills</a></M.MenuLi>
-                <M.MenuLi className="nav-item" onClick={handleClick}><a href="#portfolio">Portfólio</a></M.MenuLi>
-                <M.MenuLi className="nav-item" onClick={handleClick}><a href="#contact">Contato</a></M.MenuLi>
+                <M.MenuLi className="nav-item" onClick={handleClick}><a href="#" aria-labelledby="guia inicio da pagina">Home</a></M.MenuLi>
+                <M.MenuLi className="nav-item" onClick={handleClick}><a href="#sobre" aria-labelledby="guia sobre mim">Sobre</a></M.MenuLi>
+                <M.MenuLi className="nav-item" onClick={handleClick}><a href="#skills" aria-labelledby="guia habilidades">Skills</a></M.MenuLi>
+                <M.MenuLi className="nav-item" onClick={handleClick}><a href="#portfolio" aria-labelledby="guia projetos do portfolio">Portfólio</a></M.MenuLi>
+                <M.MenuLi className="nav-item" onClick={handleClick}><a href="#contact" aria-labelledby="guia para contato">Contato</a></M.MenuLi>
 
             </M.Menu>
             

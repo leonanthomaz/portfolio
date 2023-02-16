@@ -101,23 +101,23 @@ export const Contact = () => {
             <C.FormBox>
             <C.Form ref={form} onSubmit={sendEmail} id="formContact">
                 <div className="label-float">
-                    <input value={values} ref={n} name="name" type="text" placeholder=" " required minLength={3}/>
+                    <input value={values} ref={n} name="name" aria-label="campo nome" type="text" placeholder=" " required minLength={3}/>
                     <label>Nome</label>
                 </div>
                 <div className="label-float">
-                    <input value={values} ref={a} name="subject" type="text" placeholder=" " required minLength={5}/>
+                    <input value={values} ref={a} name="subject" aria-label="campo assunto" type="text" placeholder=" " required minLength={5}/>
                     <label>Assunto</label>
                 </div>
                 <div className="label-float">
-                    <input value={values} ref={t} name="telephone" type="number"  placeholder=" " required/>
+                    <input value={values} ref={t} name="telephone" aria-label="campo telefone" type="number"  placeholder=" " required/>
                     <label>Telefone</label>
                 </div>
                 <div className="label-float">
-                    <input value={values} ref={m} name="message" className="textarea" type="text" placeholder=" " required minLength={12}/>
+                    <input value={values} ref={m} name="message" aria-label="campo mensagem" className="textarea" type="text" placeholder=" " required minLength={12}/>
                     <label>Mensagem</label>
                 </div>
                 <div className='text-center py-3'>
-                    <button className="btn-form-contact" type="submit">Enviar</button>
+                    <button className="btn-form-contact" aria-label="tecla enviar" type="submit">Enviar</button>
                 </div>
             </C.Form>
             </C.FormBox>

@@ -4,12 +4,12 @@ import * as CS from './CardSkillsStyles';
 export const SkillsList = ({ id, index, title, active, setSelectedSkills }) => {
 
     return (
-        <CS.Container
+        <CS.Label
         key={index}
         className={active ? "skillsList active" : "skillsList"}
         onClick={() => setSelectedSkills(id)}
         >
         {title}
-        </CS.Container>
+        </CS.Label>
     )
 }
