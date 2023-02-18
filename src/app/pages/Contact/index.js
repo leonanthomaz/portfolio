@@ -81,7 +81,7 @@ export const Contact = () => {
 
     return (
         <div>
-            <C.Container>
+            <C.Container id="contact">
             <AnimationOnScroll animateIn="animate__backInLeft">
                 <ETitle title={'Dúvidas?'} subtitle={'Deixe sua mensagem!'}/>
             </AnimationOnScroll>

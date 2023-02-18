@@ -1,5 +1,5 @@
 
-import React, { useContext, useEffect, Fragment  } from 'react';
+import React, { useContext, Fragment } from 'react';
 import { Spinner } from './components/Spinner';
 import { Menu } from './components/Menu';
 import { PortfolioContext } from './sharing/context/portfolio';
@@ -12,11 +12,7 @@ import { SkillsHome } from './components/SkillsHome';
 import { Top } from './components/Top';
 
 export const App = () => {
-  const { loading, setLoading, closeNavbar } = useContext(PortfolioContext) 
-
-  useEffect(()=>{
-    setLoading(false)
-  },[loading])
+  const { loading, closeNavbar } = useContext(PortfolioContext) 
   
   return(
     <Fragment>
@@ -24,7 +20,7 @@ export const App = () => {
       <Spinner/> : 
       <div className="app" onClick={()=>closeNavbar()}> 
         <Menu/>
-        <Intro/>
+        <Intro />
         <Sobre/>
         <SkillsHome/>
         <Skills/>

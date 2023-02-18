@@ -1,26 +1,15 @@
-import React, { useContext, useEffect, useState, useRef } from 'react'
+import React, { useContext } from 'react'
 
 import { PortfolioContext } from '../../sharing/context/portfolio';
 import { useThemeContext } from '../../sharing/context/theme';
 import * as M from './MenuStyles';
 import { BiMenu } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
-// import { useState } from 'react';
 
 export const Menu = () => {
     const { click, handleClick } = useContext(PortfolioContext)
     const { changeTheme } = useThemeContext()
     const theme = localStorage.getItem('theme') || 'dark'
-
-    const [ ativo, setAtivo ] = useState(false)
-
-    console.log(ativo)
-
-    const c = useRef();
-
-    const changeAtivo = () => {
-        setAtivo(!ativo)
-    }
   
     return (
         <M.Container>
@@ -30,10 +19,10 @@ export const Menu = () => {
                     {click ? <AiOutlineClose onClick={handleClick}/> : <BiMenu onClick={handleClick}/> }
                 </M.Icon>
 
-                <M.Menu click={click} role="menu" aria-labelledby="menu principal" ref={c} >
+                <M.Menu click={click} role="menu" aria-labelledby="menu principal" >
 
                     <M.MenuLi className="nav-item" role="menuitem" onClick={handleClick}>
-                        <a href="#" aria-labelledby="guia inicio da pagina" aria-controls={click ? true : false }>Home</a>
+                        <a href="#inicio" aria-labelledby="guia inicio da pagina" aria-controls={click ? true : false }>Home</a>
                     </M.MenuLi>
 
                     <M.MenuLi className="nav-item" role="menuitem" onClick={handleClick}>

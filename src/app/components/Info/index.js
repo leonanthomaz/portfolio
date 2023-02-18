@@ -2,14 +2,14 @@ import React from 'react'
 import * as IF from './InfoStyles'
 import { BsWhatsapp } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
-import { FaMapMarkerAlt, FaLinkedin } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { ETitle } from '../../components/Elements/title'
 import { VscGithub } from "react-icons/vsc";
 
-export const Info = ({ title, subtitle }) => {
+export const Info = () => {
     return (
-        <IF.Container id="contact">
+        <IF.Container>
             <AnimationOnScroll animateIn="animate__backInLeft">
                 <ETitle title={'Contato'} subtitle={'Responderei o mais rápido possível!'}/>
             </AnimationOnScroll>

@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const PortfolioContext = createContext()
 
@@ -15,6 +15,11 @@ export const PortfolioProvider = ({ children }) => {
           setClick(false)
         }
     }
+
+    useEffect(()=>{
+        setLoading(false)
+    },[loading])
+
     return (
         <PortfolioContext.Provider value={{ 
             click, 

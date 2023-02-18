@@ -7,7 +7,7 @@ export const Intro = () => {
     const imgPath = process.env.REACT_APP_IMGPATH
     
     return (
-      <I.Container >
+      <I.Container id="inicio">
         <I.FeaturedVertical>
           <I.FeaturedHorizontal>
         <I.Box>
