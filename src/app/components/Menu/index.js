@@ -1,40 +1,64 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState, useRef } from 'react'
 
 import { PortfolioContext } from '../../sharing/context/portfolio';
 import { useThemeContext } from '../../sharing/context/theme';
 import * as M from './MenuStyles';
 import { BiMenu } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
-import { useState } from 'react';
+// import { useState } from 'react';
 
 export const Menu = () => {
     const { click, handleClick } = useContext(PortfolioContext)
     const { changeTheme } = useThemeContext()
     const theme = localStorage.getItem('theme') || 'dark'
 
+    const [ ativo, setAtivo ] = useState(false)
+
+    console.log(ativo)
+
+    const c = useRef();
+
+    const changeAtivo = () => {
+        setAtivo(!ativo)
+    }
+  
     return (
         <M.Container>
             <M.Left>
 
-            <M.Icon click={click} theme={theme} aria-label={click ? "Fechar Menu" : "Abrir Menu" }  aria-hidden="false" aria-expanded={click ? true : false }>
-                {click ? <AiOutlineClose onClick={handleClick}/> : <BiMenu onClick={handleClick}/> }
-            </M.Icon>
+                <M.Icon click={click} theme={theme} tabIndex="0" aria-label={click ? "Fechar Menu" : "Abrir Menu" } aria-expanded={click ? true : false }>
+                    {click ? <AiOutlineClose onClick={handleClick}/> : <BiMenu onClick={handleClick}/> }
+                </M.Icon>
 
-            <M.Menu click={click} role="menu" aria-label="menu">
+                <M.Menu click={click} role="menu" aria-labelledby="menu principal" ref={c} >
 
-                <M.MenuLi className="nav-item" role="menuitem" aria-label="item 1 do menu" data-content="1" aria-haspopup="true"  onClick={handleClick}><a href="#inicio" aria-labelledby="guia inicio da pagina">Home</a></M.MenuLi>
-                <M.MenuLi className="nav-item" role="menuitem" aria-label="item 2 do menu" data-content="2" aria-haspopup="true"  onClick={handleClick}><a href="#sobre" aria-labelledby="guia sobre mim">Sobre</a></M.MenuLi>
-                <M.MenuLi className="nav-item" role="menuitem" aria-label="item 3 do menu" data-content="3" aria-haspopup="true"  onClick={handleClick}><a href="#skills" aria-labelledby="guia habilidades">Skills</a></M.MenuLi>
-                <M.MenuLi className="nav-item" role="menuitem" aria-label="item 4 do menu" data-content="4" aria-haspopup="true"  onClick={handleClick}><a href="#portfolio" aria-labelledby="guia projetos do portfolio">Portfólio</a></M.MenuLi>
-                <M.MenuLi className="nav-item" role="menuitem" aria-label="item 5 do menu" data-content="5" aria-haspopup="true"  onClick={handleClick}><a href="#contact" aria-labelledby="guia para contato">Contato</a></M.MenuLi>
+                    <M.MenuLi className="nav-item" role="menuitem" onClick={handleClick}>
+                        <a href="#" aria-labelledby="guia inicio da pagina" aria-controls={click ? true : false }>Home</a>
+                    </M.MenuLi>
 
-            </M.Menu>
+                    <M.MenuLi className="nav-item" role="menuitem" onClick={handleClick}>
+                        <a href="#sobre" aria-labelledby="guia sobre mim"  aria-controls={click ? true : false }>Sobre</a>
+                    </M.MenuLi>
+
+                    <M.MenuLi className="nav-item" role="menuitem" onClick={handleClick}>
+                        <a href="#skills"  aria-labelledby="guia habilidades" aria-haspopup={true} aria-expanded={click ? true : false }>Skills</a>
+                    </M.MenuLi>
+
+                    <M.MenuLi className="nav-item" role="menuitem" onClick={handleClick}>
+                        <a href="#portfolio"  aria-labelledby="guia projetos do portfolio" aria-haspopup={true} aria-expanded={click ? true : false }>Portfólio</a>
+                    </M.MenuLi>
+
+                    <M.MenuLi className="nav-item" role="menuitem" onClick={handleClick}>
+                        <a href="#contact" aria-labelledby="guia para contato" aria-haspopup={true} aria-expanded={click ? true : false }>Contato</a>
+                    </M.MenuLi>
+
+                </M.Menu>
             
             </M.Left>
             <M.Right>
-                <M.ThemeContainer onClick={changeTheme} theme={theme}>
+                <M.ThemeContainer role="tema" aria-label="controle de tema" tabIndex="0" onClick={changeTheme} theme={theme}>
                     {/* <M.ThemeIcon>{theme !== null && theme === 'light' ? <BsMoonStars/> : <FaSun/> }</M.ThemeIcon> */}
-                    <M.ThemeIcon><M.Active theme={theme}></M.Active></M.ThemeIcon>
+                    <M.ThemeIcon role="temaItem" arua-aria-controls='true'><M.Active theme={theme}></M.Active></M.ThemeIcon>
                 </M.ThemeContainer>
             </M.Right>
         </M.Container>
