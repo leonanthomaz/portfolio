@@ -14,7 +14,7 @@ export const Intro = () => {
 
           <I.Left>
             <I.ImgContainer background={imgPath + 'back-js.webp'}>
-              <img src={imgPath + 'leonan-color.webp'} alt="Foto de Leonan Thomaz no tema introdutório" />
+              <img src={imgPath + 'foto-leonan-atual.webp'} alt="Foto de Leonan Thomaz no tema introdutório" />
             </I.ImgContainer>
           </I.Left>
 
