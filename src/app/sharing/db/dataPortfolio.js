@@ -13,6 +13,8 @@ import PopCorn1 from '../assets/img/portfolio/popcorn1.webp';
 import PopCorn2 from '../assets/img/portfolio/popcorn2.webp';
 import EleicoesST from '../assets/img/portfolio/eleicoes-st.webp';
 import EleicoesPT from '../assets/img/portfolio/eleicoes-pt.webp';
+import Burguer1 from '../assets/img/portfolio/burguer1.webp';
+import Burguer2 from '../assets/img/portfolio/burguer2.webp';
 import BN from '../assets/img/portfolio/bn.webp';
 
 
@@ -134,6 +136,18 @@ import BN from '../assets/img/portfolio/bn.webp';
   export const EcommerceListData = [
     {
       id: 1,
+      title: "Projeto Hamburgueria",
+      subtitle: "E-commerce",
+      img: Burguer1,
+      img2: Burguer2,
+      description: "E-commerce virtual, em PHP. Utilizo um sistema de rotas em 3 pilares (rota, classe e método). Sistema possui cadastro com confirmação por email, login com redes sociais (Google e Facebook), carrinho de compras, checkout e envio de pedidos ao banco, com disparo automático de mensagem para o whatsapp do cliente. Sistema também possui geração de QRCode do pix com valor e dados do usuário. Projeto em construção.",
+      date: "Fevereiro 2023",
+      technology: "PHP, JQuery, Bootstrap",
+      url: "",
+      github: "https://github.com/leonanthomaz/hamburgueria"
+    },
+    {
+      id: 2,
       title: "Beleza da Natureza",
       subtitle: "E-commerce (Estudos)",
       img: BN,
