@@ -12,20 +12,10 @@ background-attachment: fixed;
 background-size: cover;
 background-repeat: no-repeat;
 z-index: 1;
-
-/* @media(max-width: 760px){
-    background-image: url('https://www.papeldeparede.etc.br/fotos/wp-content/uploads/Teclado8.webp');
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-} */
-
 `;
 
 export const Box = styled.div`
 padding-top: 80px;
-/* background-color: ${props => props.theme.background_intro}; */
 height: 100vh;
 display: grid;
 grid-template-columns: auto auto;
@@ -56,26 +46,28 @@ justify-content: center;
 `;
 
 export const ImgContainer = styled.div`
-width: 480px;
-height: 480px;
+width: 350px;
+height: 350px;
 background: ${props => props.theme.background_intro_photo};
 border-radius: 50%;
-margin-left: 10px;
+margin-left: 5px;
+border: 3px solid whitesmoke;
 
 img {
     height: 100%;
 }
 
 @media(max-height: 500px) or (max-width: 900px){
-    width: 280px;
-    height: 280px;
+    width: 250px;
+    height: 250px;
 }
 
 @media (max-width: 760px){
-    width: 250px;
-    height: 250px;
-    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
     margin-left: 0px;
+    
 }
 
 `;
