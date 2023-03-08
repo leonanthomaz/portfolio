@@ -55,7 +55,7 @@ export const SkillsInfo = () =>{
                             <SH.Text>
                                 Possuo excelentes conhecimentos em HTML (semântica, acessibilidade e SEO), CSS (flexbox, grid, media queries),
                                 linguagem de programação JavaScript (variáveis, objetos, arrays, laços, etc.)
-                                 e framework React (componentes, libs, hooks, context). Possuo conhecimentos em pré-processadores SASS e SCSS.
+                                 e framework React (componentes, libs, hooks, context).
                             </SH.Text>
                         </SH.Right>
                     </SH.ItemDW>

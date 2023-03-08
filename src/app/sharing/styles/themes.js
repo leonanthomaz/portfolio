@@ -18,11 +18,13 @@ export const lightTheme = {
   btn_background_main: "#04232e",
   btn_background_main_hover: "#0b6585",
   btn_font_main: "#dddddd",
-  btn_font_main_hover: "crimson",
+  btn_font_main_hover: "yellow",
+
+  box_shadow_list: "0px 0px 16px -8px #04232e",
+  box_shadow_list_hover: "none",
 
   //Elements
   font_title_el: "crimson",
-
 
   //navbar
   background_navbar: "#dddddd",
@@ -77,11 +79,11 @@ export const lightTheme = {
   //portfolio
   background_portfolio: "#dddddd",
   box_shadow_portfolio: "0px 0px 16px -8px rgba(0, 0, 0, 0.68)",
-  btn_lists_box_shadow: "0.4em 0.3em 0.7em #dddddd",
   portfolio_shadow: "4px 4px 5px #bbbbbb",
-  btn_background: "#00141b",
-  btn_font: "#dddddd",
-  btn_font_hover: "#00141b",
+  btn_background_portfolio: "#00141b",
+  btn_background_portfolio_hover: "#00141b",
+  btn_font_background_portfolio: "#dddddd",
+  btn_font_background_portfolio_hover: "yellow",
   font_portfolio_h2: "crimson",
   borderbottom_portfolio: "3px solid gray",
 
@@ -118,13 +120,16 @@ export const darkTheme = {
   hr: "3px solid #bebebe",
   box: "#dddddd",
   boxfont: "#00141b",
-  box_shadow: "0.1em 0.4em 0.4em 0.1em #bbbbbb",
+  box_shadow: "0.1em 0.1em 0.4em 0.4em #bbbbbb",
 
   //Botões padrão
   btn_background_main: "#04232e",
   btn_background_main_hover: "#0b6585",
   btn_font_main: "#dddddd",
   btn_font_main_hover: "yellow",
+
+  box_shadow_list: "0.1em 0.1em 0.4em 0.4em #bbbbbb",
+  box_shadow_list_hover: "0.1em 0.1em 0.4em 0.4em #04232e",
 
   //Elements
   font_title_el: "#fbff00",
@@ -165,9 +170,10 @@ export const darkTheme = {
   //skills  
   skills_font: "#dddddd",
   skills_icon: "yellow",
-  skills_background_box: "#04232e",
+  skills_background_box: "#04232e", 
   box_shadow_skills: "0px 0px 16px -8px rgba(255, 255, 255, 0.68)",
   webkit_skills: "0px 0px 16px -8px rgba(255, 255, 255, 0.5)",
+
 
   //skills-home
   skills_home_background_box: "#04232e",
@@ -187,18 +193,21 @@ export const darkTheme = {
   background_contact_icons: "yellow",
   background_contact_icons_hover: "green",
 
-  //portfolio
-  h4_portfolio: "yellow",
-  background_portfolio: "#04232e",
-  box_shadow_portfolio: "0px 0px 16px -8px rgba(255, 255, 255, 0.68)",
-  btn_lists_box_shadow: "0.3em 0.2em 0.5em #dddddd",
-  portfolio_shadow: "4px 4px 5px #bbbbbb",
 
-  btn_background: "#dddddd",
+  //portfolio
+  background_portfolio: "#04232e",
+  box_shadow_portfolio: "0.1em 0.1em 0.4em 0.4em #bbbbbb",
+  portfolio_shadow: "4px 4px 5px #bbbbbb",
+  btn_background_portfolio: "#00141b",
+  btn_background_portfolio_hover: "#00141b",
+  btn_font_background_portfolio: "#dddddd",
+  btn_font_background_portfolio_hover: "yellow",
+  borderbottom_portfolio: "3px solid gray",
+  
+
   btn_font: "#00141b",
   btn_font_hover: "#00141b",
   font_portfolio_h2: "yellow",
-  borderbottom_portfolio: "1px solid crimson",
 
   //cursos
   font_courses_h2: "yellow",

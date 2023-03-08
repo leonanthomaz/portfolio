@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.li`
+export const Label = styled.li`
 
     
     text-align: center;
@@ -11,7 +11,7 @@ export const Container = styled.li`
     cursor: pointer;
     width: 100px;
     transition: all .1s linear;
-    box-shadow: ${props => props.theme.box_shadow};
+    box-shadow: ${props => props.theme.box_shadow_list};
     color: ${props => props.theme.btn_font_main};
     background: ${props => props.theme.btn_background_main};
 
@@ -33,7 +33,7 @@ export const Container = styled.li`
         transition: all .1s linear;
                 -webkit-transition: all .1s linear;
                 -moz-transition: all .1s linear;
-                box-shadow: ${props => props.theme.btn_lists_box_shadow};
+                box-shadow: ${props => props.theme.box_shadow_list_hover};
 
       }
 `;

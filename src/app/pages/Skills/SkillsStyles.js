@@ -58,12 +58,17 @@ export const SkillsItems = styled.div`
   width: 250px;
   padding: 15px;
   background: ${props => props.theme.skills_background_box};
-  box-shadow: ${props => props.theme.box_shadow_skills};
+  box-shadow: ${props => props.theme.box_shadow_list};
   border-radius: 7px;
   transition: all ease 0.5s;
   /* -webkit-transition: -webkit-transform .5s ease; */
   gap: 10px;
   margin: 7px auto;
+
+  :hover{
+    box-shadow: ${props => props.theme.box_shadow_list_hover};
+
+  }
 
     @media (max-width: 760px){
        

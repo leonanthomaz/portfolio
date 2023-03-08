@@ -20,7 +20,6 @@ export const Contact = () => {
 
     const form = useRef(); 
     const n = useRef();   
-    const a = useRef();   
     const t = useRef();   
     const m = useRef();   
     const [ values, setValues ] = useState(form.current)
@@ -33,10 +32,9 @@ export const Contact = () => {
         e.preventDefault()
         let celular = t.current.value.replace( /\D/g , "");
         let nome = n.current.value;
-        let assunto = a.current.value;
         let mensagem = m.current.value;
 
-        if(!celular || !nome || !assunto || !mensagem){
+        if(!celular || !nome || !mensagem){
             setStatus({
                 type: 'erro',
                 mensagem: 'Por favor, preencha todos os campos!'
@@ -89,10 +87,6 @@ export const Contact = () => {
                 <div className="label-float">
                     <input value={values} ref={n} name="name" aria-label="campo nome" type="text" placeholder=" " require minLength={3} maxLength={20}/>
                     <label>Nome</label>
-                </div>
-                <div className="label-float">
-                    <input value={values} ref={a} name="subject" aria-label="campo assunto" type="text" placeholder=" " require minLength={5}/>
-                    <label>Assunto</label>
                 </div>
                 <div className="label-float">
                     <input value={values} ref={t} name="telephone" aria-label="campo telefone" type="number"  placeholder=" " require/>

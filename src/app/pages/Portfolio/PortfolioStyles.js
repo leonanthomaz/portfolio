@@ -120,8 +120,8 @@ export const Box = styled.div`
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(to top right, #ff4747a9, #fdfa288f);
-            color: ${props => props.theme.font};
+            background: ${props => props.theme.btn_background_portfolio};
+            color: ${props => props.theme.btn_font_background_portfolio};
             font-weight: 700;
             border: none;
             padding: 5px;
@@ -133,7 +133,8 @@ export const Box = styled.div`
                         -moz-transition: all .1s linear;
 
             :hover{
-                background: linear-gradient(to top right, #fdfa288f, #ff4747a9);
+                background: ${props => props.theme.btn_background_portfolio_hover};
+                color: ${props => props.theme.btn_font_background_portfolio_hover};
                 transition: all .1s linear;
                         -webkit-transition: all .1s linear;
                         -moz-transition: all .1s linear;

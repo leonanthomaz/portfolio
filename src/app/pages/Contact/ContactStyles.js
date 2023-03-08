@@ -44,7 +44,7 @@ padding: 10px;
 
 .label-float input{
     width: 450px;
-    border: 1px solid lightgrey;
+    border: 1px solid #c3bebe;
     border-radius: 5px;
     outline: none;
     padding: 20px;
