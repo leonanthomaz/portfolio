@@ -1,14 +1,15 @@
 
 import React, { useContext, Fragment } from 'react';
+import { PortfolioContext } from './sharing/context/portfolio';
 import { Spinner } from './components/Spinner';
 import { Navbar } from './components/Navbar';
-import { PortfolioContext } from './sharing/context/portfolio';
 import { Intro } from './components/Intro';
+import { SkillsInfo } from './components/SkillsInfo';
+import { Footer } from './components/Footer';
 import { Skills } from './pages/Skills';
 import { About } from './pages/About';
 import { Portfolio } from './pages/Portfolio';
 import { Contact } from './pages/Contact';
-import { SkillsInfo } from './components/SkillsInfo';
 
 export const App = () => {
   const { loading, closeNavbar } = useContext(PortfolioContext) 
@@ -25,6 +26,7 @@ export const App = () => {
         <Skills/>
         <Portfolio/>
         <Contact/>
+        <Footer/>
       </div> 
     }
     </Fragment>

@@ -11,11 +11,11 @@ export const Icon = styled.div`
 border-radius: 10px;
 padding: 10px;
 font-size: 100px;
-color: ${props => props.theme.skillsh_font_icon};
+color: ${props => props.theme.skills_font_icon};
 transition: all ease 0.2s;
 
 &:hover{
-color: ${props => props.theme.skillsh_font_icon_hover};
+color: ${props => props.theme.skills_font_icon_hover};
 transition: all ease 0.2s;
 }
 

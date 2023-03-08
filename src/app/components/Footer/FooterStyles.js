@@ -4,6 +4,8 @@ export const Container = styled.div`
 width: 100%;
 height: auto;
 font-family: 'Josefin Sans', sans-serif;
+background: ${props => props.theme.background};
+color: ${props => props.theme.font};
 `;
 
 export const Wrapper = styled.div`

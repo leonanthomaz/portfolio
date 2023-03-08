@@ -3,7 +3,11 @@ export const lightTheme = {
   //Global
   background: "#dddddd",
   font: "#00141b",
-  button: "#00141b",
+  font_hover: "#dddddd",
+  button: "crimson",
+  button_hover: "#00141b",
+  button_font: "#dddddd",
+  button_font_hover: "yellow",
   h1: "#00141b",
   h1_mobile: "crimson",
   h2: "#fbff00",
@@ -15,13 +19,14 @@ export const lightTheme = {
   box_shadow: "0.1em 0.4em 0.2em #414141",
 
   //Botões padrão
-  btn_background_main: "#04232e",
-  btn_background_main_hover: "#0b6585",
-  btn_font_main: "#dddddd",
-  btn_font_main_hover: "yellow",
-
+  btn_background_list: "crimson",
+  btn_background_list_hover: "#00141b",
+  btn_font_list: "#dddddd",
+  btn_font_list_hover: "yellow",
   box_shadow_list: "0px 0px 16px -8px #04232e",
   box_shadow_list_hover: "none",
+  btn_background_list_active: "#00141b",
+  btn_background_list_active_hover: "crimson",
 
   //Elements
   font_title_el: "crimson",
@@ -44,17 +49,14 @@ export const lightTheme = {
 
   background_vertical: "linear-gradient(to top, #dddddd 5%, transparent 80%)",
   background_horizontal: "linear-gradient(to right, #dddddd 10%, transparent 60%)",
-  //tour
-  font_tour: "#dddddd",
 
   //about
   box_shadow_about: "0px 0px 16px -8px rgba(0, 0, 0, 0.68)",
   webkit: "0px 0px 16px -8px rgba(255, 255, 255, 0.68)",
-
   
-  //Skills Home
-  skillsh_font_icon: "crimson",
-  skillsh_font_icon_hover: "gray",
+  //skills list
+  skills_font_icon: "crimson",
+  skills_font_icon_hover: "gray",
 
   //skills
   skills_font: "#00141b",
@@ -80,7 +82,7 @@ export const lightTheme = {
   background_portfolio: "#dddddd",
   box_shadow_portfolio: "0px 0px 16px -8px rgba(0, 0, 0, 0.68)",
   portfolio_shadow: "4px 4px 5px #bbbbbb",
-  btn_background_portfolio: "#00141b",
+  btn_background_portfolio: "crimson",
   btn_background_portfolio_hover: "#00141b",
   btn_font_background_portfolio: "#dddddd",
   btn_font_background_portfolio_hover: "yellow",
@@ -98,7 +100,7 @@ export const lightTheme = {
 
   //footer
   font_footer: "#4d4d4d",
-  font_footer_hover: "#c5c5c5f5",
+  font_footer_hover: "crimson",
 
   //spinner
   background_spinner: "#dddddd",
@@ -111,7 +113,11 @@ export const darkTheme = {
   //Global
   background: "#00141b",
   font: "#dddddd",
-  button: "#dddddd",
+  font_hover: "#dddddd",  
+  button: "#0b6585",
+  button_hover: "#dddddd",
+  button_font: "#dddddd",
+  button_font_hover: "#00141b",
   h1: "#dddddd",
   h1_mobile: "#fbff00",
   h2: "#fed136",
@@ -123,13 +129,14 @@ export const darkTheme = {
   box_shadow: "0.1em 0.1em 0.4em 0.4em #bbbbbb",
 
   //Botões padrão
-  btn_background_main: "#04232e",
-  btn_background_main_hover: "#0b6585",
-  btn_font_main: "#dddddd",
-  btn_font_main_hover: "yellow",
-
+  btn_background_list: "#04232e",
+  btn_background_list_hover: "#0b6585",
+  btn_font_list: "#dddddd",
+  btn_font_list_hover: "yellow",
   box_shadow_list: "0.1em 0.1em 0.4em 0.4em #bbbbbb",
   box_shadow_list_hover: "0.1em 0.1em 0.4em 0.4em #04232e",
+  btn_background_list_active: "#0b6585",
+  btn_font_list_active: "#dddddd",
 
   //Elements
   font_title_el: "#fbff00",
@@ -163,8 +170,8 @@ export const darkTheme = {
 
 
   //Skills Home
-  skillsh_font_icon: "yellow",
-  skillsh_font_icon_hover: "gray",
+  skills_font_icon: "yellow",
+  skills_font_icon_hover: "gray",
 
 
   //skills  
@@ -198,8 +205,10 @@ export const darkTheme = {
   background_portfolio: "#04232e",
   box_shadow_portfolio: "0.1em 0.1em 0.4em 0.4em #bbbbbb",
   portfolio_shadow: "4px 4px 5px #bbbbbb",
-  btn_background_portfolio: "#00141b",
+
+  btn_background_portfolio: "#0b6585",
   btn_background_portfolio_hover: "#00141b",
+
   btn_font_background_portfolio: "#dddddd",
   btn_font_background_portfolio_hover: "yellow",
   borderbottom_portfolio: "3px solid gray",

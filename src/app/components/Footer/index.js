@@ -1,13 +1,9 @@
 import React from 'react';
 import {
-//   FaFacebook,
-//   FaInstagram,
-//   FaYoutube,
   FaTwitter,
   FaLinkedin,
   FaGithub,
   FaGoogle,
-  FaMapMarkerAlt
 } from 'react-icons/fa';
 
 import * as F from './FooterStyles';

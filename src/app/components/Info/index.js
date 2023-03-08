@@ -4,15 +4,11 @@ import { BsWhatsapp } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import { ETitle } from '../../components/Elements/title'
 import { VscGithub } from "react-icons/vsc";
 
 export const Info = () => {
     return (
         <IF.Container>
-            <AnimationOnScroll animateIn="animate__backInLeft">
-                <ETitle title={'Contato'} subtitle={'Responderei o mais rápido possível!'}/>
-            </AnimationOnScroll>
             <IF.Wrapper>
                 <AnimationOnScroll animateIn="animate__fadeInUp">
                     <IF.Item>

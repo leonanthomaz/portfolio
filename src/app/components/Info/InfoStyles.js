@@ -4,7 +4,7 @@ export const Container = styled.div`
 width: 100%;
 height: auto;
 background: ${props => props.theme.background};
-padding-bottom: 50px;
+/* padding-bottom: 50px; */
 `;
 
 export const Wrapper = styled.div`

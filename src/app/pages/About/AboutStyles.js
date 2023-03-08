@@ -80,12 +80,12 @@ border-radius: 20px;
 font-weight: 700;
 width: 200px;
 
-background: ${props => props.theme.btn_background_main};
+background: ${props => props.theme.button};
 transition: all .1s linear;
                         -webkit-transition: all .1s linear;
                         -moz-transition: all .1s linear;
 :hover{
-    background: ${props => props.theme.btn_background_main_hover};
+    background: ${props => props.theme.button_hover};
     width: 220px;
     transition: all .1s linear;
                         -webkit-transition: all .1s linear;
@@ -93,11 +93,11 @@ transition: all .1s linear;
 }
 
 a{
-    color: ${props => props.theme.btn_font_main};
+    color: ${props => props.theme.button_font};
     font-weight: 700;
 
     :hover{
-        color: ${props => props.theme.btn_font_main_hover};
+        color: ${props => props.theme.button_font_hover};
     }
 }
 `;
