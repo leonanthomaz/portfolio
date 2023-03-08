@@ -7,7 +7,7 @@ justify-content: space-between;
 width: 100%;
 height: 70px;
 scroll-behavior: smooth;
-background: ${props => props.theme.background_navbar};
+background: ${props => props.theme.navbar_background};
 color: ${props => props.theme.font_navbar};
 box-shadow: ${props => props.theme.navbar_shadow};
 z-index: 999;
@@ -55,7 +55,7 @@ color: ${props => props.theme.font_navbar};
 
 @media(max-width: 760px){
     flex-direction: column;
-    background: ${props => props.theme.background_navbar_mobile};
+    background: ${props => props.theme.navbar_background_mobile};
     position: absolute;
     transition: all 0.5s ease;
     width: 250px;
@@ -122,7 +122,7 @@ font-weight: bold; */
 `;
 
 export const Active = styled.div`
-/* background: crimson; */
+/* background: #011834; */
 background: ${({ theme }) => (theme === 'dark' ? '#00141b' : '#ffffff')};
 width: 20px;
 height: 20px;

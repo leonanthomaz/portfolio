@@ -114,17 +114,17 @@ input::-webkit-inner-spin-button {
 }
 .btn-form-contact{
         text-decoration: none;
-        color: ${props => props.theme.btn_font};
-        background: ${props => props.theme.btn_background};
-        transition: all ease 1s;
+        color: ${props => props.theme.box_font_list};
+        background: ${props => props.theme.box_background_list};
+        transition: all ease 0.5s;
         width: 100px;
         margin: auto;
         border-radius: 20px;
         border: 1px solid #ecececcc;
         :hover{
             transition: all ease 0.5s;
-            background: ${props => props.theme.btn_background_contact};
-            color: ${props => props.theme.btn_font_hover};
+            background: ${props => props.theme.box_background_list_hover};
+            color: ${props => props.theme.box_font_list_hover};
         }
     }
 `;

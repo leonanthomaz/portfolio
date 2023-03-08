@@ -3,13 +3,12 @@ export const lightTheme = {
   //Global
   background: "#dddddd",
   font: "#00141b",
-  font_hover: "#dddddd",
-  button: "crimson",
+  button: "#011834",
   button_hover: "#00141b",
   button_font: "#dddddd",
   button_font_hover: "yellow",
   h1: "#00141b",
-  h1_mobile: "crimson",
+  h1_mobile: "#011834",
   h2: "#fbff00",
   h3: "#00141b",
   h4: "gray",
@@ -19,30 +18,30 @@ export const lightTheme = {
   box_shadow: "0.1em 0.4em 0.2em #414141",
 
   //Botões padrão
-  btn_background_list: "crimson",
-  btn_background_list_hover: "#00141b",
-  btn_font_list: "#dddddd",
-  btn_font_list_hover: "yellow",
-  box_shadow_list: "0px 0px 16px -8px #04232e",
+  box_background_list: "#011834",
+  box_background_list_hover: "#00141b",
+  box_background_list_active: "#09897d",
+  box_background_list_active_hover: "#011834",
+  box_font_list: "#dddddd",
+  box_font_list_hover: "yellow",
+  box_shadow_list: "0px 0px 16px -8px #dddddd",
   box_shadow_list_hover: "none",
-  btn_background_list_active: "#00141b",
-  btn_background_list_active_hover: "crimson",
 
   //Elements
   font_title_el: "crimson",
 
   //navbar
-  background_navbar: "#dddddd",
-  overline_navbar_hover: "overline 3px crimson",
+  navbar_background: "#dddddd",
+  navbar_overline_hover: "overline 3px #011834",
   icon_navbar: "#00141b",
   font_navbar_active: "red",
   font_navbar: "#00141b",
-  background_navbar_mobile: "#dddddd",
+  navbar_background_mobile: "#dddddd",
   navbar_shadow: "4px 4px 5px #00000040",
-  font_navbar_hover: "crimson",
+  font_navbar_hover: "#011834",
 
   //intro
-  background_intro_photo: "crimson",
+  background_intro_photo: "#011834",
   intro_arrow: "crimson",
   font_intro_Typewriter: "crimson",
   background_intro: "#dbd5d5d6",
@@ -66,12 +65,11 @@ export const lightTheme = {
   webkit_skills: "0px 0px 16px -8px rgba(255, 255, 255, 0.68)",
 
   //contato
-  btn_background_contact: "yellow",
+  background_contact: "#dddddd",
 
   background_contact_form: "#dddddd",
   border_input_contact: "2px solid #ecececcc",
 
-  background_contact: "#dddddd",
   background_contact_icons: "#00141b",
   background_contact_icons_hover: "green",
   contact_form_shadow: "0.1em 0.1em 0.1em 0.1em #868686a2",
@@ -82,11 +80,11 @@ export const lightTheme = {
   background_portfolio: "#dddddd",
   box_shadow_portfolio: "0px 0px 16px -8px rgba(0, 0, 0, 0.68)",
   portfolio_shadow: "4px 4px 5px #bbbbbb",
-  btn_background_portfolio: "crimson",
+  btn_background_portfolio: "#011834",
   btn_background_portfolio_hover: "#00141b",
   btn_font_background_portfolio: "#dddddd",
   btn_font_background_portfolio_hover: "yellow",
-  font_portfolio_h2: "crimson",
+  font_portfolio_h2: "#011834",
   borderbottom_portfolio: "3px solid gray",
 
 
@@ -100,7 +98,7 @@ export const lightTheme = {
 
   //footer
   font_footer: "#4d4d4d",
-  font_footer_hover: "crimson",
+  font_footer_hover: "#011834",
 
   //spinner
   background_spinner: "#dddddd",
@@ -129,25 +127,25 @@ export const darkTheme = {
   box_shadow: "0.1em 0.1em 0.4em 0.4em #bbbbbb",
 
   //Botões padrão
-  btn_background_list: "#04232e",
-  btn_background_list_hover: "#0b6585",
-  btn_font_list: "#dddddd",
-  btn_font_list_hover: "yellow",
-  box_shadow_list: "0.1em 0.1em 0.4em 0.4em #bbbbbb",
-  box_shadow_list_hover: "0.1em 0.1em 0.4em 0.4em #04232e",
-  btn_background_list_active: "#0b6585",
-  btn_font_list_active: "#dddddd",
+  box_background_list: "#04232e",
+  box_background_list_hover: "#0b6585",
+  box_background_list_active: "#0b6585",
+  box_font_list: "#dddddd",
+  box_font_list_hover: "yellow",
+  box_font_list_active: "#dddddd",
+  box_shadow_list: "0px 0px 16px -8px #bbbbbb",
+  box_shadow_list_hover: "0px 0px 16px -8px #04232e",
 
   //Elements
   font_title_el: "#fbff00",
 
   //navbar  
-  background_navbar: "#00141b",
-  overline_navbar_hover: "overline 3px yellow",
+  navbar_background: "#00141b",
+  navbar_overline_hover: "overline 3px yellow",
   font_navbar: "#dddddd",
   font_navbar_active: "yellow",
   icon_navbar: "#dddddd",
-  background_navbar_mobile: "#00141b",
+  navbar_background_mobile: "#00141b",
   navbar_shadow: "2px 2px 3px #00141b",
   font_navbar_hover: "yellow",
 
@@ -187,6 +185,9 @@ export const darkTheme = {
 
   //contato
   background_contact: "#c5c5c5f5",
+
+  btn_contact: "#00141b",
+  btn_contact_hover: "#ecececcc",
 
   font_contact: "#dddddd",
   font_contact_icons: "#00141b",

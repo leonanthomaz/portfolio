@@ -80,12 +80,12 @@ border-radius: 20px;
 font-weight: 700;
 width: 200px;
 
-background: ${props => props.theme.button};
+background: ${props => props.theme.box_background_list};
 transition: all .1s linear;
                         -webkit-transition: all .1s linear;
                         -moz-transition: all .1s linear;
 :hover{
-    background: ${props => props.theme.button_hover};
+    background: ${props => props.theme.box_background_list_hover};
     width: 220px;
     transition: all .1s linear;
                         -webkit-transition: all .1s linear;

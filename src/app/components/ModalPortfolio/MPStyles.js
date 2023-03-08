@@ -65,13 +65,13 @@ export const Button = styled.a`
 border-radius: 10px;
 padding: 7px;
 margin: 5px;
-background: ${props => props.theme.btn_background_list};
+background: ${props => props.theme.box_background_list};
 text-decoration: none;
 font-weight: 700;
 align-items: center;
 justify-content: center;
-background: ${props => props.theme.btn_background_list};
-color: ${props => props.theme.btn_font_list};
+background: ${props => props.theme.box_background_list};
+color: ${props => props.theme.box_font_list};
 
 :hover{
         color: white;
