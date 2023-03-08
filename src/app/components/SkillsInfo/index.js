@@ -1,6 +1,6 @@
 import React from "react";
 import { ETitle } from "../Elements/title";
-import * as SH from './SkillsHomeStyles'
+import * as SH from './SkillsInfoStyles'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import '@splidejs/react-splide/css/skyblue';
 
@@ -16,11 +16,7 @@ import {
     DiJava
 } from 'react-icons/di';
 
-
-
-{/* <AnimationOnScroll animateIn="animate__fadeInLeft"></AnimationOnScroll> */}
-
-export const SkillsHome = () =>{
+export const SkillsInfo = () =>{
 
     return(
         <SH.Container>

@@ -41,12 +41,11 @@ justify-content: center;
 gap: 20px;
 padding: 20px;
 
-
-
 @media(max-width: 900px){
     display: flex;
     flex-direction: column;
 }
+
 `;
 
 export const ItemDW = styled.div`
@@ -62,8 +61,14 @@ background: ${props => props.theme.skills_home_background_box};
 
 
 @media(max-width: 760px){
-    display: flex;
-    flex-direction: column;
+    max-width: 400px;
+    height: auto;
+}
+
+@media(max-width: 560px){
+    max-width: 300px;
+    height: auto;
+    text-align: center;
 }
 `;
 

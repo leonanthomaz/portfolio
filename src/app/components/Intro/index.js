@@ -1,20 +1,19 @@
 import React from "react";
 import * as I from "./IntroStyles";
-
 import Typewriter from 'typewriter-effect';
+import imgMain from '../../sharing/assets/img/foto-leonan-atual.webp';
 
 export const Intro = () => {
-    const imgPath = process.env.REACT_APP_IMGPATH
     
     return (
-      <I.Container id="inicio">
+      <I.Container id="index">
         <I.FeaturedVertical>
           <I.FeaturedHorizontal>
         <I.Box>
 
           <I.Left>
-            <I.ImgContainer background={imgPath + 'back-js.webp'}>
-              <img src={imgPath + 'foto-leonan-atual.webp'} alt="Foto de Leonan Thomaz no tema introdutório" />
+            <I.ImgContainer background={imgMain + 'back-js.webp'}>
+              <img src={imgMain} alt="Foto de Leonan Thomaz no tema introdutório" />
             </I.ImgContainer>
           </I.Left>
 
@@ -34,7 +33,7 @@ export const Intro = () => {
               </h2>
                 
               <div className="arrow-down">
-                <a href="#sobre" aria-labelledby="Seta para ir para a seção Sobre">
+                <a href="#about" aria-labelledby="Seta para ir para a seção About">
                   <I.Arrow/>
                 </a>
               </div>

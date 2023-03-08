@@ -8,15 +8,15 @@ background: ${props => props.theme.background};
 `;
 
 
-export const MenuPortfolio = styled.ul`
+export const NavbarPortfolio = styled.ul`
     margin: 10px;
     padding: 0;
     list-style: none;
     display: flex;
     justify-content: center;
     padding-top: 1rem;
+    padding-bottom: 1rem;
 
-    
 
     @media (max-width: 760px){
       margin: 10px 0;
@@ -43,33 +43,25 @@ export const Wrapper = styled.div`
         display: flex;
         justify-content: center;
         flex-direction: column;
+        max-width: 350px;
+        margin: 0 auto;
     }
 `;
 
 export const Box = styled.div`
-    padding: 15px;
+    padding: 20px;
     margin: 10px;
     background: ${props => props.theme.background_portfolio};
     box-shadow: ${props => props.theme.box_shadow_portfolio};
     border-radius: 10px;
     color: ${props => props.theme.font};
-    max-width: 450px;
     -moz-transition: all 0.5s;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
 
-    @media (max-width: 760px){
-       margin: auto;
-    }
-
     @media (max-width: 500px){
        margin: 10px;
     }
-
-    /* font-family: 'Dela Gothic One', cursive;
-    font-family: 'Josefin Sans', sans-serif;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Roboto', sans-serif; */
 
     :hover{
         -moz-transform: scale(1.1);

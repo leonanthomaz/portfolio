@@ -1,20 +1,15 @@
 export const category = [
     {
-        id: "api",
-        title: "API",
+        id: "react",
+        title: "React",
     },
     {
-        id: "design",
-        title: "Lading Pages",
+        id: "php",
+        title: "PHP",
     },
     {
-        id: "ecommerce",
-        title: "E-Commerce",
-    },
-    {
-        id: "sistemas",
-        title: "Sistemas",
-    },
-    
+        id: "web",
+        title: "WEB",
+    },    
     
 ];

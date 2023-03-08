@@ -4,22 +4,45 @@ import {
     DiCss3,
     DiBootstrap,
     DiGit,
-    DiHeroku,
     DiReact,
     DiGithubBadge,
     DiNpm,
     DiVisualstudio,
     DiPhp,
-    DiNodejsSmall,
     DiHtml5,
     DiMysql,
-    DiFirebase,
     DiNodejs,
-    DiSass,
-    DiPython,
     DiDatabase,
-    DiJava
+    DiJava,
+    DiDocker,
+    DiLaravel
  } from 'react-icons/di';
+
+
+ export const languageDataSkills = [
+    {
+        id: 1,
+        name: 'PHP',
+        icon: <DiPhp/>,
+        level: 80,
+        description: 'Bla Bla Bla',
+    },
+    {
+        id: 2,
+        name: 'Javascript',
+        icon: <DiJsBadge/>,
+        level: 80,
+        description: 'Bla Bla Bla',
+    },
+    {
+        id: 3,
+        name: 'Java',
+        icon: <DiJava/>,
+        level: 60,
+        description: 'Bla Bla Bla',
+    }
+]
+
 
 export const webSkills = [
 
@@ -63,15 +86,15 @@ export const frameworksDataSkills = [
     },
     {
         id: 3,
-        name: 'Bootstrap',
-        icon: <DiBootstrap/>,
-        level: 70,
+        name: 'Laravel',
+        icon: <DiLaravel/>,
+        level: 60,
         description: 'Bla Bla Bla',
     },
     
 ]
 
-export const toolsDataSkills = [
+export const othersDataSkills = [
     {
         id: 1,
         name: 'VSC',
@@ -84,6 +107,13 @@ export const toolsDataSkills = [
         name: 'NPM',
         icon: <DiNpm/>,
         level: 80,
+        description: 'Bla Bla Bla',
+    },
+    {
+        id: 3,
+        name: 'Docker',
+        icon: <DiDocker/>,
+        level: 60,
         description: 'Bla Bla Bla',
     },
 ]
@@ -112,29 +142,6 @@ export const databasesDataSkills = [
     },
 ]
 
-export const languageDataSkills = [
-    {
-        id: 1,
-        name: 'Javascript',
-        icon: <DiJsBadge/>,
-        level: 80,
-        description: 'Bla Bla Bla',
-    },
-    {
-        id: 2,
-        name: 'PHP',
-        icon: <DiPhp/>,
-        level: 80,
-        description: 'Bla Bla Bla',
-    },
-    {
-        id: 3,
-        name: 'Java',
-        icon: <DiJava/>,
-        level: 60,
-        description: 'Bla Bla Bla',
-    }
-]
 
 export const versionDataSkills = [
     {
@@ -151,5 +158,6 @@ export const versionDataSkills = [
         level: 80,
         description: 'Bla Bla Bla',
     },
+    
 ]
 

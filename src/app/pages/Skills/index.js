@@ -3,50 +3,44 @@ import * as S from './SkillsStyles';
 import Progressbar from '../../sharing/utils/progressbar_skills';
 import { category } from '../../sharing/utils/category_skills';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import { webSkills, 
-  frameworksDataSkills, 
-  toolsDataSkills,
-  databasesDataSkills,
+import { 
   languageDataSkills,
+  webSkills, 
+  frameworksDataSkills, 
+  othersDataSkills,
+  databasesDataSkills,
   versionDataSkills
 } from "../../sharing/db/dataSkills";
-import { SkillsList } from "../../components/Cards/CardSkills";
+import { SkillsList } from "../../components/Lists/SkillsList";
 import { ETitle } from "../../components/Elements/title";
-import { Footer } from "../../components/Footer";
 
 export const Skills = () => {
-    const [ openList, setOpenList ] = useState(false)
-
-    const [selectedSkills, setSelectedSkills] = useState("web");
+    const [selectedSkills, setSelectedSkills] = useState("languages");
     const [dataSkills, setDataSkills] = useState([]);
     const [ listSkills, setListSkills ] = useState([])
 
-    const handleOpenList = () => {
-        setOpenList(!openList)
-    }
-
     useEffect(() => {
       switch (selectedSkills) {
+          case "languages":
+          setDataSkills(languageDataSkills);
+          break;
           case "web":
           setDataSkills(webSkills);
           break;
           case "frameworks":
           setDataSkills(frameworksDataSkills);
           break;
-          case "tools":
-          setDataSkills(toolsDataSkills);
+          case "others":
+          setDataSkills(othersDataSkills);
           break;
           case "databases":
           setDataSkills(databasesDataSkills);
-          break;
-          case "languages":
-          setDataSkills(languageDataSkills);
           break;
           case "version":
           setDataSkills(versionDataSkills);
           break;
           default:
-          setDataSkills(webSkills);
+          setDataSkills(languageDataSkills);
       }
   }, [selectedSkills]);
 
@@ -62,8 +56,8 @@ export const Skills = () => {
             <ETitle title={'Skills'} subtitle={'Habilidades que possuo'}/>
         </AnimationOnScroll>
 
-          <S.MenuSkillsGroup>
-            <S.MenuSkills>
+          <S.NavbarSkillsGroup>
+            <S.NavbarSkills>
                 {category.map((item, index) => (
                 <SkillsList
                     id={item.id}
@@ -73,8 +67,8 @@ export const Skills = () => {
                     key={index}
                 />
                 ))}
-            </S.MenuSkills>
-          </S.MenuSkillsGroup>
+            </S.NavbarSkills>
+          </S.NavbarSkillsGroup>
 
           <S.Wrapper>
             {dataSkills.map((item, key) => {

@@ -3,20 +3,18 @@ import * as P from './PortfolioStyles';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { ETitle } from "../../components/Elements/title";
 
-import { PortfolioList } from '../../components/Cards/CardPortfolio';
+import { PortfolioList } from '../../components/Lists/PortfolioList';
 import { category } from '../../sharing/utils/category_portfolio';
 import { 
-    DesignData, 
-    APIListData,
-    EcommerceListData,
-    SistemasListData
+    PHPData, 
+    ReactData,
+    WEBData,
 } from "../../sharing/db/dataPortfolio";
 import {ModalPortfolio} from '../../components/ModalPortfolio'
-import { Footer } from "../../components/Footer";
 
 export const Portfolio = () => {
 
-    const [selected, setSelected] = useState("api");    
+    const [selected, setSelected] = useState("react");    
     const [data, setData] = useState([]);
     const [ list, setList ] = useState([])
 
@@ -26,20 +24,17 @@ export const Portfolio = () => {
 
     useEffect(() => {
         switch (selected) {
-            case "api":
-            setData(APIListData);
+            case "react":
+            setData(ReactData);
             break;
-            case "design":
-            setData(DesignData);
+            case "php":
+            setData(PHPData);
             break;
-            case "ecommerce":
-            setData(EcommerceListData);
-            break;
-            case "sistemas":
-            setData(SistemasListData);
+            case "web":
+            setData(WEBData);
             break;
             default:
-            setData(APIListData);
+            setData(ReactData);
         }
     }, [selected]);
 
@@ -54,7 +49,7 @@ export const Portfolio = () => {
             <AnimationOnScroll animateIn="animate__backInLeft">
                 <ETitle title={'Portfólio'} subtitle={'Conhecimentos em prática!'}/>
             </AnimationOnScroll>
-            <P.MenuPortfolio>
+            <P.NavbarPortfolio>
                 {category.map((item, index) => (
                 <PortfolioList
                     title={item.title}
@@ -64,7 +59,7 @@ export const Portfolio = () => {
                     key={index}
                 />
                 ))}
-            </P.MenuPortfolio>
+            </P.NavbarPortfolio>
 
           <P.Wrapper>
             {data && data.map((item, index) => {

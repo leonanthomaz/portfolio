@@ -5,7 +5,7 @@ const Progress_bar = ({bgcolor,progress,height}) => {
     const Parentdiv = {
         height: height,
         width: '100%',
-        backgroundColor: 'whitesmoke',
+        backgroundColor: '#dddddd',
         borderRadius: 40,
       }
       
@@ -20,7 +20,7 @@ const Progress_bar = ({bgcolor,progress,height}) => {
       
       const progresstext = {
         padding: 10,
-        color: 'black',
+        color: '#00141b',
         fontWeight: 700,
       }
         

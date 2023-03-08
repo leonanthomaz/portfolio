@@ -53,7 +53,6 @@ font-size: 18px;
 
 export const Date = styled.span`
 font-size: 16px;
-
 `;
 
 export const ContainerButton = styled.div`

@@ -24,7 +24,6 @@ align-items: center;
 
 @media(max-height: 450px){
     padding-top: 50px;
-    justify-content: none;
 }
 
 @media(max-width: 600px){
@@ -36,68 +35,65 @@ align-items: center;
 `;
 
 export const Left = styled.div`
-flex: 1;
+flex: 1.5;
 display: flex;
 justify-content: center;
+align-items: center;
 
-@media(max-height: 760px){
-    flex: 1;
+@media (max-width: 1000px){
+    padding-top: 30px;
 }
 `;
 
+export const Right = styled.div`
+flex: 3.5;
+`;
+
 export const ImgContainer = styled.div`
-width: 350px;
-height: 350px;
+width: 300px;
+height: 300px;
 background: ${props => props.theme.background_intro_photo};
 border-radius: 50%;
-margin-left: 5px;
-border: 3px solid whitesmoke;
+border: 3px solid #dddddd;
 
 img {
     height: 100%;
 }
 
-@media(max-height: 500px) or (max-width: 900px){
+@media (max-width: 1000px){
     width: 250px;
-    height: 250px;
+    height: 250px;    
 }
 
 @media (max-width: 760px){
     width: 200px;
-    height: 200px;
-    margin-top: 50px;
-    margin-left: 0px;
-    
+    height: 200px;    
 }
 
 `;
 
-export const Right = styled.div`
-flex: 3.5;
 
-@media(max-height: 760px){
-    /* flex: 2; */
-}
-
-`;
 
 export const Wrapper = styled.div`
 
 width: 100%;
-height: 100%;
+height: 80%;
 padding-left: 50px;
 display: flex;
 flex-direction: column;
 justify-content: center;
-padding-top: 10px;
 text-align: start;
+margin-left: 15px;
 
 @media (max-width: 760px){
     text-align: center;
     padding-left: 0;
     align-items: center;
     width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
 }
+
 
 h1{
     font-size: 50px;
@@ -107,13 +103,9 @@ h1{
     text-transform: uppercase;
 
     @media (max-width:1000px){
-        color: ${props => props.theme.h1_mobile};
+        /* color: ${props => props.theme.h1_mobile}; */
         font-size: 30px;
     }
-
-    /* @media (max-width: 760px){
-        color: ${props => props.theme.h1_mobile};
-    } */
 }
 
 h2{
@@ -185,8 +177,5 @@ export const FeaturedVertical = styled.div`
 width: 100%;
 height: 100vh;
 background-image: ${props => props.theme.background_vertical};
-  
-/* @media(max-width: 760px){
-    background-image: none;
-} */
+
 `;

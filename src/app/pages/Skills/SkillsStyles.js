@@ -7,20 +7,19 @@ background: ${props => props.theme.background};
 `;
 
 
-export const MenuSkillsGroup = styled.div`
+export const NavbarSkillsGroup = styled.div`
 
 
 `;
 
-export const MenuSkills = styled.ul`
+export const NavbarSkills = styled.ul`
     margin: 10px;
     padding: 0;
     list-style: none;
     display: flex;
     justify-content: center;
     padding-top: 1rem;
-
-    
+    padding-bottom: 1rem;
 
     @media (max-width: 760px){
       margin: 10px 0;
@@ -98,7 +97,7 @@ export const SkillsItems = styled.div`
         text-align: center;
         margin: auto;
         padding: 10px;
-        color: black;
+        color: #00141b;
         text-align: center;
         color: ${props => props.theme.skills_font};
 

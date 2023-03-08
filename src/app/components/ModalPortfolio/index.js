@@ -22,7 +22,7 @@ export const ModalPortfolio = ({show,
         <div>
             <Modal 
                 key={index}
-                size="md"
+                size="lg"
                 aria-labelledby="Modal exibindo detalhes do projeto"
                 centered
                 show={show} 

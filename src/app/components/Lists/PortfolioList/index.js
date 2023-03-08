@@ -1,5 +1,5 @@
 import React from 'react'
-import * as CP from './CardPortfolioStyles';
+import * as CP from './PortfolioListStyles';
 
 export const PortfolioList = ({ id, index, title, active, setSelected }) => {
 

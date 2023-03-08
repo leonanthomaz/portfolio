@@ -1,35 +1,35 @@
 export const lightTheme = {
 
   //Global
-  background: "whitesmoke",
-  font: "#252525",
-  button: "#252525",
-  h1: "#252525",
+  background: "#dddddd",
+  font: "#00141b",
+  button: "#00141b",
+  h1: "#00141b",
   h1_mobile: "crimson",
   h2: "#fbff00",
-  h3: "#252525",
+  h3: "#00141b",
   h4: "gray",
   hr: "3px solid #979797",
-  box: "#252525",
+  box: "#00141b",
   boxfont: "#eeeeeeee",
   box_shadow: "0.1em 0.4em 0.2em #414141",
 
   //Botões padrão
   btn_background_main: "linear-gradient(to top right, #ff4747a9, #fdfa288f)",
-  btn_font_main: "#252525",
-  btn_font_main_hover: "whitesmoke",
+  btn_font_main: "#00141b",
+  btn_font_main_hover: "#dddddd",
 
   //Elements
   font_title_el: "crimson",
 
 
   //navbar
-  background_navbar: "#eeeeeeee",
+  background_navbar: "#dddddd",
   overline_navbar_hover: "overline 3px crimson",
-  icon_navbar: "#252525",
+  icon_navbar: "#00141b",
   font_navbar_active: "red",
-  font_navbar: "#252525",
-  background_navbar_mobile: "whitesmoke",
+  font_navbar: "#00141b",
+  background_navbar_mobile: "#dddddd",
   navbar_shadow: "4px 4px 5px #00000040",
   font_navbar_hover: "crimson",
 
@@ -39,10 +39,10 @@ export const lightTheme = {
   font_intro_Typewriter: "crimson",
   background_intro: "#dbd5d5d6",
 
-  background_vertical: "linear-gradient(to top, whitesmoke 5%, transparent 80%)",
-  background_horizontal: "linear-gradient(to right, whitesmoke 10%, transparent 60%)",
+  background_vertical: "linear-gradient(to top, #dddddd 5%, transparent 80%)",
+  background_horizontal: "linear-gradient(to right, #dddddd 10%, transparent 60%)",
   //tour
-  font_tour: "whitesmoke",
+  font_tour: "#dddddd",
 
   //about
   box_shadow_about: "0px 0px 16px -8px rgba(0, 0, 0, 0.68)",
@@ -54,33 +54,33 @@ export const lightTheme = {
   skillsh_font_icon_hover: "gray",
 
   //skills
-  skills_font: "#252525",
+  skills_font: "#00141b",
   skills_icon: "crimson",
-  skills_background_box: "whitesmoke",
+  skills_background_box: "#dddddd",
   box_shadow_skills: "0px 0px 16px -8px rgba(0, 0, 0, 0.68)",
   webkit_skills: "0px 0px 16px -8px rgba(255, 255, 255, 0.68)",
 
   //contato
   btn_background_contact: "yellow",
 
-  background_contact_form: "whitesmoke",
+  background_contact_form: "#dddddd",
   border_input_contact: "2px solid #ecececcc",
 
-  background_contact: "whitesmoke",
-  background_contact_icons: "#252525",
+  background_contact: "#dddddd",
+  background_contact_icons: "#00141b",
   background_contact_icons_hover: "green",
   contact_form_shadow: "0.1em 0.1em 0.1em 0.1em #868686a2",
-  font_contact: "#252525",
-  font_contact_icons: "whitesmoke",
+  font_contact: "#00141b",
+  font_contact_icons: "#dddddd",
 
   //portfolio
-  background_portfolio: "whitesmoke",
+  background_portfolio: "#dddddd",
   box_shadow_portfolio: "0px 0px 16px -8px rgba(0, 0, 0, 0.68)",
-  btn_lists_box_shadow: "0.4em 0.3em 0.7em whitesmoke",
+  btn_lists_box_shadow: "0.4em 0.3em 0.7em #dddddd",
   portfolio_shadow: "4px 4px 5px #bbbbbb",
-  btn_background: "#252525",
-  btn_font: "whitesmoke",
-  btn_font_hover: "#252525",
+  btn_background: "#00141b",
+  btn_font: "#dddddd",
+  btn_font_hover: "#00141b",
   font_portfolio_h2: "crimson",
   borderbottom_portfolio: "3px solid gray",
 
@@ -98,7 +98,7 @@ export const lightTheme = {
   font_footer_hover: "#c5c5c5f5",
 
   //spinner
-  background_spinner: "whitesmoke",
+  background_spinner: "#dddddd",
   color_border: "8px solid crimson"
 }
 
@@ -106,35 +106,35 @@ export const lightTheme = {
 //DARK
 export const darkTheme = {
   //Global
-  background: "#252525",
-  font: "whitesmoke",
-  button: "whitesmoke",
-  h1: "whitesmoke",
+  background: "#00141b",
+  font: "#dddddd",
+  button: "#dddddd",
+  h1: "#dddddd",
   h1_mobile: "#fbff00",
   h2: "#fed136",
-  h3: "whitesmoke",
-  h4: "whitesmoke",
+  h3: "#dddddd",
+  h4: "#dddddd",
   hr: "3px solid #bebebe",
-  box: "whitesmoke",
-  boxfont: "#252525",
+  box: "#dddddd",
+  boxfont: "#00141b",
   box_shadow: "0.1em 0.4em 0.4em 0.1em #bbbbbb",
 
   //Botões padrão
   btn_background_main: "crimson",
-  btn_font_main: "whitesmoke",
+  btn_font_main: "#dddddd",
   btn_font_main_hover: "yellow",
 
   //Elements
   font_title_el: "#fbff00",
 
   //navbar  
-  background_navbar: "#252525",
+  background_navbar: "#00141b",
   overline_navbar_hover: "overline 3px yellow",
-  font_navbar: "whitesmoke",
+  font_navbar: "#dddddd",
   font_navbar_active: "yellow",
-  icon_navbar: "whitesmoke",
+  icon_navbar: "#dddddd",
   background_navbar_mobile: "#1b1b1bfa",
-  navbar_shadow: "2px 2px 3px #252525",
+  navbar_shadow: "2px 2px 3px #00141b",
   font_navbar_hover: "yellow",
 
   //intro
@@ -143,12 +143,12 @@ export const darkTheme = {
   intro_arrow: "yellow",
   background_intro: "#1b1b1be7",
 
-  background_vertical: "linear-gradient(to top, #252525 3%, transparent 100%)",
-  background_horizontal: "linear-gradient(to right, #252525 10%, transparent 60%)",
+  background_vertical: "linear-gradient(to top, #00141b, transparent 100%)",
+  background_horizontal: "linear-gradient(to right, #00141b, transparent 60%)",
 
   
   //tour
-  font_tour: "whitesmoke",
+  font_tour: "#dddddd",
 
   //about
   box_shadow_about: "0px 0px 16px -8px rgba(255, 255, 255, 0.68)",
@@ -161,40 +161,40 @@ export const darkTheme = {
 
 
   //skills  
-  skills_font: "whitesmoke",
+  skills_font: "#dddddd",
   skills_icon: "yellow",
-  skills_background_box: "#343434",
+  skills_background_box: "#04232e",
   box_shadow_skills: "0px 0px 16px -8px rgba(255, 255, 255, 0.68)",
   webkit_skills: "0px 0px 16px -8px rgba(255, 255, 255, 0.5)",
 
   //skills-home
-  skills_home_background_box: "#343434",
+  skills_home_background_box: "#04232e",
 
   //contato
   background_contact: "#c5c5c5f5",
 
-  font_contact: "whitesmoke",
-  font_contact_icons: "#252525",
+  font_contact: "#dddddd",
+  font_contact_icons: "#00141b",
   contact_form_shadow: "0px 0px 16px -8px rgba(255, 255, 255, 0.68)",
   btn_background_contact: "yellow",
 
 
-  background_contact_form: "#343434",
+  background_contact_form: "#04232e",
   border_input_contact: "0px 0px 16px -8px rgba(255, 255, 255, 0.68)",
-  background_contact_label: "#343434",
+  background_contact_label: "#04232e",
   background_contact_icons: "yellow",
   background_contact_icons_hover: "green",
 
   //portfolio
   h4_portfolio: "yellow",
-  background_portfolio: "#343434",
+  background_portfolio: "#04232e",
   box_shadow_portfolio: "0px 0px 16px -8px rgba(255, 255, 255, 0.68)",
-  btn_lists_box_shadow: "0.3em 0.2em 0.5em whitesmoke",
+  btn_lists_box_shadow: "0.3em 0.2em 0.5em #dddddd",
   portfolio_shadow: "4px 4px 5px #bbbbbb",
 
-  btn_background: "whitesmoke",
-  btn_font: "#252525",
-  btn_font_hover: "#252525",
+  btn_background: "#dddddd",
+  btn_font: "#00141b",
+  btn_font_hover: "#00141b",
   font_portfolio_h2: "yellow",
   borderbottom_portfolio: "1px solid crimson",
 
@@ -212,7 +212,7 @@ export const darkTheme = {
   font_footer_hover: "yellow",
 
   //spinner
-  background_spinner: "#252525",
+  background_spinner: "#00141b",
   color_border: "8px solid yellow"
 }
 

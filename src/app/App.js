@@ -1,15 +1,14 @@
 
 import React, { useContext, Fragment } from 'react';
 import { Spinner } from './components/Spinner';
-import { Menu } from './components/Menu';
+import { Navbar } from './components/Navbar';
 import { PortfolioContext } from './sharing/context/portfolio';
 import { Intro } from './components/Intro';
 import { Skills } from './pages/Skills';
-import { Sobre } from './pages/Sobre';
+import { About } from './pages/About';
 import { Portfolio } from './pages/Portfolio';
 import { Contact } from './pages/Contact';
-import { SkillsHome } from './components/SkillsHome';
-import { Top } from './components/Top';
+import { SkillsInfo } from './components/SkillsInfo';
 
 export const App = () => {
   const { loading, closeNavbar } = useContext(PortfolioContext) 
@@ -19,12 +18,11 @@ export const App = () => {
       { loading ?  
       <Spinner/> : 
       <div className="app" onClick={()=>closeNavbar()}> 
-        <Menu/>
+        <Navbar/>
         <Intro />
-        <Sobre/>
-        <SkillsHome/>
+        <About/>
+        <SkillsInfo/>
         <Skills/>
-        <Top/>
         <Portfolio/>
         <Contact/>
       </div> 

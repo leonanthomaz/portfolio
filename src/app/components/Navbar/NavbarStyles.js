@@ -31,7 +31,7 @@ margin-right: 30px;
 
 export const Icon = styled.div`
 display: none;
-color: ${({ theme }) => (theme === null || theme === 'dark' ? 'white' : 'black')};
+color: ${({ theme }) => (theme === null || theme === 'dark' ? '#dddddd' : '#00141b')};
 cursor: pointer;
 
 @media(max-width: 760px){
@@ -42,7 +42,7 @@ cursor: pointer;
 }
 `;
 
-export const Menu = styled.ul`
+export const Navbar = styled.ul`
 display: flex;
 justify-content: flex-start;
 flex-direction: row;
@@ -60,14 +60,14 @@ color: ${props => props.theme.font_navbar};
     transition: all 0.5s ease;
     width: 250px;
     left: ${({ click }) => (click ? '0px' : '-1000px')};
-    margin-top: 80px;
+    margin-top: 72px;
     padding: 10px;
     margin-left: 0px;
 }
 
 `;
 
-export const MenuLi = styled.li`
+export const NavbarLi = styled.li`
 padding: 10px;
 list-style: none;
 text-transform: uppercase;
@@ -108,29 +108,22 @@ justify-content: center;
 padding: 5px;
 width: 70px;
 border-radius: 20px;
-background: ${({ theme }) => (theme === 'dark' ? 'white' : 'black')};
-color: ${({ theme }) => (theme === 'dark' ? 'black' : 'white')};
+background: ${({ theme }) => (theme === 'dark' ? '#dddddd' : '#00141b')};
+color: ${({ theme }) => (theme === 'dark' ? '#00141b' : '#dddddd')};
 transition: all 0.5s ease;
 cursor: pointer;
 border: 3px solid linear-gradient(45 deg, red, blue);
-/* animation: spin 0.8s linear forwards; */
-
-
-/* @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-} */
-
 `;
 
 export const ThemeIcon = styled.div`
 margin-top: -2px;
-
+/* color: ${({ theme }) => (theme === 'dark' ? '#00141b' : '#ffffff')};
+font-weight: bold; */
 `;
 
 export const Active = styled.div`
 /* background: crimson; */
-background: ${({ theme }) => (theme === 'dark' ? '#252525' : '#ffffff')};
+background: ${({ theme }) => (theme === 'dark' ? '#00141b' : '#ffffff')};
 width: 20px;
 height: 20px;
 border-radius: 50%;

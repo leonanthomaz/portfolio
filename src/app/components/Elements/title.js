@@ -16,14 +16,14 @@ text-transform: uppercase;
 
 export const TitleMain = styled.h2`
 
-    font-size: 40px;
+    font-size: 36px;
 
     @media(max-width: 900px){
-        font-size: 30px;
+        font-size: 24px;
     }
 
     @media(max-width: 760px){
-        font-size: 25px;
+        font-size: 22px;
     }
 
     @media(max-height: 400px){

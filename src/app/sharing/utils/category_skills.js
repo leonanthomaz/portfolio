@@ -1,11 +1,11 @@
 export const category = [
     {
-      id: "web",
-      title: "WEB",
-    },
-    {
         id: "languages",
         title: "Linguagens",
+    },
+    {
+      id: "web",
+      title: "WEB",
     },
     {
       id: "frameworks",
@@ -20,7 +20,7 @@ export const category = [
         title: "Versionamento",
     },
     {
-        id: "tools",
-        title: "Ferramentas",
+        id: "others",
+        title: "Outros",
     },
 ];

@@ -1,13 +1,11 @@
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
 
 *{
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    font-family: 'Montserrat', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -17,11 +15,6 @@ export const GlobalStyles = createGlobalStyle`
         scroll-snap-type: y mandatory;
         scrollbar-width: none; //for firefox
         background: ${props => props.theme.background};
-
-        /* font-family: 'Dela Gothic One', cursive;
-        font-family: 'Josefin Sans', sans-serif;
-        font-family: 'Montserrat', sans-serif;
-        font-family: 'Roboto', sans-serif; */
         
                 
         &::-webkit-scrollbar{
@@ -39,12 +32,10 @@ export const GlobalStyles = createGlobalStyle`
         }
 
         h3{
-            font-family: 'Montserrat', sans-serif;
             color: ${props => props.theme.h3};
         }
 
         h4{
-            font-family: 'Montserrat', sans-serif;
             color: ${props => props.theme.h4};
         }       
     } 

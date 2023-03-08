@@ -8,11 +8,10 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { ModalContact } from '../../components/ModalContact';
 import { Info } from '../../components/Info';
 
-export const Contact = () => {
+import checked from '../../sharing/assets/img/checked.webp';
+import erroricon from '../../sharing/assets/img/error-icon.webp';
 
-    const imgPath = process.env.REACT_APP_IMGPATH
-    let checked = imgPath + 'checked.webp'
-    let erroricon = imgPath + 'error-icon.webp'
+export const Contact = () => {
 
     /**/
     const [showModalContact, setShowModalContact] = useState(false);

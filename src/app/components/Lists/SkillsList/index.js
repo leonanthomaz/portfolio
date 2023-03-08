@@ -1,5 +1,5 @@
 import React from 'react'
-import * as CS from './CardSkillsStyles';
+import * as CS from './SkillsListStyles';
 
 export const SkillsList = ({ id, index, title, active, setSelectedSkills }) => {
 

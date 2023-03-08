@@ -1,19 +1,26 @@
 import React from "react";
-import * as A from "./SobreStyles";
+import * as A from "./AboutStyles";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { ETitle } from "../../components/Elements/title";
 import curriculo from '../../sharing/assets/doc/curriculo.pdf'
+import imageDev from '../../sharing/assets/img/programador.webp';
 
-export const Sobre = () => {
-    const imgPath = process.env.REACT_APP_IMGPATH
+export const About = () => {
 
     return (
-      <A.Container id="sobre">
-        <AnimationOnScroll animateIn="animate__backInLeft">
+      <A.Container id="about">
+        <AnimationOnScroll animateIn="animate__backInRight">
           <ETitle title={'Sobre Mim'} subtitle={'Um pouco sobre minha trajetória'}/>
         </AnimationOnScroll>
         <A.Wrapper>
           <A.Left>
+            <AnimationOnScroll animateIn="animate__fadeInLeft">
+                <A.ImgContainer>
+                  <img src={imageDev} alt="Desenho minimalista de um programador" />
+                </A.ImgContainer>
+            </AnimationOnScroll>
+          </A.Left>
+          <A.Right>
             <A.Text>
               <p>Olá!</p>
               <p>
@@ -22,10 +29,6 @@ export const Sobre = () => {
 
               <p>
               Sempre fui apaixonado por tecnologia. Meu primeiro curso na área foi há 12 anos atrás, quando tive meu primeiro contato com HTML, mas foi a partir de 2019, que ingressei oficialmente nesta área quando dei início à minha graduação.
-              </p>
-
-              <p>
-              Hoje, busco aperfeiçoar meus conhecimentos, sempre me mantendo atualizado na área.
               </p>
 
               <p>
@@ -42,13 +45,6 @@ export const Sobre = () => {
               </A.LinkCurriculum>
               </AnimationOnScroll>
             </A.Text>
-          </A.Left>
-          <A.Right>
-            <AnimationOnScroll animateIn="animate__fadeInRight">
-                <A.ImgContainer>
-                  <img src={imgPath + 'programador.webp'} alt="Desenho minimalista de um programador" />
-                </A.ImgContainer>
-            </AnimationOnScroll>
           </A.Right>
         </A.Wrapper>
       </A.Container>
