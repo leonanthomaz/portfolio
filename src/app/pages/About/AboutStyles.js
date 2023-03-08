@@ -85,6 +85,7 @@ transition: all .1s linear;
                         -webkit-transition: all .1s linear;
                         -moz-transition: all .1s linear;
 :hover{
+    background: ${props => props.theme.btn_background_main_hover};
     width: 220px;
     transition: all .1s linear;
                         -webkit-transition: all .1s linear;

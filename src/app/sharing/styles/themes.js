@@ -15,9 +15,10 @@ export const lightTheme = {
   box_shadow: "0.1em 0.4em 0.2em #414141",
 
   //Botões padrão
-  btn_background_main: "linear-gradient(to top right, #ff4747a9, #fdfa288f)",
-  btn_font_main: "#00141b",
-  btn_font_main_hover: "#dddddd",
+  btn_background_main: "#04232e",
+  btn_background_main_hover: "#0b6585",
+  btn_font_main: "#dddddd",
+  btn_font_main_hover: "crimson",
 
   //Elements
   font_title_el: "crimson",
@@ -120,7 +121,8 @@ export const darkTheme = {
   box_shadow: "0.1em 0.4em 0.4em 0.1em #bbbbbb",
 
   //Botões padrão
-  btn_background_main: "crimson",
+  btn_background_main: "#04232e",
+  btn_background_main_hover: "#0b6585",
   btn_font_main: "#dddddd",
   btn_font_main_hover: "yellow",
 
@@ -133,7 +135,7 @@ export const darkTheme = {
   font_navbar: "#dddddd",
   font_navbar_active: "yellow",
   icon_navbar: "#dddddd",
-  background_navbar_mobile: "#1b1b1bfa",
+  background_navbar_mobile: "#00141b",
   navbar_shadow: "2px 2px 3px #00141b",
   font_navbar_hover: "yellow",
 

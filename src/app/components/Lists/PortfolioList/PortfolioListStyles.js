@@ -12,10 +12,11 @@ export const Container = styled.li`
     width: 100px;
     transition: all .1s linear;
     box-shadow: ${props => props.theme.box_shadow};
-    color: ${props => props.theme.font};
+    color: ${props => props.theme.btn_font_main};
+    background: ${props => props.theme.btn_background_main};
 
     :hover{
-          background: linear-gradient(to top right, #fdfa288f, #ff4747a9);
+          background: ${props => props.theme.btn_background_main_hover};
           transition: all .1s linear;
                 -webkit-transition: all .1s linear;
                 -moz-transition: all .1s linear;
@@ -26,8 +27,8 @@ export const Container = styled.li`
       }
 
       &.active {
-        background: linear-gradient(to top right, #ff4747a9, #fdfa288f);
-        color: ${props => props.theme.font};
+        background: ${props => props.theme.btn_background_main_hover};
+        color: ${props => props.theme.btn_font_main};
         font-weight: bold;
         transition: all .1s linear;
                 -webkit-transition: all .1s linear;
