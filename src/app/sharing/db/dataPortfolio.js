@@ -130,8 +130,8 @@ import BN from '../assets/img/portfolio/bn.webp';
   ];
 
   /*Java*/
-  export const JavaData = [
-  ];
+  // export const JavaData = [
+  // ];
 
   /*WEB*/
   export const WEBData = [

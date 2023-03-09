@@ -140,7 +140,7 @@ export const lightTheme = {
   button_hover: "#00141b",
   button_font: "#dddddd",
   button_font_hover: "yellow",
-  h1: "#5b7178",
+  h1: "#00141b",
   h1_mobile: "#011834",
   h2: "#fbff00",
   h3: "#00141b",
@@ -161,7 +161,7 @@ export const lightTheme = {
 
   //Elements
   font_title_el: "#5b7178",
-  font_title_el_h3: "#5b7178",
+  font_title_el_h3: "#00141b",
 
   //navbar
   navbar_background: "#dddddd",
@@ -175,7 +175,7 @@ export const lightTheme = {
 
   //intro
   intro_background_photo: "#011834",
-  intro_arrow: "#698c99",
+  intro_arrow: "#00141b",
   intro_font_Typewriter: "#5b7178",
   intro_background_vertical: "linear-gradient(to top, #dddddd 5%, transparent 80%)",
   intro_background_horizontal: "linear-gradient(to right, #dddddd 10%, transparent 60%)",
@@ -196,8 +196,8 @@ export const lightTheme = {
   //skills
   skills_box_shadow: "0px 0px 16px -8px rgba(0, 0, 0, 0.68)",
   skills_box_shadow_hover: "0px 0px 16px -8px #bbbbbb",
-  skills_font: "#00141b",
-  skills_icon: "#5b7178",
+  skills_font: "#5b7178",
+  skills_icon: "#00141b",
   skills_background_box: "#efefef",
 
   //portfolio

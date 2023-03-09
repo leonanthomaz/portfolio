@@ -54,11 +54,14 @@ display: flex;
 flex-direction: column;
 margin: auto;
 height: 450px;
+font-size: 16px;
 
 
 @media(max-width: 760px){
     max-width: 400px;
     height: auto;
+    font-size: 14px;
+
 }
 
 @media(max-width: 560px){

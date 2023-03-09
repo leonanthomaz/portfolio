@@ -52,12 +52,12 @@ box-shadow: ${props => props.theme.about_box_shadow};
 padding: 28px;
 font-family: 'Josefin Sans', sans-serif;
 
-font-size: 14px;
+font-size: 16px;
 
 @media (max-width: 760px){
     width: auto;
     margin: 10px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 `;
