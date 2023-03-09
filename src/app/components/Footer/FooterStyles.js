@@ -103,7 +103,7 @@ export const SocialIcons = styled.div`
 `;
 
 export const SocialIconLink = styled.a`
-  color: ${props => props.theme.font};
+  color: ${props => props.theme.font_footer};
   font-size: 24px;
   transition: all ease 0.2s;
 

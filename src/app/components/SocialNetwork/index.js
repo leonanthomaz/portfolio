@@ -16,7 +16,7 @@ export const SocialNetwork = () => {
                         <SN.Icon>
                             <BsWhatsapp/>
                         </SN.Icon>
-                        <SN.Title>Whatsapp</SN.Title>
+                        {/* <SN.Title>Whatsapp</SN.Title> */}
                         <SN.Subtitle>(21) 99809-0928</SN.Subtitle>
                         </a>
                     </SN.Item>
@@ -28,7 +28,7 @@ export const SocialNetwork = () => {
                     <SN.Icon>
                         <SiGmail/>
                     </SN.Icon>
-                    <SN.Title>E-mail</SN.Title>
+                    {/* <SN.Title>E-mail</SN.Title> */}
                     <SN.Subtitle>leonan.thomaz@gmail.com</SN.Subtitle>
                     </a>
                 </SN.Item>
@@ -40,7 +40,7 @@ export const SocialNetwork = () => {
                     <SN.Icon>
                         <FaLinkedin/>
                     </SN.Icon>
-                    <SN.Title>LinkedIn</SN.Title>
+                    {/* <SN.Title>LinkedIn</SN.Title> */}
                     <SN.Subtitle>@leonanthomaz</SN.Subtitle>
                     </a>
                 </SN.Item>
@@ -52,7 +52,7 @@ export const SocialNetwork = () => {
                     <SN.Icon>
                         <VscGithub/>
                     </SN.Icon>
-                    <SN.Title>Github</SN.Title>
+                    {/* <SN.Title>Github</SN.Title> */}
                     <SN.Subtitle>leonanthomaz</SN.Subtitle>
                     </a>
                 </SN.Item>

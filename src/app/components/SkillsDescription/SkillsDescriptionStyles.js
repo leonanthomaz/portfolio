@@ -36,6 +36,7 @@ grid-template-columns: auto auto;
 justify-content: center;
 gap: 20px;
 padding: 20px;
+border-radius: 10px;
 
 @media(max-width: 900px){
     display: flex;

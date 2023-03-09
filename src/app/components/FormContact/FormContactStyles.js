@@ -9,11 +9,16 @@ export const FormBox = styled.div`
 margin: auto;
 width: 500px;
 height: auto;
-background: ${props => props.theme.background_contact_form};
+background: ${props => props.theme.contact_background_form};
 box-shadow: ${props => props.theme.contact_form_shadow};
-border-radius: 10px; 
 border: 1px solid white;
 margin: 20px auto;
+transition: all ease 0.5s;
+
+:hover{
+    box-shadow: ${props => props.theme.contact_shadow_hover};
+    border-radius: 5px;
+}
 
 @media (max-width: 760px){
     max-width: 310px;
@@ -53,7 +58,7 @@ padding: 10px;
     -webkit-transition: all .1s linear;
     -moz-transition: all .1s linear;
     -webkit-appearance:none;
-    background: ${props => props.theme.background_contact_form};
+    background: ${props => props.theme.contact_background_form};
     color: ${props => props.theme.font};
 
     @media (max-width: 760px){
@@ -65,7 +70,9 @@ padding: 10px;
 }
 
 .label-float input:focus{
-    border: ${props => props.theme.border_input_contact};                    
+    border-top: ${props => props.theme.contact_border_input};    
+    border-left: ${props => props.theme.contact_border_input};                    
+    border-right: ${props => props.theme.contact_border_input};                                 
 }
 
 .label-float input::placeholder{
@@ -81,7 +88,7 @@ padding: 10px;
     transition: all .1s linear;
     -webkit-transition: all .1s linear;
     -moz-transition: all .1s linear;
-    background: ${props => props.theme.background_contact_label};
+    background: ${props => props.theme.contact_background_label};
     color: ${props => props.theme.font};                    
     padding: 5px;
     box-sizing: border-box;
@@ -114,17 +121,18 @@ input::-webkit-inner-spin-button {
 }
 .btn-form-contact{
         text-decoration: none;
-        color: ${props => props.theme.box_font_list};
-        background: ${props => props.theme.btn_background};
+        color: ${props => props.theme.contact_font_btn};
+        background: ${props => props.theme.contact_background_btn};
         transition: all ease 0.5s;
         width: 100px;
         margin: auto;
         border-radius: 20px;
         border: 1px solid #ecececcc;
+
         :hover{
+            width: 110px;
             transition: all ease 0.5s;
-            background: ${props => props.theme.btn_background_hover};
-            color: ${props => props.theme.box_font_list_hover};
+            background: ${props => props.theme.contact_background_btn_hover};
         }
     }
 `;

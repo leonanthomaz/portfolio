@@ -7,23 +7,30 @@ color: ${props => props.theme.font};
 
 export const Wrapper = styled.div`
 display: grid;
-grid-template-columns: auto auto;
+grid-template-columns: 500px auto;
 justify-content: space-around;
 align-items: center;
 padding: 20px;
 
-@media(max-width: 760px){
+@media(max-width: 1000px){
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
 }
 
 `;
 
-export const Right = styled.div`
+export const Left = styled.div`
+flex: 3.5;
+flex-wrap: wrap;
 `;
 
-export const Left = styled.div`
+export const Right = styled.div`
+flex: 1;
+flex-wrap: nowrap;
 `;
+
+
 

@@ -52,13 +52,13 @@ export const SkillsItems = styled.div`
   padding: 15px;
   background: ${props => props.theme.skills_background_box};
   box-shadow: ${props => props.theme.skills_box_shadow};
-  border-radius: 7px;
   transition: all ease 0.5s;
   gap: 10px;
   margin: 7px auto;
 
   :hover{
     box-shadow: ${props => props.theme.skills_box_shadow_hover};
+    border-radius: 5px;
   }
 
     @media (max-width: 760px){

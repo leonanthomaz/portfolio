@@ -9,7 +9,7 @@ background: ${props => props.theme.background};
 
 export const Wrapper = styled.div`
 display: grid;
-grid-template-columns: 350px 350px; 
+grid-template-columns: 250px 250px; 
 justify-content: center;
 gap: 10px;
 padding-top: 20px;
@@ -25,23 +25,23 @@ export const Item = styled.div`
 
 padding: 15px;
 margin: 10px;
-background: ${props => props.theme.background_portfolio};
-box-shadow: ${props => props.theme.box_shadow_portfolio};
-border-radius: 10px;
+box-shadow: ${props => props.theme.contact_shadow};
 color: ${props => props.theme.font};
 text-align: center;
 align-items: center;
+transition: all .1s linear;
+                        -webkit-transition: all .1s linear;
+                        -moz-transition: all .1s linear;
 
+:hover{
+    box-shadow: ${props => props.theme.contact_shadow_hover};
+    border-radius: 5px;
+}
 
 a{
     text-decoration: none;
     color: ${props => props.theme.font};
 }
-
-/* @media(max-width: 760px){
-    width: auto;
-    height: auto;
-} */
 `;
 
 export const Title = styled.div`
@@ -64,10 +64,4 @@ font-family: 'Josefin Sans', sans-serif;
 export const Icon = styled.div`
 font-size: 32px;
 color: ${props => props.theme.font_icon};
-
-`
-export const Location = styled.div`
-/* border: 2px solid red; */
-max-width: 500px;
-margin: auto;
 `

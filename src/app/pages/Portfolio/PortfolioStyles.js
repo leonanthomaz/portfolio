@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { BiCodeBlock } from "react-icons/bi";
 
 export const Container = styled.div`
 width: 100%;
@@ -33,7 +32,6 @@ export const Wrapper = styled.div`
     justify-content: center;
     gap: 10px;
     
-    /* border: 2px solid green; */
 
     @media (max-width: 1200px){
         grid-template-columns: 350px 350px; 
@@ -53,7 +51,6 @@ export const Box = styled.div`
     margin: 10px;
     background: ${props => props.theme.portfolio_background_box};
     box-shadow: ${props => props.theme.portfolio_box_shadow};
-    border-radius: 10px;
     color: ${props => props.theme.font};
     -moz-transition: all 0.5s;
     -webkit-transition: all 0.5s;
@@ -67,9 +64,8 @@ export const Box = styled.div`
         -moz-transform: scale(1.1);
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
-        box-shadow: "4px 4px 5px #121214";
         border-radius: 5px;
-        box-shadow: ${props => props.theme.skills_box_shadow_hover};
+        box-shadow: ${props => props.theme.portfolio_box_shadow_hover};
     }
     
     h2{
@@ -87,13 +83,10 @@ export const Box = styled.div`
 
     p{
         text-align: center;
-        /* font-style: italic; */
         font-size: 14px;
         margin-top: 5px;
         font-family: 'Josefin Sans', sans-serif;
-        /* border: 2px solid red; */
         padding: 5px;
-        /* box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;     */
     }
 
     span{
@@ -103,7 +96,6 @@ export const Box = styled.div`
         font-size: 12px;
         font-family: 'Roboto', sans-serif;
         padding: 7px;
-        /* border: 2px solid red; */
     }
 
     .date{
@@ -122,7 +114,7 @@ export const Box = styled.div`
             justify-content: center;
             align-items: center;
             background: ${props => props.theme.portfolio_btn_background};
-            color: ${props => props.theme.btn_font_background_portfolio};
+            color: ${props => props.theme.portfolio_btn_font};
             font-weight: 700;
             border: none;
             padding: 5px;
@@ -135,7 +127,7 @@ export const Box = styled.div`
 
             :hover{
                 background: ${props => props.theme.portfolio_btn_background_hover};
-                color: ${props => props.theme.btn_font_background_portfolio_hover};
+                color: ${props => props.theme.portfolio_btn_font_hover};
                 transition: all .1s linear;
                         -webkit-transition: all .1s linear;
                         -moz-transition: all .1s linear;

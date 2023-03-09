@@ -31,7 +31,7 @@ margin-right: 30px;
 
 export const Icon = styled.div`
 display: none;
-color: ${({ theme }) => (theme === null || theme === 'dark' ? '#dddddd' : '#00141b')};
+color: ${({ theme }) => (theme === null || theme === 'dark' ? '#dddddd' : '#5b7178')};
 cursor: pointer;
 
 @media(max-width: 760px){
@@ -86,7 +86,6 @@ a{
     &.active {
         text-decoration: none;
         color: ${props => props.theme.navbar_font_active};
-        transition: all ease 0.1s;
         font-weight: 700;
         text-decoration: 3px solid overline;
     }
@@ -94,8 +93,7 @@ a{
     :hover{
         text-decoration: none;
         color: ${props => props.theme.navbar_font_active};
-        transition: all ease 0.1s;
-        font-weight: 900;
+        font-weight: 700;
         text-decoration: 3px solid overline;
     }
 }
@@ -109,11 +107,10 @@ justify-content: center;
 padding: 5px;
 width: 70px;
 border-radius: 20px;
-background: ${({ theme }) => (theme === 'dark' ? '#dddddd' : '#00141b')};
-color: ${({ theme }) => (theme === 'dark' ? '#00141b' : '#dddddd')};
+background: ${({ theme }) => (theme === 'dark' ? '#dddddd' : '#5b7178')};
+color: ${({ theme }) => (theme === 'dark' ? '#5b7178' : '#dddddd')};
 transition: all 0.5s ease;
 cursor: pointer;
-border: 3px solid linear-gradient(45 deg, red, blue);
 `;
 
 export const ThemeIcon = styled.div`

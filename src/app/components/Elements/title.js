@@ -32,7 +32,7 @@ export const TitleMain = styled.h2`
 `;
 
 export const H3 = styled.h3`
-
+    color: ${props => props.theme.font_title_el_h3};
     font-size: 24px;
 
     @media(max-width: 760px){
