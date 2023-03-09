@@ -5,8 +5,6 @@ import { useThemeContext } from '../../sharing/context/theme';
 import * as M from './NavbarStyles';
 import { BiMenu } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
-// import { BsMoonStars } from "react-icons/bs";
-// import { FaSun } from "react-icons/fa";
 
 export const Navbar = () => {
     const { click, handleClick } = useContext(PortfolioContext)
@@ -48,7 +46,6 @@ export const Navbar = () => {
             </M.Left>
             <M.Right>
                 <M.ThemeContainer role="tema" aria-label="controle de tema" tabIndex="0" onClick={changeTheme} theme={theme}>
-                    {/* <M.ThemeIcon theme={theme}>{theme === "dark" ? <BsMoonStars/> : <FaSun/> }</M.ThemeIcon> */}
                     <M.ThemeIcon role="temaItem" aria-controls='true'><M.Active theme={theme}></M.Active></M.ThemeIcon>
                 </M.ThemeContainer>
             </M.Right>

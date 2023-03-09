@@ -1,10 +1,9 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState, useEffect, useContext } from "react";
 import * as P from './PortfolioStyles';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { ETitle } from "../../components/Elements/title";
 
-import { PortfolioList } from '../../components/Lists/PortfolioList';
-import { category } from '../../sharing/utils/category_portfolio';
+import { NP } from '../../components/Navs/Portfolio';
 import { 
     PHPData, 
     ReactData,
@@ -12,7 +11,11 @@ import {
 } from "../../sharing/db/dataPortfolio";
 import {ModalPortfolio} from '../../components/ModalPortfolio'
 
+import { PortfolioContext } from "../../sharing/context/portfolio";
+
 export const Portfolio = () => {
+
+    const { categoryPortfolio } = useContext(PortfolioContext)
 
     const [selected, setSelected] = useState("react");    
     const [data, setData] = useState([]);
@@ -50,8 +53,8 @@ export const Portfolio = () => {
                 <ETitle title={'Portfólio'} subtitle={'Conhecimentos em prática!'}/>
             </AnimationOnScroll>
             <P.NavbarPortfolio>
-                {category.map((item, index) => (
-                <PortfolioList
+                {categoryPortfolio.map((item, index) => (
+                <NP
                     title={item.title}
                     active={selected === item.id}
                     setSelected={setSelected}

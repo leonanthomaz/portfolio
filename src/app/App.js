@@ -4,7 +4,7 @@ import { PortfolioContext } from './sharing/context/portfolio';
 import { Spinner } from './components/Spinner';
 import { Navbar } from './components/Navbar';
 import { Intro } from './components/Intro';
-import { SkillsInfo } from './components/SkillsInfo';
+import { SkillsDescription } from './components/SkillsDescription';
 import { Footer } from './components/Footer';
 import { Skills } from './pages/Skills';
 import { About } from './pages/About';
@@ -22,7 +22,7 @@ export const App = () => {
         <Navbar/>
         <Intro />
         <About/>
-        <SkillsInfo/>
+        <SkillsDescription/>
         <Skills/>
         <Portfolio/>
         <Contact/>

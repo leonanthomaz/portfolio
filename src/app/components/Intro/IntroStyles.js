@@ -52,9 +52,9 @@ flex: 3.5;
 export const ImgContainer = styled.div`
 width: 300px;
 height: 300px;
-background: ${props => props.theme.background_intro_photo};
+background: ${props => props.theme.intro_background_photo};
 border-radius: 50%;
-border: 3px solid #dddddd;
+border: 5px solid #dddddd;
 
 img {
     height: 100%;
@@ -103,7 +103,6 @@ h1{
     text-transform: uppercase;
 
     @media (max-width:1000px){
-        /* color: ${props => props.theme.h1_mobile}; */
         font-size: 30px;
     }
 }
@@ -121,7 +120,7 @@ h2{
     }
 
     span {
-        color: ${props => props.theme.font_intro_Typewriter};
+        color: ${props => props.theme.intro_font_Typewriter};
     }
 }
 
@@ -159,7 +158,7 @@ export const FeaturedHorizontal = styled.div`
 
 width: 100%;
 height: 100vh;
-background-image: ${props => props.theme.background_horizontal};
+background-image: ${props => props.theme.intro_background_horizontal};
 
 display: flex;
 flex-direction: column;
@@ -176,6 +175,6 @@ export const FeaturedVertical = styled.div`
 
 width: 100%;
 height: 100vh;
-background-image: ${props => props.theme.background_vertical};
+background-image: ${props => props.theme.intro_background_vertical};
 
 `;

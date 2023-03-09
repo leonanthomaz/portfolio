@@ -3,7 +3,7 @@ import * as C from "./ContactStyles";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { ETitle } from "../../components/Elements/title";
 import { FormContact } from "../../components/FormContact";
-import { Info } from "../../components/Info";
+import { SocialNetwork } from "../../components/SocialNetwork";
 
 export const Contact = () => {
 
@@ -17,7 +17,7 @@ export const Contact = () => {
             <FormContact/>
           </C.Left>
           <C.Right>
-            <Info/>
+            <SocialNetwork/>
           </C.Right>
         </C.Wrapper>
       </C.Container>

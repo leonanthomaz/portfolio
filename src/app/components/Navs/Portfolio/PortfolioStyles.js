@@ -13,10 +13,10 @@ export const Label = styled.li`
     transition: all .1s linear;
     box-shadow: ${props => props.theme.box_shadow_list};
     color: ${props => props.theme.box_font_list};
-    background: ${props => props.theme.box_background_list};
+    background: ${props => props.theme.btn_background};
 
     :hover{
-          background: ${props => props.theme.box_background_list_hover};
+          background: ${props => props.theme.btn_background_hover};
           transition: all .1s linear;
                 -webkit-transition: all .1s linear;
                 -moz-transition: all .1s linear;
@@ -27,7 +27,7 @@ export const Label = styled.li`
       }
 
       &.active {
-        background: ${props => props.theme.box_background_list_active};
+        background: ${props => props.theme.btn_background_active};
         color: ${props => props.theme.box_font_list_active};
         font-weight: bold;
         transition: all .1s linear;

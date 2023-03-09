@@ -1,16 +1,16 @@
 import React from 'react'
-import * as CP from './PortfolioListStyles';
+import * as NPS from './PortfolioStyles';
 
-export const PortfolioList = ({ id, index, title, active, setSelected }) => {
+export const NP = ({ id, index, title, active, setSelected }) => {
 
     return (
-        <CP.Label
+        <NPS.Label
         key={index}
         className={active ? "portfolioList active" : "portfolioList"}
         onClick={() => setSelected(id)}
         >
         {title}
-        </CP.Label>
+        </NPS.Label>
     )
 }
 

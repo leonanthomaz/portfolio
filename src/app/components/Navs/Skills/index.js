@@ -1,15 +1,15 @@
 import React from 'react'
-import * as CS from './SkillsListStyles';
+import * as SK from './SkillsStyles';
 
 export const SkillsList = ({ id, index, title, active, setSelectedSkills }) => {
 
     return (
-        <CS.Label
+        <SK.Label
         key={index}
         className={active ? "skillsList active" : "skillsList"}
         onClick={() => setSelectedSkills(id)}
         >
         {title}
-        </CS.Label>
+        </SK.Label>
     )
 }

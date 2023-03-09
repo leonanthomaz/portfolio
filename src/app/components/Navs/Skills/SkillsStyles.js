@@ -11,12 +11,12 @@ export const Label = styled.li`
     cursor: pointer;
     width: 100px;
     transition: all .1s linear;
-    box-shadow: ${props => props.theme.box_shadow_list};
-    color: ${props => props.theme.box_font_list};
-    background: ${props => props.theme.box_background_list};
+    box-shadow: ${props => props.theme.skills_nav_box_shadow};
+    color: ${props => props.theme.skills_nav_font};
+    background: ${props => props.theme.skills_nav_background_btn};
 
     :hover{
-          background: ${props => props.theme.box_background_list_hover};
+          background: ${props => props.theme.skills_nav_background_btn_hover};
           transition: all .1s linear;
                 -webkit-transition: all .1s linear;
                 -moz-transition: all .1s linear;
@@ -27,13 +27,13 @@ export const Label = styled.li`
       }
 
       &.active {
-        background: ${props => props.theme.box_background_list_active};
-        color: ${props => props.theme.box_font_list_active};
+        background: ${props => props.theme.skills_nav_background_btn_active};
+        color: ${props => props.theme.skills_nav_font_btn_active};
         font-weight: bold;
         transition: all .1s linear;
                 -webkit-transition: all .1s linear;
                 -moz-transition: all .1s linear;
-                box-shadow: ${props => props.theme.box_shadow_list_hover};
+                box-shadow: ${props => props.theme.skills_nav_btn_active_boxshadow};
 
       }
 `;

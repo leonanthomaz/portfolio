@@ -21,7 +21,7 @@ export const About = () => {
             </AnimationOnScroll>
           </A.Left>
           <A.Right>
-            <A.Text>
+            <A.BoxText>
               <p>Olá!</p>
               <p>
               Me chamo Leonan Thomaz e sou formado em Análise e Desenvolvimento de Sistemas pela Estácio de Sá.
@@ -44,7 +44,7 @@ export const About = () => {
                   <a className="btn" aria-labelledby="Botão para baixar curriculo de Leonan Thomaz" href={curriculo} download>Baixe meu curriculo</a>
               </A.LinkCurriculum>
               </AnimationOnScroll>
-            </A.Text>
+            </A.BoxText>
           </A.Right>
         </A.Wrapper>
       </A.Container>

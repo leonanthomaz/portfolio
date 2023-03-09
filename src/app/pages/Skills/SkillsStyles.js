@@ -1,15 +1,8 @@
 import styled from "styled-components";
-import { BiCodeBlock } from "react-icons/bi";
 
 export const Container = styled.div`
 width: 100%;
 background: ${props => props.theme.background};
-`;
-
-
-export const NavbarSkillsGroup = styled.div`
-
-
 `;
 
 export const NavbarSkills = styled.ul`
@@ -58,16 +51,14 @@ export const SkillsItems = styled.div`
   width: 250px;
   padding: 15px;
   background: ${props => props.theme.skills_background_box};
-  box-shadow: ${props => props.theme.box_shadow_list};
+  box-shadow: ${props => props.theme.skills_box_shadow};
   border-radius: 7px;
   transition: all ease 0.5s;
-  /* -webkit-transition: -webkit-transform .5s ease; */
   gap: 10px;
   margin: 7px auto;
 
   :hover{
-    box-shadow: ${props => props.theme.box_shadow_list_hover};
-
+    box-shadow: ${props => props.theme.skills_box_shadow_hover};
   }
 
     @media (max-width: 760px){

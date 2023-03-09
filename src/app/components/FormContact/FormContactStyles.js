@@ -115,7 +115,7 @@ input::-webkit-inner-spin-button {
 .btn-form-contact{
         text-decoration: none;
         color: ${props => props.theme.box_font_list};
-        background: ${props => props.theme.box_background_list};
+        background: ${props => props.theme.btn_background};
         transition: all ease 0.5s;
         width: 100px;
         margin: auto;
@@ -123,7 +123,7 @@ input::-webkit-inner-spin-button {
         border: 1px solid #ecececcc;
         :hover{
             transition: all ease 0.5s;
-            background: ${props => props.theme.box_background_list_hover};
+            background: ${props => props.theme.btn_background_hover};
             color: ${props => props.theme.box_font_list_hover};
         }
     }

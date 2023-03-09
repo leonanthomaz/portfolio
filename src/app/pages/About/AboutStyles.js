@@ -48,9 +48,8 @@ align-items: center;
 
 `;
 
-export const Text = styled.div`
--webkit-box-shadow: ${props => props.theme.webkit};
-box-shadow: ${props => props.theme.box_shadow_portfolio};
+export const BoxText = styled.div`
+box-shadow: ${props => props.theme.about_box_shadow};
 padding: 35px;
 font-family: 'Josefin Sans', sans-serif;
 
@@ -80,12 +79,12 @@ border-radius: 20px;
 font-weight: 700;
 width: 200px;
 
-background: ${props => props.theme.box_background_list};
+background: ${props => props.theme.about_btn_background};
 transition: all .1s linear;
                         -webkit-transition: all .1s linear;
                         -moz-transition: all .1s linear;
 :hover{
-    background: ${props => props.theme.box_background_list_hover};
+    background: ${props => props.theme.about_btn_background_hover};
     width: 220px;
     transition: all .1s linear;
                         -webkit-transition: all .1s linear;
@@ -93,11 +92,11 @@ transition: all .1s linear;
 }
 
 a{
-    color: ${props => props.theme.button_font};
+    color: ${props => props.theme.about_font_btn_background};
     font-weight: 700;
 
     :hover{
-        color: ${props => props.theme.button_font_hover};
+        color: #dddddd;
     }
 }
 `;

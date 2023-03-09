@@ -1,63 +1,63 @@
 import React from 'react'
-import * as IF from './InfoStyles'
+import * as SN from './SocialNetworkStyles'
 import { BsWhatsapp } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { VscGithub } from "react-icons/vsc";
 
-export const Info = () => {
+export const SocialNetwork = () => {
     return (
-        <IF.Container>
-            <IF.Wrapper>
+        <SN.Container>
+            <SN.Wrapper>
                 <AnimationOnScroll animateIn="animate__fadeInUp">
-                    <IF.Item>
+                    <SN.Item>
                         <a href="https://api.whatsapp.com/send?phone=5521998090928">
-                        <IF.Icon>
+                        <SN.Icon>
                             <BsWhatsapp/>
-                        </IF.Icon>
-                        <IF.Title>Whatsapp</IF.Title>
-                        <IF.Subtitle>(21) 99809-0928</IF.Subtitle>
+                        </SN.Icon>
+                        <SN.Title>Whatsapp</SN.Title>
+                        <SN.Subtitle>(21) 99809-0928</SN.Subtitle>
                         </a>
-                    </IF.Item>
+                    </SN.Item>
                 </AnimationOnScroll>
 
                 <AnimationOnScroll animateIn="animate__fadeInUp">
-                <IF.Item>
+                <SN.Item>
                     <a href="mailto:leonan.thomaz@gmail.com? Subject: Olá! Gostaria de falar com você!m&body=Conteúdo da mensagem">
-                    <IF.Icon>
+                    <SN.Icon>
                         <SiGmail/>
-                    </IF.Icon>
-                    <IF.Title>E-mail</IF.Title>
-                    <IF.Subtitle>leonan.thomaz@gmail.com</IF.Subtitle>
+                    </SN.Icon>
+                    <SN.Title>E-mail</SN.Title>
+                    <SN.Subtitle>leonan.thomaz@gmail.com</SN.Subtitle>
                     </a>
-                </IF.Item>
+                </SN.Item>
                 </AnimationOnScroll> 
 
                 <AnimationOnScroll animateIn="animate__fadeInUp">
-                <IF.Item>
+                <SN.Item>
                     <a href="https://www.linkedin.com/in/leonanthomaz">
-                    <IF.Icon>
+                    <SN.Icon>
                         <FaLinkedin/>
-                    </IF.Icon>
-                    <IF.Title>LinkedIn</IF.Title>
-                    <IF.Subtitle>@leonanthomaz</IF.Subtitle>
+                    </SN.Icon>
+                    <SN.Title>LinkedIn</SN.Title>
+                    <SN.Subtitle>@leonanthomaz</SN.Subtitle>
                     </a>
-                </IF.Item>
+                </SN.Item>
                 </AnimationOnScroll>
 
                 <AnimationOnScroll animateIn="animate__fadeInUp">
-                <IF.Item>
+                <SN.Item>
                     <a href="https://github.com/leonanthomaz">
-                    <IF.Icon>
+                    <SN.Icon>
                         <VscGithub/>
-                    </IF.Icon>
-                    <IF.Title>Github</IF.Title>
-                    <IF.Subtitle>leonanthomaz</IF.Subtitle>
+                    </SN.Icon>
+                    <SN.Title>Github</SN.Title>
+                    <SN.Subtitle>leonanthomaz</SN.Subtitle>
                     </a>
-                </IF.Item>
+                </SN.Item>
                 </AnimationOnScroll> 
-            </IF.Wrapper>
-        </IF.Container>
+            </SN.Wrapper>
+        </SN.Container>
     )
 }

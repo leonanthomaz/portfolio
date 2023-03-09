@@ -1,7 +1,6 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useContext, useEffect, useState } from "react";
 import * as S from './SkillsStyles';
 import Progressbar from '../../sharing/utils/progressbar_skills';
-import { category } from '../../sharing/utils/category_skills';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { 
   languageDataSkills,
@@ -11,10 +10,14 @@ import {
   databasesDataSkills,
   versionDataSkills
 } from "../../sharing/db/dataSkills";
-import { SkillsList } from "../../components/Lists/SkillsList";
+import { SkillsList } from "../../components/Navs/Skills";
 import { ETitle } from "../../components/Elements/title";
+import { PortfolioContext } from "../../sharing/context/portfolio";
 
 export const Skills = () => {
+
+    const { categorySkills } = useContext(PortfolioContext)
+
     const [selectedSkills, setSelectedSkills] = useState("languages");
     const [dataSkills, setDataSkills] = useState([]);
     const [ listSkills, setListSkills ] = useState([])
@@ -45,10 +48,9 @@ export const Skills = () => {
   }, [selectedSkills]);
 
     const handleFindSkills = (id) => {
-      // console.log(id)
       const item = dataSkills.filter(e => e.id === id)
       setListSkills(item)
-  }
+    }
 
     return (
       <S.Container id="skills">
@@ -56,9 +58,8 @@ export const Skills = () => {
             <ETitle title={'Skills'} subtitle={'Habilidades que possuo'}/>
         </AnimationOnScroll>
 
-          <S.NavbarSkillsGroup>
-            <S.NavbarSkills>
-                {category.map((item, index) => (
+        <S.NavbarSkills>
+                {categorySkills.map((item, index) => (
                 <SkillsList
                     id={item.id}
                     title={item.title}
@@ -68,7 +69,6 @@ export const Skills = () => {
                 />
                 ))}
             </S.NavbarSkills>
-          </S.NavbarSkillsGroup>
 
           <S.Wrapper>
             {dataSkills.map((item, key) => {

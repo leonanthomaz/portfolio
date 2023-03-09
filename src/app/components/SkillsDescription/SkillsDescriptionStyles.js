@@ -4,18 +4,17 @@ import styled from "styled-components";
 export const Container = styled.div`
 background: ${props => props.theme.background};
 color: ${props => props.theme.font};
-/* border: 2px solid red; */
 `;
 
 export const Icon = styled.div`
 border-radius: 10px;
 padding: 10px;
 font-size: 100px;
-color: ${props => props.theme.skills_font_icon};
+color: ${props => props.theme.skills_description_font_icon};
 transition: all ease 0.2s;
 
 &:hover{
-color: ${props => props.theme.skills_font_icon_hover};
+color: ${props => props.theme.skills_description_font_icon_hover};
 transition: all ease 0.2s;
 }
 
@@ -29,9 +28,6 @@ transition: all ease 0.2s;
 `;
 
 export const Wrapper = styled.div`
-/* border: 2px solid green; */
-//margin: 10px;
-
 `;
 
 export const Box = styled.div`
@@ -50,14 +46,14 @@ padding: 20px;
 
 export const ItemDW = styled.div`
 /* border: 2px solid red; */
-box-shadow: ${props => props.theme.box_shadow_portfolio};
+box-shadow: ${props => props.theme.skills_description_box_shadow};
 padding: 20px;
 max-width: 500px;
 display: flex;
 flex-direction: column;
 margin: auto;
 height: 450px;
-background: ${props => props.theme.skills_home_background_box};
+background: ${props => props.theme.skills_description_background_box};
 
 
 @media(max-width: 760px){
@@ -86,7 +82,6 @@ flex-direction: column;
 `;
 
 export const TitleContainer = styled.div`
-/* border: 2px solid red; */
 text-align: center;
 padding: 5px;
 font-family: 'Roboto', sans-serif;
@@ -94,7 +89,6 @@ font-family: 'Roboto', sans-serif;
 `;
 
 export const IconsContainer = styled.div`
-/* box-shadow: 0px 0px 16px -8px rgba(204, 47, 252, 0.5); */
 display: flex;
 flex-direction: row;
 padding: 8px;
@@ -102,7 +96,6 @@ padding: 8px;
 `;
 
 export const Right = styled.div`
-/* border: 2px solid purple; */
 display: flex;
 flex-direction: row;
 `;
@@ -110,19 +103,14 @@ flex-direction: row;
 
 export const Title = styled.h2`
 font-family: 'Wendy One', sans-serif;
-
 `;
 
-
-
 export const Text = styled.p`
-/* border: 2px solid red; */
 padding: 10px;
 font-family: 'Josefin Sans', sans-serif;
 `;
 
 export const ButtonContainer = styled.div`
-/* border: 2px solid red; */
 display: flex;
 justify-content: center;
 padding-top: 20px;

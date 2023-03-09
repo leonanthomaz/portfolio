@@ -8,7 +8,7 @@ width: 100%;
 height: 70px;
 scroll-behavior: smooth;
 background: ${props => props.theme.navbar_background};
-color: ${props => props.theme.font_navbar};
+color: ${props => props.theme.navbar_font};
 box-shadow: ${props => props.theme.navbar_shadow};
 z-index: 999;
 
@@ -50,7 +50,7 @@ max-width: 500px;
 margin-top: 15px;
 text-align: center;
 margin-left: 20px;
-color: ${props => props.theme.font_navbar};
+color: ${props => props.theme.navbar_font};
 
 
 @media(max-width: 760px){
@@ -73,18 +73,19 @@ list-style: none;
 text-transform: uppercase;
 transition: all ease 0.2s;
 border: 1px solid transparent;
+font-weight: 500;
 
 @media(max-width: 760px){
     line-height: 35px;
 }
 
 a{
-    color: ${props => props.theme.font_navbar};
+    color: ${props => props.theme.navbar_font};
     text-decoration: none;
 
     &.active {
         text-decoration: none;
-        color: ${props => props.theme.font_navbar_active};
+        color: ${props => props.theme.navbar_font_active};
         transition: all ease 0.1s;
         font-weight: 700;
         text-decoration: 3px solid overline;
@@ -92,9 +93,9 @@ a{
 
     :hover{
         text-decoration: none;
-        color: ${props => props.theme.font_navbar_active};
+        color: ${props => props.theme.navbar_font_active};
         transition: all ease 0.1s;
-        font-weight: 700;
+        font-weight: 900;
         text-decoration: 3px solid overline;
     }
 }
@@ -117,12 +118,9 @@ border: 3px solid linear-gradient(45 deg, red, blue);
 
 export const ThemeIcon = styled.div`
 margin-top: -2px;
-/* color: ${({ theme }) => (theme === 'dark' ? '#00141b' : '#ffffff')};
-font-weight: bold; */
 `;
 
 export const Active = styled.div`
-/* background: #011834; */
 background: ${({ theme }) => (theme === 'dark' ? '#00141b' : '#ffffff')};
 width: 20px;
 height: 20px;

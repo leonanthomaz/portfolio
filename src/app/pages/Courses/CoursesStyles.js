@@ -89,11 +89,11 @@ justify-content: center;
 export const ItemURL = styled(Link)`
 border-radius: 20px;
 padding: 10px;
-background: ${props => props.theme.box_background_list};
+background: ${props => props.theme.btn_background};
 text-decoration: none;
 font-weight: 700;
 
-background: ${props => props.theme.box_background_list};
+background: ${props => props.theme.btn_background};
 color: ${props => props.theme.box_font_list};
 
 :hover{

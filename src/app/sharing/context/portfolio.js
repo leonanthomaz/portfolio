@@ -20,6 +20,49 @@ export const PortfolioProvider = ({ children }) => {
         setLoading(false)
     },[loading])
 
+    let categoryPortfolio = [
+        {
+            id: "react",
+            title: "React",
+        },
+        {
+            id: "php",
+            title: "PHP",
+        },
+        {
+            id: "web",
+            title: "WEB",
+        },    
+        
+    ];
+
+    let categorySkills = [
+        {
+            id: "languages",
+            title: "Linguagens",
+        },
+        {
+          id: "web",
+          title: "WEB",
+        },
+        {
+          id: "frameworks",
+          title: "Frameworks",
+        },
+        {
+            id: "databases",
+            title: "Databases",
+        },
+        {
+            id: "version",
+            title: "Versionamento",
+        },
+        {
+            id: "others",
+            title: "Outros",
+        },
+    ];
+
     return (
         <PortfolioContext.Provider value={{ 
             click, 
@@ -27,7 +70,9 @@ export const PortfolioProvider = ({ children }) => {
             handleClick,
             closeNavbar,
             loading,
-            setLoading
+            setLoading,
+            categorySkills,
+            categoryPortfolio
             }}>
             {children}
         </PortfolioContext.Provider>
