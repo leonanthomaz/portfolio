@@ -50,11 +50,13 @@ export const darkTheme = {
 
   //about
   about_box_shadow: "0px 0px 20px 0px #bbbbbb",
+  about_background: "#04232e",
   about_btn_background: "#00141b",
   about_btn_background_hover: "#31874b",
   about_font_btn_background: "#dddddd",
 
   //skills description
+  skills_description_background: "#04232e",
   skills_description_font_icon: "yellow",
   skills_description_font_icon_hover: "gray",
   skills_description_box_shadow: "0px 0px 20px 0px #bbbbbb",
@@ -180,25 +182,27 @@ export const lightTheme = {
 
   //about
   about_box_shadow: "0px 0px 16px -8px rgba(0, 0, 0, 0.68)",
+  about_background: "#efefef",
   about_btn_background: "#5b7178",
   about_btn_background_hover: "#31874b",
   about_font_btn_background: "#dddddd",
 
   //skills description
+  skills_description_background: "#efefef",
+  skills_description_box_shadow: "0px 0px 16px -8px rgba(0, 0, 0, 0.68)",
   skills_description_font_icon: "#5b7178",
   skills_description_font_icon_hover: "#31874b",
-  skills_description_box_shadow: "0px 0px 16px -8px rgba(0, 0, 0, 0.68)",
 
   //skills
   skills_box_shadow: "0px 0px 16px -8px rgba(0, 0, 0, 0.68)",
   skills_box_shadow_hover: "0px 0px 16px -8px #bbbbbb",
   skills_font: "#00141b",
   skills_icon: "#5b7178",
-  skills_background_box: "#dddddd",
+  skills_background_box: "#efefef",
 
   //portfolio
   portfolio_font_h2: "#5b7178",
-  portfolio_background_box: "#dddddd",
+  portfolio_background_box: "#efefef",
   portfolio_box_shadow: "0px 0px 16px -8px #31874b",
   portfolio_box_shadow_hover: "0px 0px 16px -8px #31874b",
   portfolio_btn_background: "#5b7178",
@@ -229,14 +233,14 @@ export const lightTheme = {
   
 
   //contato
-  contact_background: "#dddddd",
+  contact_background: "#efefef",
   contact_background_form: "#dddddd",
   contact_border_input: "2px solid #dddddd",
   contact_background_icons: "#00141b",
   contact_background_icons_hover: "green",
   contact_form_shadow: "0.1em 0.1em 0.1em 0.1em #868686a2",
   contact_font: "#00141b",
-  contact_font_icons: "#5b7178",
+  contact_font_icons: "#efefef",
   contact_shadow: "0px 0px 16px -8px #dddddd",
   contact_shadow_hover: "0px 0px 16px 0px #31874b",
   contact_background_btn: "#5b7178",

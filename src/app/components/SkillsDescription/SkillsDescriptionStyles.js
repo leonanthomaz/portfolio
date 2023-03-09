@@ -46,7 +46,7 @@ border-radius: 10px;
 `;
 
 export const ItemDW = styled.div`
-/* border: 2px solid red; */
+background: ${props => props.theme.skills_description_background};
 box-shadow: ${props => props.theme.skills_description_box_shadow};
 padding: 20px;
 max-width: 500px;
@@ -54,7 +54,6 @@ display: flex;
 flex-direction: column;
 margin: auto;
 height: 450px;
-background: ${props => props.theme.skills_description_background_box};
 
 
 @media(max-width: 760px){

@@ -46,7 +46,7 @@ export const Navbar = () => {
             </M.Left>
             <M.Right>
                 <M.ThemeContainer role="tema" aria-label="controle de tema" tabIndex="0" onClick={changeTheme} theme={theme}>
-                    <M.ThemeIcon role="temaItem" aria-controls='true'><M.Active theme={theme}></M.Active></M.ThemeIcon>
+                    <M.ThemeIcon role="temaItem"><M.Active theme={theme}></M.Active></M.ThemeIcon>
                 </M.ThemeContainer>
             </M.Right>
         </M.Container>

@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { BiCodeBlock } from "react-icons/bi";
-import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 export const Title = styled.div`
 display: flex;
@@ -9,38 +8,38 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 color: ${props => props.theme.font_title_el};
-padding-top: 80px;
+padding-top: 4rem;
 font-family: 'Dela Gothic One', cursive;
 text-transform: uppercase;
 `;
 
 export const TitleMain = styled.h2`
 
-    font-size: 36px;
+    font-size: 32px;
 
     @media(max-width: 900px){
-        font-size: 24px;
-    }
-
-    @media(max-width: 760px){
         font-size: 22px;
     }
 
-    @media(max-height: 400px){
+    @media(max-width: 760px){
         font-size: 20px;
+    }
+
+    @media(max-height: 400px){
+        font-size: 18px;
     }
 `;
 
 export const H3 = styled.h3`
     color: ${props => props.theme.font_title_el_h3};
-    font-size: 24px;
+    font-size: 18px;
 
     @media(max-width: 760px){
-        font-size: 20px;
+        font-size: 16px;
     }
 
     @media(max-width: 500px){
-        font-size: 16px;
+        font-size: 14px;
     }
 `;
 
@@ -48,14 +47,14 @@ export const Icon = styled(BiCodeBlock)`
 margin: 5px;
 color: ${props => props.theme.font};
 
-font-size: 40px;
+font-size: 36px;
 
 @media(max-width: 760px){
-    font-size: 40px;
+    font-size: 36px;
 }
 
 @media(max-width: 500px){
-    font-size: 30px;
+    font-size: 28px;
 }
 
 `;

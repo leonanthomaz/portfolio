@@ -57,6 +57,7 @@ export const SkillsItems = styled.div`
   margin: 7px auto;
 
   :hover{
+    background: ${props => props.theme.skills_background_box};
     box-shadow: ${props => props.theme.skills_box_shadow_hover};
     border-radius: 5px;
   }

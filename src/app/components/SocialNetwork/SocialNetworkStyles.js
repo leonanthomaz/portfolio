@@ -25,6 +25,7 @@ export const Item = styled.div`
 
 padding: 15px;
 margin: 10px;
+background: ${props => props.theme.contact_background};
 box-shadow: ${props => props.theme.contact_shadow};
 color: ${props => props.theme.font};
 text-align: center;

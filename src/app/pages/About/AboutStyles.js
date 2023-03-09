@@ -10,7 +10,6 @@ display: grid;
 grid-template-columns: 500px 500px;
 justify-content: center;
 align-items: center;
-padding: 20px;
 
 @media (max-width: 1000px){
     grid-template-columns: 400px 400px;
@@ -20,7 +19,7 @@ padding: 20px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
 }
 `;
 
@@ -42,23 +41,23 @@ align-items: center;
 
 
 @media (max-width: 760px){
-    /* border: 2px solid red; */
-    width: 70%;
+    display: none;
 }
 
 `;
 
 export const BoxText = styled.div`
+background: ${props => props.theme.about_background};
 box-shadow: ${props => props.theme.about_box_shadow};
-padding: 35px;
+padding: 28px;
 font-family: 'Josefin Sans', sans-serif;
 
-font-size: 16px;
+font-size: 14px;
 
 @media (max-width: 760px){
     width: auto;
     margin: 10px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 `;
