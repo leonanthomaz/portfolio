@@ -2,7 +2,6 @@ import {
     DiMongodb,
     DiJsBadge,
     DiCss3,
-    DiBootstrap,
     DiGit,
     DiReact,
     DiGithubBadge,
@@ -31,7 +30,7 @@ import {
         id: 2,
         name: 'Javascript',
         icon: <DiJsBadge/>,
-        level: 80,
+        level: 70,
         description: 'Bla Bla Bla',
     },
     {
@@ -50,7 +49,7 @@ export const webSkills = [
         id: 1,
         name: 'HTML',
         icon: <DiHtml5/>,
-        level: 90,
+        level: 85,
         description: "",
     },
     {
@@ -64,7 +63,7 @@ export const webSkills = [
         id: 3,
         name: 'Javascript',
         icon: <DiJsBadge/>,
-        level: 80,
+        level: 70,
         description: 'Bla Bla Bla',
     },
 ]
@@ -106,7 +105,7 @@ export const othersDataSkills = [
         id: 2,
         name: 'NPM',
         icon: <DiNpm/>,
-        level: 80,
+        level: 70,
         description: 'Bla Bla Bla',
     },
     {
@@ -137,25 +136,24 @@ export const databasesDataSkills = [
         id: 3,
         name: 'SQL Server',
         icon: <DiDatabase/>,
-        level: 75,
+        level: 60,
         description: 'Conhecimentos de querys e requisições via node',
     },
 ]
-
 
 export const versionDataSkills = [
     {
         id: 1,
         name: 'Git',
         icon: <DiGit/>,
-        level: 70,
+        level: 75,
         description: 'Bla Bla Bla',
     },
     {
         id: 2,
         name: 'GitHub',
         icon: <DiGithubBadge/>,
-        level: 80,
+        level: 70,
         description: 'Bla Bla Bla',
     },
     

@@ -5,8 +5,9 @@ import { ETitle } from "../../components/Elements/title";
 
 import { NP } from '../../components/Navs/Portfolio';
 import { 
-    PHPData, 
     ReactData,
+    PHPData, 
+    JavaData,
     WEBData,
 } from "../../sharing/db/dataPortfolio";
 import {ModalPortfolio} from '../../components/ModalPortfolio'
@@ -29,6 +30,9 @@ export const Portfolio = () => {
         switch (selected) {
             case "react":
             setData(ReactData);
+            break;
+            case "java":
+            setData(JavaData);
             break;
             case "php":
             setData(PHPData);

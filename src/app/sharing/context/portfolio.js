@@ -30,8 +30,12 @@ export const PortfolioProvider = ({ children }) => {
             title: "PHP",
         },
         {
+            id: "java",
+            title: "Java",
+        },
+        {
             id: "web",
-            title: "WEB",
+            title: "HMTL/CSS",
         },    
         
     ];

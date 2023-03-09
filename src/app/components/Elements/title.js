@@ -8,7 +8,7 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 color: ${props => props.theme.font_title_el};
-padding-top: 4rem;
+padding-top: 5rem;
 font-family: 'Dela Gothic One', cursive;
 text-transform: uppercase;
 `;

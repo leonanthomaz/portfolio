@@ -51,7 +51,7 @@ export const darkTheme = {
   //about
   about_box_shadow: "0px 0px 20px 0px #bbbbbb",
   about_background: "#04232e",
-  about_btn_background: "#00141b",
+  about_btn_background: "#014c66",
   about_btn_background_hover: "#31874b",
   about_font_btn_background: "#dddddd",
 
@@ -100,7 +100,7 @@ export const darkTheme = {
   portfolio_nav_box_shadow_active: "0px 0px 16px 0px #31874b",
 
   //contact
-  contact_background: "#c5c5c5f5",
+  contact_background: "#04232e",
   contact_btn: "#00141b",
   contact_btn_hover: "#ecececcc",
   contact_font: "#dddddd",

@@ -17,33 +17,7 @@ import Burguer1 from '../assets/img/portfolio/burguer1.webp';
 import Burguer2 from '../assets/img/portfolio/burguer2.webp';
 import BN from '../assets/img/portfolio/bn.webp';
 
-  /*PHP*/
-  export const PHPData = [
-    {
-      id: 1,
-      title: "Projeto Hamburgueria",
-      subtitle: "E-commerce",
-      img: Burguer1,
-      img2: Burguer2,
-      description: "E-commerce virtual, em PHP. Utilizo um sistema em 3 pilares (rota, classe e método), onde a rota é controlada pela URL (miniframework similar ao Laravel). Sistema possui cadastro com confirmação por email, login com redes sociais (Google e Facebook), carrinho de compras, checkout e envio de pedidos ao banco, com disparo automático de mensagem para o whatsapp do cliente. Sistema também possui geração de QRCode do pix com valor e dados do usuário. Projeto freelancer em construção.",
-      date: "Fevereiro 2023",
-      technology: "PHP, JQuery, Bootstrap",
-      url: "",
-      github: "https://github.com/leonanthomaz/hamburgueria"
-    },
-    {
-      id: 2,
-      title: "Casa do Salgado",
-      subtitle: "E-commerce ",
-      img: CasaDoSalgado1,
-      img2: CasaDoSalgado2,
-      description: "E-commerce virtual, desenvolvido em PHP com base de dados MySQL, para o seguimento comercial, onde o usuário tem a disposição o cardápio virtual dividido por página. Ao abrir sessão, o cliente tem a disposição o carrinho de compras bloqueado pelas condições de horário de funcionamento e realização de login, área privada, onde pode alterar seus dados de maneira completa, redefinição de senha e exclusão de conta. O cliente ainda pode, ao finalizar a compra, acompanhar o status da sua entrega em tempo real. O projeto ainda conta com área administrativa, onde o administrador com acesso tem total controle de todo o site, podendo manipular dados de clientes e produtos, bem como alterar o status da entrega, espelhado diretamente para o cliente.",
-      date: "Dezembro 2021",
-      technology: "HTML, PHP, JavaScript, Bootstrap, CSS e MySQL",
-      url: "https://casadosalgadoabv.000webhostapp.com/",
-      github: "https://github.com/leonanthomaz/CasaDoSalgado"
-    },
-  ];
+
 
   /*REACT*/
   export const ReactData = [
@@ -125,6 +99,38 @@ import BN from '../assets/img/portfolio/bn.webp';
       url: "",
       github: "https://github.com/leonanthomaz/Saturno"
     },
+  ];
+
+  /*PHP*/
+  export const PHPData = [
+    {
+      id: 1,
+      title: "Projeto Hamburgueria",
+      subtitle: "E-commerce",
+      img: Burguer1,
+      img2: Burguer2,
+      description: "E-commerce virtual, em PHP. Utilizo um sistema em 3 pilares (rota, classe e método), onde a rota é controlada pela URL (miniframework similar ao Laravel). Sistema possui cadastro com confirmação por email, login com redes sociais (Google e Facebook), carrinho de compras, checkout e envio de pedidos ao banco, com disparo automático de mensagem para o whatsapp do cliente. Sistema também possui geração de QRCode do pix com valor e dados do usuário. Projeto freelancer em construção.",
+      date: "Fevereiro 2023",
+      technology: "PHP, JQuery, Bootstrap",
+      url: "",
+      github: "https://github.com/leonanthomaz/hamburgueria"
+    },
+    {
+      id: 2,
+      title: "Casa do Salgado",
+      subtitle: "E-commerce ",
+      img: CasaDoSalgado1,
+      img2: CasaDoSalgado2,
+      description: "E-commerce virtual, desenvolvido em PHP com base de dados MySQL, para o seguimento comercial, onde o usuário tem a disposição o cardápio virtual dividido por página. Ao abrir sessão, o cliente tem a disposição o carrinho de compras bloqueado pelas condições de horário de funcionamento e realização de login, área privada, onde pode alterar seus dados de maneira completa, redefinição de senha e exclusão de conta. O cliente ainda pode, ao finalizar a compra, acompanhar o status da sua entrega em tempo real. O projeto ainda conta com área administrativa, onde o administrador com acesso tem total controle de todo o site, podendo manipular dados de clientes e produtos, bem como alterar o status da entrega, espelhado diretamente para o cliente.",
+      date: "Dezembro 2021",
+      technology: "HTML, PHP, JavaScript, Bootstrap, CSS e MySQL",
+      url: "https://casadosalgadoabv.000webhostapp.com/",
+      github: "https://github.com/leonanthomaz/CasaDoSalgado"
+    },
+  ];
+
+  /*Java*/
+  export const JavaData = [
   ];
 
   /*WEB*/
