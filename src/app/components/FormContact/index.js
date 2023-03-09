@@ -49,7 +49,7 @@ export const FormContact = () => {
         celular = celular.replace(/^(\d{2})(\d)/g,"($1) $2"); 
         celular.replace(/(\d)(\d{4})$/,"$1-$2");
 
-        emailjs.sendForm('service_6lh3joz', 'template_1sogban', form.current, 'p8wpY9wEmPZdsAgdo')
+        emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE, 'template_1sogban', form.current, process.env.REACT_APP_EMAILJS_ID)
         .then((result) => {
             // console.log('SUCCESS!', result.text);
             setValues('')
