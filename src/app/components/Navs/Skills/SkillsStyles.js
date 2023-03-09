@@ -33,7 +33,7 @@ export const Label = styled.li`
         transition: all .1s linear;
                 -webkit-transition: all .1s linear;
                 -moz-transition: all .1s linear;
-                box-shadow: ${props => props.theme.skills_nav_btn_active_boxshadow};
+                box-shadow: ${props => props.theme.skills_nav_box_shadow_active};
 
       }
 `;

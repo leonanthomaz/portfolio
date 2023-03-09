@@ -78,7 +78,7 @@ margin-top: 20px;
 border-radius: 20px;
 font-weight: 700;
 width: 200px;
-
+border: 2px solid #dddddd;
 background: ${props => props.theme.about_btn_background};
 transition: all .1s linear;
                         -webkit-transition: all .1s linear;

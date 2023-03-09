@@ -51,8 +51,8 @@ export const Wrapper = styled.div`
 export const Box = styled.div`
     padding: 20px;
     margin: 10px;
-    background: ${props => props.theme.background_portfolio};
-    box-shadow: ${props => props.theme.box_shadow_portfolio};
+    background: ${props => props.theme.portfolio_background_box};
+    box-shadow: ${props => props.theme.portfolio_box_shadow};
     border-radius: 10px;
     color: ${props => props.theme.font};
     -moz-transition: all 0.5s;
@@ -69,6 +69,7 @@ export const Box = styled.div`
         transform: scale(1.1);
         box-shadow: "4px 4px 5px #121214";
         border-radius: 5px;
+        box-shadow: ${props => props.theme.skills_box_shadow_hover};
     }
     
     h2{
@@ -76,12 +77,12 @@ export const Box = styled.div`
         margin-top: 10px;
         font-size: 24px;
         font-weight: 700;
-        color: ${props => props.theme.font_portfolio_h2};
+        color: ${props => props.theme.portfolio_font_h2};
         font-family: 'Wendy One', sans-serif;
         font-weight: 500;
         /* border: 2px solid red; */
         padding: 5px;
-        border-bottom: ${props => props.theme.borderbottom_portfolio};
+        border-bottom: ${props => props.theme.portfolio_borderbottom};
     }
 
     p{
@@ -120,7 +121,7 @@ export const Box = styled.div`
             display: flex;
             justify-content: center;
             align-items: center;
-            background: ${props => props.theme.btn_background_portfolio};
+            background: ${props => props.theme.portfolio_btn_background};
             color: ${props => props.theme.btn_font_background_portfolio};
             font-weight: 700;
             border: none;
@@ -133,7 +134,7 @@ export const Box = styled.div`
                         -moz-transition: all .1s linear;
 
             :hover{
-                background: ${props => props.theme.btn_background_portfolio_hover};
+                background: ${props => props.theme.portfolio_btn_background_hover};
                 color: ${props => props.theme.btn_font_background_portfolio_hover};
                 transition: all .1s linear;
                         -webkit-transition: all .1s linear;
