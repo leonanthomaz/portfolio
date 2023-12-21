@@ -31,9 +31,9 @@ export const Portfolio = () => {
             case "react":
             setData(ReactData);
             break;
-            // case "java":
-            // setData(JavaData);
-            // break;
+            case "java":
+            setData(JavaData);
+            break;
             case "php":
             setData(PHPData);
             break;

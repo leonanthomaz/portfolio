@@ -15,9 +15,6 @@ import EleicoesST from '../assets/img/portfolio/eleicoes-st.webp';
 import EleicoesPT from '../assets/img/portfolio/eleicoes-pt.webp';
 import Burguer1 from '../assets/img/portfolio/burguer1.webp';
 import Burguer2 from '../assets/img/portfolio/burguer2.webp';
-import BN from '../assets/img/portfolio/bn.webp';
-
-
 
   /*REACT*/
   export const ReactData = [
