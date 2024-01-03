@@ -127,8 +127,20 @@ import Burguer2 from '../assets/img/portfolio/burguer2.webp';
   ];
 
   /*Java*/
-  // export const JavaData = [
-  // ];
+  export const JavaData = [
+    {
+      id: 1,
+      title: "Design Galeria",
+      subtitle: "Galeria de fotos (Estudos)",
+      img: null,
+      preview: "Design de uma galeria de fotos",
+      description: "Design de uma galeria de fotos, utilizando HTML e estilização em SASS.",
+      date: "Junho 2022",
+      technology: "HTML e SASS",
+      url: "",
+      github: "https://github.com/leonanthomaz/GaleriaSass"
+    }
+  ];
 
   /*WEB*/
   export const WEBData = [

@@ -11,35 +11,39 @@ import {
     DiHtml5,
     DiMysql,
     DiNodejs,
-    DiDatabase,
+    DiPostgresql,
+    DiMsqlServer,
     DiJava,
-    DiDocker,
-    DiLaravel
- } from 'react-icons/di';
+    DiDocker
+} from 'react-icons/di';
+ import { SiSpring } from "react-icons/si";
+ import { GiTortoise } from "react-icons/gi";
+
 
 
  export const languageDataSkills = [
     {
         id: 1,
-        name: 'PHP',
-        icon: <DiPhp/>,
-        level: 80,
+        name: 'Java',
+        icon: <DiJava/>,
+        level: 85,
         description: 'Bla Bla Bla',
     },
     {
         id: 2,
         name: 'Javascript',
         icon: <DiJsBadge/>,
-        level: 70,
+        level: 80,
         description: 'Bla Bla Bla',
     },
     {
         id: 3,
-        name: 'Java',
-        icon: <DiJava/>,
-        level: 60,
+        name: 'PHP',
+        icon: <DiPhp/>,
+        level: 70,
         description: 'Bla Bla Bla',
-    }
+    },
+ 
 ]
 
 
@@ -63,7 +67,7 @@ export const webSkills = [
         id: 3,
         name: 'Javascript',
         icon: <DiJsBadge/>,
-        level: 70,
+        level: 80,
         description: 'Bla Bla Bla',
     },
 ]
@@ -71,25 +75,25 @@ export const webSkills = [
 export const frameworksDataSkills = [
     {
         id: 1,
+        name: 'Spring',
+        icon: <SiSpring/>,
+        level: 75,
+        description: '',
+    },
+    {
+        id: 2,
         name: 'React',
         icon: <DiReact/>,
         level: 75,
         description: '',
     },
     {
-        id: 2,
+        id: 3,
         name: 'Node',
         icon: <DiNodejs/>,
         level: 70,
         description: 'Bla Bla Bla',
-    },
-    {
-        id: 3,
-        name: 'Laravel',
-        icon: <DiLaravel/>,
-        level: 60,
-        description: 'Bla Bla Bla',
-    },
+    }
     
 ]
 
@@ -112,7 +116,7 @@ export const othersDataSkills = [
         id: 3,
         name: 'Docker',
         icon: <DiDocker/>,
-        level: 60,
+        level: 75,
         description: 'Bla Bla Bla',
     },
 ]
@@ -127,18 +131,18 @@ export const databasesDataSkills = [
     },
     {
         id: 2,
-        name: 'MongoDB',
-        icon: <DiMongodb/>,
-        level: 70,
+        name: 'SQL Server',
+        icon: <DiMsqlServer/>,
+        level: 75,
         description: 'Conhecimentos de querys e requisições via node',
     },
     {
         id: 3,
-        name: 'SQL Server',
-        icon: <DiDatabase/>,
-        level: 60,
+        name: 'Postgres',
+        icon: <DiPostgresql/>,
+        level: 70,
         description: 'Conhecimentos de querys e requisições via node',
-    },
+    }
 ]
 
 export const versionDataSkills = [
@@ -156,6 +160,13 @@ export const versionDataSkills = [
         level: 70,
         description: 'Bla Bla Bla',
     },
+    {
+        id: 3,
+        name: 'Tortoise',
+        icon: <GiTortoise/>,
+        level: 70,
+        description: 'Bla Bla Bla',
+    }
     
 ]
 

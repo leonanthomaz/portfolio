@@ -3,6 +3,7 @@ import * as I from "./IntroStyles";
 import Typewriter from 'typewriter-effect';
 import imgMain from '../../sharing/assets/img/foto-leonan-atual.webp';
 
+
 export const Intro = () => {
     
     return (

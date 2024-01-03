@@ -29,10 +29,10 @@ export const PortfolioProvider = ({ children }) => {
             id: "php",
             title: "PHP",
         },
-        // {
-        //     id: "java",
-        //     title: "Java",
-        // },
+        {
+            id: "java",
+            title: "Java",
+        },
         {
             id: "web",
             title: "HMTL/CSS",

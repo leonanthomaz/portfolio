@@ -9,7 +9,7 @@ import { AiOutlineClose } from "react-icons/ai";
 export const Navbar = () => {
     const { click, handleClick } = useContext(PortfolioContext)
     const { changeTheme } = useThemeContext()
-    const theme = localStorage.getItem('theme') || 'dark'
+    const theme = localStorage.getItem('theme') || 'light'
   
     return (
         <M.Container>

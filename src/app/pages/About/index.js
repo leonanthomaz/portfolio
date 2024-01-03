@@ -23,20 +23,21 @@ export const About = () => {
           <A.Right>
             <A.BoxText>
               <p>Olá!</p>
+
               <p>
-              Me chamo Leonan Thomaz e sou formado em Análise e Desenvolvimento de Sistemas pela Estácio de Sá.
+              Meu nome é Leonan Thomaz, graduado em Análise e Desenvolvimento de Sistemas pela Estácio de Sá.
               </p>
 
               <p>
-              Sempre fui apaixonado por tecnologia. Meu primeiro curso na área foi há 12 anos atrás, quando tive meu primeiro contato com HTML, mas foi a partir de 2019, que ingressei oficialmente nesta área quando dei início à minha graduação.
+              Desde meu primeiro contato com HTML, há 12 anos, nutro uma paixão constante por tecnologia. Entretanto, foi a partir de 2019 que oficializei minha entrada na área ao iniciar minha graduação.
               </p>
 
               <p>
-              Tenho profunda satisfação em ver meus projetos adaptados em diversos tipos de telas e dispositivos, progredindo a cada nova habilidade conquistada.
+              Na equipe do MetrôRio, acumulei uma valiosa experiência na implementação de projetos em Java. Destaco minha habilidade em trabalhar com bancos de dados SQL Server e PL SQL, garantindo soluções eficientes e robustas.
               </p>
 
               <p>
-              Veja abaixo minhas principais competências e habilidades!
+              Atualmente, estou prestes a concluir o último período da pós-graduação em Engenharia de Software na Universidade Estácio de Sá.
               </p>
               
             <AnimationOnScroll animateIn="animate__bounceIn">

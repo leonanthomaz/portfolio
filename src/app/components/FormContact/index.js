@@ -1,11 +1,14 @@
 import React, { useRef, useState } from 'react';
 import * as C from './FormContactStyles'
 import emailjs from '@emailjs/browser';
-import { ModalContact } from '../ModalContact';
-import checked from '../../sharing/assets/img/checked.webp';
-import erroricon from '../../sharing/assets/img/error-icon.webp';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const FormContact = () => {
+    
+    const notify = () => {
+        toast();
+    }
 
     /**/
     const [showModalContact, setShowModalContact] = useState(false);
@@ -17,10 +20,6 @@ export const FormContact = () => {
     const t = useRef();   
     const m = useRef();   
     const [ values, setValues ] = useState(form.current)
-    const [ status, setStatus ] = useState({
-        type: '',
-        mensagem: ''
-    })
 
     const sendEmail = (e) => {
         e.preventDefault()
@@ -29,20 +28,30 @@ export const FormContact = () => {
         let mensagem = m.current.value;
 
         if(!celular || !nome || !mensagem){
-            setStatus({
-                type: 'erro',
-                mensagem: 'Por favor, preencha todos os campos!'
+            toast.warning('Por favor, preencha todos os campos!',{
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
             })
-            handleShowModalContact();
             return false;
         }
 
         if (celular.length !== 11){
-            setStatus({
-                type: 'erro',
-                mensagem: 'Digite um telefone válido!'
+            toast.warning('Telefone invalido! Por favor, revise novamente.',{
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
             })
-            handleShowModalContact();
             return false;
         }
 
@@ -51,21 +60,33 @@ export const FormContact = () => {
 
         emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE, 'template_1sogban', form.current, process.env.REACT_APP_EMAILJS_ID)
         .then((result) => {
-            // console.log('SUCCESS!', result.text);
+            console.log('SUCCESS!', result.text);
             setValues('')
-            setStatus({
-                type: 'sucesso',
-                mensagem: 'Mensagem enviada com sucesso!'
-            })
-            handleShowModalContact()
+            toast.success('Mensagem enviada com sucesso! Retornarei o mais breve possível!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+            window.reload();
+            
         }, (error) => {
-            // console.log('FAILED...', error.text);
+            console.log('FAILED...', error.text);
             setValues('')
-            setStatus({
-                type: 'erro',
-                mensagem: 'Falha ao enviar a mensagem.'
-            })
-            handleShowModalContact()
+            toast.error('Erro ao enviar mensagem. Tente novamente.', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
         });
     }
 
@@ -88,17 +109,23 @@ export const FormContact = () => {
                             <label>Mensagem</label>
                         </div>
                         <div className='text-center py-3'>
-                            <button className="btn-form-contact" aria-label="tecla enviar" type="submit">Enviar</button>
+                            <button onClick={notify} className="btn-form-contact" aria-label="tecla enviar" type="submit">Enviar</button>
                         </div>
+                        <ToastContainer
+                        position="top-right"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="light"
+                        />
+                        <ToastContainer />
                     </C.Form>
                 </C.FormBox>
-                <ModalContact 
-                status={status} 
-                showModalContact={showModalContact} 
-                handleCloseModalContact={handleCloseModalContact}
-                checked={checked}
-                erroricon={erroricon}
-                />
             </C.Container>
         </div>
     )

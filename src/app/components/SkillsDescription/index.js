@@ -8,20 +8,57 @@ import {
     DiJsBadge,
     DiCss3,
     DiHtml5,
-    DiNodejsSmall,
-    DiPhp,
+    DiJava,
     DiDatabase,
 } from 'react-icons/di';
+import { SiSpring } from "react-icons/si";
 
 export const SkillsDescription = () =>{
 
     return(
         <SD.Container>
             <AnimationOnScroll animateIn="animate__backInLeft">
-                <ETitle title={'Competências'} subtitle={'Do front ao back!'}/>
+                <ETitle title={'Competências'} subtitle={'Do back ao front!'}/>
             </AnimationOnScroll>
             <SD.Wrapper>
                 <SD.Box>
+                   
+                    <SD.ItemDW>
+                        <SD.Left>
+                            <SD.LeftHeader>
+                                <SD.TitleContainer>
+                                    <SD.Title>Back-End</SD.Title>
+                                </SD.TitleContainer>
+                                <SD.IconsContainer>
+
+                                    <AnimationOnScroll animateIn="animate__zoomInUp">
+                                        <SD.Icon>
+                                            <DiJava aria-labelledby="Ícone da linguagem Java"/>
+                                        </SD.Icon>
+                                    </AnimationOnScroll> 
+                                   
+                                    <AnimationOnScroll animateIn="animate__zoomInUp">
+                                        <SD.Icon>
+                                            <SiSpring aria-labelledby="Ícone da linguagem Spring"/>
+                                        </SD.Icon>
+                                    </AnimationOnScroll> 
+                                    <AnimationOnScroll animateIn="animate__zoomInUp">
+                                        <SD.Icon>
+                                            <DiDatabase aria-labelledby="Ícone da linguagem MySQL"/>
+                                        </SD.Icon>
+                                    </AnimationOnScroll> 
+                                    
+                                </SD.IconsContainer>
+                                
+                            </SD.LeftHeader>
+                        </SD.Left>
+                        <SD.Right>
+                            <SD.Text>
+                                Destaco-me por sólidos conhecimentos e experiência em Java, com ênfase na utilização eficaz do Spring, manipulação de APIs REST, protocolos HTTP e proficiência em bancos de dados, incluindo SQL Server e PL SQL.
+                            </SD.Text>
+                        </SD.Right>
+                    </SD.ItemDW>
+
                     <SD.ItemDW>
                         <SD.Left>
                             <SD.LeftHeader>
@@ -50,44 +87,7 @@ export const SkillsDescription = () =>{
                         </SD.Left>
                         <SD.Right>
                             <SD.Text>
-                                Possuo excelentes conhecimentos em HTML (semântica, acessibilidade e SEO), CSS (flexbox, grid, media queries),
-                                linguagem de programação JavaScript (variáveis, objetos, arrays, laços, etc.)
-                                 e framework React (componentes, libs, hooks, context).
-                            </SD.Text>
-                        </SD.Right>
-                    </SD.ItemDW>
-
-                    <SD.ItemDW>
-                        <SD.Left>
-                            <SD.LeftHeader>
-                                <SD.TitleContainer>
-                                    <SD.Title>Back-End</SD.Title>
-                                </SD.TitleContainer>
-                                <SD.IconsContainer>
-
-                                    <AnimationOnScroll animateIn="animate__zoomInUp">
-                                        <SD.Icon>
-                                            <DiPhp aria-labelledby="Ícone da linguagem PHP"/>
-                                        </SD.Icon>
-                                    </AnimationOnScroll> 
-                                    <AnimationOnScroll animateIn="animate__zoomInUp">
-                                        <SD.Icon>
-                                            <DiDatabase aria-labelledby="Ícone da linguagem MySQL"/>
-                                        </SD.Icon>
-                                    </AnimationOnScroll> 
-                                    <AnimationOnScroll animateIn="animate__zoomInUp">
-                                        <SD.Icon>
-                                            <DiNodejsSmall aria-labelledby="Ícone da linguagem Node JS"/>
-                                        </SD.Icon>
-                                    </AnimationOnScroll> 
-                                    
-                                </SD.IconsContainer>
-                                
-                            </SD.LeftHeader>
-                        </SD.Left>
-                        <SD.Right>
-                            <SD.Text>
-                                Em back-end, possuo conhecimentos em PHP (procedural e orientado a objetos), Node JS, noções em banco de dados MySQL e Mongo DB (a nível de consultas).
+                                Proficiente em HTML, CSS, JavaScript (ECMA6) e frameworks ReactJS e NodeJs. Contribuo para interfaces dinâmicas e responsivas, promovendo experiências de usuário modernas.
                             </SD.Text>
                         </SD.Right>
                     </SD.ItemDW>

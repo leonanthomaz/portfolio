@@ -51,6 +51,7 @@ background: ${props => props.theme.about_background};
 box-shadow: ${props => props.theme.about_box_shadow};
 padding: 28px;
 font-family: 'Josefin Sans', sans-serif;
+margin-top: 10px;
 
 font-size: 16px;
 

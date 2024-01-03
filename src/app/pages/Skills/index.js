@@ -86,7 +86,7 @@ export const Skills = () => {
                           </div>
                         </div>
                       <div className="skills-level">
-                        <Progressbar bgcolor={item.level >= 70 ? "#99ff66" : "orange"} progress={item.level} height={20}/>
+                        <Progressbar bgcolor={item.level >= 70 ? "#99ff66" : "orange"} progress={item.level} height={25}/>
                       </div>
                     </S.SkillsItems>
                   </S.Grid>
