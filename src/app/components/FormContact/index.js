@@ -28,7 +28,7 @@ export const FormContact = () => {
         let mensagem = m.current.value;
 
         if(!celular || !nome || !mensagem){
-            toast.warning('Por favor, preencha todos os campos!',{
+            toast.warning('Campos obrigatórios não preenchidos. Por favor, verifique.',{
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -42,7 +42,7 @@ export const FormContact = () => {
         }
 
         if (celular.length !== 11){
-            toast.warning('Telefone invalido! Por favor, revise novamente.',{
+            toast.warning('Número de telefone inválido. Por favor, revise e tente novamente.',{
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -62,7 +62,7 @@ export const FormContact = () => {
         .then((result) => {
             console.log('SUCCESS!', result.text);
             setValues('')
-            toast.success('Mensagem enviada com sucesso! Retornarei o mais breve possível!', {
+            toast.success('Mensagem enviada com sucesso! Retornarei em breve.', {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -77,7 +77,7 @@ export const FormContact = () => {
         }, (error) => {
             console.log('FAILED...', error.text);
             setValues('')
-            toast.error('Erro ao enviar mensagem. Tente novamente.', {
+            toast.error('Erro ao enviar mensagem. Por favor, tente novamente.', {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
