@@ -10,11 +10,6 @@ export const FormContact = () => {
         toast();
     }
 
-    /**/
-    const [showModalContact, setShowModalContact] = useState(false);
-    const handleCloseModalContact = () => setShowModalContact(false);
-    const handleShowModalContact = () => setShowModalContact(true);
-
     const form = useRef(); 
     const n = useRef();   
     const t = useRef();   
@@ -97,11 +92,11 @@ export const FormContact = () => {
                 <C.FormBox>
                     <C.Form ref={form} onSubmit={sendEmail} id="formContact">
                         <div className="label-float">
-                            <input value={values} ref={n} name="name" aria-label="campo nome" type="text" placeholder=" " require minLength={3} maxLength={20}/>
+                            <input value={values} ref={n} name="name" aria-label="campo nome" type="text" placeholder=" " require minLength={3}/>
                             <label>Nome</label>
                         </div>
                         <div className="label-float">
-                            <input value={values} ref={t} name="telephone" aria-label="campo telefone" type="number"  placeholder=" " require/>
+                            <input value={values} ref={t} name="telephone" aria-label="campo telefone" type="number"  placeholder=" " require minLength={8} maxLength={12}/>
                             <label>Telefone</label>
                         </div>
                         <div className="label-float">
