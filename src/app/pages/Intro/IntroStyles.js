@@ -43,31 +43,31 @@ align-items: center;
 @media (max-width: 1000px){
     padding-top: 30px;
 }
+
+@media (max-width: 760px){
+    display: none;
+}
+
 `;
 
 export const Right = styled.div`
 flex: 3.5;
+
+
 `;
 
 export const ImgContainer = styled.div`
-width: 300px;
-height: 300px;
-background: ${props => props.theme.intro_background_photo};
-border-radius: 50%;
-border: 5px solid #dddddd;
+width: 500px;
+height: 500px;
+
 
 img {
     height: 100%;
 }
 
 @media (max-width: 1000px){
-    width: 250px;
-    height: 250px;    
-}
-
-@media (max-width: 760px){
-    width: 200px;
-    height: 200px;    
+    width: 300px;
+    height: 300px;    
 }
 
 `;
@@ -84,6 +84,7 @@ flex-direction: column;
 justify-content: center;
 text-align: start;
 margin-left: 15px;
+
 
 @media (max-width: 760px){
     text-align: center;

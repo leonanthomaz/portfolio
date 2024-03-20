@@ -9,10 +9,10 @@ export const ThemeContextProvider = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(() => {
     const theme = localStorage.getItem('theme');
 
-    if (theme === 'light' || theme === null) {
-      return 'light';
-    } else {
+    if (theme === 'dark' || theme === null) {
       return 'dark';
+    } else {
+      return 'light';
     }
   });
 

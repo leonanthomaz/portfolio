@@ -3,7 +3,7 @@ import React, { useContext, Fragment } from 'react';
 import { PortfolioContext } from './sharing/context/portfolio';
 import { Spinner } from './components/Spinner';
 import { Navbar } from './components/Navbar';
-import { Intro } from './components/Intro';
+import { Intro } from './pages/Intro';
 import { SkillsDescription } from './components/SkillsDescription';
 import { Footer } from './components/Footer';
 import { Skills } from './pages/Skills';

@@ -54,7 +54,9 @@ export const SkillsDescription = () =>{
                         </SD.Left>
                         <SD.Right>
                             <SD.Text>
-                                Destaco-me por sólidos conhecimentos e experiência em Java, com ênfase na utilização eficaz do Spring, manipulação de APIs REST, protocolos HTTP e proficiência em bancos de dados, incluindo SQL Server e PL SQL.
+                                Possuo sólidos conhecimentos e experiência em Java (versão 8 e superior), com ênfase na utilização eficaz do Spring 
+                                Framework. Tenho conhecimentos sólidos em Apache Maven, construção de API's REST e microsserviços, JDBC, Hibernate/JPA, 
+                                Spring Security, RabbitMQ, testes unitários com Junit e Mockito, além de bancos de dados relacionais SQL.
                             </SD.Text>
                         </SD.Right>
                     </SD.ItemDW>
@@ -87,7 +89,7 @@ export const SkillsDescription = () =>{
                         </SD.Left>
                         <SD.Right>
                             <SD.Text>
-                                Proficiente em HTML, CSS, JavaScript (ECMA6) e frameworks ReactJS e NodeJs. Contribuo para interfaces dinâmicas e responsivas, promovendo experiências de usuário modernas.
+                                Sou proeficiente em HTML, CSS, JavaScript (ECMA6) e o framework ReactJS. Contribuo para interfaces dinâmicas e responsivas, promovendo experiências de usuário modernas.
                             </SD.Text>
                         </SD.Right>
                     </SD.ItemDW>

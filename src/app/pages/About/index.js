@@ -3,7 +3,7 @@ import * as A from "./AboutStyles";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { ETitle } from "../../components/Elements/title";
 import curriculo from '../../sharing/assets/doc/curriculo.pdf'
-import imageDev from '../../sharing/assets/img/programador.webp';
+import imageDev from '../../sharing/assets/img/foto-leonan-atual.webp';
 
 export const About = () => {
 
@@ -22,23 +22,27 @@ export const About = () => {
           </A.Left>
           <A.Right>
             <A.BoxText>
-              <p>Olá!</p>
+            Olá! 👋
 
-              <p>
-              Meu nome é Leonan Thomaz, graduado em Análise e Desenvolvimento de Sistemas pela Estácio de Sá.
-              </p>
+            <p>
+            Me chamo Leonan Thomaz, sou Analista e Desenvolvedor de Sistemas formado pela Universidade Estácio de Sá e atualmente cursando pós-graduação em Engenharia de Software. Meu foco é o desenvolvimento Java.            
+            </p>
 
-              <p>
-              Desde meu primeiro contato com HTML, há 12 anos, nutro uma paixão constante por tecnologia. Entretanto, foi a partir de 2019 que oficializei minha entrada na área ao iniciar minha graduação.
-              </p>
+            <p>
+            Tenho experiência em implementação e correção de códigos em Java, com foco em automação de tarefas comerciais. Atuo com ambiente Windows e possuo experiência com manutenção de bancos de dados SQL Server e PL/SQL. Estou em constante busca por aprimoramento, desde os conceitos fundamentais até temas mais avançados, como orientação a objetos e padrões de projeto.            
+            </p>
 
-              <p>
-              Na equipe do MetrôRio, acumulei uma valiosa experiência na implementação de projetos em Java. Destaco minha habilidade em trabalhar com bancos de dados SQL Server e PL SQL, garantindo soluções eficientes e robustas.
-              </p>
+            <p>
+            Além disso, estou desenvolvendo habilidades em threads, concorrência e virtualização de ambientes usando Docker. Estou começando a explorar a computação em nuvem, com ênfase na AWS.            
+            </p>
 
-              <p>
-              Atualmente, estou prestes a concluir o último período da pós-graduação em Engenharia de Software na Universidade Estácio de Sá.
-              </p>
+            <p>
+            Estou sempre em busca de desafios enriquecedores que possam ampliar meu conhecimento.
+            </p>
+
+            <p>
+            Aberto a oportunidades e pronto para contribuir em projetos inovadores! 💼✨
+            </p>
               
             <AnimationOnScroll animateIn="animate__bounceIn">
               <A.LinkCurriculum>

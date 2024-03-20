@@ -107,8 +107,8 @@ justify-content: center;
 padding: 5px;
 width: 70px;
 border-radius: 20px;
-background: ${({ theme }) => (theme === 'dark' ? '#dddddd' : '#5b7178')};
-color: ${({ theme }) => (theme === 'dark' ? '#5b7178' : '#dddddd')};
+background: ${({ theme }) => (theme === 'dark' ? '#dddddd' : '#1f022a')};
+color: ${({ theme }) => (theme === 'dark' ? '#1f022a' : '#dddddd')};
 transition: all 0.5s ease;
 cursor: pointer;
 `;
@@ -118,7 +118,7 @@ margin-top: -2px;
 `;
 
 export const Active = styled.div`
-background: ${({ theme }) => (theme === 'dark' ? '#00141b' : '#ffffff')};
+background: ${({ theme }) => (theme === 'dark' ? '#1f022a' : '#ffffff')};
 width: 20px;
 height: 20px;
 border-radius: 50%;

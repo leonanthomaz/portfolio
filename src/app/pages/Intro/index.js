@@ -1,7 +1,7 @@
 import React from "react";
 import * as I from "./IntroStyles";
 import Typewriter from 'typewriter-effect';
-import imgMain from '../../sharing/assets/img/foto-leonan-atual.webp';
+import imgMain from '../../sharing/assets/img/programador.webp';
 
 
 export const Intro = () => {
@@ -25,7 +25,7 @@ export const Intro = () => {
               <h2> 
               <Typewriter 
               options={{ 
-              strings:["Desenvolvedor WEB", "Desenvolvedor Front-End", "Desenvolvedor Back-End"],
+              strings:["Desenvolvedor Java FullStack", "Desenvolvedor Spring", "Desenvolvedor Web"],
               autoStart:true,
               delay:75,
               loop:true
