@@ -7,12 +7,12 @@ color: ${props => props.theme.font};
 
 export const Wrapper = styled.div`
 display: grid;
-grid-template-columns: 400px 700px;
+grid-template-columns: 40% 50%;
 justify-content: center;
 align-items: center;
 
 @media (max-width: 1000px){
-    grid-template-columns: 300px 500px;
+    grid-template-columns: auto auto;
 }
 
 @media(max-width: 760px){
@@ -24,16 +24,14 @@ align-items: center;
 `;
 
 export const Right = styled.div`
-flex: 1.5;
-width: auto;
-height: auto;
 display: flex;
 justify-content: center;
 padding: 20px;
+
 `;
 
 export const Left = styled.div`
-flex: 1;
+display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
