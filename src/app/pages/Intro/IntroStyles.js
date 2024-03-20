@@ -57,8 +57,8 @@ flex: 3.5;
 `;
 
 export const ImgContainer = styled.div`
-width: 500px;
-height: 500px;
+width: 400px;
+height: 400px;
 
 
 img {

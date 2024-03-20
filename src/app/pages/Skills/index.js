@@ -1,98 +1,142 @@
-import React, { Fragment, useContext, useEffect, useState } from "react";
+import React from "react";
 import * as S from './SkillsStyles';
-import Progressbar from '../../sharing/utils/progressbar_skills';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import { 
-  languageDataSkills,
-  webSkills, 
-  frameworksDataSkills, 
-  othersDataSkills,
-  databasesDataSkills,
-  versionDataSkills
-} from "../../sharing/db/dataSkills";
-import { SkillsList } from "../../components/Navs/Skills";
 import { ETitle } from "../../components/Elements/title";
-import { PortfolioContext } from "../../sharing/context/portfolio";
+import { 
+  DiJsBadge,
+  DiCss3,
+  DiGit,
+  DiReact,
+  DiGithubBadge,
+  DiNpm,
+  DiVisualstudio,
+  DiHtml5,
+  DiMysql,
+  DiPostgresql,
+  DiMsqlServer,
+  DiJava,
+  DiDocker,
+  
+} from 'react-icons/di';
+import { SiSpring, SiApachemaven } from "react-icons/si";
+import { GiTortoise } from "react-icons/gi";
+import { LiaJava } from "react-icons/lia";
 
 export const Skills = () => {
-
-    const { categorySkills } = useContext(PortfolioContext)
-
-    const [selectedSkills, setSelectedSkills] = useState("languages");
-    const [dataSkills, setDataSkills] = useState([]);
-    const [ listSkills, setListSkills ] = useState([])
-
-    useEffect(() => {
-      switch (selectedSkills) {
-          case "languages":
-          setDataSkills(languageDataSkills);
-          break;
-          case "web":
-          setDataSkills(webSkills);
-          break;
-          case "frameworks":
-          setDataSkills(frameworksDataSkills);
-          break;
-          case "others":
-          setDataSkills(othersDataSkills);
-          break;
-          case "databases":
-          setDataSkills(databasesDataSkills);
-          break;
-          case "version":
-          setDataSkills(versionDataSkills);
-          break;
-          default:
-          setDataSkills(languageDataSkills);
-      }
-  }, [selectedSkills]);
-
-    const handleFindSkills = (id) => {
-      const item = dataSkills.filter(e => e.id === id)
-      setListSkills(item)
-    }
 
     return (
       <S.Container id="skills">
         <AnimationOnScroll animateIn="animate__backInLeft">
-            <ETitle title={'Skills'} subtitle={'Habilidades que possuo'}/>
+            <ETitle title={'Skills Teste'} subtitle={'Habilidades que possuo'}/>
         </AnimationOnScroll>
 
-        <S.NavbarSkills>
-                {categorySkills.map((item, index) => (
-                <SkillsList
-                    id={item.id}
-                    title={item.title}
-                    active={selectedSkills === item.id}
-                    setSelectedSkills={setSelectedSkills}
-                    key={index}
-                />
-                ))}
-            </S.NavbarSkills>
-
           <S.Wrapper>
-            {dataSkills.map((item, key) => {
-              return(
-                <Fragment key={key}>
-                  <S.Grid>
-                    <S.SkillsItems onClick={()=>handleFindSkills(item.id)}>
-                      
-                        <div className="skills-header">
-                            <div className="skills-icon">
-                                {item.icon}
-                            </div>
-                            <div className="skills-name">
-                                <h3>{item.name}</h3>
-                          </div>
-                        </div>
-                      <div className="skills-level">
-                        <Progressbar bgcolor={item.level >= 70 ? "#99ff66" : "orange"} progress={item.level} height={25}/>
-                      </div>
-                    </S.SkillsItems>
-                  </S.Grid>
-                </Fragment>
-                )
-            })} 
+          <AnimationOnScroll animateIn="animate__fadeInUp">
+                <S.Item>
+                    <S.Titulo>Java</S.Titulo>
+                    <S.Icon>
+                        <LiaJava/>
+                    </S.Icon>
+                </S.Item>
+            </AnimationOnScroll> 
+            <AnimationOnScroll animateIn="animate__fadeInUp">
+                <S.Item>
+                <S.Titulo>Spring</S.Titulo>
+                <S.Icon><SiSpring/></S.Icon>
+                </S.Item>
+            </AnimationOnScroll>
+            <AnimationOnScroll animateIn="animate__fadeInUp">
+                <S.Item>
+                <S.Titulo>Maven</S.Titulo>
+                <S.Icon><SiApachemaven/></S.Icon>
+                </S.Item>
+            </AnimationOnScroll> 
+            
+            <AnimationOnScroll animateIn="animate__fadeInUp">
+                <S.Item>
+                <S.Titulo>HTML</S.Titulo>
+                <S.Icon><DiHtml5/></S.Icon>
+                </S.Item>
+            </AnimationOnScroll> 
+            <AnimationOnScroll animateIn="animate__fadeInUp">
+                <S.Item>
+                <S.Titulo>CSS</S.Titulo>
+                  <S.Icon><DiCss3/></S.Icon>
+                </S.Item>
+            </AnimationOnScroll> 
+            <AnimationOnScroll animateIn="animate__fadeInUp">
+                <S.Item>
+                <S.Titulo>Javascript</S.Titulo>
+                <S.Icon><DiJsBadge/></S.Icon>
+                </S.Item>
+            </AnimationOnScroll> 
+
+            <AnimationOnScroll animateIn="animate__fadeInUp">
+                <S.Item>
+                <S.Titulo>ReactJS</S.Titulo>
+                <S.Icon><DiReact/></S.Icon>
+                </S.Item>
+            </AnimationOnScroll> 
+
+            <AnimationOnScroll animateIn="animate__fadeInUp">
+                <S.Item>
+                <S.Titulo>GIT</S.Titulo>
+                <S.Icon><DiGit/></S.Icon>
+                </S.Item>
+            </AnimationOnScroll> 
+            <AnimationOnScroll animateIn="animate__fadeInUp">
+                <S.Item>
+                <S.Titulo>Github</S.Titulo>
+                <S.Icon><DiGithubBadge/></S.Icon>
+                </S.Item>
+            </AnimationOnScroll> 
+            <AnimationOnScroll animateIn="animate__fadeInUp">
+                <S.Item>
+                <S.Titulo>NPM</S.Titulo>
+                <S.Icon><DiNpm/></S.Icon>
+                </S.Item>
+            </AnimationOnScroll> 
+            <AnimationOnScroll animateIn="animate__fadeInUp">
+                <S.Item>
+                <S.Titulo>Java</S.Titulo>
+                <S.Icon><DiVisualstudio/></S.Icon>
+                </S.Item>
+            </AnimationOnScroll> 
+           
+           
+            <AnimationOnScroll animateIn="animate__fadeInUp">
+                <S.Item>
+                <S.Titulo>Java</S.Titulo>
+                <S.Icon><DiMsqlServer/></S.Icon>
+                </S.Item>
+            </AnimationOnScroll> 
+            <AnimationOnScroll animateIn="animate__fadeInUp">
+                <S.Item>
+                <S.Titulo>Java</S.Titulo>
+                <S.Icon><DiPostgresql/></S.Icon>
+                </S.Item>
+            </AnimationOnScroll> 
+            <AnimationOnScroll animateIn="animate__fadeInUp">
+                <S.Item>
+                <S.Titulo>Java</S.Titulo>
+                <S.Icon><DiMysql/></S.Icon>
+                </S.Item>
+            </AnimationOnScroll> 
+  
+            <AnimationOnScroll animateIn="animate__fadeInUp">
+                <S.Item>
+                <S.Titulo>Java</S.Titulo>
+                <S.Icon><DiDocker/></S.Icon>
+                </S.Item>
+            </AnimationOnScroll> 
+            
+            <AnimationOnScroll animateIn="animate__fadeInUp">
+                <S.Item>
+                <S.Titulo>Java</S.Titulo>
+                <S.Icon><GiTortoise/></S.Icon>
+                </S.Item>
+            </AnimationOnScroll> 
+    
           </S.Wrapper>
       </S.Container>
     )

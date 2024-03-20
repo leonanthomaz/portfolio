@@ -1,5 +1,4 @@
 import { 
-    DiMongodb,
     DiJsBadge,
     DiCss3,
     DiGit,

@@ -1,7 +1,7 @@
 import React from "react";
 import * as I from "./IntroStyles";
 import Typewriter from 'typewriter-effect';
-import imgMain from '../../sharing/assets/img/programador.webp';
+import imgMain from '../../sharing/assets/img/programador_mesa.png';
 
 
 export const Intro = () => {

@@ -5,72 +5,46 @@ width: 100%;
 background: ${props => props.theme.background};
 `;
 
-export const Item = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-flex-direction: column;
+export const NavbarSkills = styled.ul`
+    margin: 10px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
-padding: 15px;
-width: 200px;
+    @media (max-width: 760px){
+      margin: 10px 0;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-color: ${props => props.theme.font};
-transition: all .1s linear;
-                        -webkit-transition: all .1s linear;
-                        -moz-transition: all .1s linear;
-
-:hover{
-    box-shadow: ${props => props.theme.contact_shadow_hover};
-    border-radius: 5px;
-}
-
-
-`;
-
-export const Titulo = styled.div`
-  margin-bottom: 5px;
-  font-weight: 700;
-`;
-
-export const Icon = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-color: white;
-font-size: 50px;
-border-radius: 50%;
-width: 100px;
-height: 100px;
-
-background: ${props => props.theme.skills_description_font_icon};
-box-shadow: ${props => props.theme.contact_shadow};
-
-
-a{
-    text-decoration: none;
-    color: ${props => props.theme.font};
-}
 `;
 
 export const Wrapper = styled.div`
-    display: grid;
-    grid-template-columns: auto auto auto auto; 
+display: grid;
+    grid-template-columns: 350px 350px 350px; 
     justify-content: center;
-    margin: 20px;
     gap: 10px;
     padding: 20px;
+    /* border: 2px solid green; */
 
     @media (max-width: 1200px){
-        grid-template-columns: auto auto auto; 
+        grid-template-columns: 350px 350px; 
 
     }
 
     @media (max-width: 760px){
-      grid-template-columns: auto auto; 
-
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
+`;
+
+export const Grid = styled.div`
+    
 `;
 
 export const SkillsItems = styled.div`
