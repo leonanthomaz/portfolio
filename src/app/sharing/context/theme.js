@@ -1,13 +1,13 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useEffect, useContext, useState } from "react";
 import { ThemeProvider } from 'styled-components';
 import { darkTheme, lightTheme } from '../styles/themes';
 
 export const ThemeContext = createContext();
 
 export const ThemeContextProvider = ({ children }) => {
-  
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+
   const [isDarkTheme, setIsDarkTheme] = useState(() => {
-    const theme = localStorage.getItem('theme');
 
     if (theme === 'light' || theme === null) {
       return 'light';
@@ -15,6 +15,20 @@ export const ThemeContextProvider = ({ children }) => {
       return 'dark';
     }
   });
+
+  useEffect(() => {
+    const currentHour = new Date().getHours();
+
+    // Se estiver entre 18h e 6h, definimos o tema como 'dark', caso contrário, como 'light'
+    const newTheme = currentHour >= 18 || currentHour < 6 ? 'dark' : 'light';
+
+    // Atualiza o tema se for diferente do tema atual armazenado no localStorage
+    if (newTheme !== theme) {
+      setTheme(newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+  }, [theme]); // A dependência theme garante que este useEffect seja chamado sempre que o tema for alterado
+
 
   return (
     <ThemeContext.Provider value={{ isDarkTheme, setIsDarkTheme}}>
@@ -28,7 +42,7 @@ export const ThemeContextProvider = ({ children }) => {
 
 export const useThemeContext = () => {
 
-  const { isDarkTheme, setIsDarkTheme } = useContext(ThemeContext);
+  const { isDarkTheme, setIsDarkTheme, theme } = useContext(ThemeContext);
 
   function changeTheme() {
     if (isDarkTheme === 'dark') {
@@ -44,7 +58,8 @@ export const useThemeContext = () => {
   }
 
   return {
-    changeTheme
+    changeTheme,
+    theme
   }
 }
 

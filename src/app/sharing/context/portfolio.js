@@ -22,21 +22,33 @@ export const PortfolioProvider = ({ children }) => {
 
     let categoryPortfolio = [
         {
-            id: "react",
-            title: "React",
-        },
-        {
-            id: "php",
-            title: "PHP",
+            id: "destaque",
+            title: "Destaques",
         },
         {
             id: "java",
             title: "Java",
         },
         {
+            id: "spring",
+            title: "Spring",
+        }, 
+        {
+            id: "react",
+            title: "React",
+        },
+        {
+            id: "python",
+            title: "Python",
+        },
+        {
+            id: "php",
+            title: "PHP",
+        },
+        {
             id: "web",
             title: "HMTL/CSS",
-        },    
+        },  
         
     ];
 

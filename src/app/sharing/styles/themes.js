@@ -18,14 +18,14 @@ export const darkTheme = {
   box_shadow: "0px 0px 20px 0px #bbbbbb",
 
   //Botões padrão
-  btn_background: "#310442",
+  btn_background: "#1f022a",
   btn_background_hover: "#0b6585",
 
   box_font_list: "#fafafa",
   box_font_list_hover: "yellow",
   box_font_list_active: "#fafafa",
   box_shadow_list: "0px 0px 16px -8px #bbbbbb",
-  box_shadow_list_hover: "0px 0px 16px -8px #310442",
+  box_shadow_list_hover: "0px 0px 16px -8px #1f022a",
 
   //Elements
   font_title_el: "#fbff00",
@@ -50,31 +50,32 @@ export const darkTheme = {
 
   //about
   about_box_shadow: "0px 0px 20px 0px #bbbbbb",
-  about_background: "#310442",
+  about_background: "#1f022a",
   about_btn_background: "#014c66",
-  about_btn_background_hover: "#31874b",
+  about_btn_background_hover: "#38094a",
   about_font_btn_background: "#fafafa",
 
   //skills description
-  skills_description_background: "#310442",
+  skills_description_background: "#1f022a",
   skills_description_font_icon: "yellow",
   skills_description_font_icon_hover: "gray",
   skills_description_box_shadow: "0px 0px 20px 0px #bbbbbb",
 
   //skills  
   skills_box_shadow: "0px 0px 20px 0px #bbbbbb",
-  skills_box_shadow_hover: "0px 0px 20px 0px #31874b",
+  skills_box_shadow_hover: "0px 0px 20px 0px #38094a",
   skills_font: "#fafafa",
   skills_icon: "yellow",
-  skills_background_box: "#310442", 
+  skills_background_box: "#1f022a", 
+  skills_font_icons: "#1f022a",
 
   //portfolio
   portfolio_font_h2: "yellow",
-  portfolio_background_box: "#310442", 
+  portfolio_background_box: "#1f022a", 
   portfolio_box_shadow: "0px 0px 20px 0px #bbbbbb",
-  portfolio_box_shadow_hover: "0px 0px 20px 0px #31874b",
+  portfolio_box_shadow_hover: "0px 0px 20px 0px #38094a",
   portfolio_btn_background: "#4e0569",
-  portfolio_btn_background_hover: "#31874b",
+  portfolio_btn_background_hover: "#38094a",
   portfolio_btn_font: "#fafafa",
   portfolio_btn_font_hover: "#fafafa",
   portfolio_borderbottom: "3px solid gray",
@@ -83,39 +84,39 @@ export const darkTheme = {
   skills_nav_box_shadow: "0px 0px 16px 0px #fafafa",
   skills_nav_shadow_hover: "0px 0px 16px -8px #bbbbbb",
   skills_nav_font: "#fafafa",
-  skills_nav_background_btn: "#310442",
-  skills_nav_background_btn_hover: "#31874b",
-  skills_nav_background_btn_active: "#31874b",
+  skills_nav_background_btn: "#1f022a",
+  skills_nav_background_btn_hover: "#38094a",
+  skills_nav_background_btn_active: "#38094a",
   skills_nav_font_btn_active: "#fafafa",
-  skills_nav_box_shadow_active: "0px 0px 16px 0px #31874b",
+  skills_nav_box_shadow_active: "0px 0px 16px 0px #38094a",
 
   //nav portfolio
   portfolio_nav_box_shadow: "0px 0px 16px 0px #fafafa",
   portfolio_nav_shadow_hover: "0px 0px 16px -8px #bbbbbb",
   portfolio_nav_font: "#fafafa",
-  portfolio_nav_background_btn: "#310442",
-  portfolio_nav_background_btn_hover: "#31874b",
-  portfolio_nav_background_btn_active: "#31874b",
+  portfolio_nav_background_btn: "#1f022a",
+  portfolio_nav_background_btn_hover: "#38094a",
+  portfolio_nav_background_btn_active: "#38094a",
   portfolio_nav_font_btn_active: "#fafafa",
-  portfolio_nav_box_shadow_active: "0px 0px 16px 0px #31874b",
+  portfolio_nav_box_shadow_active: "0px 0px 16px 0px #38094a",
 
   //contact
-  contact_background: "#310442",
+  contact_background: "#1f022a",
   contact_btn: "#1f022a",
   contact_btn_hover: "#ecececcc",
   contact_font: "#fafafa",
   contact_font_icons: "#1f022a",
   contact_form_shadow: "0px 0px 16px -8px rgba(255, 255, 255, 0.68)",
   contact_btn_background: "yellow",
-  contact_background_form: "#310442",
-  contact_border_input: "2px solid #310442",
-  contact_background_label: "#310442",
+  contact_background_form: "#1f022a",
+  contact_border_input: "2px solid #1f022a",
+  contact_background_label: "#1f022a",
   contact_background_icons: "yellow",
   contact_background_icons_hover: "green",
   contact_shadow: "0px 0px 16px -8px #bbbbbb",
-  contact_shadow_hover: "0px 0px 16px 0px #31874b",
-  contact_background_btn: "#310442",
-  contact_background_btn_hover: "#31874b",
+  contact_shadow_hover: "0px 0px 16px 0px #38094a",
+  contact_background_btn: "#1f022a",
+  contact_background_btn_hover: "#38094a",
   contact_font_btn: "#fafafa",
 
   //social networks
@@ -140,7 +141,7 @@ export const lightTheme = {
   button_hover: "#1f022a",
   button_font: "#fafafa",
   button_font_hover: "yellow",
-  h1: "#1f022a",
+  h1: "#310442",
   h1_mobile: "#011834",
   h2: "#fbff00",
   h3: "#1f022a",
@@ -176,7 +177,7 @@ export const lightTheme = {
   //intro
   intro_background_photo: "#011834",
   intro_arrow: "#1f022a",
-  intro_font_Typewriter: "#4e0569",
+  intro_font_Typewriter: "#5b7178",
   intro_background_vertical: "linear-gradient(to top, #fafafa 5%, transparent 80%)",
   intro_background_horizontal: "linear-gradient(to right, #fafafa 10%, transparent 60%)",
 
@@ -184,14 +185,14 @@ export const lightTheme = {
   about_box_shadow: "0px 0px 16px -8px rgba(0, 0, 0, 0.68)",
   about_background: "#f4f4f4",
   about_btn_background: "#4e0569",
-  about_btn_background_hover: "#31874b",
+  about_btn_background_hover: "#38094a",
   about_font_btn_background: "#fafafa",
 
   //skills description
   skills_description_background: "#f4f4f4",
-  skills_description_box_shadow: "0px 0px 16px -8px rgba(0, 0, 0, 0.68)",
+  skills_description_box_shadow: "0px 0px 16px 0px #56186e", //
   skills_description_font_icon: "#4e0569",
-  skills_description_font_icon_hover: "#31874b",
+  skills_description_font_icon_hover: "#38094a",
 
   //skills
   skills_box_shadow: "0px 0px 16px -8px rgba(0, 0, 0, 0.68)",
@@ -199,14 +200,15 @@ export const lightTheme = {
   skills_font: "#4e0569",
   skills_icon: "#1f022a",
   skills_background_box: "#f4f4f4",
+  skills_font_icons: "#fafafa",
 
   //portfolio
   portfolio_font_h2: "#4e0569",
   portfolio_background_box: "#f4f4f4",
-  portfolio_box_shadow: "0px 0px 16px -8px #31874b",
-  portfolio_box_shadow_hover: "0px 0px 16px -8px #31874b",
+  portfolio_box_shadow: "0px 0px 16px -8px #38094a",
+  portfolio_box_shadow_hover: "0px 0px 16px -8px #38094a",
   portfolio_btn_background: "#4e0569",
-  portfolio_btn_background_hover: "#31874b",
+  portfolio_btn_background_hover: "#38094a",
   portfolio_btn_font: "#fafafa",
   portfolio_btn_font_hover: "#fafafa",
   portfolio_borderbottom: "3px solid gray",
@@ -216,20 +218,20 @@ export const lightTheme = {
   skills_nav_shadow_hover: "0px 0px 16px -8px #bbbbbb",
   skills_nav_font: "#fafafa",
   skills_nav_background_btn: "#4e0569",
-  skills_nav_background_btn_hover: "#31874b",
-  skills_nav_background_btn_active: "#31874b",
+  skills_nav_background_btn_hover: "#38094a",
+  skills_nav_background_btn_active: "#38094a",
   skills_nav_font_btn_active: "#fafafa",
-  skills_nav_box_shadow_active: "0px 0px 16px 0px #31874b",
+  skills_nav_box_shadow_active: "0px 0px 16px 0px #38094a",
 
   //nav portfolio
   portfolio_nav_box_shadow: "0px 0px 16px 0px #fafafa",
   portfolio_nav_shadow_hover: "0px 0px 16px -8px #bbbbbb",
   portfolio_nav_font: "#fafafa",
   portfolio_nav_background_btn: "#4e0569",
-  portfolio_nav_background_btn_hover: "#31874b",
-  portfolio_nav_background_btn_active: "#31874b",
+  portfolio_nav_background_btn_hover: "#38094a",
+  portfolio_nav_background_btn_active: "#38094a",
   portfolio_nav_font_btn_active: "#fafafa",
-  portfolio_nav_box_shadow_active: "0px 0px 16px 0px #31874b",
+  portfolio_nav_box_shadow_active: "0px 0px 16px 0px #38094a",
   
 
   //contato
@@ -242,9 +244,9 @@ export const lightTheme = {
   contact_font: "#1f022a",
   contact_font_icons: "#f4f4f4",
   contact_shadow: "0px 0px 16px -8px #fafafa",
-  contact_shadow_hover: "0px 0px 16px 0px #31874b",
+  contact_shadow_hover: "0px 0px 16px 0px #38094a",
   contact_background_btn: "#4e0569",
-  contact_background_btn_hover: "#31874b",
+  contact_background_btn_hover: "#38094a",
   contact_font_btn: "#fafafa",
 
   //social networks

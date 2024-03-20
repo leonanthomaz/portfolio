@@ -1,17 +1,15 @@
 import React from 'react'
-import { Modal } from "react-bootstrap";
 import { GrClose } from "react-icons/gr";
 import * as MPS from './MPStyles'
+import { Modal } from "react-bootstrap";
 
 export const ModalPortfolio = ({show,
     handleClose,
-    id,
     index,
     subtitle,
     title,
     img,
     img2,
-    preview,
     description,
     date,
     technology,
@@ -20,18 +18,18 @@ export const ModalPortfolio = ({show,
 }) => {
     return (
         <div>
-            <Modal 
+            <MPS.CustomModal
                 key={index}
-                size="lg"
                 aria-labelledby="Modal exibindo detalhes do projeto"
                 centered
-                show={show} 
+                show={show}
                 onHide={handleClose}
                 style={{background: '#14141498', fontFamily: 'Josefin Sans'}}                    
-                >
+            >
+
                 <Modal.Body style={{background: '#ecececce', padding: '20px'}}>
                 
-                <MPS.Container>
+                <MPS.Container >
 
                     <MPS.Header>
                         <GrClose 
@@ -42,6 +40,7 @@ export const ModalPortfolio = ({show,
                         }} onClick={handleClose}
                         />
                     </MPS.Header>
+
                     
                     <MPS.Title>{title}</MPS.Title>
                     
@@ -67,7 +66,7 @@ export const ModalPortfolio = ({show,
                     
                     </MPS.Container>
                 </Modal.Body >
-            </Modal>
+            </MPS.CustomModal>
         </div>
     )
 }

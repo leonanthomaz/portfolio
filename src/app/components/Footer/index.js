@@ -16,7 +16,7 @@ export const Footer = () => {
                 <F.SocialMedia>
                     <F.SocialMediaWrap>
                         <F.SocialLogo >
-                            <p>© 2022 Copyright: Leonan Thomaz</p>
+                            <p>© 2024 Copyright: Leonan Thomaz</p>
                             <span>Design by <a href="https://www.linkedin.com/in/leonanthomaz" >@leonanthomaz</a></span><br/>
                         </F.SocialLogo>
 

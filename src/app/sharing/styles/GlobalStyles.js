@@ -38,6 +38,7 @@ export const GlobalStyles = createGlobalStyle`
         h4{
             color: ${props => props.theme.h4};
         }       
+
     } 
 }
 

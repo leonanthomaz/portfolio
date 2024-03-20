@@ -8,18 +8,16 @@ import {
   DiGit,
   DiReact,
   DiGithubBadge,
-  DiNpm,
   DiVisualstudio,
   DiHtml5,
   DiMysql,
   DiPostgresql,
   DiMsqlServer,
-  DiJava,
   DiDocker,
+  DiPhp
   
 } from 'react-icons/di';
 import { SiSpring, SiApachemaven } from "react-icons/si";
-import { GiTortoise } from "react-icons/gi";
 import { LiaJava } from "react-icons/lia";
 
 export const Skills = () => {
@@ -27,7 +25,7 @@ export const Skills = () => {
     return (
       <S.Container id="skills">
         <AnimationOnScroll animateIn="animate__backInLeft">
-            <ETitle title={'Skills Teste'} subtitle={'Habilidades que possuo'}/>
+            <ETitle title={'Skills'} subtitle={'Habilidades que possuo'}/>
         </AnimationOnScroll>
 
           <S.Wrapper>
@@ -77,6 +75,12 @@ export const Skills = () => {
                 <S.Icon><DiReact/></S.Icon>
                 </S.Item>
             </AnimationOnScroll> 
+            <AnimationOnScroll animateIn="animate__fadeInUp">
+                <S.Item>
+                <S.Titulo>PHP</S.Titulo>
+                <S.Icon><DiPhp/></S.Icon>
+                </S.Item>
+            </AnimationOnScroll>
 
             <AnimationOnScroll animateIn="animate__fadeInUp">
                 <S.Item>
@@ -88,12 +92,6 @@ export const Skills = () => {
                 <S.Item>
                 <S.Titulo>Github</S.Titulo>
                 <S.Icon><DiGithubBadge/></S.Icon>
-                </S.Item>
-            </AnimationOnScroll> 
-            <AnimationOnScroll animateIn="animate__fadeInUp">
-                <S.Item>
-                <S.Titulo>NPM</S.Titulo>
-                <S.Icon><DiNpm/></S.Icon>
                 </S.Item>
             </AnimationOnScroll> 
             <AnimationOnScroll animateIn="animate__fadeInUp">
@@ -127,13 +125,6 @@ export const Skills = () => {
                 <S.Item>
                 <S.Titulo>Docker</S.Titulo>
                 <S.Icon><DiDocker/></S.Icon>
-                </S.Item>
-            </AnimationOnScroll> 
-            
-            <AnimationOnScroll animateIn="animate__fadeInUp">
-                <S.Item>
-                <S.Titulo>Tortoise</S.Titulo>
-                <S.Icon><GiTortoise/></S.Icon>
                 </S.Item>
             </AnimationOnScroll> 
     

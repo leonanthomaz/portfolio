@@ -15,6 +15,96 @@ import EleicoesST from '../assets/img/portfolio/eleicoes-st.webp';
 import EleicoesPT from '../assets/img/portfolio/eleicoes-pt.webp';
 import Burguer1 from '../assets/img/portfolio/burguer1.webp';
 import Burguer2 from '../assets/img/portfolio/burguer2.webp';
+import Java from '../assets/img/portfolio/java.webp';
+import Spring from '../assets/img/portfolio/spring.webp';
+import Python from '../assets/img/portfolio/python.webp';
+
+
+  /*Destaque*/
+  export const DestaqueData = [
+    {
+      id: 1,
+      title: "Programa para cálculo de custo de produtos",
+      subtitle: "Java/Spring",
+      img: Spring,
+      preview: "",
+      description: "O Sistema de Cálculo de Preços é uma aplicação desenvolvida em Java, utilizando o framework Spring e o banco de dados MySQL. O objetivo do sistema é automatizar o processo de determinação de preços de venda de produtos, levando em consideração os custos de produção. A aplicação é executada em contêineres Docker, proporcionando uma fácil implantação e escalabilidade.",
+      date: "Março 2024",
+      technology: "JAVA, SPRING, MYSQL",
+      url: "",
+      github: ""
+    },
+    {
+      id: 2,
+      title: "Eleições 2022 - 2º Turno",
+      subtitle: "Eleições presidenciais",
+      img: EleicoesST,
+      img2: '',
+      preview: "Apuração em tempo real da eleição presidencial do segundo turno - 2022",
+      description: "Portal onde apresenta estatísticas dos dois candidatos a presidência da República do dia 30/10/2022, consumindo API do TSE.",
+      date: "Outubro 2022",
+      technology: "React, Javascript, HTML e CSS",
+      url: "https://eleicoes2022-segundo-turno.vercel.app/",
+      github: "https://github.com/leonanthomaz/eleicoes2022-segundoTurno"
+    },
+    {
+      id: 3,
+      title: "PopCorn",
+      subtitle: "React JS",
+      img: PopCorn1,
+      img2: PopCorn2,
+      preview: "Sistema de consultas de filmes com comentários",
+      description: "Catálogo de filmes, consumindo API TMDB com sistema de comentários com banco de dados MongoDB.",
+      date: "Agosto 2022",
+      technology: "React, Javascript, HTML e CSS (Styled-Components) e MongoDB",
+      url: "https://popcorn-two.vercel.app/",
+      github: "https://github.com/leonanthomaz/popcorn"
+    },
+  ];
+
+  /*Java*/
+  export const JavaData = [
+    {
+      id: 1,
+      title: "Aplicação Socket",
+      subtitle: "Modelo de comunicação socket",
+      img: Java,
+      preview: "",
+      description: "Aplicação Socket, utilizando Java 8, protocolo TCP/IP e Threads (servidor gerencia múltiplos clientes de forma concorrente, permitindo operações assíncronas e independentes). Arquitetura escalável e eficiente para interações simultâneas com o servidor",
+      date: "Fevereiro 2024",
+      technology: "HTML e SASS",
+      url: "",
+      github: "https://github.com/leonanthomaz/java_socket"
+    }
+  ];
+
+  /*Spring*/
+  export const SpringData = [
+    {
+      id: 1,
+      title: "Chicken House",
+      subtitle: "Java/Spring",
+      img: Spring,
+      preview: "",
+      description: "",
+      date: "Em andamento",
+      technology: "JAVA, SPRING, MYSQL",
+      url: "",
+      github: ""
+    },
+    {
+      id: 2,
+      title: "Programa para cálculo de custo de produtos",
+      subtitle: "Java/Spring",
+      img: Spring,
+      preview: "",
+      description: "O Sistema de Cálculo de Preços é uma aplicação desenvolvida em Java, utilizando o framework Spring e o banco de dados MySQL. O objetivo do sistema é automatizar o processo de determinação de preços de venda de produtos, levando em consideração os custos de produção. A aplicação é executada em contêineres Docker, proporcionando uma fácil implantação e escalabilidade.",
+      date: "Março 2024",
+      technology: "JAVA, SPRING, MYSQL",
+      url: "",
+      github: ""
+    },
+  ];
 
   /*REACT*/
   export const ReactData = [
@@ -98,6 +188,21 @@ import Burguer2 from '../assets/img/portfolio/burguer2.webp';
     },
   ];
 
+  /*Python*/
+  export const PythonData = [
+    {
+      id: 1,
+      title: "Projeto Tainá",
+      subtitle: "Inteligência Artificial",
+      img: Python,
+      description: "Projeto de um sistema de inteligência artificial chamada Tainá, criada em Python e utilizando libs como Google Search, Wikipedia, Youtube, entre outros.",
+      date: "Janeiro 2024",
+      technology: "Python",
+      url: "",
+      github: "https://github.com/leonanthomaz/projeto_taina"
+    },
+  ];
+
   /*PHP*/
   export const PHPData = [
     {
@@ -124,22 +229,6 @@ import Burguer2 from '../assets/img/portfolio/burguer2.webp';
       url: "https://casadosalgadoabv.000webhostapp.com/",
       github: "https://github.com/leonanthomaz/CasaDoSalgado"
     },
-  ];
-
-  /*Java*/
-  export const JavaData = [
-    {
-      id: 1,
-      title: "Design Galeria",
-      subtitle: "Galeria de fotos (Estudos)",
-      img: null,
-      preview: "Design de uma galeria de fotos",
-      description: "Design de uma galeria de fotos, utilizando HTML e estilização em SASS.",
-      date: "Junho 2022",
-      technology: "HTML e SASS",
-      url: "",
-      github: "https://github.com/leonanthomaz/GaleriaSass"
-    }
   ];
 
   /*WEB*/

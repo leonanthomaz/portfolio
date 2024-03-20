@@ -15,7 +15,6 @@ flex-direction: column;
 padding: 15px;
 width: 200px;
 
-color: ${props => props.theme.font};
 transition: all .1s linear;
                         -webkit-transition: all .1s linear;
                         -moz-transition: all .1s linear;
@@ -31,6 +30,8 @@ transition: all .1s linear;
 export const Titulo = styled.div`
   margin-bottom: 5px;
   font-weight: 700;
+  color: ${props => props.theme.font};
+
 `;
 
 export const Icon = styled.div`
@@ -46,19 +47,14 @@ height: 100px;
 
 background: ${props => props.theme.skills_description_font_icon};
 box-shadow: ${props => props.theme.contact_shadow};
+color: ${props => props.theme.skills_font_icons};
 
-
-a{
-    text-decoration: none;
-    color: ${props => props.theme.font};
-}
 `;
 
 export const Wrapper = styled.div`
     display: grid;
-    grid-template-columns: auto auto auto auto; 
+    grid-template-columns: auto auto auto auto auto; 
     justify-content: center;
-    margin: 20px;
     gap: 10px;
     padding: 20px;
 
