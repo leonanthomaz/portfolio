@@ -7,12 +7,12 @@ color: ${props => props.theme.font};
 
 export const Wrapper = styled.div`
 display: grid;
-grid-template-columns: 400px 600px;
+grid-template-columns: 400px 700px;
 justify-content: center;
 align-items: center;
 
 @media (max-width: 1000px){
-    grid-template-columns: 300px 400px;
+    grid-template-columns: 300px 500px;
 }
 
 @media(max-width: 760px){

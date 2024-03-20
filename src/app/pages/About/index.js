@@ -22,22 +22,20 @@ export const About = () => {
           </A.Left>
           <A.Right>
             <A.BoxText>
-            Olá! 👋
-
             <p>
-            Me chamo Leonan Thomaz, sou Analista e Desenvolvedor de Sistemas formado pela Universidade Estácio de Sá e atualmente cursando pós-graduação em Engenharia de Software. Meu foco é o desenvolvimento Java.            
+            Me chamo Leonan Thomaz de Oliveira, sou Analista e Desenvolvedor de Sistemas com experiência sólida em desenvolvimento Java e manutenção de bancos de dados SQL Server e PL/SQL. Possuo formação em Tecnologia em Análise e Desenvolvimento de Sistemas pela Universidade Estácio de Sá e estou cursando pós-graduação em Engenharia de Software.            
             </p>
 
             <p>
-            Tenho experiência em implementação e correção de códigos em Java, com foco em automação de tarefas comerciais. Atuo com ambiente Windows e possuo experiência com manutenção de bancos de dados SQL Server e PL/SQL. Estou em constante busca por aprimoramento, desde os conceitos fundamentais até temas mais avançados, como orientação a objetos e padrões de projeto.            
+            Com passagens por empresas como MetrôRio e Mundiware, destaco minha atuação no desenvolvimento, correção e melhoria de sistemas, utilizando Java. Participei ativamente de projetos ágeis, aplicando metodologias como Scrum, e contribuí para a implementação bem-sucedida do sistema PIX no MetrôRio.            
             </p>
 
             <p>
-            Além disso, estou desenvolvendo habilidades em threads, concorrência e virtualização de ambientes usando Docker. Estou começando a explorar a computação em nuvem, com ênfase na AWS.            
+            Minhas habilidades incluem domínio em Java (versões 8 e superir), Spring Boot, Hibernate/JPA, além de conhecimentos em desenvolvimento front-end com React JS. Estou constantemente buscando aprimoramento, explorando tópicos como computação em nuvem (AWS) e inteligência artificial (Python).            
             </p>
 
             <p>
-            Estou sempre em busca de desafios enriquecedores que possam ampliar meu conhecimento.
+            Destaco também minhas conquistas, como a intermediação da primeira transação do sistema PIX no MetrôRio e minha participação em projetos de e-commerce e inteligência artificial.            
             </p>
 
             <p>
