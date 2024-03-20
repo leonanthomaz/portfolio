@@ -98,7 +98,7 @@ export const Skills = () => {
             </AnimationOnScroll> 
             <AnimationOnScroll animateIn="animate__fadeInUp">
                 <S.Item>
-                <S.Titulo>Java</S.Titulo>
+                <S.Titulo>VSCode</S.Titulo>
                 <S.Icon><DiVisualstudio/></S.Icon>
                 </S.Item>
             </AnimationOnScroll> 
@@ -106,33 +106,33 @@ export const Skills = () => {
            
             <AnimationOnScroll animateIn="animate__fadeInUp">
                 <S.Item>
-                <S.Titulo>Java</S.Titulo>
+                <S.Titulo>SQL Server</S.Titulo>
                 <S.Icon><DiMsqlServer/></S.Icon>
                 </S.Item>
             </AnimationOnScroll> 
             <AnimationOnScroll animateIn="animate__fadeInUp">
                 <S.Item>
-                <S.Titulo>Java</S.Titulo>
+                <S.Titulo>Postgres</S.Titulo>
                 <S.Icon><DiPostgresql/></S.Icon>
                 </S.Item>
             </AnimationOnScroll> 
             <AnimationOnScroll animateIn="animate__fadeInUp">
                 <S.Item>
-                <S.Titulo>Java</S.Titulo>
+                <S.Titulo>MySQL</S.Titulo>
                 <S.Icon><DiMysql/></S.Icon>
                 </S.Item>
             </AnimationOnScroll> 
   
             <AnimationOnScroll animateIn="animate__fadeInUp">
                 <S.Item>
-                <S.Titulo>Java</S.Titulo>
+                <S.Titulo>Docker</S.Titulo>
                 <S.Icon><DiDocker/></S.Icon>
                 </S.Item>
             </AnimationOnScroll> 
             
             <AnimationOnScroll animateIn="animate__fadeInUp">
                 <S.Item>
-                <S.Titulo>Java</S.Titulo>
+                <S.Titulo>Tortoise</S.Titulo>
                 <S.Icon><GiTortoise/></S.Icon>
                 </S.Item>
             </AnimationOnScroll> 
