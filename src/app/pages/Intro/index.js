@@ -4,6 +4,7 @@ import * as I from "./IntroStyles";
 import Typewriter from 'typewriter-effect';
 import imgMain from '../../sharing/assets/img/programador_mesa.webp';
 import imgMain2 from '../../sharing/assets/img/programador.webp';
+import curriculo from '../../sharing/assets/doc/curriculo.pdf'
 
 export const Intro = () => {
   const theme = localStorage.getItem('theme')
@@ -17,6 +18,11 @@ export const Intro = () => {
               <I.ImgContainer background={ imgMain + 'back-js.webp'}>
                 <img src={theme === 'light' ? imgMain : imgMain2} alt="Icone programador" />
               </I.ImgContainer>
+              <I.ButtonContainer>
+                  <I.DownloadButton href={curriculo} download>
+                    Baixar Currículo
+                  </I.DownloadButton>
+                </I.ButtonContainer>
             </I.Left>
             <I.Right>
               <I.Wrapper>

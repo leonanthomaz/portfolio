@@ -38,7 +38,7 @@ export const Navbar = () => {
                     console.log("Window Bottom:", windowBottom);
     
                     // Verifica se pelo menos uma parte do elemento está visível na janela de visualização
-                    if ((elementTop === 0 || elementTop <= windowBottom - windowHeight/2 && elementBottom >= windowTop + windowHeight/2) || (id === 'index' && elementTop <= windowTop)) {
+                    if ((!elementTop || elementTop <= windowBottom - windowHeight/2 && elementBottom >= windowTop + windowHeight/2) || (id === 'index' && elementTop <= windowTop)) {
                         console.log("Elemento completamente visível:", id);
                         setActiveLink(id);
                     } else {

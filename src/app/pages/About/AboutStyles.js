@@ -21,14 +21,14 @@ align-items: center;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    padding: 10px;
+    padding: 5px;
 }
 `;
 
 export const Right = styled.div`
 display: flex;
 justify-content: center;
-padding: 20px;
+padding: 5px;
 
 `;
 
@@ -48,7 +48,7 @@ align-items: center;
 export const BoxText = styled.div`
 background: ${props => props.theme.about_background};
 box-shadow: ${props => props.theme.about_box_shadow};
-padding: 28px;
+padding: 22px;
 margin-top: 10px;
 
 font-size: 16px;

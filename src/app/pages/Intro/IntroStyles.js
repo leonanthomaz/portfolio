@@ -35,20 +35,22 @@ align-items: center;
 `;
 
 export const Left = styled.div`
-flex: 1.5;
-display: flex;
-justify-content: center;
-align-items: center;
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-@media (max-width: 1000px){
+  @media (max-width: 1000px){
     padding-top: 30px;
-}
+  }
 
-@media (max-width: 760px){
+  @media (max-width: 760px){
     display: none;
-}
-
+  }
 `;
+
+
 
 export const Right = styled.div`
 flex: 3.5;
@@ -176,4 +178,39 @@ width: 100%;
 height: 100vh;
 background-image: ${props => props.theme.intro_background_vertical};
 
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; // Ajuste conforme necessário
+`;
+
+export const DownloadButton = styled.a`
+  background: ${props => props.theme.about_btn_background};
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  width: 220px;
+  border-radius: 20px;
+  font-weight: 700;
+  transition: background-color 0.3s;
+  text-align: center;
+  transition: all .1s linear;
+                        -webkit-transition: all .1s linear;
+                        -moz-transition: all .1s linear;
+  
+
+  &:hover {
+    background: ${props => props.theme.about_btn_background_hover};
+    color: #dddddd;
+
+
+    a{
+        text-decoration: none;
+    }
+                        
+  }
 `;
