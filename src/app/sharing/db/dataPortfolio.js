@@ -32,7 +32,7 @@ import Python from '../assets/img/portfolio/python.webp';
       date: "Março 2024",
       technology: "JAVA, SPRING, MYSQL",
       url: "",
-      github: "https://github.com/leonanthomaz/SpringCalculadoraDeCusto"
+      github: "https://github.com/leonanthomaz/springcalculadora"
     },
     {
       id: 2,
@@ -74,7 +74,7 @@ import Python from '../assets/img/portfolio/python.webp';
       date: "Fevereiro 2024",
       technology: "HTML e SASS",
       url: "",
-      github: "https://github.com/leonanthomaz/java_socket"
+      github: "https://github.com/leonanthomaz/javasocket"
     }
   ];
 
@@ -86,11 +86,11 @@ import Python from '../assets/img/portfolio/python.webp';
       subtitle: "Java/Spring",
       img: Spring,
       preview: "",
-      description: "",
+      description: "Ecommerce para delivery",
       date: "Em andamento",
       technology: "JAVA, SPRING, MYSQL",
       url: "",
-      github: ""
+      github: "https://github.com/leonanthomaz/chickenhouse"
     },
     {
       id: 2,
@@ -102,7 +102,7 @@ import Python from '../assets/img/portfolio/python.webp';
       date: "Março 2024",
       technology: "JAVA, SPRING, MYSQL",
       url: "",
-      github: "https://github.com/leonanthomaz/SpringCalculadoraDeCusto"
+      github: "https://github.com/leonanthomaz/springcalculadora"
     },
   ];
 
