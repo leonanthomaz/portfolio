@@ -24,7 +24,7 @@ import Python from '../assets/img/portfolio/python.webp';
   export const DestaqueData = [
     {
       id: 1,
-      title: "Programa para cálculo de custo de produtos",
+      title: "Cálculo de custos para comécio",
       subtitle: "Java/Spring",
       img: Spring,
       preview: "",
@@ -94,7 +94,7 @@ import Python from '../assets/img/portfolio/python.webp';
     },
     {
       id: 2,
-      title: "Programa para cálculo de custo de produtos",
+      title: "Cálculo de custos para comécio",
       subtitle: "Java/Spring",
       img: Spring,
       preview: "",

@@ -79,22 +79,28 @@ font-weight: 500;
     line-height: 35px;
 }
 
+&.active a {
+        color: ${props => props.theme.navbar_font_active};
+        font-weight: 700;
+        font-weight: 700;
+        text-decoration: 3px solid overline;  
+        transition: all ease 0.4s;
+
+        :hover{
+            transition: all ease 0.2s;
+            transition: all ease 0.4s;
+        }
+        
+    }
+
 a{
     color: ${props => props.theme.navbar_font};
     text-decoration: none;
 
-    &.active {
-        text-decoration: none;
-        color: ${props => props.theme.navbar_font_active};
-        font-weight: 700;
-        text-decoration: 3px solid overline;
-    }
-
     :hover{
         text-decoration: none;
         color: ${props => props.theme.navbar_font_active};
-        font-weight: 700;
-        text-decoration: 3px solid overline;
+        
     }
 }
 `;

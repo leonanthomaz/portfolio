@@ -3,14 +3,22 @@ import { Modal } from "react-bootstrap";
 
 export const CustomModal = styled(Modal)`
     .modal-dialog {
-        max-width: 70%; /* Defina a largura máxima da caixa de diálogo */
+        min-height: 100vh;
+        max-width: 50vw; /* Defina a largura máxima da caixa de diálogo */
+        min-width: 100vh;
+        max-height: 50vh;
         width: auto; /* Permita que a largura se ajuste automaticamente ao conteúdo */
         margin: 1rem auto; /* Centralize a caixa de diálogo horizontalmente */
+
+        
+        @media(max-width: 760px){
+            max-width: 100%; /* Defina a largura máxima da caixa de diálogo */
+        }
     }
 `;
 
 export const Container = styled.div`
-    padding: 20px;
+    padding: 10px;
     background: #ecececce;
 `;
 
@@ -48,7 +56,7 @@ export const ContainerImg = styled.div`
     justify-content: center;
 
     img {
-        max-width: 80%;
+        max-width: 70%;
         height: auto;
     }
 `;

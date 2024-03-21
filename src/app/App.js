@@ -10,6 +10,8 @@ import { Skills } from './pages/Skills';
 import { About } from './pages/About';
 import { Portfolio } from './pages/Portfolio';
 import { Contact } from './pages/Contact';
+// import { Experience } from './pages/Experience';
+// import { Course } from './pages/Course';
 
 export const App = () => {
   const { loading, closeNavbar } = useContext(PortfolioContext) 

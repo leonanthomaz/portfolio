@@ -19,6 +19,8 @@ import {
 } from 'react-icons/di';
 import { SiSpring, SiApachemaven } from "react-icons/si";
 import { LiaJava } from "react-icons/lia";
+import { Github } from "../../components/Github";
+
 
 export const Skills = () => {
 
@@ -127,8 +129,13 @@ export const Skills = () => {
                 <S.Icon><DiDocker/></S.Icon>
                 </S.Item>
             </AnimationOnScroll> 
-    
+        
           </S.Wrapper>
+            <div className="github">
+                <div className="container">
+                    <Github/>
+                </div>
+            </div>
       </S.Container>
     )
 }

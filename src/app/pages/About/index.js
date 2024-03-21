@@ -39,7 +39,7 @@ export const About = () => {
             </p>
 
             <p>
-            Aberto a oportunidades e pronto para contribuir em projetos inovadores! 💼✨
+            Aberto a oportunidades e pronto para contribuir em projetos inovadores!
             </p>
               
             <AnimationOnScroll animateIn="animate__bounceIn">

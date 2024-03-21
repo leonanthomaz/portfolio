@@ -126,6 +126,7 @@ export const Portfolio = () => {
                                             />
                                         )
                                     }
+                                    return null; // Adicionando retorno padrão
                                 })}
                             </P.Box>
                         </Fragment>

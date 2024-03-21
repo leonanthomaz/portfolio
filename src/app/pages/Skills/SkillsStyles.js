@@ -3,6 +3,21 @@ import styled from "styled-components";
 export const Container = styled.div`
 width: 100%;
 background: ${props => props.theme.background};
+
+.github{
+  color:  ${props => props.theme.font};
+  text-align: center;
+
+  strong{
+    /* color: ${props => props.theme.fo}; */
+  }
+
+
+
+  @media (max-width: 760px){
+     /* display: none; */
+  }
+}
 `;
 
 export const Item = styled.div`
