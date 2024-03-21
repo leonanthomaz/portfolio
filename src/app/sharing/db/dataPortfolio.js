@@ -32,7 +32,7 @@ import Python from '../assets/img/portfolio/python.webp';
       date: "Março 2024",
       technology: "JAVA, SPRING, MYSQL",
       url: "",
-      github: ""
+      github: "https://github.com/leonanthomaz/SpringCalculadoraDeCusto"
     },
     {
       id: 2,
@@ -102,7 +102,7 @@ import Python from '../assets/img/portfolio/python.webp';
       date: "Março 2024",
       technology: "JAVA, SPRING, MYSQL",
       url: "",
-      github: ""
+      github: "https://github.com/leonanthomaz/SpringCalculadoraDeCusto"
     },
   ];
 
