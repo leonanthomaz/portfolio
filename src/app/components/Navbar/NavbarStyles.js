@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div`
 position: fixed;
@@ -26,19 +26,6 @@ margin-right: 30px;
 
 @media(max-width: 760px){
     margin-right: 10px;
-}
-`;
-
-export const Icon = styled.div`
-display: none;
-color: ${({ theme }) => (theme === null || theme === 'dark' ? '#dddddd' : '#5b7178')};
-cursor: pointer;
-
-@media(max-width: 760px){
-    display: block;
-    padding: 10px;
-    font-size: 32px;
-    margin-left: 10px;
 }
 `;
 
@@ -74,6 +61,8 @@ text-transform: uppercase;
 transition: all ease 0.2s;
 border: 1px solid transparent;
 font-weight: 500;
+transition: all ease 0.2s;
+transition: all ease 0.4s;
 
 @media(max-width: 760px){
     line-height: 35px;
@@ -81,9 +70,8 @@ font-weight: 500;
 
 &.active a {
         color: ${props => props.theme.navbar_font_active};
-        font-weight: 700;
-        font-weight: 700;
         text-decoration: 3px solid overline;  
+        transition: all ease 0.2s;
         transition: all ease 0.4s;
 
         :hover{
@@ -105,6 +93,15 @@ a{
 }
 `;
 
+const rotateAnimation = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`;
+
 export const ThemeContainer = styled.div`
 /* border: 2px solid red; */
 float: right;
@@ -113,24 +110,42 @@ justify-content: center;
 padding: 5px;
 width: 70px;
 border-radius: 20px;
-background: ${({ theme }) => (theme === 'dark' ? '#dddddd' : '#1f022a')};
-color: ${({ theme }) => (theme === 'dark' ? '#1f022a' : '#dddddd')};
-transition: all 0.5s ease;
+background: ${({ theme }) => (theme === 'light' ? '#56186e' : '#ffffff')};
+color: ${({ theme }) => (theme === 'light' ? '#ffffff' : '#1f022a')};
+
+animation: ${props => props.animate ? rotateAnimation : 'none'} 1s linear;
+animation-play-state: ${props => props.animate ? 'running' : 'paused'};
+
+transition: all 0.2s ease;
 cursor: pointer;
 `;
 
 export const ThemeIcon = styled.div`
 margin-top: -2px;
+transition: color 0.2s ease;
+
 `;
 
-export const Active = styled.div`
-background: ${({ theme }) => (theme === 'dark' ? '#1f022a' : '#ffffff')};
-width: 20px;
-height: 20px;
-border-radius: 50%;
-margin-right: ${({ theme }) => (theme === 'dark' ? '35px' : '')};
-margin-left: ${({ theme }) => (theme === 'light' ? '35px' : '')};
-transition: all ease-in-out 0.5s;
+export const Icon = styled.div`
+display: none;
+cursor: pointer;
 
-margin-top: 2px;
+@media(max-width: 760px){
+    display: block;
+    padding: 10px;
+    font-size: 32px;
+    margin-left: 10px;
+}
 `;
+
+// export const Active = styled.div`
+// background: ${({ theme }) => (theme === 'dark' ? '#1f022a' : '#ffffff')};
+// width: 20px;
+// height: 20px;
+// border-radius: 50%;
+// margin-right: ${({ theme }) => (theme === 'dark' ? '35px' : '')};
+// margin-left: ${({ theme }) => (theme === 'light' ? '35px' : '')};
+// transition: all ease-in-out 0.5s;
+
+// margin-top: 2px;
+// `;

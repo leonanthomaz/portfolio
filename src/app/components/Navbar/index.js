@@ -2,13 +2,13 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import { PortfolioContext } from '../../sharing/context/portfolio';
 import { useThemeContext } from '../../sharing/context/theme';
 import * as M from './NavbarStyles';
-import { BiMenu } from 'react-icons/bi';
+import { BiMenu, BiSun, BiMoon } from 'react-icons/bi';
 import { AiOutlineClose } from 'react-icons/ai';
 
 export const Navbar = () => {
     const { click, handleClick } = useContext(PortfolioContext);
     const { changeTheme } = useThemeContext();
-    const [activeLink, setActiveLink] = useState('');
+    const [activeLink, setActiveLink] = useState(null);
     const theme = localStorage.getItem('theme') || 'light';
     const sectionRefs = useRef({});
 
@@ -18,33 +18,46 @@ export const Navbar = () => {
         handleClick(); // Fecha a navbar (se estiver aberta)
     };
 
-    // Efeito para atualizar o link ativo ao rolar a página
     useEffect(() => {
         const handleScroll = () => {
-            const scrollPosition = window.scrollY;
-
-            // Mapeia a posição dos elementos na página usando refs
-            Object.entries(sectionRefs.current).forEach(([id, ref]) => {
-                const element = ref.current;
-                console.log("REF: " + element)
+            const windowHeight = window.innerHeight;
+            const windowTop = window.scrollY;
+            const windowBottom = windowTop + windowHeight;
+    
+            Object.keys(sectionRefs.current).forEach(id => {
+                const element = document.getElementById(id);
                 if (element) {
-                    const { offsetTop, offsetHeight } = element.getBoundingClientRect();
-                    if (scrollPosition >= offsetTop - 70 && scrollPosition < offsetTop + offsetHeight - 70) {
+                    const { top, bottom } = element.getBoundingClientRect();
+                    const elementTop = top + windowTop;
+                    const elementBottom = bottom + windowTop;
+    
+                    console.log("Element ID:", id);
+                    console.log("Element Top:", elementTop);
+                    console.log("Element Bottom:", elementBottom);
+                    console.log("Window Top:", windowTop);
+                    console.log("Window Bottom:", windowBottom);
+    
+                    // Verifica se pelo menos uma parte do elemento está visível na janela de visualização
+                    if ((elementTop === 0 || elementTop <= windowBottom - windowHeight/2 && elementBottom >= windowTop + windowHeight/2) || (id === 'index' && elementTop <= windowTop)) {
+                        console.log("Elemento completamente visível:", id);
                         setActiveLink(id);
+                    } else {
+                        console.log("Elemento não completamente visível:", id);
                     }
+                } else {
+                    console.log("Elemento não encontrado:", id);
                 }
-                console.log("REF processado: " + element)
-
             });
         };
-
+    
         window.addEventListener('scroll', handleScroll);
-
+    
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-
+    
+    
     return (
         <M.Container>
             <M.Left>
@@ -63,7 +76,7 @@ export const Navbar = () => {
                         className={`nav-item ${activeLink === 'index' ? 'active' : ''}`}
                         role="menuItem"
                         onClick={() => handleLinkClick('index')}
-                        ref={sectionRefs.current['index']}
+                        ref={(el) => sectionRefs.current['index'] = el}
                     >
                         <a href="#index">Início</a>
                     </M.NavbarLi>
@@ -71,7 +84,7 @@ export const Navbar = () => {
                         className={`nav-item ${activeLink === 'about' ? 'active' : ''}`}
                         role="menuItem"
                         onClick={() => handleLinkClick('about')}
-                        ref={sectionRefs.current['about']}
+                        ref={(el) => sectionRefs.current['about'] = el}
                     >
                         <a href="#about">Sobre</a>
                     </M.NavbarLi>
@@ -79,7 +92,7 @@ export const Navbar = () => {
                         className={`nav-item ${activeLink === 'experience' ? 'active' : ''}`}
                         role="menuItem"
                         onClick={() => handleLinkClick('experience')}
-                        ref={sectionRefs.current['experience']}
+                        ref={(el) => sectionRefs.current['experience'] = el}
                     >
                         <a href="#experience">Experiência</a>
                     </M.NavbarLi>
@@ -87,7 +100,7 @@ export const Navbar = () => {
                         className={`nav-item ${activeLink === 'skills' ? 'active' : ''}`}
                         role="menuItem"
                         onClick={() => handleLinkClick('skills')}
-                        ref={sectionRefs.current['skills']}
+                        ref={(el) => sectionRefs.current['skills'] = el}
                     >
                         <a href="#skills">Skills</a>
                     </M.NavbarLi>
@@ -95,7 +108,7 @@ export const Navbar = () => {
                         className={`nav-item ${activeLink === 'portfolio' ? 'active' : ''}`}
                         role="menuItem"
                         onClick={() => handleLinkClick('portfolio')}
-                        ref={sectionRefs.current['portfolio']}
+                        ref={(el) => sectionRefs.current['portfolio'] = el}
                     >
                         <a href="#portfolio">Portfólio</a>
                     </M.NavbarLi>
@@ -103,7 +116,7 @@ export const Navbar = () => {
                         className={`nav-item ${activeLink === 'course' ? 'active' : ''}`}
                         role="menuItem"
                         onClick={() => handleLinkClick('course')}
-                        ref={sectionRefs.current['course']}
+                        ref={(el) => sectionRefs.current['course'] = el}
                     >
                         <a href="#course">Cursos</a>
                     </M.NavbarLi>
@@ -111,7 +124,7 @@ export const Navbar = () => {
                         className={`nav-item ${activeLink === 'contact' ? 'active' : ''}`}
                         role="menuItem"
                         onClick={() => handleLinkClick('contact')}
-                        ref={sectionRefs.current['contact']}
+                        ref={(el) => sectionRefs.current['contact'] = el}
                     >
                         <a href="#contact">Contato</a>
                     </M.NavbarLi>
@@ -126,10 +139,10 @@ export const Navbar = () => {
                     theme={theme}
                 >
                     <M.ThemeIcon role="temaItem">
-                        <M.Active theme={theme}></M.Active>
+                        {theme === 'dark' ? <BiSun /> : <BiMoon />}
                     </M.ThemeIcon>
                 </M.ThemeContainer>
             </M.Right>
-        </M.Container>
+            </M.Container>
     );
 };

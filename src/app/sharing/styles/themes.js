@@ -1,29 +1,4 @@
-export const colorPalette = {
-  primary: {
-    main: '#FF5733',
-    light: '#FFA07A',
-    dark: '#C70039',
-  },
-  secondary: {
-    main: '#33FF57',
-    light: '#7CFFA0',
-    dark: '#39C700',
-  },
-  background: {
-    main: '#F0F0F0',
-    light: '#FFFFFF',
-    dark: '#C0C0C0',
-  },
-  text: {
-    primary: '#333333',
-    secondary: '#666666',
-    accent: '#FF5733',
-  },
-  border: {
-    main: '#CCCCCC',
-    dark: '#999999',
-  },
-};
+
 
 
 // DARK THEME
@@ -83,6 +58,7 @@ export const darkTheme = {
   about_btn_background: "#014c66",
   about_btn_background_hover: "#38094a",
   about_font_btn_background: "#fafafa",
+  fontColorAbout: "#fafafa",
 
   // Experience
   fontColorExperience: "#1f022a",
@@ -219,6 +195,7 @@ export const lightTheme = {
   about_btn_background: "#4e0569",
   about_btn_background_hover: "#38094a",
   about_font_btn_background: "#fafafa",
+  fontColorAbout: "#38094a",
 
   // Experience
   fontColorExperience: "#38094a",
