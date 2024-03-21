@@ -111,7 +111,8 @@ h1{
 h2{
     font-size: 30px;
     padding-top: 10px;
-
+    text-align: center;
+    
     @media (max-width:1000px){
         font-size: 25px;
     }
