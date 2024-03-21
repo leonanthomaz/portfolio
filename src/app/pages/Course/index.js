@@ -1,92 +1,77 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { WorkIcon } from './WorkIcon';
-import * as C from './CourseStyles'
+import * as C from './CourseStyles';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { ETitle } from "../../components/Elements/title";
+import { FaGraduationCap } from "react-icons/fa";
+import { LiaJava } from "react-icons/lia";
 
 export const Course = () => {
-  useEffect(() => {
-    const handleScroll = () => {
-      const elements = document.querySelectorAll('.vertical-timeline-element');
-      elements.forEach(element => {
-        const bounding = element.getBoundingClientRect();
-        if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
-          element.classList.add('active'); // Adiciona a classe 'active' apenas aos elementos visíveis na janela
-        } else {
-          element.classList.remove('active'); // Remove a classe 'active' dos elementos que não estão visíveis na janela
-        }
-      });
-    };
+    return (
+        <C.Container id="course">
+            <AnimationOnScroll animateIn="animate__backInLeft">
+                <ETitle title={'Cursos'} subtitle={'Meu Aprendizado'} />
+            </AnimationOnScroll>
+            <VerticalTimeline>
+                {/* Seção para Graduação */}
+                <VerticalTimelineElement
+                    className="vertical-timeline-element--education"
+                    date="2021"
+                    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+                    icon={<FaGraduationCap />}
+                >
+                    <h3 className="vertical-timeline-element-title">TÉCNOLOGO EM ANÁLISE E DESENVOLVIMENTO DE SISTEMAS</h3>
+                    <h4 className="vertical-timeline-element-subtitle">Universidade Estácio de Sá</h4>
+                    <p>
+                        Concluído em 2021
+                    </p>
+                    <p><a href="link_para_o_certificado">Diploma</a></p>
+                </VerticalTimelineElement>
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Chama a função uma vez para garantir que os elementos visíveis recebam o estilo inicial
+                {/* Adicione elementos VerticalTimelineElement para representar seus cursos */}
+                <VerticalTimelineElement
+                    className="vertical-timeline-element--education"
+                    date="2022"
+                    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+                    icon={<LiaJava />}
+                >
+                    <h3 className="vertical-timeline-element-title">JAVA COMPLETO PROGRAMAÇÃO ORIENTADA A OBJETOS + PROJETOS</h3>
+                    <h4 className="vertical-timeline-element-subtitle">UDEMY</h4>
+                    <p>
+                        Ministrado pelo Professor Nélio Alves.
+                        Carga horária de 60h.
+                    </p>
+                    <p><a href="https://www.udemy.com/certificate/UC-dbfa69d0-1b4a-4c7d-a417-73733bbc42af/">Certificado Java Orientado a Objetos 2022</a></p>
+                </VerticalTimelineElement>
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []); // Apenas executa a lógica uma vez, após a montagem do componente
-
-  return (
-    <C.Container id="course">
-      <AnimationOnScroll animateIn="animate__backInLeft">
-            <ETitle title={'Cursos'} subtitle={'Habilidades que possuo'}/>
-        </AnimationOnScroll>
-      <VerticalTimeline>
-        <VerticalTimelineElement
-          id="1" // Identificador único para o primeiro elemento
-          className="vertical-timeline-element--work"
-          date="2011 - present"
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          icon={<WorkIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">Work Experience</h3>
-          <h4 className="vertical-timeline-element-subtitle">Company Name</h4>
-          <p>
-            Job Description
-          </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          id="2" // Identificador único para o segundo elemento
-          className="vertical-timeline-element--work"
-          date="2008 - 2011"
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          icon={<WorkIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">Work Experience</h3>
-          <h4 className="vertical-timeline-element-subtitle">Company Name</h4>
-          <p>
-            Job Description
-          </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          id="3" // Identificador único para o terceiro elemento
-          className="vertical-timeline-element--work"
-          date="2005 - 2008"
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          icon={<WorkIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">Work Experience</h3>
-          <h4 className="vertical-timeline-element-subtitle">Company Name</h4>
-          <p>
-            Job Description
-          </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          id="4" // Identificador único para o quarto elemento
-          className="vertical-timeline-element--work"
-          date="2002 - 2005"
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          icon={<WorkIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">Work Experience</h3>
-          <h4 className="vertical-timeline-element-subtitle">Company Name</h4>
-          <p>
-            Job Description
-          </p>
-        </VerticalTimelineElement>
-      </VerticalTimeline>
-    </C.Container>
-  );
+                <VerticalTimelineElement
+                    className="vertical-timeline-element--education"
+                    date="2022"
+                    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+                    icon={<LiaJava />}
+                >
+                    <h3 className="vertical-timeline-element-title">MARATONA JAVA</h3>
+                    <h4 className="vertical-timeline-element-subtitle">DEVDOJO</h4>
+                    <p>
+                        Ministrado pelo Professor William Suane.
+                        Carga horária de 90h.
+                    </p>
+                </VerticalTimelineElement>
+                
+                <VerticalTimelineElement
+                        className="vertical-timeline-element--education"
+                        date="2023"
+                        iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+                        icon={<FaGraduationCap />}
+                    >
+                    <h3 className="vertical-timeline-element-title">PÓS-GRADUAÇÃO EM ENGENHARIA DE SOFTWARE</h3>
+                    <h4 className="vertical-timeline-element-subtitle">Universidade Estácio de Sá</h4>
+                    <p>
+                        Previsão de conclusão em 06/2024
+                    </p>
+                </VerticalTimelineElement>
+            </VerticalTimeline>
+        </C.Container>
+    );
 };

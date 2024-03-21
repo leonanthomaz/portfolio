@@ -45,7 +45,7 @@ export const H3 = styled.h3`
 
 export const Icon = styled(BiCodeBlock)`
 margin: 5px;
-color: ${props => props.theme.font};
+color: ${props => props.theme.fontColor};
 
 font-size: 36px;
 
@@ -64,7 +64,7 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
-color: ${props => props.theme.font};
+color: ${props => props.theme.fontColor};
 font-family: 'Josefin Sans', sans-serif;
 font-family: 'Josefin Sans', sans-serif;
 

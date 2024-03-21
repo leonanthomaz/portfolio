@@ -5,7 +5,7 @@ width: 100%;
 background: ${props => props.theme.background};
 
 .github{
-  color:  ${props => props.theme.font};
+  color:  ${props => props.theme.fontColor};
   text-align: center;
 
   strong{
@@ -45,7 +45,7 @@ transition: all .1s linear;
 export const Titulo = styled.div`
   margin-bottom: 5px;
   font-weight: 700;
-  color: ${props => props.theme.font};
+  color: ${props => props.theme.fontColor};
 
 `;
 

@@ -1,8 +1,37 @@
-//DARK
+export const colorPalette = {
+  primary: {
+    main: '#FF5733',
+    light: '#FFA07A',
+    dark: '#C70039',
+  },
+  secondary: {
+    main: '#33FF57',
+    light: '#7CFFA0',
+    dark: '#39C700',
+  },
+  background: {
+    main: '#F0F0F0',
+    light: '#FFFFFF',
+    dark: '#C0C0C0',
+  },
+  text: {
+    primary: '#333333',
+    secondary: '#666666',
+    accent: '#FF5733',
+  },
+  border: {
+    main: '#CCCCCC',
+    dark: '#999999',
+  },
+};
+
+
+// DARK THEME
 export const darkTheme = {
-  //Global
+  // Global
   background: "#1f022a",
-  font: "#fafafa",
+  font: "'Josefin Sans', sans-serif",
+  fontColor: "#fafafa",
   font_hover: "#fafafa",  
   button: "#0b6585",
   button_hover: "#fafafa",
@@ -17,7 +46,7 @@ export const darkTheme = {
   boxfont: "#1f022a",
   box_shadow: "0px 0px 20px 0px #bbbbbb",
 
-  //Botões padrão
+  // Botões padrão
   btn_background: "#1f022a",
   btn_background_hover: "#0b6585",
 
@@ -27,11 +56,11 @@ export const darkTheme = {
   box_shadow_list: "0px 0px 16px -8px #bbbbbb",
   box_shadow_list_hover: "0px 0px 16px -8px #1f022a",
 
-  //Elements
+  // Elements
   font_title_el: "#fbff00",
   font_title_el_h3: "#fafafa",
 
-  //navbar  
+  // Navbar  
   navbar_background: "#1f022a",
   navbar_overline_hover: "overline 3px yellow",
   navbar_font: "#fafafa",
@@ -41,27 +70,30 @@ export const darkTheme = {
   navbar_shadow: "2px 2px 3px #1f022a",
   navbar_font_hover: "yellow",
 
-  //intro
+  // Intro
   intro_font_Typewriter: "#fbff00",
   intro_background_photo: "#fbff00",
   intro_arrow: "yellow",
   intro_background_vertical: "linear-gradient(to top, #1f022a, transparent 100%)",
   intro_background_horizontal: "linear-gradient(to right, #1f022a, transparent 60%)",
 
-  //about
+  // About
   about_box_shadow: "0px 0px 20px 0px #bbbbbb",
   about_background: "#1f022a",
   about_btn_background: "#014c66",
   about_btn_background_hover: "#38094a",
   about_font_btn_background: "#fafafa",
 
-  //skills description
+  // Experience
+  fontColorExperience: "#1f022a",
+
+  // Skills description
   skills_description_background: "#1f022a",
   skills_description_font_icon: "yellow",
   skills_description_font_icon_hover: "gray",
   skills_description_box_shadow: "0px 0px 20px 0px #bbbbbb",
 
-  //skills  
+  // Skills  
   skills_box_shadow: "0px 0px 20px 0px #bbbbbb",
   skills_box_shadow_hover: "0px 0px 20px 0px #38094a",
   skills_font: "#fafafa",
@@ -69,7 +101,7 @@ export const darkTheme = {
   skills_background_box: "#1f022a", 
   skills_font_icons: "#1f022a",
 
-  //portfolio
+  // Portfolio
   portfolio_font_h2: "yellow",
   portfolio_background_box: "#1f022a", 
   portfolio_box_shadow: "0px 0px 20px 0px #bbbbbb",
@@ -80,7 +112,7 @@ export const darkTheme = {
   portfolio_btn_font_hover: "#fafafa",
   portfolio_borderbottom: "3px solid gray",
 
-  //nav skills
+  // Nav skills
   skills_nav_box_shadow: "0px 0px 16px 0px #fafafa",
   skills_nav_shadow_hover: "0px 0px 16px -8px #bbbbbb",
   skills_nav_font: "#fafafa",
@@ -90,7 +122,7 @@ export const darkTheme = {
   skills_nav_font_btn_active: "#fafafa",
   skills_nav_box_shadow_active: "0px 0px 16px 0px #38094a",
 
-  //nav portfolio
+  // Nav portfolio
   portfolio_nav_box_shadow: "0px 0px 16px 0px #fafafa",
   portfolio_nav_shadow_hover: "0px 0px 16px -8px #bbbbbb",
   portfolio_nav_font: "#fafafa",
@@ -100,7 +132,7 @@ export const darkTheme = {
   portfolio_nav_font_btn_active: "#fafafa",
   portfolio_nav_box_shadow_active: "0px 0px 16px 0px #38094a",
 
-  //contact
+  // Contact
   contact_background: "#1f022a",
   contact_btn: "#1f022a",
   contact_btn_hover: "#ecececcc",
@@ -119,24 +151,24 @@ export const darkTheme = {
   contact_background_btn_hover: "#38094a",
   contact_font_btn: "#fafafa",
 
-  //social networks
+  // Social networks
   font_icon: "yellow",
 
-  //footer
+  // Footer
   font_footer: "#c5c5c5f5",
   font_footer_hover: "yellow",
 
-  //spinner
+  // Spinner
   background_spinner: "#1f022a",
   color_border: "8px solid yellow"
 }
 
-//LIGHT
+// LIGHT THEME
 export const lightTheme = {
-
-  //Global
+  // Global
   background: "#fafafa",
-  font: "#1f022a",
+  font: "'Josefin Sans', sans-serif",
+  fontColor: "#1f022a",
   button: "#011834",
   button_hover: "#1f022a",
   button_font: "#fafafa",
@@ -151,7 +183,7 @@ export const lightTheme = {
   boxfont: "#eeeeeeee",
   box_shadow: "0.1em 0.4em 0.2em #414141",
 
-  //Botões padrão
+  // Botões padrão
   btn_background: "#011834",
   btn_background_hover: "#1f022a",
 
@@ -160,11 +192,11 @@ export const lightTheme = {
   box_shadow_list: "0px 0px 16px -8px #fafafa",
   box_shadow_list_hover: "none",
 
-  //Elements
+  // Elements
   font_title_el: "#4e0569",
   font_title_el_h3: "#1f022a",
 
-  //navbar
+  // Navbar
   navbar_background: "#fafafa",
   navbar_overline_hover: "overline 3px #011834",
   navbar_icon: "#4e0569",
@@ -174,27 +206,31 @@ export const lightTheme = {
   navbar_shadow: "4px 4px 5px #00000040",
   navbar_font_hover: "#011834",
 
-  //intro
+  // Intro
   intro_background_photo: "#011834",
   intro_arrow: "#1f022a",
   intro_font_Typewriter: "#5b7178",
   intro_background_vertical: "linear-gradient(to top, #fafafa 5%, transparent 80%)",
   intro_background_horizontal: "linear-gradient(to right, #fafafa 10%, transparent 60%)",
 
-  //about
+  // About
   about_box_shadow: "0px 0px 16px -8px rgba(0, 0, 0, 0.68)",
   about_background: "#f4f4f4",
   about_btn_background: "#4e0569",
   about_btn_background_hover: "#38094a",
   about_font_btn_background: "#fafafa",
 
-  //skills description
+  // Experience
+  fontColorExperience: "#38094a",
+
+
+  // Skills description
   skills_description_background: "#f4f4f4",
-  skills_description_box_shadow: "0px 0px 16px 0px #56186e", //
+  skills_description_box_shadow: "0px 0px 16px 0px #56186e",
   skills_description_font_icon: "#4e0569",
   skills_description_font_icon_hover: "#38094a",
 
-  //skills
+  // Skills
   skills_box_shadow: "0px 0px 16px -8px rgba(0, 0, 0, 0.68)",
   skills_box_shadow_hover: "0px 0px 16px -8px #bbbbbb",
   skills_font: "#4e0569",
@@ -202,7 +238,7 @@ export const lightTheme = {
   skills_background_box: "#f4f4f4",
   skills_font_icons: "#fafafa",
 
-  //portfolio
+  // Portfolio
   portfolio_font_h2: "#4e0569",
   portfolio_background_box: "#f4f4f4",
   portfolio_box_shadow: "0px 0px 16px -8px #38094a",
@@ -213,7 +249,7 @@ export const lightTheme = {
   portfolio_btn_font_hover: "#fafafa",
   portfolio_borderbottom: "3px solid gray",
 
-  //nav skills
+  // Nav skills
   skills_nav_box_shadow: "0px 0px 16px 0px #fafafa",
   skills_nav_shadow_hover: "0px 0px 16px -8px #bbbbbb",
   skills_nav_font: "#fafafa",
@@ -223,7 +259,7 @@ export const lightTheme = {
   skills_nav_font_btn_active: "#fafafa",
   skills_nav_box_shadow_active: "0px 0px 16px 0px #38094a",
 
-  //nav portfolio
+  // Nav portfolio
   portfolio_nav_box_shadow: "0px 0px 16px 0px #fafafa",
   portfolio_nav_shadow_hover: "0px 0px 16px -8px #bbbbbb",
   portfolio_nav_font: "#fafafa",
@@ -233,8 +269,7 @@ export const lightTheme = {
   portfolio_nav_font_btn_active: "#fafafa",
   portfolio_nav_box_shadow_active: "0px 0px 16px 0px #38094a",
   
-
-  //contato
+  // Contact
   contact_background: "#f4f4f4",
   contact_background_form: "#fafafa",
   contact_border_input: "2px solid #fafafa",
@@ -249,14 +284,14 @@ export const lightTheme = {
   contact_background_btn_hover: "#38094a",
   contact_font_btn: "#fafafa",
 
-  //social networks
+  // Social networks
   font_icon: "#4e0569",
 
-  //footer
+  // Footer
   font_footer: "#4e0569",
   font_footer_hover: "#1f022a",
 
-  //spinner
+  // Spinner
   background_spinner: "#fafafa",
   color_border: "8px solid #4e0569"
 }

@@ -75,14 +75,14 @@ export const Navbar = () => {
                     >
                         <a href="#about">Sobre</a>
                     </M.NavbarLi>
-                    {/* <M.NavbarLi
+                    <M.NavbarLi
                         className={`nav-item ${activeLink === 'experience' ? 'active' : ''}`}
                         role="menuItem"
                         onClick={() => handleLinkClick('experience')}
                         ref={sectionRefs.current['experience']}
                     >
                         <a href="#experience">Experiência</a>
-                    </M.NavbarLi> */}
+                    </M.NavbarLi>
                     <M.NavbarLi
                         className={`nav-item ${activeLink === 'skills' ? 'active' : ''}`}
                         role="menuItem"
@@ -99,14 +99,14 @@ export const Navbar = () => {
                     >
                         <a href="#portfolio">Portfólio</a>
                     </M.NavbarLi>
-                    {/* <M.NavbarLi
+                    <M.NavbarLi
                         className={`nav-item ${activeLink === 'course' ? 'active' : ''}`}
                         role="menuItem"
                         onClick={() => handleLinkClick('course')}
                         ref={sectionRefs.current['course']}
                     >
                         <a href="#course">Cursos</a>
-                    </M.NavbarLi> */}
+                    </M.NavbarLi>
                     <M.NavbarLi
                         className={`nav-item ${activeLink === 'contact' ? 'active' : ''}`}
                         role="menuItem"

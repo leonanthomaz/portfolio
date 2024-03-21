@@ -27,7 +27,7 @@ padding: 15px;
 margin: 10px;
 background: ${props => props.theme.contact_background};
 box-shadow: ${props => props.theme.contact_shadow};
-color: ${props => props.theme.font};
+color: ${props => props.theme.fontColor};
 text-align: center;
 align-items: center;
 transition: all .1s linear;
@@ -41,7 +41,7 @@ transition: all .1s linear;
 
 a{
     text-decoration: none;
-    color: ${props => props.theme.font};
+    color: ${props => props.theme.fontColor};
 }
 `;
 

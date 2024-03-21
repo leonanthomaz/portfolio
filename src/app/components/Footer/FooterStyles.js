@@ -5,7 +5,7 @@ width: 100%;
 height: auto;
 font-family: 'Josefin Sans', sans-serif;
 background: ${props => props.theme.background};
-color: ${props => props.theme.font};
+color: ${props => props.theme.fontColor};
 `;
 
 export const Wrapper = styled.div`
@@ -44,7 +44,7 @@ export const SocialLogo = styled.div`
     justify-self: start;
     margin-top: 16px;
 
-    color: ${props => props.theme.font};
+    color: ${props => props.theme.fontColor};
 
     a{
         color: ${props => props.theme.font_footer};

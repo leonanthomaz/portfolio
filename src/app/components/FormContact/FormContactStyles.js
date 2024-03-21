@@ -59,7 +59,7 @@ padding: 10px;
     -moz-transition: all .1s linear;
     -webkit-appearance:none;
     background: ${props => props.theme.contact_background_form};
-    color: ${props => props.theme.font};
+    color: ${props => props.theme.fontColor};
 
     @media (max-width: 760px){
         width: 320px;
@@ -89,7 +89,7 @@ padding: 10px;
     -webkit-transition: all .1s linear;
     -moz-transition: all .1s linear;
     background: ${props => props.theme.contact_background_label};
-    color: ${props => props.theme.font};                    
+    color: ${props => props.theme.fontColor};                    
     padding: 5px;
     box-sizing: border-box;
     border-radius: 10%;
@@ -107,7 +107,7 @@ input::-webkit-inner-spin-button {
 .label-float input:not(:placeholder-shown) + label{
     font-size: 13px;
     top: 0;
-    color: ${props => props.theme.font};
+    color: ${props => props.theme.fontColor};
 }
 
 @media (max-width: 760px){

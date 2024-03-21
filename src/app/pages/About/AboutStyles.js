@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 background: ${props => props.theme.background};
-color: ${props => props.theme.font};
+color: ${props => props.theme.fontColor};
+font-family: ${props => props.theme.font};
+
 `;
 
 export const Wrapper = styled.div`
@@ -47,7 +49,6 @@ export const BoxText = styled.div`
 background: ${props => props.theme.about_background};
 box-shadow: ${props => props.theme.about_box_shadow};
 padding: 28px;
-font-family: 'Josefin Sans', sans-serif;
 margin-top: 10px;
 
 font-size: 16px;

@@ -51,7 +51,7 @@ export const Box = styled.div`
     margin: 10px;
     background: ${props => props.theme.portfolio_background_box};
     box-shadow: ${props => props.theme.portfolio_box_shadow};
-    color: ${props => props.theme.font};
+    color: ${props => props.theme.fontColor};
     -moz-transition: all 0.5s;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
