@@ -55,7 +55,7 @@ export const FormContact = () => {
 
         emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE, 'template_1sogban', form.current, process.env.REACT_APP_EMAILJS_ID)
         .then((result) => {
-            console.log('SUCCESS!', result.text);
+            // console.log('SUCCESS!', result.text);
             setValues('')
             toast.success('Mensagem enviada com sucesso! Retornarei em breve.', {
                 position: "top-right",
@@ -70,7 +70,7 @@ export const FormContact = () => {
             window.reload();
             
         }, (error) => {
-            console.log('FAILED...', error.text);
+            // console.log('FAILED...', error.text);
             setValues('')
             toast.error('Erro ao enviar mensagem. Por favor, tente novamente.', {
                 position: "top-right",

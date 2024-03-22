@@ -83,7 +83,7 @@ import Python from '../assets/img/portfolio/python.webp';
     {
       id: 1,
       title: "Chicken House",
-      subtitle: "Java/Spring",
+      subtitle: "Em construção",
       img: Spring,
       preview: "",
       description: "Ecommerce para delivery",
