@@ -9,8 +9,6 @@ import {
     SpringData,
     ReactData,
     PythonData,
-    PHPData, 
-    WEBData,
 } from "../../sharing/db/dataPortfolio";
 import { ModalPortfolio } from '../../components/ModalPortfolio'
 import { PortfolioContext } from "../../sharing/context/portfolio";
@@ -38,12 +36,6 @@ export const Portfolio = () => {
                 break;
             case "python":
                 setData(PythonData);
-                break;
-            case "php":
-                setData(PHPData);
-                break;
-            case "web":
-                setData(WEBData);
                 break;
             default:
                 setData(DestaqueData);

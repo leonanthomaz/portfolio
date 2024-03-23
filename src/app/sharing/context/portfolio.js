@@ -41,15 +41,6 @@ export const PortfolioProvider = ({ children }) => {
             id: "python",
             title: "Python",
         },
-        {
-            id: "php",
-            title: "PHP",
-        },
-        {
-            id: "web",
-            title: "HMTL/CSS",
-        },  
-        
     ];
 
     let categorySkills = [
