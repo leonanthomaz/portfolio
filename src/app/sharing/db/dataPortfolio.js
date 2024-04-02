@@ -11,6 +11,18 @@ import Python from '../assets/img/portfolio/python.webp';
   export const DestaqueData = [
     {
       id: 1,
+      title: "Ponto de Venda",
+      subtitle: "Java/Spring e React",
+      img: Spring,
+      preview: "",
+      description: "O Ponto de Venda (PDV) é uma aplicação web desenvolvida para facilitar o gerenciamento de vendas em estabelecimentos comerciais. Com uma interface intuitiva e funcionalidades essenciais, como registro de vendas, adição de produtos ao carrinho, recebimento de pagamentos e fechamento de caixa, o PDV oferece uma experiência simplificada tanto para operadores quanto para clientes. Utilizando tecnologias modernas como Java Spring Boot para o backend e React.js para o frontend, o PDV proporciona uma solução eficiente e escalável para negócios de diversos segmentos.",
+      date: "Abril 2024",
+      technology: "JAVA, SPRING, React JS, MYSQL",
+      url: "",
+      github: "https://github.com/leonanthomaz/pdv"
+    },
+    {
+      id: 2,
       title: "Cálculo de custos para comécio",
       subtitle: "Java/Spring",
       img: Spring,
@@ -22,7 +34,7 @@ import Python from '../assets/img/portfolio/python.webp';
       github: "https://github.com/leonanthomaz/spring-calculadora-custos-produto"
     },
     {
-      id: 2,
+      id: 4,
       title: "Eleições 2022 - 2º Turno",
       subtitle: "Eleições presidenciais",
       img: EleicoesST,
@@ -35,7 +47,7 @@ import Python from '../assets/img/portfolio/python.webp';
       github: "https://github.com/leonanthomaz/eleicoes2022-segundoTurno"
     },
     {
-      id: 3,
+      id: 5,
       title: "PopCorn",
       subtitle: "React JS",
       img: PopCorn1,
@@ -48,7 +60,7 @@ import Python from '../assets/img/portfolio/python.webp';
       github: "https://github.com/leonanthomaz/popcorn"
     },
     {
-      id: 4,
+      id: 6,
       title: "Gerador de currículos em PDF",
       subtitle: "Java/Spring",
       img: Spring,

@@ -31,21 +31,21 @@ export const Navbar = () => {
                     const elementTop = top + windowTop;
                     const elementBottom = bottom + windowTop;
     
-                    console.log("Element ID:", id);
-                    console.log("Element Top:", elementTop);
-                    console.log("Element Bottom:", elementBottom);
-                    console.log("Window Top:", windowTop);
-                    console.log("Window Bottom:", windowBottom);
+                    // console.log("Element ID:", id);
+                    // console.log("Element Top:", elementTop);
+                    // console.log("Element Bottom:", elementBottom);
+                    // console.log("Window Top:", windowTop);
+                    // console.log("Window Bottom:", windowBottom);
     
                     // Verifica se pelo menos uma parte do elemento está visível na janela de visualização
-                    if ((!elementTop || elementTop <= windowBottom - windowHeight/2 && elementBottom >= windowTop + windowHeight/2) || (id === 'index' && elementTop <= windowTop)) {
-                        console.log("Elemento completamente visível:", id);
+                    if (((!elementTop || elementTop <= windowBottom - windowHeight/2) && (elementBottom >= windowTop + windowHeight/2)) || (id === 'index' && elementTop <= windowTop)) {
+                        // console.log("Elemento completamente visível:", id);
                         setActiveLink(id);
                     } else {
-                        console.log("Elemento não completamente visível:", id);
+                        // console.log("Elemento não completamente visível:", id);
                     }
                 } else {
-                    console.log("Elemento não encontrado:", id);
+                    // console.log("Elemento não encontrado:", id);
                 }
             });
         };

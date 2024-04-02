@@ -7,7 +7,6 @@ import imgMain from '../../sharing/assets/img/programador_mesa.webp';
 import curriculo from '../../sharing/assets/doc/curriculo.pdf'
 
 export const Intro = () => {
-  const theme = localStorage.getItem('theme')
   
   return (
     <I.Container id="index">
