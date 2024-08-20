@@ -10,7 +10,7 @@ export const darkTheme = {
   button_font: "#ffffff",
   button_font_hover: "#ffffff",
   h1: "#ffffff",
-  h2: "#ffeb3b", // Amarelo vibrante para destaque
+  h2: "#e0e0e0", // Mudado para cinza claro que contrasta melhor com o fundo escuro
   h3: "#ffffff",
   h4: "#b0bec5",
   hr: "1px solid #424242",

@@ -3,18 +3,18 @@ import { Modal } from "react-bootstrap";
 
 export const CustomModal = styled(Modal)`
     .modal-dialog {
-        max-width: 90vw; /* Ocupa até 90% da largura da tela */
+        max-width: 90vw;
         width: 100%;
-        margin: auto; /* Garante que o modal esteja centralizado horizontalmente */
+        margin: auto;
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
-        height: auto; /* Ajusta a altura do modal */
-        
+        height: auto;
+        top: 20px;
+
         @media (max-width: 760px) {
-            max-width: 95vw; /* Ajusta a largura para telas menores */
-            top: 20px; /* Ajusta o espaço para telas menores */
+            max-width: 95vw;
         }
     }
 
@@ -26,10 +26,17 @@ export const CustomModal = styled(Modal)`
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
+        z-index: 1000;
 
         @media (max-width: 760px) {
             padding: 15px;
         }
+    }
+
+    .modal-backdrop {
+        backdrop-filter: blur(10px); /* Aplica o desfoque ao fundo */
+        background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semitransparente */
     }
 `;
 
@@ -37,10 +44,10 @@ export const Header = styled.div`
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    position: absolute; /* Usa posicionamento absoluto para fixar o botão no canto */
-    top: 10px; /* Ajusta a posição do botão para o topo */
-    right: 10px; /* Ajusta a posição do botão para a direita */
-    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
 `;
 
 export const Container = styled.div`
@@ -75,7 +82,7 @@ export const ContainerImg = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
-    max-width: 600px; /* Define o máximo de largura para a imagem */
+    max-width: 600px;
     margin: 15px 0;
 
     img {
@@ -85,7 +92,7 @@ export const ContainerImg = styled.div`
     }
 
     @media (max-width: 760px) {
-        max-width: 95vw; /* Ajusta a largura máxima para telas menores */
+        max-width: 95vw;
     }
 `;
 
@@ -93,7 +100,7 @@ export const Description = styled.p`
     text-align: center;
     padding: 10px;
     font-size: 16px;
-    max-width: 90%; /* Aumenta a largura máxima para mais legibilidade */
+    max-width: 90%;
     color: ${props => props.theme.fontColor};
 `;
 

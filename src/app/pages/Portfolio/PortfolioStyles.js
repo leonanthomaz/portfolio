@@ -74,6 +74,7 @@ export const Box = styled.div`
   h2 {
     font-size: 24px;
     font-weight: 500;
+    font-family: 'Wendy One', sans-serif;
     color: ${(props) => props.theme.portfolio_font_h2};
     border-bottom: ${(props) => props.theme.portfolio_borderbottom};
   }
