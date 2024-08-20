@@ -5,6 +5,7 @@ import EleicoesPT from '../assets/img/portfolio/eleicoes-pt.webp';
 import Java from '../assets/img/portfolio/java.webp';
 import Spring from '../assets/img/portfolio/spring.webp';
 import Python from '../assets/img/portfolio/python.webp';
+import Mobile from '../assets/img/portfolio/mobile.jpg';
 
 
   /*Destaque*/
@@ -226,3 +227,17 @@ import Python from '../assets/img/portfolio/python.webp';
     },
   ];
 
+  /*Python*/
+  export const MobileData = [
+    {
+      id: 1,
+      title: "Mobile",
+      subtitle: "Mobile",
+      img: Mobile,
+      description: "Projeto de um sistema de inteligência artificial chamada Tainá, criada em Python e utilizando libs como Google Search, Wikipedia, Youtube, entre outros.",
+      date: "Janeiro 2024",
+      technology: "Python",
+      url: "",
+      github: "https://github.com/leonanthomaz/projeto-taina"
+    },
+  ];

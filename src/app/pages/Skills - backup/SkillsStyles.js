@@ -43,10 +43,6 @@ display: grid;
     }
 `;
 
-export const Grid = styled.div`
-    
-`;
-
 export const SkillsItems = styled.div`
   width: 250px;
   padding: 15px;
@@ -62,10 +58,7 @@ export const SkillsItems = styled.div`
     border-radius: 5px;
   }
 
-    @media (max-width: 760px){
-       
-    }
-  
+
 
   .skills-header{
     display: flex;

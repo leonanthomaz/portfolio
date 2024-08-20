@@ -15,10 +15,6 @@ border: 1px solid white;
 margin: 20px auto;
 transition: all ease 0.5s;
 
-:hover{
-    box-shadow: ${props => props.theme.contact_shadow_hover};
-    border-radius: 5px;
-}
 
 @media (max-width: 760px){
     max-width: 310px;
@@ -55,11 +51,8 @@ padding: 10px;
     padding: 20px;
     font-size: 16px;
     transition: all .1s linear;
-    -webkit-transition: all .1s linear;
-    -moz-transition: all .1s linear;
-    -webkit-appearance:none;
-    background: ${props => props.theme.contact_background_form};
-    color: ${props => props.theme.fontColor};
+    background: ${props => props.theme.contact_background_input};
+    color: ${props => props.theme.contact_font_input};
 
     @media (max-width: 760px){
         width: 320px;
@@ -72,7 +65,9 @@ padding: 10px;
 .label-float input:focus{
     border-top: ${props => props.theme.contact_border_input};    
     border-left: ${props => props.theme.contact_border_input};                    
-    border-right: ${props => props.theme.contact_border_input};                                 
+    border-right: ${props => props.theme.contact_border_input};
+    border-bottom: ${props => props.theme.contact_border_input};                                 
+                                 
 }
 
 .label-float input::placeholder{

@@ -3,97 +3,139 @@ import { Modal } from "react-bootstrap";
 
 export const CustomModal = styled(Modal)`
     .modal-dialog {
-        min-height: 100vh;
-        max-width: 50vw; /* Defina a largura máxima da caixa de diálogo */
-        min-width: 100vh;
-        max-height: 50vh;
-        width: auto; /* Permita que a largura se ajuste automaticamente ao conteúdo */
-        margin: 1rem auto; /* Centralize a caixa de diálogo horizontalmente */
+        max-width: 90vw; /* Ocupa até 90% da largura da tela */
+        max-height: 70vh; /* Ocupa até 80% da altura da tela */
+        width: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 30px; /* Adiciona espaço para evitar que o modal se esconda atrás da barra de navegação */
 
-        
-        @media(max-width: 760px){
-            max-width: 100%; /* Defina a largura máxima da caixa de diálogo */
+        @media (max-width: 760px) {
+            max-width: 95vw; /* Ajusta a largura para telas menores */
+            max-height: 95vh; /* Ajusta a altura para telas menores */
+            top: 20px; /* Ajusta o espaço para telas menores */
+        }
+    }
+
+    .modal-content {
+        background-color: #ecececce;
+        border-radius: 10px;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width: 760px) {
+            padding: 10px;
         }
     }
 `;
 
+
 export const Container = styled.div`
-    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: #ecececce;
 `;
 
 export const Header = styled.div`
-    /* border: 2px solid red; */
     display: flex;
     justify-content: flex-end;
+    width: 100%;
     height: 40px;
 `;
 
 export const Title = styled.h2`
     color: #14141498; 
     text-align: center; 
-    margin-top: 20px;
-    border-bottom: 2px solid #14141498;
-    line-height: 5rem;
+    margin: 10px 0;
+    line-height: 1.5rem;
     font-family: 'Wendy One', sans-serif;
     font-weight: 500;
-    font-size: 40px;
+    font-size: 28px;
 `;
 
 export const SubtitleContainer = styled.div`
     display: flex;
     justify-content: center;
+    width: 100%;
 `;
 
 export const Subtitle = styled.span`
-    /* text-align: center; */
-    font-size: 20px;
-    padding: 10px;
+    font-size: 16px;
+    color: #14141498;
 `;
 
 export const ContainerImg = styled.div`
     display: flex;
     justify-content: center;
+    width: 80%;
+    margin: 15px 0;
 
     img {
-        max-width: 70%;
+        max-width: 80%;
         height: auto;
+        border-radius: 8px;
+    }
+
+    @media (max-width: 760px) {
+        img {
+            max-width: 100%;
+        }
     }
 `;
 
 export const Description = styled.p`
     text-align: center;
-    padding: 20px;
-    font-size: 18px;
+    padding: 10px;
+    font-size: 16px;
+    color: #141414;
 `;
 
 export const Date = styled.span`
-    font-size: 16px;
+    font-size: 14px;
+    color: #141414;
+    margin-top: 10px;
 `;
 
 export const ContainerButton = styled.div`
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
+    width: 100%;
+    gap: 10px;
+
+    @media (max-width: 760px) {
+        flex-direction: column;
+    }
 `;
 
 export const Button = styled.a`
-    border-radius: 10px;
-    padding: 7px;
+    border-radius: 8px;
+    padding: 10px 15px;
     margin: 5px;
     background: ${props => props.theme.btn_background};
     text-decoration: none;
     font-weight: 700;
-    align-items: center;
-    justify-content: center;
-    background: ${props => props.theme.btn_background};
     color: ${props => props.theme.box_font_list};
+    text-align: center;
+    transition: background-color 0.3s ease;
 
     &:hover {
         color: white;
         background: green;
-        transition: all .1s linear;
-        -webkit-transition: all .1s linear;
-        -moz-transition: all .1s linear;
+    }
+
+    @media (max-width: 760px) {
+        width: 100%;
+        margin: 5px 0;
     }
 `;

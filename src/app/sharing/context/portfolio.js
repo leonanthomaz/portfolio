@@ -26,6 +26,14 @@ export const PortfolioProvider = ({ children }) => {
             title: "Destaques",
         },
         {
+            id: "react",
+            title: "React",
+        },
+        {
+            id: "mobile",
+            title: "Mobile",
+        },
+        {
             id: "java",
             title: "Java",
         },
@@ -34,13 +42,10 @@ export const PortfolioProvider = ({ children }) => {
             title: "Spring",
         }, 
         {
-            id: "react",
-            title: "React",
-        },
-        {
             id: "python",
             title: "Python",
         },
+        
     ];
 
     let categorySkills = [

@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
 import { GrClose } from "react-icons/gr";
-import * as MPS from './MPStyles'
+import * as MPS from './MPStyles';
 import { Modal } from "react-bootstrap";
 
-export const ModalPortfolio = ({show,
+export const ModalPortfolio = ({
+    show,
     handleClose,
     index,
     subtitle,
@@ -17,30 +18,25 @@ export const ModalPortfolio = ({show,
     github
 }) => {
     return (
-        <div>
-            <MPS.CustomModal
-                key={index}
-                aria-labelledby="Modal exibindo detalhes do projeto"
-                centered
-                show={show}
-                onHide={handleClose}
-                style={{background: '#14141498', fontFamily: 'Josefin Sans'}}                    
-            >
-
-                <Modal.Body style={{background: '#ecececce', padding: '20px'}}>
-                
-                <MPS.Container >
-
+        <MPS.CustomModal
+            key={index}
+            aria-labelledby="Modal exibindo detalhes do projeto"
+            centered
+            show={show}
+            onHide={handleClose}
+        >
+            <Modal.Body>
+                <MPS.Container>
                     <MPS.Header>
                         <GrClose 
-                        style={{color: '#14141498', 
-                        float: 'right', 
-                        fontSize: '20px',
-                        cursor: 'pointer'
-                        }} onClick={handleClose}
+                            onClick={handleClose} 
+                            style={{
+                                color: '#14141498',
+                                cursor: 'pointer',
+                                fontSize: '20px'
+                            }} 
                         />
                     </MPS.Header>
-
                     
                     <MPS.Title>{title}</MPS.Title>
                     
@@ -49,7 +45,7 @@ export const ModalPortfolio = ({show,
                     </MPS.SubtitleContainer>
 
                     <MPS.ContainerImg>
-                        <img src={img2 ? img2 : img} alt={title} loading='lazy' />
+                        <img src={img2 || img} alt={title} loading='lazy' />
                     </MPS.ContainerImg>
 
                     <MPS.Description>{description}</MPS.Description>
@@ -60,13 +56,12 @@ export const ModalPortfolio = ({show,
                     </MPS.Date>
 
                     <MPS.ContainerButton>
-                        {url ?  <MPS.Button aria-label={title} href={url} target="_blank">Visitar Site</MPS.Button> : ''}
+                        {url && <MPS.Button aria-label={title} href={url} target="_blank">Visitar Site</MPS.Button>}
                         <MPS.Button aria-label={title} href={github} target="_blank">Repositório</MPS.Button>
                     </MPS.ContainerButton>
                     
-                    </MPS.Container>
-                </Modal.Body >
-            </MPS.CustomModal>
-        </div>
-    )
-}
+                </MPS.Container>
+            </Modal.Body>
+        </MPS.CustomModal>
+    );
+};

@@ -1,10 +1,8 @@
-// Intro.js
 import React from "react";
 import * as I from "./IntroStyles";
 import Typewriter from 'typewriter-effect';
 import imgMain from '../../sharing/assets/img/programador_mesa.webp';
-// import imgMain2 from '../../sharing/assets/img/programador.webp';
-import curriculo from '../../sharing/assets/doc/curriculo.pdf'
+import curriculo from '../../sharing/assets/doc/leonan_curriculo.pdf'
 
 export const Intro = () => {
   
@@ -15,10 +13,9 @@ export const Intro = () => {
           <I.Box>
             <I.Left>
               <I.ImgContainer background={ imgMain + 'back-js.webp'}>
-                {/* <img src={theme === 'light' ? imgMain : imgMain2} alt="Icone programador" /> */}
                 <img src={imgMain} alt="Icone programador" />
               </I.ImgContainer>
-              <I.ButtonContainer>
+                <I.ButtonContainer>
                   <I.DownloadButton href={curriculo} download>
                     Baixar Currículo
                   </I.DownloadButton>
@@ -28,9 +25,10 @@ export const Intro = () => {
               <I.Wrapper>
                 <h1>Leonan Thomaz</h1>
                 <h2> 
+                  <span>Desenvolvedor&nbsp;</span> 
                   <Typewriter 
                     options={{ 
-                      strings:["Desenvolvedor Java FullStack", "Desenvolvedor Spring", "Desenvolvedor Web"],
+                      strings:["FullStack", "Frontend", "Backend"],
                       autoStart:true,
                       delay:75,
                       loop:true

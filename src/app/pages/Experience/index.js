@@ -5,61 +5,60 @@ import * as E from './ExperienceStyles';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { ETitle } from "../../components/Elements/title";
 import { FaBriefcase } from 'react-icons/fa';
-import { GiHillConquest } from "react-icons/gi";
 
 export const Experience = () => {
+    const theme = localStorage.getItem('theme');
+    const iconColor = theme === 'light' ? '#073767' : '#313131'; // Azul para tema claro, cinza para tema escuro
+
     return (
         <E.Container id="experience">
             <AnimationOnScroll animateIn="animate__backInLeft">
                 <ETitle title={'Experiência'} subtitle={'Meu Caminho Profissional'} />
             </AnimationOnScroll>
             <VerticalTimeline>
-
+                <VerticalTimelineElement
+                    className="vertical-timeline-element--work"
+                    date="2024"
+                    iconStyle={{ background: iconColor, color: '#fff' }}
+                    icon={<FaBriefcase />}
+                >
+                    <h3 className="vertical-timeline-element-title">FABRIKATECH | DESENVOLVEDOR FULLSTACK</h3>
+                    {/* <h4 className="vertical-timeline-element-subtitle">Co-Fundador de uma empresa de tecnologia voltada para micro e pequenas empresas</h4> */}
+                    <ul>
+                        <li><b>Desenvolvimento Web:</b> Criei landing pages personalizadas que aumentaram a interação dos usuários em 35% e geraram mais leads para micro e pequenas empresas.</li>
+                        <li><b>Manutenção com Java:</b> Aperfeiçoei sistemas críticos, fortalecendo a segurança e o desempenho dos dados, resultando em proteção contra vulnerabilidades.</li>
+                        <li><b>Backend e Sistemas Comerciais:</b> Desenvolvi sistemas de PDV e soluções backend com Java e Spring Boot, melhorando a eficiência operacional e o controle de vendas.</li>
+                        <li><b>Automação e Desenvolvimento Futuro:</b> Implementei automações em Python e preparei a expansão para soluções móveis com React Native, antecipando demandas futuras.</li>
+                    </ul>
+                </VerticalTimelineElement>
+                <VerticalTimelineElement
+                    className="vertical-timeline-element--work"
+                    date="2023"
+                    iconStyle={{ background: iconColor, color: '#fff' }}
+                    icon={<FaBriefcase />}
+                >
+                    <h3 className="vertical-timeline-element-title">METRÔRIO | ANALISTA DE SISTEMAS</h3>
+                    {/* <h4 className="vertical-timeline-element-subtitle">Maior empresa de transporte do Estado do Rio de Janeiro</h4> */}
+                    <ul>
+                        <li><b>Implementação do PIX:</b> Contribuí para a primeira transação do PIX no MetrôRio, modernizando os processos financeiros.</li>
+                        <li><b>Manutenção com Java:</b> Aperfeiçoei sistemas críticos, reforçando a segurança e o desempenho dos dados.</li>
+                        <li><b>Automação de Tarefas:</b> Automatizei processos e corrigi bugs em servidores com Python e Windows Batch, reduzindo erros em 30%.</li>
+                        <li><b>Gestão de Dados:</b> Otimizei bancos de dados SQL Server e Oracle, garantindo a integridade e disponibilidade dos dados.</li>
+                    </ul>
+                </VerticalTimelineElement>
                 <VerticalTimelineElement
                         className="vertical-timeline-element--work"
                         date="2022"
-                        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                        iconStyle={{ background: iconColor, color: '#fff' }}
                         icon={<FaBriefcase />}
                     >
                     <h3 className="vertical-timeline-element-title">DESENVOLVEDOR FRONTEND | ESTÁGIO</h3>
-                    <h4 className="vertical-timeline-element-subtitle">Desenvolvimento Frontend</h4>
+                    {/* <h4 className="vertical-timeline-element-subtitle">Primeira oportunidade na área de programação</h4> */}
                     <ul>
-                        <li>Desenvolvimento web, incluindo aplicações baseadas em linguagem própria da empresa e integrações com APIs;</li>
-                        <li>Implementações avançadas de SEO com semântica.</li>
+                        <li><b>Desenvolvimento Web:</b> Criei aplicações web com HTML, CSS e JavaScript, integrando APIs para melhorar a funcionalidade e a experiência do usuário.</li>
+                        <li><b>SEO e Análise de Dados:</b> Apliquei técnicas de SEO e utilizei Google Analytics para aumentar a visibilidade e a eficácia das aplicações.</li>
                     </ul>
-                </VerticalTimelineElement>
-
-                <VerticalTimelineElement
-                    className="vertical-timeline-element--work"
-                    date="2023"
-                    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                    icon={<FaBriefcase />}
-                >
-                    <h3 className="vertical-timeline-element-title">METRÔRIO | ANALISTA DE SISTEMAS - JÚNIOR</h3>
-                    <h4 className="vertical-timeline-element-subtitle">Desenvolvimento, correções e melhorias em sistemas de suporte ao MetrôRio</h4>
-                    <ul>
-                        <li>Desenvolvimento, correções e melhorias em sistemas de suporte ao metrô utilizando Java 8 com Intellij;</li>
-                        <li>Execução de scripts em Python para automação de tarefas em servidores;</li>
-                        <li>Manutenção em bancos de dados SQL Server e Oracle;</li>
-                        <li>Monitoramento de servidores em ambientes Windows e Linux com Zabbix;</li>
-                        <li>Extração, tratamento e geração de relatórios a partir de dados dos bancos SQL Server e Oracle utilizando o Microsoft Report Builder;</li>
-                        <li>Trabalho de campo, intermediando implementações de sistemas em equipamentos de bilhetagem;</li>
-                        <li>Participação em projetos de equipe utilizando metodologias ágeis, similar ao Scrum.</li>
-                    </ul>
-                </VerticalTimelineElement>
-                
-                <VerticalTimelineElement
-                    className="vertical-timeline-element--work"
-                    date="2023"
-                    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                    icon={<GiHillConquest />}
-                >
-                    <h3 className="vertical-timeline-element-title">IMPLEMENTAÇÃO DO PIX NO METRÔRIO</h3>
-                    <p>
-                        Fui responsável pela intermediação da primeira transação do sistema PIX do MetrôRio.
-                    </p>
-                </VerticalTimelineElement>
-
+                </VerticalTimelineElement>      
             </VerticalTimeline>
         </E.Container>
     );

@@ -21,22 +21,18 @@ export const About = () => {
             </AnimationOnScroll>
           </A.Left>
           <A.Right>
-            <A.BoxText>
-            <p>Me chamo Leonan Thomaz de Oliveira, sou Analista e Desenvolvedor de Sistemas com experiência em desenvolvimento Java, manutenção de bancos de dados SQL Server e PL/SQL. Possuo formação em Análise e Desenvolvimento de Sistemas pela Universidade Estácio de Sá e estou cursando pós-graduação em Engenharia de Software.</p>
+            <A.BoxText className="small-screen-text">
+                <p>Sou Leonan, um Desenvolvedor FullStack apaixonado por tecnologia e pela criação de soluções inovadoras. Minha experiência abrange uma sólida base em JavaScript com React, além de Java com Spring Boot. Também tenho conhecimentos em Typescript, React Native para desenvolvimento mobile e Python para automação e análise de dados.</p>
+                <p>Minha jornada na tecnologia é marcada pela busca contínua por aprendizado e inovação. Sou movido pela curiosidade e pela vontade de resolver problemas reais. No meu portfólio, você encontrará projetos que refletem meu compromisso com a qualidade, a funcionalidade e a inovação. Estou sempre em busca de novos desafios que me permitam crescer como profissional e contribuir com soluções que fazem a diferença.</p>
+                <p>Fique à vontade para explorar meus projetos e conhecer mais sobre o que posso oferecer. Vamos construir algo incrível juntos!</p>
+              </A.BoxText>
 
-            <p>Com passagens por empresas como MetrôRio e Mundiware, destaco minha atuação no desenvolvimento, correção e melhoria de sistemas em Java. Participei ativamente de projetos ágeis, aplicando metodologias como Scrum, e contribuí para a implementação bem-sucedida de sistemas de pagamento instantâneo.</p>
-
-            <p>Minhas habilidades incluem domínio em Java (versões 8 e superiores), Spring Boot, Hibernate/JPA, além de conhecimentos em desenvolvimento front-end com React JS. Estou sempre buscando aprimoramento, especializando-me cada vez mais em Java e explorando tópicos como computação em nuvem (AWS) e ferramentas de sistemas de mensageria e armazenamento de dados distribuídos, como RabbitMQ, Redis, GraphQL e Kafka.</p>
-
-            <p>Destaco ainda minha intermediação na primeira transação de pagamento PIX no MetrôRio e desenvolvimento de projetos pessoais significativos para meu portfólio, nos quais explorei diversas tecnologias e conceitos.</p>
-
-            <p>Estou aberto a oportunidades e pronto para contribuir em projetos inovadores!</p>
-            <AnimationOnScroll animateIn="animate__bounceIn">
-              {/* <A.LinkCurriculum>
-                  <a className="btn" aria-labelledby="Botão para baixar curriculo de Leonan Thomaz" href={curriculo} download>Baixe meu curriculo</a>
-              </A.LinkCurriculum> */}
-              </AnimationOnScroll>
-            </A.BoxText>
+              <A.BoxText className="large-screen-text">
+                <p>Sou Leonan, um Desenvolvedor FullStack apaixonado por tecnologia e pela criação de soluções inovadoras. Minha experiência abrange uma sólida base em JavaScript com React, além de Java com Spring Boot. Também tenho conhecimentos em Typescript, React Native para desenvolvimento mobile e Python para automação e análise de dados.</p>
+                <p>Tenho trabalhado em projetos que vão desde interfaces dinâmicas e responsivas até sistemas backend robustos. Acredito que a combinação de uma boa arquitetura, código limpo e uma comunicação eficaz com o cliente são fundamentais para o sucesso de qualquer projeto. Minha abordagem se baseia na criação de soluções que não apenas atendem às necessidades, mas também superam as expectativas.</p>
+                <p>Minha jornada na tecnologia é guiada pela curiosidade e pela busca por desafios que me permitam crescer e aprender continuamente. Em meu portfólio, você encontrará projetos que refletem meu compromisso com a qualidade e a inovação. Estou sempre aberto a novos desafios e oportunidades para aplicar minhas habilidades e contribuir com soluções eficazes.</p>
+                <p>Sinta-se à vontade para explorar meus projetos e ver o que posso oferecer. Se você está em busca de um desenvolvedor dedicado para transformar suas ideias em realidade, estou pronto para colaborar e criar algo incrível juntos.</p>
+              </A.BoxText>
           </A.Right>
         </A.Wrapper>
       </A.Container>

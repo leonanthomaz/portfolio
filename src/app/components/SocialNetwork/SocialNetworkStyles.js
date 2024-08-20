@@ -19,24 +19,23 @@ padding-top: 20px;
 }
 `;
 
-
-
 export const Item = styled.div`
 
-padding: 15px;
-margin: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+flex-direction: column;
 background: ${props => props.theme.contact_background};
 box-shadow: ${props => props.theme.contact_shadow};
-color: ${props => props.theme.fontColor};
-text-align: center;
-align-items: center;
-transition: all .1s linear;
-                        -webkit-transition: all .1s linear;
-                        -moz-transition: all .1s linear;
-
-:hover{
-    box-shadow: ${props => props.theme.contact_shadow_hover};
-    border-radius: 5px;
+padding: 10px; // Reduzido para diminuir o espaçamento
+width: 100%; // Ajuste a largura para ocupar o espaço disponível
+border-radius: 10px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+&:hover {
+transform: scale(1.05);
+/* box-shadow: ${props => props.theme.contact_shadow_hover}; */
 }
 
 a{
