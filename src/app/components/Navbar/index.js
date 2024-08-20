@@ -89,20 +89,20 @@ export const Navbar = () => {
                         <a href="#about">Sobre</a>
                     </M.NavbarLi>
                     <M.NavbarLi
-                        className={`nav-item ${activeLink === 'experience' ? 'active' : ''}`}
-                        role="menuItem"
-                        onClick={() => handleLinkClick('experience')}
-                        ref={(el) => sectionRefs.current['experience'] = el}
-                    >
-                        <a href="#experience">Experiência</a>
-                    </M.NavbarLi>
-                    <M.NavbarLi
                         className={`nav-item ${activeLink === 'skills' ? 'active' : ''}`}
                         role="menuItem"
                         onClick={() => handleLinkClick('skills')}
                         ref={(el) => sectionRefs.current['skills'] = el}
                     >
                         <a href="#skills">Skills</a>
+                    </M.NavbarLi>
+                    <M.NavbarLi
+                        className={`nav-item ${activeLink === 'experience' ? 'active' : ''}`}
+                        role="menuItem"
+                        onClick={() => handleLinkClick('experience')}
+                        ref={(el) => sectionRefs.current['experience'] = el}
+                    >
+                        <a href="#experience">Experiência</a>
                     </M.NavbarLi>
                     <M.NavbarLi
                         className={`nav-item ${activeLink === 'portfolio' ? 'active' : ''}`}
