@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
+// Container principal
 export const Container = styled.div`
   width: 100%;
   background: ${(props) => props.theme.background};
 `;
 
+// Navbar do portfólio
 export const NavbarPortfolio = styled.ul`
   margin: 10px;
   padding: 0;
@@ -21,26 +23,29 @@ export const NavbarPortfolio = styled.ul`
   }
 `;
 
+// Wrapper dos itens do portfólio
 export const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); // 4 colunas para telas grandes
-  justify-content: center; // Centraliza o grid horizontalmente
-  align-items: center; // Centraliza verticalmente os itens dentro das colunas
-  gap: 20px; // Espaçamento entre os ícones
+  display: ${(props) => (props.isEmpty ? 'flex' : 'grid')};
+  flex-direction: ${(props) => (props.isEmpty ? 'column' : 'initial')};
+  justify-content: ${(props) => (props.isEmpty ? 'center' : 'initial')};
+  align-items: ${(props) => (props.isEmpty ? 'center' : 'initial')};
+  grid-template-columns: ${(props) => (props.isEmpty ? 'none' : 'repeat(3, 1fr)')}; // Grid para quando há projetos
+  gap: ${(props) => (props.isEmpty ? '0' : '20px')}; // Sem espaço entre itens quando vazio
   padding: 20px;
   max-width: 1200px; // Largura máxima para garantir que a grade não fique muito larga
   margin: 0 auto; // Centraliza o Wrapper horizontalmente
 
   @media (max-width: 1200px) {
-    grid-template-columns: repeat(2, 1fr); // 3 colunas para telas médias
+    grid-template-columns: ${(props) => (props.isEmpty ? 'none' : 'repeat(2, 1fr)')}; // 2 colunas para telas médias
   }
 
   @media (max-width: 760px) {
-    grid-template-columns: repeat(1, 1fr); // 2 colunas para smartphones
-    gap: 10px; // Reduzido o espaçamento entre os ícones em smartphones
+    grid-template-columns: ${(props) => (props.isEmpty ? 'none' : 'repeat(1, 1fr)')}; // 1 coluna para smartphones
+    gap: ${(props) => (props.isEmpty ? '0' : '10px')}; // Reduzido o espaçamento entre os itens em smartphones
   }
 `;
 
+// Caixa de cada item do portfólio
 export const Box = styled.div`
   display: flex;
   justify-content: center;
@@ -51,8 +56,8 @@ export const Box = styled.div`
   box-shadow: ${(props) => props.theme.portfolio_box_shadow};
   color: ${props => props.theme.fontColor};
 
-  padding: 10px; // Reduzido para diminuir o espaçamento
-  width: 100%; // Ajuste a largura para ocupar o espaço disponível
+  padding: 10px;
+  width: 100%;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   
@@ -111,6 +116,7 @@ export const Box = styled.div`
   }
 `;
 
+// Container da imagem do portfólio
 export const ImgContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -122,10 +128,35 @@ export const ImgContainer = styled.div`
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-    /* Efeito de hover na imagem */
     :hover {
       transform: scale(1.05);
       box-shadow: 4px 4px 5px #121214;
     }
   }
 `;
+
+// Mensagem quando não há projetos disponíveis
+export const EmptyMessage = styled.div`
+  display: flex;
+  flex-direction: column; // Adiciona direção coluna para centralizar ícone e texto
+  justify-content: center;
+  align-items: center;
+  height: 200px; // Ajuste conforme necessário
+  background: ${(props) => props.theme.portfolio_background_box};
+  color: ${(props) => props.theme.fontColor};
+  border-radius: 10px;
+  box-shadow: ${(props) => props.theme.portfolio_box_shadow};
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif;
+
+  svg {
+    margin-bottom: 15px; // Espaço entre o ícone e o texto
+  }
+
+  p {
+    margin: 0;
+    padding: 0 20px; // Ajusta o padding horizontal
+  }
+`;
+

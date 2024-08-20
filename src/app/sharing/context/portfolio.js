@@ -28,24 +28,20 @@ export const PortfolioProvider = ({ children }) => {
         {
             id: "react",
             title: "React",
+            
+        },
+        {
+            id: "java",
+            title: "Java/Spring",
         },
         {
             id: "mobile",
             title: "Mobile",
         },
         {
-            id: "java",
-            title: "Java",
-        },
-        {
-            id: "spring",
-            title: "Spring",
-        }, 
-        {
             id: "python",
             title: "Python",
-        },
-        
+        },  
     ];
 
     let categorySkills = [

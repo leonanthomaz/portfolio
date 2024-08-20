@@ -6,13 +6,13 @@ import { NP } from '../../components/Navs/Portfolio';
 import { 
     DestaqueData,
     JavaData,
-    SpringData,
     ReactData,
     PythonData,
     MobileData,
 } from "../../sharing/db/dataPortfolio";
-import { ModalPortfolio } from '../../components/ModalPortfolio'
+import { ModalPortfolio } from '../../components/ModalPortfolio';
 import { PortfolioContext } from "../../sharing/context/portfolio";
+import { AiOutlineRobot } from 'react-icons/ai';
 
 export const Portfolio = () => {
     const { categoryPortfolio } = useContext(PortfolioContext);
@@ -20,6 +20,7 @@ export const Portfolio = () => {
     const [data, setData] = useState([]);
     const [list, setList] = useState([]);
     const [show, setShow] = useState(false);
+    const [isEmpty, setIsEmpty] = useState(false); // Adicione este estado
 
     useEffect(() => {
         switch (selected) {
@@ -28,9 +29,6 @@ export const Portfolio = () => {
                 break;
             case "java":
                 setData(JavaData);
-                break;
-            case "spring":
-                setData(SpringData);
                 break;
             case "react":
                 setData(ReactData);
@@ -53,18 +51,21 @@ export const Portfolio = () => {
 
         if (data.length > 0) {
             setData(sortProjectsByDate(data));
+            setIsEmpty(false); // Define como não vazio
+        } else {
+            setIsEmpty(true); // Define como vazio
         }
     }, [data]);
 
     const handleFind = (id) => {
-        const item = data.filter(e => e.id === id)
-        setList(item)
+        const item = data.find(e => e.id === id);
+        setList(item ? [item] : []);
         setShow(true);
-    }
+    };
 
     const handleClose = () => {
         setShow(false);
-    }
+    };
 
     return (
         <P.Container id="portfolio">
@@ -82,9 +83,14 @@ export const Portfolio = () => {
                     />
                 ))}
             </P.NavbarPortfolio>
-            <P.Wrapper>
-                {data && data.map((item, index) => {
-                    return (
+            <P.Wrapper isEmpty={isEmpty}>
+                {isEmpty ? (
+                    <P.EmptyMessage>
+                        <AiOutlineRobot size={50} color="#666" />
+                        <p>Seção em construção. Volte em breve para conferir meus projetos!</p>
+                    </P.EmptyMessage>
+                ) : (
+                    data.map((item, index) => (
                         <Fragment key={index}>
                             <P.Box>
                                 <P.ImgContainer>
@@ -101,34 +107,28 @@ export const Portfolio = () => {
                                 <div className="btn-container">
                                     <button onClick={() => handleFind(item.id)}>Ver mais</button>
                                 </div>
-                                {list.map((e, index) => {
-                                    if (e.id === item.id) {
-                                        return (
-                                            <ModalPortfolio
-                                                show={show}
-                                                handleClose={handleClose}
-                                                id={e.id}
-                                                subtitle={e.subtitle}
-                                                title={e.title}
-                                                img={e.img}
-                                                img2={e.img2}
-                                                preview={e.preview}
-                                                description={e.description}
-                                                date={e.date}
-                                                technology={e.technology}
-                                                url={e.url}
-                                                github={e.github}
-                                                key={index}
-                                            />
-                                        )
-                                    }
-                                    return null; // Adicionando retorno padrão
-                                })}
+                                {list.length > 0 && list[0].id === item.id && (
+                                    <ModalPortfolio
+                                        show={show}
+                                        handleClose={handleClose}
+                                        id={list[0].id}
+                                        subtitle={list[0].subtitle}
+                                        title={list[0].title}
+                                        img={list[0].img}
+                                        img2={list[0].img2}
+                                        preview={list[0].preview}
+                                        description={list[0].description}
+                                        date={list[0].date}
+                                        technology={list[0].technology}
+                                        url={list[0].url}
+                                        github={list[0].github}
+                                    />
+                                )}
                             </P.Box>
                         </Fragment>
-                    )
-                })}
+                    ))
+                )}
             </P.Wrapper>
         </P.Container>
-    )
-}
+    );
+};
