@@ -5,7 +5,7 @@ export const darkTheme = {
   font: "'Josefin Sans', sans-serif",
   fontColor: "#e0e0e0", // Texto claro e suave
   font_hover: "#ffffff",
-  button: "#1e88e5", // Azul mais suave e moderno
+  button: "#073767", // Azul mais suave e moderno
   button_hover: "#1565c0", // Azul mais escuro
   button_font: "#ffffff",
   button_font_hover: "#ffffff",
@@ -19,7 +19,7 @@ export const darkTheme = {
   box_shadow: "0px 4px 8px rgba(0, 0, 0, 0.3)",
 
   // Botões padrão
-  btn_background: "#1e88e5",
+  btn_background: "#073767",
   btn_background_hover: "#1565c0",
 
   box_font_list: "#e0e0e0",
@@ -44,7 +44,7 @@ export const darkTheme = {
 
   // Intro
   intro_font_Typewriter: "#ffeb3b",
-  intro_background_photo: "#1e88e5",
+  intro_background_photo: "#073767",
   intro_arrow: "#ffeb3b",
   intro_background_vertical: "linear-gradient(to top, #313131, transparent 100%)",
   intro_btn_background: "#073767",
@@ -80,7 +80,7 @@ export const darkTheme = {
   portfolio_background_box: "#313131", 
   portfolio_box_shadow: "0px 4px 8px rgba(0, 0, 0, 0.3)",
   portfolio_box_shadow_hover: "0px 4px 8px rgba(0, 0, 0, 0.5)",
-  portfolio_btn_background: "#1e88e5",
+  portfolio_btn_background: "#073767",
   portfolio_btn_background_hover: "#1565c0",
   portfolio_btn_font: "#ffffff",
   portfolio_btn_font_hover: "#ffffff",
@@ -108,12 +108,12 @@ export const darkTheme = {
   
   // Contact
   contact_background: "#313131",
-  contact_btn: "#1e88e5",
+  contact_btn: "#073767",
   contact_btn_hover: "#1565c0",
   contact_font: "#e0e0e0",
   contact_font_icons: "#ffeb3b",
   contact_form_shadow: "0px 4px 8px rgba(0, 0, 0, 0.3)",
-  contact_btn_background: "#1e88e5",
+  contact_btn_background: "#073767",
   contact_background_form: "#313131",
   contact_border_input: "2px solid #ffffff",
   contact_background_label: "#313131",
@@ -123,7 +123,7 @@ export const darkTheme = {
   contact_background_icons_hover: "#fbc02d",
   contact_shadow: "0px 4px 8px rgba(0, 0, 0, 0.3)",
   contact_shadow_hover: "0px 4px 8px rgba(0, 0, 0, 0.5)",
-  contact_background_btn: "#1e88e5",
+  contact_background_btn: "#073767",
   contact_background_btn_hover: "#1565c0",
   contact_font_btn: "#ffffff",
 

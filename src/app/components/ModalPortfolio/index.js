@@ -25,19 +25,18 @@ export const ModalPortfolio = ({
             show={show}
             onHide={handleClose}
         >
+            <MPS.Header>
+                <GrClose 
+                    onClick={handleClose} 
+                    style={{
+                        color: '#ffeb3b',
+                        cursor: 'pointer',
+                        fontSize: '24px'
+                    }} 
+                />
+            </MPS.Header>
             <Modal.Body>
                 <MPS.Container>
-                    <MPS.Header>
-                        <GrClose 
-                            onClick={handleClose} 
-                            style={{
-                                color: '#14141498',
-                                cursor: 'pointer',
-                                fontSize: '20px'
-                            }} 
-                        />
-                    </MPS.Header>
-                    
                     <MPS.Title>{title}</MPS.Title>
                     
                     <MPS.SubtitleContainer>
@@ -59,7 +58,6 @@ export const ModalPortfolio = ({
                         {url && <MPS.Button aria-label={title} href={url} target="_blank">Visitar Site</MPS.Button>}
                         <MPS.Button aria-label={title} href={github} target="_blank">Repositório</MPS.Button>
                     </MPS.ContainerButton>
-                    
                 </MPS.Container>
             </Modal.Body>
         </MPS.CustomModal>

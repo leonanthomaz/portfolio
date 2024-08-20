@@ -4,58 +4,55 @@ import { Modal } from "react-bootstrap";
 export const CustomModal = styled(Modal)`
     .modal-dialog {
         max-width: 90vw; /* Ocupa até 90% da largura da tela */
-        max-height: 70vh; /* Ocupa até 80% da altura da tela */
         width: 100%;
-        margin: auto;
+        margin: auto; /* Garante que o modal esteja centralizado horizontalmente */
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
-        top: 30px; /* Adiciona espaço para evitar que o modal se esconda atrás da barra de navegação */
-
+        height: auto; /* Ajusta a altura do modal */
+        
         @media (max-width: 760px) {
             max-width: 95vw; /* Ajusta a largura para telas menores */
-            max-height: 95vh; /* Ajusta a altura para telas menores */
             top: 20px; /* Ajusta o espaço para telas menores */
         }
     }
 
     .modal-content {
-        background-color: #ecececce;
+        background-color: ${props => props.theme.box};
         border-radius: 10px;
-        width: 100%;
-        height: auto;
-        padding: 10px;
+        padding: 20px;
         overflow-y: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
 
         @media (max-width: 760px) {
-            padding: 10px;
+            padding: 15px;
         }
     }
-`;
-
-
-export const Container = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #ecececce;
 `;
 
 export const Header = styled.div`
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    height: 40px;
+    position: absolute; /* Usa posicionamento absoluto para fixar o botão no canto */
+    top: 10px; /* Ajusta a posição do botão para o topo */
+    right: 10px; /* Ajusta a posição do botão para a direita */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+`;
+
+export const Container = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 export const Title = styled.h2`
-    color: #14141498; 
-    text-align: center; 
+    color: ${props => props.theme.h2};
+    text-align: center;
     margin: 10px 0;
     line-height: 1.5rem;
     font-family: 'Wendy One', sans-serif;
@@ -71,25 +68,24 @@ export const SubtitleContainer = styled.div`
 
 export const Subtitle = styled.span`
     font-size: 16px;
-    color: #14141498;
+    color: ${props => props.theme.h2};
 `;
 
 export const ContainerImg = styled.div`
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 100%;
+    max-width: 600px; /* Define o máximo de largura para a imagem */
     margin: 15px 0;
 
     img {
-        max-width: 80%;
+        max-width: 100%;
         height: auto;
         border-radius: 8px;
     }
 
     @media (max-width: 760px) {
-        img {
-            max-width: 100%;
-        }
+        max-width: 95vw; /* Ajusta a largura máxima para telas menores */
     }
 `;
 
@@ -97,12 +93,13 @@ export const Description = styled.p`
     text-align: center;
     padding: 10px;
     font-size: 16px;
-    color: #141414;
+    max-width: 90%; /* Aumenta a largura máxima para mais legibilidade */
+    color: ${props => props.theme.fontColor};
 `;
 
 export const Date = styled.span`
     font-size: 14px;
-    color: #141414;
+    color: ${props => props.theme.fontColor};
     margin-top: 10px;
 `;
 
@@ -125,13 +122,13 @@ export const Button = styled.a`
     background: ${props => props.theme.btn_background};
     text-decoration: none;
     font-weight: 700;
-    color: ${props => props.theme.box_font_list};
+    color: ${props => props.theme.button_font};
     text-align: center;
     transition: background-color 0.3s ease;
 
     &:hover {
-        color: white;
-        background: green;
+        color: ${props => props.theme.button_font_hover};
+        background: ${props => props.theme.btn_background_hover};
     }
 
     @media (max-width: 760px) {
