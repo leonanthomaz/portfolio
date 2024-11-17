@@ -1,0 +1,86 @@
+import { styled } from '@mui/material/styles';
+import { Box, Button, Typography } from '@mui/material';
+
+export const ProjetosContainer = styled(Box)`
+  padding: 40px 20px;
+  color: #fff;
+`;
+
+export const ProjetoCard = styled(Box)`
+  cursor: pointer;
+  border: 2px solid #ffeb3b;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+`;
+
+export const ProjetoImage = styled('img')`
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #ffeb3b;
+`;
+
+export const ProjetoDetails = styled(Box)`
+  padding: 20px;
+`;
+
+export const ProjetoTitle = styled(Typography)`
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffeb3b;
+`;
+
+export const ProjetoSubtitle = styled(Typography)`
+  font-size: 1.2rem;
+  color: #fff;
+`;
+
+export const ProjetoDescription = styled(Typography)`
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 10px;
+`;
+
+export const LinkButton = styled(Button)`
+  background-color: #ffeb3b;
+  color: #121212;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px;
+
+  &:hover {
+    background-color: #ff9800;
+  }
+`;
+
+export const ModalContent = styled(Box)`
+  .MuiTypography-body1 {
+    color: #333;
+  }
+
+  .MuiBox-root {
+    padding-bottom: 20px;
+  }
+
+  /* Estilo da rolagem */
+  .MuiBox-root::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .MuiBox-root::-webkit-scrollbar-thumb {
+    background-color: #ffeb3b;
+    border-radius: 10px;
+  }
+
+  .MuiBox-root::-webkit-scrollbar-track {
+    background-color: #212121;
+  }
+`;

@@ -1,23 +1,42 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Node.js
+node_modules/
+dist/
+build/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# production
-/build
-
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Editor Directories and Files
+.idea/
+.vscode/
+*.swp
+
+# Dependency directories
+.pnpm-debug.log*
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+
+# Next.js (caso o projeto utilize)
+.next/
+
+# Coverage
+coverage/
+
+# React Native (caso utilize para mobile)
+.expo/
+.expo-shared/
+
+# Parcel
+.cache/
+
+# TypeScript
+*.tsbuildinfo
