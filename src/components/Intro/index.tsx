@@ -51,7 +51,7 @@ export const Intro = () => {
             to="about" 
             smooth={true} 
             duration={500} 
-            offset={-70} // Ajusta para o mesmo deslocamento da navbar
+            offset={-60} // Ajusta para o mesmo deslocamento da navbar
             spy={true}   // Ativa a observação de seções
           >
             <ArrowDown />

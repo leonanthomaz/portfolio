@@ -1,71 +1,71 @@
+// NavbarStyles.ts
 import { AppBar, Drawer } from '@mui/material';
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
 
-// Navbar com fundo preto e texto amarelo
+// Navbar fixa com estilo moderno
 export const NavbarWrapper = styled(AppBar)`
   position: fixed;
-  background-color: #1A1A1A; // Preto
-  color: #FFEB3B; // Amarelo
+  background-color: #1a1a1a;
+  color: #ffeb3b;
   box-shadow: none;
   padding: 5px 0;
-  z-index: 1200; // Garante que a navbar fique acima de outros elementos
+  z-index: 1200;
 `;
 
-// Links com caixa alta, borda embaixo e espaçamento ajustado
+// Links da Navbar (desktop)
 export const NavbarLink = styled(Link)`
-  color: #B0B0B0; // Cor padrão dos links (cinza para inativo)
+  color: #b0b0b0;
   font-size: 16px;
   font-weight: 500;
-  text-transform: uppercase; // Caixa alta
+  text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 5px px; // Ajuste de espaçamento entre a borda e o texto
-  margin: 0 5px; // Espaço entre os links
+  padding: 10px;
+  margin: 0 5px;
   text-decoration: none;
-  transition: all 0.3s ease;
   cursor: pointer;
+  transition: all 0.3s ease;
 
   &:hover {
-    border-bottom: 2px solid #FFEB3B; // Borda embaixo ao passar o mouse
-    color: #FFEB3B; // Cor do texto ao passar o mouse
+    border-bottom: 2px solid #ffeb3b;
+    color: #ffeb3b;
   }
 
   &.active {
-    border-bottom: 2px solid #FFEB3B; // Borda ativa nos links
-    color: #FFEB3B; // Cor ativa do link
+    border-bottom: 2px solid #ffeb3b;
+    color: #ffeb3b;
   }
 `;
 
-// Menu Drawer com fundo preto e texto amarelo
+// Links do Drawer (mobile)
+export const DrawerLink = styled(Link)`
+  color: #ffeb3b;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #ff9800;
+  }
+
+  &.active {
+    color: #ff9800;
+  }
+`;
+
+// Menu Drawer estilizado
 export const MenuDrawer = styled(Drawer)`
   .MuiDrawer-paper {
+    padding-top: 20px; // Adiciona padding no topo de todo o drawer
     width: 250px;
-    background-color: #1A1A1A; // Preto
-    color: #FFEB3B; // Amarelo
-    border-left: 2px solid #FF9800;
+    background-color: #1a1a1a;
+    color: #ffeb3b;
+    border-left: 2px solid #ff9800;
     display: flex;
-    justify-content: center; // Centraliza os itens
-    align-items: center; // Alinha verticalmente os itens
-    text-transform: uppercase; // Caixa alta
-  }
-
-  .MuiList-root {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; // Centraliza a coluna
-    align-items: center; // Alinha os itens centralizados na coluna
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  .MuiListItem-root {
-    width: 100%; // Garante que os itens ocupem toda a largura disponível
-    text-align: center; // Centraliza o texto dos itens
-  }
-
-  .MuiListItemText-root {
-    font-size: 18px;
-    font-weight: 500;
-    text-align: center; // Garante que o texto também fique centralizado
+    justify-content: flex-start; // Alinha os itens no topo
+    align-items: center;
   }
 `;

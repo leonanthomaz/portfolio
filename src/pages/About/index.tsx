@@ -18,7 +18,7 @@ export const About: React.FC = () => {
           justifyContent: 'center',
           alignItems: 'center',
           color: '#ffeb3b',
-          padding: { xs: '40px 20px', md: '60px 20px' },
+          
           textAlign: 'center',
           minHeight: '100vh',
         }}

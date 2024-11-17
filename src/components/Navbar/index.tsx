@@ -1,3 +1,4 @@
+// Navbar.tsx
 import { FC, useState } from 'react';
 import {
   Toolbar,
@@ -5,12 +6,14 @@ import {
   IconButton,
   List,
   ListItem,
+  Divider,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import {
   NavbarWrapper,
   MenuDrawer,
   NavbarLink,
+  DrawerLink,
 } from './NavbarStyles';
 import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
@@ -39,10 +42,20 @@ const Navbar: FC = () => {
   return (
     <NavbarWrapper>
       <Toolbar
-        sx={{ display: 'flex', justifyContent: 'space-between', padding: '0 20px' }}
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          padding: '0 20px',
+        }}
       >
         {/* Links para telas maiores */}
-        <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 3 }}>
+        <Box
+          sx={{
+            display: { xs: 'none', md: 'flex' },
+            gap: 3,
+            alignItems: 'center',
+          }}
+        >
           {navItems.map((item) => (
             <NavbarLink
               key={item.to}
@@ -50,7 +63,7 @@ const Navbar: FC = () => {
               spy={true}
               smooth={true}
               duration={500}
-              offset={-70}
+              offset={-50}
               activeClass="active"
             >
               {item.label}
@@ -70,28 +83,49 @@ const Navbar: FC = () => {
         </IconButton>
 
         {/* Menu Drawer */}
-        <MenuDrawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
-          <List>
+        <MenuDrawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
+          <List
+            sx={{
+              marginTop: '100px', // Adiciona uma margem superior para descer os itens
+            }}
+          >
             {navItems.map((item) => (
-              <ListItem key={item.to} disablePadding>
-                <NavbarLink
+              <ListItem
+                key={item.to}
+                disablePadding
+                sx={{
+                  width: '100%',
+                  justifyContent: 'flex-start',
+                  padding: '13px 26px',
+                }}
+              >
+                <DrawerLink
                   to={item.to}
                   spy={true}
                   smooth={true}
                   duration={500}
                   offset={-50}
                   activeClass="active"
-                  onClick={toggleDrawer(false)} // Fecha o drawer após o clique
+                  onClick={toggleDrawer(false)}
                 >
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 2,
+                      color: 'inherit',
+                    }}
+                  >
                     {item.icon}
                     {item.label}
                   </Box>
-                </NavbarLink>
+                </DrawerLink>
               </ListItem>
             ))}
+            <Divider sx={{ borderColor: '#FFEB3B', marginY: 1 }} />
           </List>
         </MenuDrawer>
+
       </Toolbar>
     </NavbarWrapper>
   );
