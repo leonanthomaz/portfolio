@@ -1,5 +1,5 @@
 import { styled } from '@mui/material/styles';
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 export const ProjetosContainer = styled(Box)`
   padding: 40px 20px;
@@ -48,13 +48,17 @@ export const ProjetoDescription = styled(Typography)`
   margin-top: 10px;
 `;
 
-export const LinkButton = styled(Button)`
+// Modificar LinkButton para um styled component baseado em <a>
+export const LinkButton = styled('a')`
+  display: inline-block;
   background-color: #ffeb3b;
   color: #121212;
   font-size: 1rem;
   border-radius: 5px;
   padding: 10px 20px;
   margin: 10px;
+  text-decoration: none;
+  text-align: center;
 
   &:hover {
     background-color: #ff9800;

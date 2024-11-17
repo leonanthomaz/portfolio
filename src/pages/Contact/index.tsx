@@ -44,45 +44,41 @@ export const Contact: React.FC = () => {
       return;
     }
 
-    // Formata o celular para o padrão (xx) xxxx-xxxx
-    const formattedCelular = celular.replace(/^(\d{2})(\d)/, '($1) $2').replace(/(\d)(\d{4})$/, '$1-$2');
-
-    if (form.current) {
-      console.log('form.current:', form.current);
-
-      emailjs
-        .sendForm(
-          import.meta.env.VITE_EMAILJS_SERVICE,
-          'template_1sogban',
-          form.current,
-          import.meta.env.VITE_EMAILJS_ID
-        )
-        .then(() => {
-          toast.success('Mensagem enviada com sucesso! Retornarei em breve.', {
-            position: 'top-right',
-            autoClose: 5000,
-            theme: 'light',
-          });
-          form.current.reset(); // Limpa o formulário
-        })
-        .catch(() => {
-          toast.error('Erro ao enviar mensagem. Por favor, tente novamente.', {
-            position: 'top-right',
-            autoClose: 5000,
-            theme: 'light',
-          });
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-    } else {
+    if (!form.current) {
       toast.error('Erro no envio do formulário. Tente novamente.', {
         position: 'top-right',
         autoClose: 5000,
         theme: 'light',
       });
       setLoading(false);
+      return;
     }
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE,
+        'template_1sogban',
+        form.current,
+        import.meta.env.VITE_EMAILJS_ID
+      )
+      .then(() => {
+        toast.success('Mensagem enviada com sucesso! Retornarei em breve.', {
+          position: 'top-right',
+          autoClose: 5000,
+          theme: 'light',
+        });
+        form.current?.reset(); // Limpa o formulário
+      })
+      .catch(() => {
+        toast.error('Erro ao enviar mensagem. Por favor, tente novamente.', {
+          position: 'top-right',
+          autoClose: 5000,
+          theme: 'light',
+        });
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
