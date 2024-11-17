@@ -6,7 +6,7 @@ export const SkillsContainer = styled(Box)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   color: #ffeb3b;
   padding: 60px 20px;
   text-align: center;

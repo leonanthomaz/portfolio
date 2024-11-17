@@ -1,12 +1,11 @@
-// src/pages/Sobre/SobreStyles.ts
 import styled from 'styled-components';
 import { Box, Typography, Button } from '@mui/material';
 
-export const SobreContainer = styled(Box)`
+export const AboutContainer = styled(Box)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;  /* Garantir que os itens estejam centralizados */
   color: #ffeb3b;
   padding: 60px 20px;
   text-align: center;
@@ -20,6 +19,7 @@ export const Description = styled(Typography)`
   margin-bottom: 30px;
   color: #ddd;
   font-weight: 400;
+  text-align: center; /* Adicionado para centralizar o texto */
 `;
 
 export const HighlightText = styled.span`

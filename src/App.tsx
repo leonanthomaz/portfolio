@@ -7,7 +7,7 @@ import { Projects } from './pages/Projects';
 import { Courses } from './pages/Courses';
 import { Contact } from './pages/Contact';
 import Navbar from './components/Navbar';
-import Intro from './components/Intro';
+import { Intro } from './components/Intro';
 import { GlobalStyles } from './styles/GlobalStyles';
 import GitHub from './components/Github';
 import Footer from './components/Footer';

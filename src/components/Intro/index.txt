@@ -1,21 +1,10 @@
 import Typewriter from 'typewriter-effect';
 import { Box } from '@mui/material';
-import { Link as ScrollLink } from 'react-scroll';
-import { 
-  IntroContainer, 
-  TypewriterEffect, 
-  DownloadButton, 
-  ArrowDown, 
-  TitleWrapper, 
-  Right, 
-  Left, 
-  NameText, 
-  FirstName, 
-  LastName 
-} from './IntroStyles';
+import { Link } from 'react-scroll';
+import { IntroContainer, TypewriterEffect, DownloadButton, ArrowDown, TitleWrapper, TitleText, Right, Left, NameText, FirstName, LastName } from './IntroStyles';
 import curriculo from '@/assets/docs/curriculo.pdf';
 
-export const Intro = () => {
+const Intro = () => {
   const handleDownloadClick = () => {
     window.location.href = curriculo;
   };
@@ -28,10 +17,11 @@ export const Intro = () => {
             <FirstName>Leonan</FirstName> <LastName>Thomaz</LastName>
           </NameText>
           <TitleWrapper>
+            <TitleText>Desenvolvedor</TitleText>
             <TypewriterEffect>
               <Typewriter
                 options={{
-                  strings: ['Desenvolvedor Python', 'Automação de Processos', 'Desenvolvimento de APIs', 'Integração de Sistemas'],
+                  strings: ['FullStack', 'Frontend', 'Backend'],
                   autoStart: true,
                   delay: 75,
                   loop: true,
@@ -46,18 +36,13 @@ export const Intro = () => {
             Meu Currículo
           </DownloadButton>
 
-          {/* Link ajustado para rolar suavemente até a seção "about" */}
-          <ScrollLink 
-            to="about" 
-            smooth={true} 
-            duration={500} 
-            offset={-70} // Ajusta para o mesmo deslocamento da navbar
-            spy={true}   // Ativa a observação de seções
-          >
+          <Link to="about" smooth={true} duration={500}>
             <ArrowDown />
-          </ScrollLink>
+          </Link>
         </Right>
       </Box>
     </IntroContainer>
   );
 };
+
+export default Intro;

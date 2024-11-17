@@ -1,6 +1,6 @@
 // src/pages/Skills/index.tsx
 import React from 'react';
-import { Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { SiReact, SiSpring, SiTypescript, SiMysql, SiDocker } from 'react-icons/si';
 import { FaPython, FaJsSquare, FaJava } from 'react-icons/fa';
 import { Title } from '../../styles/GlobalStyles';
@@ -15,10 +15,12 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 export const Skills: React.FC = () => {
   return (
-    <SkillsContainer>
-      <AnimationOnScroll animateIn="animate__backInLeft">
+   <Box sx={{ padding: { xs: 2, md: 4 }, width: '100%' }}>
+     <AnimationOnScroll animateIn="animate__backInLeft">
         <Title>Minhas Skills</Title>
       </AnimationOnScroll>
+     <SkillsContainer>
+     
       <Typography
         variant="h6"
         sx={{ marginBottom: '40px', color: '#ddd', fontSize: '1.2rem', fontWeight: 400 }}
@@ -94,5 +96,6 @@ export const Skills: React.FC = () => {
         Eu busco sempre melhorar minhas habilidades e aprender novas ferramentas que se encaixem com meu perfil e paixão por <HighlightText>soluções eficazes</HighlightText>.
       </Typography>
     </SkillsContainer>
+   </Box>
   );
 };
