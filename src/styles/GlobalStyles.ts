@@ -19,7 +19,7 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const Title = styled.div`
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -33,9 +33,5 @@ export const Title = styled.div`
 
   @media (max-width: 1200px) {
     font-size: 1.5rem;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
   }
 `;
