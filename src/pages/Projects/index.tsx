@@ -47,9 +47,10 @@ export const Projects = () => {
   const renderProjects = () => {
     const sections: (keyof typeof projetosData)[] = [
       'destaque',
-      'java',
-      'react',
+      'biomedicina',
       'python',
+      'react',
+      'java',
     ];
     const section = projetosData[sections[activeTab]];
 
@@ -103,33 +104,34 @@ export const Projects = () => {
               }}
             />
             <Tab
-              label="Java"
+              label="Biomedicina"
               sx={{
                 color: activeTab === 1 ? theme.palette.primary.main : theme.palette.text.primary,
                 '&:hover': { color: theme.palette.primary.main },
               }}
             />
             <Tab
-              label="React"
+              label="Python"
               sx={{
                 color: activeTab === 2 ? theme.palette.primary.main : theme.palette.text.primary,
                 '&:hover': { color: theme.palette.primary.main },
               }}
             />
             <Tab
-              label="Python"
+              label="React"
               sx={{
                 color: activeTab === 3 ? theme.palette.primary.main : theme.palette.text.primary,
                 '&:hover': { color: theme.palette.primary.main },
               }}
             />
             <Tab
-              label="Mobile"
+              label="Java"
               sx={{
                 color: activeTab === 4 ? theme.palette.primary.main : theme.palette.text.primary,
                 '&:hover': { color: theme.palette.primary.main },
               }}
             />
+            
           </Tabs>
         </Toolbar>
       </AppBar>
@@ -139,6 +141,7 @@ export const Projects = () => {
           display: 'flex',
           flexWrap: 'wrap',
           justifyContent: 'center',
+          marginTop: '14px',
           gap: 4,
         }}
       >

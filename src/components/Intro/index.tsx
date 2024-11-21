@@ -50,7 +50,6 @@ export const Intro = () => {
             to="about" 
             smooth={true} 
             duration={500} 
-            offset={-60}
             spy={true}
           >
             <ArrowDown />

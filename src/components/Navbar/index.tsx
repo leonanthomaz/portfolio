@@ -40,14 +40,14 @@ const Navbar: FC = () => {
         sx={{
           display: 'flex',
           justifyContent: 'space-between',
-          padding: '0 20px',
+          padding: '0 10px',
         }}
       >
         {/* Links para telas maiores */}
         <Box
           sx={{
             display: { xs: 'none', md: 'flex' },
-            gap: 3,
+            gap: 1,
             alignItems: 'center',
           }}
         >
@@ -58,7 +58,7 @@ const Navbar: FC = () => {
               spy={true}
               smooth={true}
               duration={500}
-              offset={-50}
+              offset={-80}
               activeClass="active"
             >
               {item.label}
@@ -99,7 +99,7 @@ const Navbar: FC = () => {
                   spy={true}
                   smooth={true}
                   duration={500}
-                  offset={-50}
+                  offset={-80}
                   activeClass="active"
                   onClick={toggleDrawer(false)}
                 >

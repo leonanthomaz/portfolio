@@ -138,4 +138,18 @@ export const projetosData = {
       github: "https://github.com/leonanthomaz/projeto-taina",
     },
   ],
+
+  biomedicina: [
+    {
+      id: 1,
+      title: "Projeto Tainá",
+      subtitle: "Inteligência Artificial",
+      description:
+        "Sistema de inteligência artificial criado em Python utilizando bibliotecas como Google Search, Wikipedia e YouTube.",
+      img: pythonImg,
+      date: "Janeiro 2024",
+      technology: "Python",
+      github: "https://github.com/leonanthomaz/projeto-taina",
+    },
+  ],
 };
