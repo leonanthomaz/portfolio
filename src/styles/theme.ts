@@ -35,7 +35,7 @@ const theme = createTheme({
     body1: {
       fontSize: '1rem',
       fontWeight: 400,
-    },
+    }
   },
   components: {
     MuiButton: {

@@ -34,7 +34,7 @@ export const Experiences: FC = () => {
             <Typography variant="h6" sx={{ fontSize: { xs: '1rem', md: '1.25rem' }, fontWeight: 'bold' }}>
               Mundiware
             </Typography>
-            <Typography color="gray" sx={{ fontSize: { xs: '0.875rem', md: '1rem' } }}>Desenvolvedor Front-End</Typography>
+            <Typography color="gray" sx={{ fontSize: { xs: '0.875rem', md: '1rem' } }}>Estágio Front-End</Typography>
             <Typography variant="body2" sx={{ marginTop: 1, fontSize: { xs: '0.875rem', md: '1rem' } }}>
               Trabalhei remotamente no desenvolvimento de sistemas utilizando HTML, CSS e JavaScript. Essa experiência foi fundamental para moldar minhas habilidades em Front-End e aprimorar minha experiência prática.
             </Typography>
@@ -64,7 +64,7 @@ export const Experiences: FC = () => {
             </Typography>
             <Typography color="gray" sx={{ fontSize: { xs: '0.875rem', md: '1rem' } }}>Analista de Sistemas</Typography>
             <Typography variant="body2" sx={{ marginTop: 1, fontSize: { xs: '0.875rem', md: '1rem' } }}>
-              Trabalhei em um ambiente de alta demanda de administração de servidores, SQL, Zabbix e Batch no Windows. Embora não tenha me adaptado ao perfil de trabalho, a experiência foi enriquecedora para o desenvolvimento de habilidades técnicas.
+              Trabalhei em um ambiente de alta demanda, atuando como analista de sistemas Windows, manutenção em bancos de dados SQL, monitoramento de servidores com Zabbix, atualização de sistemas e prevenção de erros, entre outros.
             </Typography>
           </TimelineContent>
         </TimelineItem>
@@ -92,7 +92,7 @@ export const Experiences: FC = () => {
             </Typography>
             <Typography color="gray" sx={{ fontSize: { xs: '0.875rem', md: '1rem' } }}>Programação</Typography>
             <Typography variant="body2" sx={{ marginTop: 1, fontSize: { xs: '0.875rem', md: '1rem' } }}>
-              Atualmente, atuo como freelancer, dedicando-me a projetos pessoais e profissionais utilizando Python, React e outras tecnologias. Busco constantemente aprender e evoluir, criando soluções inovadoras e explorando novas oportunidades que me desafiem a crescer na área de tecnologia.
+              Atualmente, atuo como freelancer, me dedicando a projetos pessoais e profissionais utilizando Python, React e outras tecnologias, com foco em análise de dados e automação.
             </Typography>
           </TimelineContent>
         </TimelineItem>
@@ -118,7 +118,7 @@ export const Experiences: FC = () => {
               Aprendendo continuamente!
             </Typography>
             <Typography variant="body2" sx={{ marginTop: 1, fontSize: { xs: '0.875rem', md: '1rem' } }}>
-              Estou constantemente me desafiando com novos projetos pessoais, como o desenvolvimento de um portfólio interativo e automação de tarefas usando Python. A cada projeto, busco aprofundar meu conhecimento e aprimorar minhas habilidades técnicas.
+              Estou constantemente me desafiando com novos projetos pessoais. A cada projeto, busco aprofundar meu conhecimento e aprimorar minhas habilidades técnicas.
             </Typography>
           </TimelineContent>
         </TimelineItem>

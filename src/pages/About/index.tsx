@@ -47,7 +47,6 @@ export const About: React.FC = () => {
         >
           <Typography
             sx={{
-              fontSize: '1.2rem',
               lineHeight: 1.8,
               maxWidth: '800px',
               marginBottom: '30px',

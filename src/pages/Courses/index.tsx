@@ -9,7 +9,7 @@ export const Courses: FC = () => {
   return (
     <Box sx={{ padding: { xs: 2, md: 4 }, width: '100%' }}>
       <AnimationOnScroll animateIn="animate__backInLeft">
-        <Title>Cursos</Title>
+        <Title>Formação</Title>
       </AnimationOnScroll>
 
       <Timeline position="alternate">

@@ -9,15 +9,20 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #121212;
-    color: #ffffff;
+    font-family: ${({ theme }) => theme.typography.fontFamily};
+    background-color: ${({ theme }) => theme.palette.background.default};
+    color: ${({ theme }) => theme.palette.text.primary};
+
+    @media (max-width: 600px) {
+      font-size: 70%;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
+    font-family: ${({ theme }) => theme.typography.fontFamily};
   }
 `;
+
 
 export const Title = styled.div`
   font-size: 2rem;

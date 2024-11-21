@@ -1,8 +1,6 @@
-// src/App.tsx
 import { useState, useEffect } from 'react';
 import { Container, Box } from '@mui/material';
 import { Intro } from './components/Intro';
-import { GlobalStyles } from './styles/GlobalStyles';
 import { Routes } from './routes';
 import Footer from './components/Footer';
 import Loading from './components/Loading';
@@ -24,7 +22,6 @@ export const App = () => {
 
   return (
     <div>
-      <GlobalStyles />
       <Navbar />
       <Box id="intro" sx={{ minHeight: '100vh', minWidth: '100%' }}>
         <Intro />

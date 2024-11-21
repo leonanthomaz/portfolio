@@ -32,7 +32,7 @@ export const Intro = () => {
             <TypewriterEffect>
               <Typewriter
                 options={{
-                  strings: ['Desenvolvedor Python', 'Automação de Processos', 'Desenvolvimento de APIs', 'Integração de Sistemas'],
+                  strings: ['Desenvolvedor Python', 'Analista de Dados', 'Bioinformata'],
                   autoStart: true,
                   delay: 75,
                   loop: true,

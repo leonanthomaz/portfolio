@@ -5,6 +5,7 @@ import { FaPython, FaJsSquare, FaJava } from 'react-icons/fa';
 import { Title } from '../../styles/GlobalStyles';
 import { SkillsContainer, SkillItemContainer, SkillItem, HighlightText, SkillsWrapper } from './SkillsStyles';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import { BsFiletypeSql } from "react-icons/bs";
 
 export const Skills: React.FC = () => {
   return (
@@ -29,7 +30,7 @@ export const Skills: React.FC = () => {
               { icon: <SiTypescript />, label: 'TypeScript' },
               { icon: <FaJava />, label: 'Java' },
               { icon: <SiSpring />, label: 'Spring' },
-              { icon: <SiMysql />, label: 'MySQL' },
+              { icon: <BsFiletypeSql />, label: 'SQL' },
               { icon: <SiDocker />, label: 'Docker' },
             ].map((skill, index) => (
               <AnimationOnScroll key={index} animateIn="animate__fadeInUp">
