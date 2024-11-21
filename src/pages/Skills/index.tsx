@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import { SiReact, SiSpring, SiTypescript, SiMysql, SiDocker } from 'react-icons/si';
+import { SiReact, SiSpring, SiTypescript, SiDocker } from 'react-icons/si';
 import { FaPython, FaJsSquare, FaJava } from 'react-icons/fa';
 import { Title } from '../../styles/GlobalStyles';
 import { SkillsContainer, SkillItemContainer, SkillItem, HighlightText, SkillsWrapper } from './SkillsStyles';

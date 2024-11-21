@@ -18,7 +18,7 @@ export const About: React.FC = () => {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          color: (theme) => theme.palette.primary.main,  // Usando o tema
+          color: (theme) => theme.palette.primary.main, // Usando o tema
           textAlign: 'center',
           minHeight: '100vh',
         }}
@@ -50,24 +50,26 @@ export const About: React.FC = () => {
               lineHeight: 1.8,
               maxWidth: '800px',
               marginBottom: '30px',
-              color: theme => theme.palette.text.primary, // Usando a cor de texto do tema
+              color: (theme) => theme.palette.text.primary, // Usando a cor de texto do tema
               fontWeight: 400,
               textAlign: 'left',
             }}
           >
-            Sou um <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>desenvolvedor de software</span> com experiência em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>front-end</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>back-end</span>. Trabalhei com <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>HTML, CSS, JavaScript</span> e apliquei <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>SEO</span>. No back-end, minha principal ferramenta é <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Python</span>, utilizada para automação, integração de sistemas, e criação de APIs, além de <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>SQL</span> para bancos de dados.
+            Sou <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Desenvolvedor Python</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Engenheiro de Software</span>, formado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Análise e Desenvolvimento de Sistemas</span> e pós-graduado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Engenharia de Software</span>.
 
-            Em minha experiência profissional, além de atuar com <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Python</span>, também trabalhei com <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Java</span>, desenvolvendo soluções que atendem a demandas específicas. No entanto, foi com <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Python</span> que encontrei maior versatilidade e eficiência.
+            Tenho experiência no desenvolvimento de soluções tanto para <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>front-end</span> quanto para <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>back-end</span>, trabalhando com tecnologias como <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Python</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>SQL</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Java</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>React</span>. Além disso, tenho conhecimento em automação, integração de APIs e otimização de processos.
 
-            Hoje, sou freelancer, criando soluções personalizadas como automação de processos, desenvolvimento de APIs e scripts sob demanda para empresas. A flexibilidade de atuar por conta própria me permite explorar profundamente as possibilidades do <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Python</span>.
+            Atualmente, sou freelancer, desenvolvendo soluções personalizadas, como automação de processos e desenvolvimento de APIs, utilizando principalmente o <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Python</span>. Essa flexibilidade me permite explorar profundamente as possibilidades dessa tecnologia.
 
-            Paralelamente, estou cursando <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Biomedicina</span>, com foco em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>bioinformática</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>biotecnologia</span>, buscando explorar como a tecnologia pode contribuir para o avanço dessas áreas.
+            Paralelamente, estou cursando <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Biomedicina</span>, com foco em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>bioinformática</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>biotecnologia</span>, buscando aplicar minhas habilidades de desenvolvimento de software para contribuir com inovações na área de saúde e ciência.
+
+            Meu objetivo é combinar minha experiência técnica com meu interesse por ciência e saúde, desenvolvendo soluções que possam melhorar a vida das pessoas e impactar positivamente o campo biomédico.
           </Typography>
         </Box>
 
         <Button
           sx={{
-            backgroundColor: theme => theme.palette.primary.main,
+            backgroundColor: (theme) => theme.palette.primary.main,
             color: '#121212',
             fontWeight: 'bold',
             padding: '10px 20px',
@@ -75,7 +77,7 @@ export const About: React.FC = () => {
             marginTop: '20px',
             textTransform: 'uppercase',
             '&:hover': {
-              backgroundColor: theme => theme.palette.secondary.main, // Usando a cor do tema para hover
+              backgroundColor: (theme) => theme.palette.secondary.main, // Usando a cor do tema para hover
             },
           }}
         >
