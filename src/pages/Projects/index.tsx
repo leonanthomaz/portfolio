@@ -23,6 +23,7 @@ import {
 import { projetosData, Projeto } from '../../data/portfolio';
 import { Title } from '../../styles/GlobalStyles';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import theme from '../../styles/theme';
 
 export const Projects = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -97,36 +98,36 @@ export const Projects = () => {
             <Tab
               label="Destaque"
               sx={{
-                color: activeTab === 0 ? '#ffeb3b' : '#ccc',
-                '&:hover': { color: '#ffeb3b' },
+                color: activeTab === 0 ? theme.palette.primary.main : theme.palette.text.primary,
+                '&:hover': { color: theme.palette.primary.main },
               }}
             />
             <Tab
               label="Java"
               sx={{
-                color: activeTab === 1 ? '#ffeb3b' : '#ccc',
-                '&:hover': { color: '#ffeb3b' },
+                color: activeTab === 1 ? theme.palette.primary.main : theme.palette.text.primary,
+                '&:hover': { color: theme.palette.primary.main },
               }}
             />
             <Tab
               label="React"
               sx={{
-                color: activeTab === 2 ? '#ffeb3b' : '#ccc',
-                '&:hover': { color: '#ffeb3b' },
+                color: activeTab === 2 ? theme.palette.primary.main : theme.palette.text.primary,
+                '&:hover': { color: theme.palette.primary.main },
               }}
             />
             <Tab
               label="Python"
               sx={{
-                color: activeTab === 3 ? '#ffeb3b' : '#ccc',
-                '&:hover': { color: '#ffeb3b' },
+                color: activeTab === 3 ? theme.palette.primary.main : theme.palette.text.primary,
+                '&:hover': { color: theme.palette.primary.main },
               }}
             />
             <Tab
               label="Mobile"
               sx={{
-                color: activeTab === 4 ? '#ffeb3b' : '#ccc',
-                '&:hover': { color: '#ffeb3b' },
+                color: activeTab === 4 ? theme.palette.primary.main : theme.palette.text.primary,
+                '&:hover': { color: theme.palette.primary.main },
               }}
             />
           </Tabs>
@@ -174,7 +175,7 @@ export const Projects = () => {
                 }}
               >
                 <Typography variant="h4">{selectedProjeto.title}</Typography>
-                <IconButton onClick={handleClose} sx={{ color: '#ffeb3b' }}>
+                <IconButton onClick={handleClose} sx={{ color: theme.palette.primary.main }}>
                   <CloseIcon />
                 </IconButton>
               </Box>

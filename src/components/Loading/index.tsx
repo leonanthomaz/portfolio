@@ -2,7 +2,6 @@
 import { CircularProgress, Box } from '@mui/material';
 import { keyframes } from '@emotion/react';
 
-// Animação de fade-in
 const fadeIn = keyframes`
   0% {
     opacity: 0;
@@ -12,7 +11,6 @@ const fadeIn = keyframes`
   }
 `;
 
-// Componente de loading com animação de transição
 const Loading = () => {
   return (
     <Box
@@ -21,9 +19,9 @@ const Loading = () => {
         justifyContent: 'center',
         alignItems: 'center',
         height: '100vh',
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',  // Fundo escuro com transparência
-        backdropFilter: 'blur(5px)', // Efeito de desfoque no fundo
-        animation: `${fadeIn} 1s ease-in-out`, // Animação de fade-in
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        backdropFilter: 'blur(5px)',
+        animation: `${fadeIn} 1s ease-in-out`,
       }}
     >
       <CircularProgress color="primary" sx={{ animation: `${fadeIn} 1s ease-in-out` }} />

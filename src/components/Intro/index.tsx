@@ -1,3 +1,4 @@
+// src/components/Intro/index.tsx
 import Typewriter from 'typewriter-effect';
 import { Box } from '@mui/material';
 import { Link as ScrollLink } from 'react-scroll';
@@ -45,14 +46,12 @@ export const Intro = () => {
           <DownloadButton onClick={handleDownloadClick}>
             Meu Currículo
           </DownloadButton>
-
-          {/* Link ajustado para rolar suavemente até a seção "about" */}
           <ScrollLink 
             to="about" 
             smooth={true} 
             duration={500} 
-            offset={-60} // Ajusta para o mesmo deslocamento da navbar
-            spy={true}   // Ativa a observação de seções
+            offset={-60}
+            spy={true}
           >
             <ArrowDown />
           </ScrollLink>

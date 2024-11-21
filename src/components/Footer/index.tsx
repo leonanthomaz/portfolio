@@ -1,35 +1,7 @@
 // src/components/Footer/index.tsx
-import { Box, Container, Typography, Link } from '@mui/material';
+import { Container, Link, Typography } from '@mui/material';
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
-import { styled } from '@mui/material/styles';
-
-const FooterContainer = styled(Box)(({ theme }) => ({
-  color: '#fff',
-  padding: '40px 0',
-  textAlign: 'center',
-  boxShadow: '0 -4px 10px rgba(0, 0, 0, 0.1)',
-  [theme.breakpoints.up('md')]: {
-    padding: '40px 20px',
-  },
-}));
-
-const SocialLinks = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  justifyContent: 'center',
-  gap: '20px',
-  marginTop: '20px',
-  [theme.breakpoints.down('sm')]: {
-    gap: '15px',
-  },
-}));
-
-const SocialLink = styled(Link)(() => ({
-  transition: 'transform 0.3s, opacity 0.3s',
-  '&:hover': {
-    transform: 'scale(1.1)',
-    opacity: 0.8,
-  },
-}));
+import { FooterContainer, SocialLinks, SocialLink } from './FooterStyles'; // Importando os estilos
 
 const Footer = () => {
   return (

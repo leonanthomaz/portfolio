@@ -1,4 +1,3 @@
-// src/pages/Skills/SkillsStyles.ts
 import styled from 'styled-components';
 import { Box } from '@mui/material';
 
@@ -7,23 +6,21 @@ export const SkillsContainer = styled(Box)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #ffeb3b;
+  color: ${({ theme }) => theme.palette.primary.main};
   padding: 60px 20px;
   text-align: center;
   min-height: 100vh;
 `;
 
 export const SkillsWrapper = styled(Box)`
-display: flex;
-flex-direction: column;
-align-items: center;
-/* border: 2px solid red; */
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const SkillItemContainer = styled(Box)`
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 itens por linha em telas maiores */
+  grid-template-columns: repeat(4, 1fr);
   gap: 80px;
   margin-top: 40px;
 
@@ -38,10 +35,9 @@ export const SkillItemContainer = styled(Box)`
 
   @media (max-width: 480px) {
     gap: 20px;
-    grid-template-columns: repeat(2, 1fr); /* 1 item por linha em telas muito pequenas */
+    grid-template-columns: repeat(1, 1fr); /* 1 item por linha em telas muito pequenas */
   }
 `;
-
 
 export const SkillItem = styled(Box)`
   display: flex;
@@ -51,7 +47,7 @@ export const SkillItem = styled(Box)`
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background-color: #1a1a1a;
+  background-color: ${({ theme }) => theme.palette.background.paper}; /* Cor de fundo do tema */
   padding: 20px;
   text-align: center;
   cursor: pointer;
@@ -64,18 +60,18 @@ export const SkillItem = styled(Box)`
 
   svg {
     font-size: 48px;
-    color: #ffeb3b;
+    color: ${({ theme }) => theme.palette.primary.main}; /* Cor do tema */
   }
 
   span {
     margin-top: 10px;
     font-size: 16px;
     font-weight: 500;
-    color: #ddd;
+    color: ${({ theme }) => theme.palette.text.secondary}; /* Cor do texto do tema */
   }
 `;
 
 export const HighlightText = styled.span`
   font-weight: bold;
-  color: #ffeb3b;
+  color: ${({ theme }) => theme.palette.primary.main}; /* Cor do tema */
 `;

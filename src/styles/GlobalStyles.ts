@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import theme from './theme';
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -24,8 +25,8 @@ export const Title = styled.div`
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #FFEB3B;
-  border-bottom: 3px solid #FFEB3B;
+  color: ${theme.palette.primary.main};
+  border-bottom: 3px solid ${theme.palette.primary.main};
   padding-bottom: 10px;
   display: inline-block;
   text-align: left;
@@ -35,3 +36,4 @@ export const Title = styled.div`
     font-size: 1.5rem;
   }
 `;
+

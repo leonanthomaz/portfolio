@@ -1,6 +1,8 @@
+// src/components/Intro/IntroStyles.ts
 import { styled } from '@mui/material/styles';
 import { Box, Button } from '@mui/material';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import theme from '../../styles/theme';
 
 export const IntroContainer = styled(Box)`
   height: 100vh;
@@ -27,7 +29,6 @@ export const IntroContainer = styled(Box)`
   }
 `;
 
-// Estilo para o nome "Leonan Thomaz"
 export const NameText = styled('h1')`
   font-size: 4rem;
   font-weight: 900;
@@ -46,34 +47,24 @@ export const NameText = styled('h1')`
 `;
 
 export const FirstName = styled('span')`
-  color: #fff;
+  color: ${theme.palette.text.primary};
 `;
 
 export const LastName = styled('span')`
-  color: #ffeb3b; /* Cor diferente para 'Thomaz' */
-`;
-
-export const TitleText = styled('span')`
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #242424;
-  @media (max-width: 768px) {
-    font-size: 2rem;
-  }
-  @media (max-width: 480px) {
-    font-size: 1.4rem;
-  }
+  color: ${theme.palette.primary.main};
 `;
 
 export const TypewriterEffect = styled('div')`
   font-size: 2.5rem;
   font-weight: bold;
-  color: #ffeb3b;
+  color: ${theme.palette.primary.main};
   z-index: 2;
   margin-left: -5px;
+
   @media (max-width: 768px) {
     font-size: 2rem;
   }
+
   @media (max-width: 480px) {
     font-size: 1.4rem;
   }
@@ -99,20 +90,21 @@ export const DownloadButton = styled(Button)`
   width: 250px;
   height: 45px;
   margin-top: 30px;
-  background-color: #ffeb3b;
-  color: #121212;
+  background-color: ${theme.palette.primary.main};
+  color: #242424;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 8px;
   text-transform: none;
+  padding: 8px 16px;
   &:hover {
-    background-color: #ff9800;
+    background-color: ${theme.palette.secondary.main};
   }
 `;
 
 export const ArrowDown = styled(ArrowDownwardIcon)`
   margin-top: 20px;
   font-size: 3rem;
-  color: #ffeb3b;
+  color: ${theme.palette.primary.main};
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 

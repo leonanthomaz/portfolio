@@ -45,7 +45,7 @@ export const Experiences: FC = () => {
         <TimelineItem>
           <TimelineSeparator>
             <TimelineDot
-              color="secondary"
+              color="primary"
               sx={{
                 width: { xs: 40, sm: 50 },
                 height: { xs: 40, sm: 50 },
@@ -73,7 +73,7 @@ export const Experiences: FC = () => {
         <TimelineItem>
           <TimelineSeparator>
             <TimelineDot
-              color="error"
+              color="primary"
               sx={{
                 width: { xs: 40, sm: 50 },
                 height: { xs: 40, sm: 50 },
@@ -101,7 +101,7 @@ export const Experiences: FC = () => {
         <TimelineItem>
           <TimelineSeparator>
             <TimelineDot
-              color="warning"
+              color="primary"
               sx={{
                 width: { xs: 40, sm: 50 },
                 height: { xs: 40, sm: 50 },

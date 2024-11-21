@@ -43,7 +43,7 @@ export const Courses: FC = () => {
         {/* Curso de Pós-Graduação */}
         <TimelineItem>
           <TimelineSeparator>
-            <TimelineDot color="secondary" sx={{
+            <TimelineDot color="primary" sx={{
               width: { xs: 40, sm: 50 },
               height: { xs: 40, sm: 50 },
               display: 'flex',
@@ -95,7 +95,7 @@ export const Courses: FC = () => {
         {/* Bootcamp de Automação em Python */}
         <TimelineItem>
           <TimelineSeparator>
-            <TimelineDot color="secondary" sx={{
+            <TimelineDot color="primary" sx={{
               width: { xs: 40, sm: 50 },
               height: { xs: 40, sm: 50 },
               display: 'flex',

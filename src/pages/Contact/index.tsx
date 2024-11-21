@@ -6,8 +6,10 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { Title } from '../../styles/GlobalStyles';
+import { useTheme } from '@mui/material/styles'; // Importando o hook useTheme
 
 export const Contact: React.FC = () => {
+  const theme = useTheme(); // Obtendo o tema atual
   const form = useRef<HTMLFormElement>(null);
   const n = useRef<HTMLInputElement>(null);
   const t = useRef<HTMLInputElement>(null);
@@ -21,8 +23,6 @@ export const Contact: React.FC = () => {
     const celular = t.current?.value.replace(/\D/g, '') || '';
     const nome = n.current?.value || '';
     const mensagem = m.current?.value || '';
-
-    console.log('DADOS DO FORMULÁRIO:', celular, nome, mensagem);
 
     if (!celular || !nome || !mensagem) {
       toast.warning('Campos obrigatórios não preenchidos. Por favor, verifique.', {
@@ -82,7 +82,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <Box sx={{ padding: 4, borderRadius: '8px', backgroundColor: '#121212' }}>
+    <Box sx={{ padding: 4, borderRadius: '8px'}}>
       <AnimationOnScroll animateIn="animate__backInLeft">
         <Title>Contato</Title>
       </AnimationOnScroll>
@@ -105,12 +105,12 @@ export const Contact: React.FC = () => {
               inputRef={n}
               required
               sx={{
-                input: { color: '#FFD700' },
-                '& .MuiInputLabel-root': { color: '#FFD700' },
+                input: { color: theme.palette.text.primary },
+                '& .MuiInputLabel-root': { color: theme.palette.text.primary },
                 '& .MuiOutlinedInput-root': {
-                  '& fieldset': { borderColor: '#FFD700' },
-                  '&:hover fieldset': { borderColor: '#FFD700' },
-                  '&.Mui-focused fieldset': { borderColor: '#FFD700' },
+                  '& fieldset': { borderColor: theme.palette.primary.main },
+                  '&:hover fieldset': { borderColor: theme.palette.primary.main },
+                  '&.Mui-focused fieldset': { borderColor: theme.palette.primary.main },
                 },
               }}
             />
@@ -122,12 +122,12 @@ export const Contact: React.FC = () => {
               inputRef={t}
               required
               sx={{
-                input: { color: '#FFD700' },
-                '& .MuiInputLabel-root': { color: '#FFD700' },
+                input: { color: theme.palette.text.primary },
+                '& .MuiInputLabel-root': { color: theme.palette.text.primary },
                 '& .MuiOutlinedInput-root': {
-                  '& fieldset': { borderColor: '#FFD700' },
-                  '&:hover fieldset': { borderColor: '#FFD700' },
-                  '&.Mui-focused fieldset': { borderColor: '#FFD700' },
+                  '& fieldset': { borderColor: theme.palette.primary.main },
+                  '&:hover fieldset': { borderColor: theme.palette.primary.main },
+                  '&.Mui-focused fieldset': { borderColor: theme.palette.primary.main },
                 },
               }}
             />
@@ -141,24 +141,27 @@ export const Contact: React.FC = () => {
               inputRef={m}
               required
               sx={{
-                textarea: { color: '#FFD700' },
-                '& .MuiInputLabel-root': { color: '#FFD700' },
+                textarea: { color: theme.palette.text.primary },
+                '& .MuiInputLabel-root': { color: theme.palette.text.primary },
                 '& .MuiOutlinedInput-root': {
-                  '& fieldset': { borderColor: '#FFD700' },
-                  '&:hover fieldset': { borderColor: '#FFD700' },
-                  '&.Mui-focused fieldset': { borderColor: '#FFD700' },
+                  '& fieldset': { borderColor: theme.palette.primary.main },
+                  '&:hover fieldset': { borderColor: theme.palette.primary.main },
+                  '&.Mui-focused fieldset': { borderColor: theme.palette.primary.main },
                 },
               }}
             />
             <Button
               type="submit"
               variant="contained"
-              color="primary"
               fullWidth
-              sx={{ marginTop: 2 }}
+              sx={{ marginTop: 2, backgroundColor: theme => theme.palette.primary.main,
+                '&:hover': {
+                  backgroundColor: theme => theme.palette.secondary.main, 
+                },
+              }}
               disabled={loading}
             >
-              {loading ? <CircularProgress size={24} sx={{ color: '#FFD700' }} /> : 'Enviar Mensagem'}
+              {loading ? <CircularProgress size={24} sx={{ color: theme.palette.primary.contrastText }} /> : 'Enviar Mensagem'}
             </Button>
           </form>
         </Box>
@@ -173,21 +176,21 @@ export const Contact: React.FC = () => {
             gap: 2,
           }}
         >
-          <Typography variant="h6" sx={{ color: '#FFD700', marginBottom: 2 }}>
+          <Typography variant="h6" sx={{ color: theme.palette.primary.main, marginBottom: 2 }}>
             Minhas Redes Sociais
           </Typography>
           <Box sx={{ display: 'flex', gap: 3 }}>
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <FaFacebook size={40} color="#FFD700" />
+              <FaFacebook size={40} color={theme.palette.primary.main} />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin size={40} color="#FFD700" />
+              <FaLinkedin size={40} color={theme.palette.primary.main} />
             </a>
             <a href="https://github.com/leonanthomaz" target="_blank" rel="noopener noreferrer">
-              <FaGithub size={40} color="#FFD700" />
+              <FaGithub size={40} color={theme.palette.primary.main} />
             </a>
             <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noopener noreferrer">
-              <FaWhatsapp size={40} color="#FFD700" />
+              <FaWhatsapp size={40} color={theme.palette.primary.main} />
             </a>
           </Box>
         </Box>

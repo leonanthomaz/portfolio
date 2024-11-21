@@ -1,13 +1,6 @@
 // Navbar.tsx
 import { FC, useState } from 'react';
-import {
-  Toolbar,
-  Box,
-  IconButton,
-  List,
-  ListItem,
-  Divider,
-} from '@mui/material';
+import { Toolbar, Box, IconButton, List, ListItem, Divider } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import {
   NavbarWrapper,
@@ -21,6 +14,7 @@ import BuildIcon from '@mui/icons-material/Build';
 import PortfolioIcon from '@mui/icons-material/FolderOpen';
 import SchoolIcon from '@mui/icons-material/School';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
+import { useTheme } from '@mui/material/styles';
 
 const navItems = [
   { label: 'Início', to: 'intro', icon: <HomeIcon /> },
@@ -34,6 +28,7 @@ const navItems = [
 
 const Navbar: FC = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const theme = useTheme();  // Usando o tema MUI
 
   const toggleDrawer = (open: boolean) => () => {
     setDrawerOpen(open);
@@ -86,7 +81,7 @@ const Navbar: FC = () => {
         <MenuDrawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
           <List
             sx={{
-              marginTop: '100px', // Adiciona uma margem superior para descer os itens
+              marginTop: '100px',
             }}
           >
             {navItems.map((item) => (
@@ -113,7 +108,7 @@ const Navbar: FC = () => {
                       display: 'flex',
                       alignItems: 'center',
                       gap: 2,
-                      color: 'inherit',
+                      color: theme.palette.text.primary, // Usando a cor do tema
                     }}
                   >
                     {item.icon}
@@ -122,10 +117,9 @@ const Navbar: FC = () => {
                 </DrawerLink>
               </ListItem>
             ))}
-            <Divider sx={{ borderColor: '#FFEB3B', marginY: 1 }} />
+            <Divider sx={{ borderColor: theme.palette.primary.main, marginY: 1 }} />
           </List>
         </MenuDrawer>
-
       </Toolbar>
     </NavbarWrapper>
   );
