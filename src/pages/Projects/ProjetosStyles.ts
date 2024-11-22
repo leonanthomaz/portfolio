@@ -89,3 +89,25 @@ export const ModalContent = styled(Box)`
     background-color: #212121;
   }
 `;
+
+// Mensagem quando não há projetos disponíveis
+export const ProjetoEmpty = styled('div')`
+  display: flex;
+  flex-direction: column; // Adiciona direção coluna para centralizar ícone e texto
+  justify-content: center;
+  align-items: center;
+  height: 200px; // Ajuste conforme necessário
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif;
+
+  svg {
+    margin-bottom: 15px; // Espaço entre o ícone e o texto
+  }
+
+  p {
+    margin: 0;
+    padding: 0 20px; // Ajusta o padding horizontal
+  }
+`;

@@ -19,11 +19,13 @@ import {
   ProjetoSubtitle,
   ProjetoDescription,
   LinkButton,
+  ProjetoEmpty,
 } from './ProjetosStyles';
 import { projetosData, Projeto } from '../../data/portfolio';
 import { Title } from '../../styles/GlobalStyles';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import theme from '../../styles/theme';
+import { AiOutlineRobot } from 'react-icons/ai';
 
 export const Projects = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -54,13 +56,23 @@ export const Projects = () => {
     ];
     const section = projetosData[sections[activeTab]];
 
+    if (!section || section.length === 0) {
+      return (
+        <Typography variant="body1" color="textSecondary">
+          <ProjetoEmpty>
+            <AiOutlineRobot size={50} color="#666" />
+            <p>Seção em construção. Volte em breve para conferir meus projetos!</p>
+          </ProjetoEmpty>
+        </Typography>
+      );
+    }
+
     return section?.map((projeto: Projeto) => (
       <ProjetoCard key={projeto.id} onClick={() => handleOpen(projeto)}>
         <ProjetoImage src={projeto.img} alt={projeto.title} loading="lazy" />
         <ProjetoDetails>
           <ProjetoTitle>{projeto.title}</ProjetoTitle>
           <ProjetoSubtitle>{projeto.subtitle}</ProjetoSubtitle>
-          {/* <ProjetoDescription>{projeto.description}</ProjetoDescription> */}
           <ProjetoDescription>{projeto.date}</ProjetoDescription>
         </ProjetoDetails>
       </ProjetoCard>
