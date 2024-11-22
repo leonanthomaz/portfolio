@@ -1,5 +1,5 @@
-import popCorn1 from '@/assets/img/portfolio/popCorn1.webp';
-import popCorn2 from '@/assets/img/portfolio/popCorn2.webp';
+import popCorn1 from '@/assets/img/portfolio/PopCorn1.webp';
+import popCorn2 from '@/assets/img/portfolio/PopCorn2.webp';
 import eleicoesST from '@/assets/img/portfolio/eleicoes-st.webp';
 import eleicoesST2 from '@/assets/img/portfolio/eleicoes-st2.webp';
 import eleicoesPT from '@/assets/img/portfolio/eleicoes-pt.webp';
