@@ -1,4 +1,3 @@
-// Navbar.tsx
 import { FC, useState } from 'react';
 import { Toolbar, Box, IconButton, List, ListItem, Divider } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -28,7 +27,7 @@ const navItems = [
 
 const Navbar: FC = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const theme = useTheme();  // Usando o tema MUI
+  const theme = useTheme();
 
   const toggleDrawer = (open: boolean) => () => {
     setDrawerOpen(open);
@@ -79,11 +78,7 @@ const Navbar: FC = () => {
 
         {/* Menu Drawer */}
         <MenuDrawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
-          <List
-            sx={{
-              marginTop: '100px',
-            }}
-          >
+          <List sx={{ marginTop: '100px' }}>
             {navItems.map((item) => (
               <ListItem
                 key={item.to}
@@ -108,7 +103,7 @@ const Navbar: FC = () => {
                       display: 'flex',
                       alignItems: 'center',
                       gap: 2,
-                      color: theme.palette.text.primary, // Usando a cor do tema
+                      color: theme.palette.text.primary,
                     }}
                   >
                     {item.icon}

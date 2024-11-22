@@ -1,4 +1,3 @@
-// src/routes/index.tsx
 import { Box } from '@mui/material';
 import { About } from '../pages/About';
 import { Skills } from '../pages/Skills';
@@ -9,7 +8,6 @@ import { Contact } from '../pages/Contact';
 import GitHub from '../components/Github';
 import { keyframes } from '@emotion/react';
 
-// Animação de fade-in progressiva
 const fadeIn = keyframes`
   0% {
     opacity: 0;
@@ -42,8 +40,8 @@ export const Routes = () => (
     </Section>
     <Section id="skills" delay="0.4s">
       <Skills />
+      <GitHub />
     </Section>
-    <GitHub />
     <Section id="experiences" delay="0.6s">
       <Experiences />
     </Section>

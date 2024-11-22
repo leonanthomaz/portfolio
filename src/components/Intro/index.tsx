@@ -51,6 +51,7 @@ export const Intro = () => {
             smooth={true} 
             duration={500} 
             spy={true}
+            offset={-80}
           >
             <ArrowDown />
           </ScrollLink>

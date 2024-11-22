@@ -1,4 +1,3 @@
-// NavbarStyles.ts
 import { AppBar, Drawer } from '@mui/material';
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
@@ -55,10 +54,7 @@ export const DrawerLink = styled(Link)`
 
 export const MenuDrawer = styled(Drawer)`
   .MuiDrawer-paper {
-    padding-top: 20px;
-    width: 250px;
+    width: 240px;
     background-color: ${({ theme }) => theme.palette.background.paper};
-    color: ${({ theme }) => theme.palette.primary.main};
-    border-left: 2px solid ${({ theme }) => theme.palette.primary.main};
   }
 `;
