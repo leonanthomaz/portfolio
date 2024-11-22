@@ -49,7 +49,6 @@ export const About: React.FC = () => {
             sx={{
               lineHeight: 1.8,
               maxWidth: '800px',
-              marginBottom: '30px',
               color: (theme) => theme.palette.text.primary, // Usando a cor de texto do tema
               fontWeight: 400,
               textAlign: 'left',

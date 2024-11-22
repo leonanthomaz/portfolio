@@ -15,6 +15,7 @@ export const ProjetoCard = styled(Box)`
   transition: transform 0.3s ease;
   width: 100%;
   max-width: 300px;
+  text-align: center;
 
   &:hover {
     transform: translateY(-10px);

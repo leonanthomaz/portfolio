@@ -26,7 +26,7 @@ export const App = () => {
       <Box id="intro" sx={{ minHeight: '100vh', minWidth: '100%' }}>
         <Intro />
       </Box>
-      <Container sx={{ mt: 10 }}>
+      <Container>
         <Routes />
       </Container>
       <Footer />

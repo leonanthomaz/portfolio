@@ -60,7 +60,8 @@ export const Projects = () => {
         <ProjetoDetails>
           <ProjetoTitle>{projeto.title}</ProjetoTitle>
           <ProjetoSubtitle>{projeto.subtitle}</ProjetoSubtitle>
-          <ProjetoDescription>{projeto.description}</ProjetoDescription>
+          {/* <ProjetoDescription>{projeto.description}</ProjetoDescription> */}
+          <ProjetoDescription>{projeto.date}</ProjetoDescription>
         </ProjetoDetails>
       </ProjetoCard>
     ));
@@ -178,15 +179,15 @@ export const Projects = () => {
                 }}
               >
                 <Typography variant="h4">{selectedProjeto.title}</Typography>
-                <IconButton onClick={handleClose} sx={{ color: theme.palette.primary.main }}>
-                  <CloseIcon />
+                <IconButton onClick={handleClose}>
+                  <CloseIcon sx={{ fontSize: '30px' }} />
                 </IconButton>
               </Box>
               <Typography variant="h6" color="textSecondary">
                 {selectedProjeto.subtitle}
               </Typography>
               <img
-                src={selectedProjeto.img2}
+                src={selectedProjeto.img2 ? selectedProjeto.img2 : selectedProjeto.img}
                 alt={selectedProjeto.title}
                 style={{ width: '100%', borderRadius: 8, marginTop: 20 }}
               />
