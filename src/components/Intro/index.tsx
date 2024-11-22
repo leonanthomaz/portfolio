@@ -17,8 +17,12 @@ import {
 import curriculo from '@/assets/docs/curriculo.pdf';
 
 export const Intro = () => {
+  
   const handleDownloadClick = () => {
-    window.location.href = curriculo;
+    const link = document.createElement('a');
+    link.href = curriculo;
+    link.download = 'Curriculo_Leonan_Thomaz.pdf';
+    link.click();
   };
 
   return (
@@ -32,7 +36,11 @@ export const Intro = () => {
             <TypewriterEffect>
               <Typewriter
                 options={{
-                  strings: ['Desenvolvedor Python', 'Analista de Dados', 'Bioinformata em formação'],
+                  strings: [
+                    'Análise de Dados com Python',
+                    'Automação de Processos',
+                    'Bioinformática em Formação',
+                  ],
                   autoStart: true,
                   delay: 75,
                   loop: true,
@@ -44,7 +52,7 @@ export const Intro = () => {
 
         <Right>
           <DownloadButton onClick={handleDownloadClick}>
-            Meu Currículo
+            Baixar Currículo
           </DownloadButton>
           <ScrollLink 
             to="about" 

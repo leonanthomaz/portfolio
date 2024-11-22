@@ -45,25 +45,26 @@ export const About: React.FC = () => {
             textAlign: 'left',
           }}
         >
-          <Typography
-            sx={{
-              lineHeight: 1.8,
-              maxWidth: '800px',
-              color: (theme) => theme.palette.text.primary, // Usando a cor de texto do tema
-              fontWeight: 400,
-              textAlign: 'left',
-            }}
-          >
-            Sou <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Desenvolvedor Python</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Engenheiro de Software</span>, formado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Análise e Desenvolvimento de Sistemas</span> e pós-graduado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Engenharia de Software</span>.
+        <Typography
+          sx={{
+            lineHeight: 1.8,
+            maxWidth: '800px',
+            color: (theme) => theme.palette.text.primary,
+            fontWeight: 400,
+            textAlign: 'left',
+          }}
+        >
+          Sou <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Analista de Dados</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Desenvolvedor Python</span>, formado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Análise e Desenvolvimento de Sistemas</span> e pós-graduado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Engenharia de Software</span>.  
 
-            Tenho experiência no desenvolvimento de soluções tanto para <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>front-end</span> quanto para <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>back-end</span>, trabalhando com tecnologias como <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Python</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>SQL</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Java</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>React</span>. Além disso, tenho conhecimento em automação, integração de APIs e otimização de processos.
+          Minha experiência abrange <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>análise de dados</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>automação de processos</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>visualização de dados</span>, utilizando ferramentas como <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Python</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>SQL</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Power BI</span>. No Python, utilizo bibliotecas como <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Pandas</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>NumPy</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Matplotlib</span> para manipulação e análise de dados, além de <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Requests</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Beautiful Soup</span> para integrações e web scraping.  
 
-            Atualmente, sou freelancer, desenvolvendo soluções personalizadas, como automação de processos e desenvolvimento de APIs, utilizando principalmente o <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Python</span>.
+          Atuei em projetos envolvendo <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>automação de processos</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>manipulação de dados</span> com <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>bancos SQL</span>, otimizando fluxos de trabalho e gerando relatórios estratégicos com o <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Power BI</span>.  
 
-            Paralelamente, estou cursando <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Biomedicina</span>, com foco em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>bioinformática</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>biotecnologia</span>, buscando aplicar minhas habilidades de desenvolvimento de software para contribuir com inovações na área de saúde e ciência.
+          Como freelancer, desenvolvi soluções personalizadas de <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>automação</span> e análise de dados para empresas, abrangendo desde a integração de APIs até a criação de dashboards interativos e scripts otimizados para a tomada de decisão.  
 
-            Meu objetivo é combinar minha experiência técnica com meu interesse por ciência e saúde, desenvolvendo soluções que possam melhorar a vida das pessoas e impactar positivamente o campo biomédico.
-          </Typography>
+          Atualmente, curso <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Biomedicina</span>, aprofundando-me em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>bioinformática</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>biotecnologia</span>, com o objetivo de integrar tecnologia e ciência. Meu foco é desenvolver soluções que aliem inovação tecnológica e impacto positivo, tanto no mercado corporativo quanto no campo biomédico.
+        </Typography>
+
         </Box>
 
         <Button
