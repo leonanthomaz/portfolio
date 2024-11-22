@@ -32,6 +32,7 @@ export const projetosData = {
       date: "Abril 2024",
       technology: "Java, Spring, React, MySQL",
       github: "https://github.com/leonanthomaz/pdv",
+      categories: ["destaque", "java"]
     },
     {
       id: 2,
@@ -79,6 +80,7 @@ export const projetosData = {
       date: "Abril 2024",
       technology: "Java, Spring, React, MySQL",
       github: "https://github.com/leonanthomaz/pdv",
+      categories: ["destaque", "java"]
     },
   ],
 

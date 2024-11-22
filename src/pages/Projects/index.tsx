@@ -56,7 +56,7 @@ export const Projects = () => {
 
     return section?.map((projeto: Projeto) => (
       <ProjetoCard key={projeto.id} onClick={() => handleOpen(projeto)}>
-        <ProjetoImage src={projeto.img} alt={projeto.title} />
+        <ProjetoImage src={projeto.img} alt={projeto.title} loading="lazy" />
         <ProjetoDetails>
           <ProjetoTitle>{projeto.title}</ProjetoTitle>
           <ProjetoSubtitle>{projeto.subtitle}</ProjetoSubtitle>
@@ -95,7 +95,8 @@ export const Projects = () => {
               width: 'auto',
               minWidth: 0,
             }}
-            indicatorColor="primary"
+            indicatorColor="secondary"
+            textColor="inherit"
           >
             <Tab
               label="Destaque"
@@ -179,7 +180,7 @@ export const Projects = () => {
                 }}
               >
                 <Typography variant="h4">{selectedProjeto.title}</Typography>
-                <IconButton onClick={handleClose}>
+                <IconButton onClick={handleClose} aria-label="Fechar modal">
                   <CloseIcon sx={{ fontSize: '30px' }} />
                 </IconButton>
               </Box>
@@ -187,9 +188,9 @@ export const Projects = () => {
                 {selectedProjeto.subtitle}
               </Typography>
               <img
-                src={selectedProjeto.img2 ? selectedProjeto.img2 : selectedProjeto.img}
+                src={selectedProjeto.img2 || selectedProjeto.img}
                 alt={selectedProjeto.title}
-                style={{ width: '100%', borderRadius: 8, marginTop: 20 }}
+                style={{ width: '100%', maxHeight: 300, borderRadius: 8, marginTop: 20, objectFit: 'cover' }}
               />
               <Box sx={{ maxHeight: 400, overflowY: 'auto', marginTop: 2 }}>
                 <Typography variant="body1" sx={{ color: '#242424' }}>
