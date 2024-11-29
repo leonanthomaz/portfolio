@@ -7,9 +7,8 @@ export const SkillsContainer = styled(Box)`
   justify-content: center;
   align-items: center;
   color: ${({ theme }) => theme.palette.primary.main};
-  padding: 60px 20px;
   text-align: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 `;
 
 export const SkillsWrapper = styled(Box)`

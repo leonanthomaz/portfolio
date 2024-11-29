@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useState, useEffect } from 'react';
 import { Toolbar, Box, IconButton, List, ListItem, Divider } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import {
@@ -27,11 +27,36 @@ const navItems = [
 
 const Navbar: FC = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState<string>(''); // Gerenciar o link ativo
   const theme = useTheme();
 
   const toggleDrawer = (open: boolean) => () => {
     setDrawerOpen(open);
   };
+
+  const handleSetActive = (link: string) => {
+    setActiveLink(link); // Atualiza o estado ativo ao clicar no link
+  };
+
+  useEffect(() => {
+    // Lógica para atualizar o link ativo durante a rolagem
+    const handleScroll = () => {
+      navItems.forEach((item) => {
+        const element = document.getElementById(item.to);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 80 && rect.bottom >= 80) {
+            setActiveLink(item.to);
+          }
+        }
+      });
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <NavbarWrapper>
@@ -58,7 +83,8 @@ const Navbar: FC = () => {
               smooth={true}
               duration={500}
               offset={-80}
-              activeClass="active"
+              activeClass={activeLink === item.to ? 'active' : ''}
+              onClick={() => handleSetActive(item.to)} // Atualiza o link ativo ao clicar
             >
               {item.label}
             </NavbarLink>
@@ -95,8 +121,8 @@ const Navbar: FC = () => {
                   smooth={true}
                   duration={500}
                   offset={-80}
-                  activeClass="active"
-                  onClick={toggleDrawer(false)}
+                  activeClass={activeLink === item.to ? 'active' : ''}
+                  onClick={() => handleSetActive(item.to)} // Atualiza o link ativo ao clicar
                 >
                   <Box
                     sx={{

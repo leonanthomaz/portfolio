@@ -23,7 +23,7 @@ export const App = () => {
   return (
     <div>
       <Navbar />
-      <Box id="intro" sx={{ minHeight: '100vh', minWidth: '100%' }}>
+      <Box id="intro">
         <Intro />
       </Box>
       <Container>

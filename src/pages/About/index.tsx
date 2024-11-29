@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
+import { Link as ScrollLink } from 'react-scroll';
 import { Title } from '../../styles/GlobalStyles';
 import photo from '@/assets/img/foto-leonan-atual.webp';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
@@ -18,7 +19,7 @@ export const About: React.FC = () => {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          color: (theme) => theme.palette.primary.main, // Usando o tema
+          color: (theme) => theme.palette.primary.main,
           textAlign: 'center',
           minHeight: '100vh',
         }}
@@ -32,7 +33,7 @@ export const About: React.FC = () => {
               height: 200,
               borderRadius: '50%',
               objectFit: 'cover',
-              border: `5px solid ${theme.palette.primary.main}`, // Usando a cor do tema
+              border: `5px solid ${theme.palette.primary.main}`,
             }}
           />
         </Box>
@@ -45,44 +46,47 @@ export const About: React.FC = () => {
             textAlign: 'left',
           }}
         >
-        <Typography
-          sx={{
-            lineHeight: 1.8,
-            maxWidth: '800px',
-            color: (theme) => theme.palette.text.primary,
-            fontWeight: 400,
-            textAlign: 'left',
-          }}
-        >
-          Sou <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Analista de Dados</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Desenvolvedor Python</span>, formado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Análise e Desenvolvimento de Sistemas</span> e pós-graduado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Engenharia de Software</span>.  
+          <Typography
+            sx={{
+              lineHeight: 1.8,
+              maxWidth: '800px',
+              color: (theme) => theme.palette.text.primary,
+              fontWeight: 400,
+              textAlign: 'left',
+            }}
+          >
+            Sou <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Desenvolvedor Python</span> com foco em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>automação</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>análise de dados</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>integração de APIs</span>. Formado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Análise e Desenvolvimento de Sistemas</span> e pós-graduado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Engenharia de Software</span>, tenho experiência prática com tecnologias como <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Python</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>SQL</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Pandas</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>NumPy</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Matplotlib</span>.  
 
-          Minha experiência abrange <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>análise de dados</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>automação de processos</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>visualização de dados</span>, utilizando ferramentas como <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Python</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>SQL</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Power BI</span>. No Python, utilizo bibliotecas como <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Pandas</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>NumPy</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Matplotlib</span> para manipulação e análise de dados, além de <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Requests</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Beautiful Soup</span> para integrações e web scraping.  
+            Também possuo experiência em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Java</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Spring</span>, além de conhecimento em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>React</span>, aplicado em projetos que exigem interfaces modernas e dinâmicas.  
 
-          Atuei em projetos envolvendo <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>automação de processos</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>manipulação de dados</span> com <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>bancos SQL</span>, otimizando fluxos de trabalho e gerando relatórios estratégicos com o <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Power BI</span>.  
-
-          Como freelancer, desenvolvi soluções personalizadas de <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>automação</span> e análise de dados para empresas, abrangendo desde a integração de APIs até a criação de dashboards interativos e scripts otimizados para a tomada de decisão.  
-
-          Atualmente, curso <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Biomedicina</span>, aprofundando-me em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>bioinformática</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>biotecnologia</span>, com o objetivo de integrar tecnologia e ciência. Meu foco é desenvolver soluções que aliem inovação tecnológica e impacto positivo, tanto no mercado corporativo quanto no campo biomédico.
-        </Typography>
-
+            Atualmente, curso Biomedicina com o objetivo de, no futuro, unir minhas habilidades em tecnologia à área de saúde, explorando aplicações em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>bioinformática</span>. Meu propósito é desenvolver soluções inovadoras que contribuam para o avanço do campo biomédico e impactem positivamente a sociedade.
+          </Typography>
         </Box>
 
-        <Button
-          sx={{
-            backgroundColor: (theme) => theme.palette.primary.main,
-            color: '#121212',
-            fontWeight: 'bold',
-            padding: '10px 20px',
-            borderRadius: '30px',
-            marginTop: '20px',
-            textTransform: 'uppercase',
-            '&:hover': {
-              backgroundColor: (theme) => theme.palette.secondary.main, // Usando a cor do tema para hover
-            },
-          }}
+        <ScrollLink 
+          to="contact" 
+          smooth={true} 
+          duration={500} 
+          spy={true} 
+          offset={-80}
         >
-          Entrar em Contato
-        </Button>
+          <Button
+            sx={{
+              backgroundColor: (theme) => theme.palette.primary.main,
+              color: '#121212',
+              fontWeight: 'bold',
+              padding: '10px 20px',
+              borderRadius: '30px',
+              marginTop: '20px',
+              textTransform: 'uppercase',
+              '&:hover': {
+                backgroundColor: (theme) => theme.palette.secondary.main,
+              },
+            }}
+          >
+            Entrar em Contato
+          </Button>
+        </ScrollLink>
       </Box>
     </Box>
   );

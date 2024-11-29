@@ -23,7 +23,6 @@ const Section = ({ id, delay, children }: { id: string; delay: string; children:
   <Box
     id={id}
     sx={{
-      minHeight: '100vh',
       animation: `${fadeIn} 1.5s ease-in-out`,
       animationDelay: delay,
       animationFillMode: 'forwards',

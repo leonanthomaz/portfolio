@@ -13,6 +13,7 @@ export const Skills: React.FC = () => {
       <AnimationOnScroll animateIn="animate__backInLeft">
         <Title>Minhas Skills</Title>
       </AnimationOnScroll>
+      
       <SkillsContainer>
         <Typography
           variant="h6"

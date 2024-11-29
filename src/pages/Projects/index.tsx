@@ -11,7 +11,6 @@ import {
 } from '@mui/material';
 import { Close as CloseIcon } from '@mui/icons-material';
 import {
-  ProjetosContainer,
   ProjetoCard,
   ProjetoImage,
   ProjetoDetails,
@@ -80,7 +79,7 @@ export const Projects = () => {
   };
 
   return (
-    <ProjetosContainer>
+    <Box sx={{ padding: { xs: 2, md: 4 }, width: '100%' }}>
       <AnimationOnScroll animateIn="animate__backInLeft">
         <Title>Meus Projetos</Title>
       </AnimationOnScroll>
@@ -238,6 +237,6 @@ export const Projects = () => {
           )}
         </Box>
       </Modal>
-    </ProjetosContainer>
+    </Box>
   );
 };

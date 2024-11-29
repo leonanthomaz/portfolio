@@ -1,11 +1,12 @@
-import { FC } from 'react';
+import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot } from '@mui/lab';
 import { FaLaptop, FaTrain, FaBriefcase, FaUniversity } from 'react-icons/fa';
 import { Title } from '../../styles/GlobalStyles';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
-export const Experiences: FC = () => {
+export const Experiences: React.FC = () => {
+  
   const experiences = [
     {
       id: 1,
@@ -46,11 +47,10 @@ export const Experiences: FC = () => {
   ];
 
   return (
-    <Box sx={{ padding: { xs: 2, md: 4 }, width: '100%' }}>
+    <Box sx={{ padding: 4, borderRadius: '8px'}}>
       <AnimationOnScroll animateIn="animate__backInLeft">
         <Title>Experiência</Title>
       </AnimationOnScroll>
-
       <Timeline position="alternate">
         {experiences.map((experience, index) => (
           <TimelineItem key={experience.id}>

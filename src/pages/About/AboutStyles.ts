@@ -7,7 +7,7 @@ export const AboutContainer = styled(Box)`
   justify-content: center;
   align-items: center;  /* Garantir que os itens estejam centralizados */
   color: #ffeb3b;
-  padding: 60px 20px;
+  padding: 40px 20px;
   text-align: center;
   min-height: 100vh;
 `;

@@ -37,9 +37,9 @@ export const Intro = () => {
               <Typewriter
                 options={{
                   strings: [
-                    'Análise de Dados com Python',
+                    'Desenvolvedor Python',
                     'Automação de Processos',
-                    'Bioinformática em Formação',
+                    'Análise de Dados',
                   ],
                   autoStart: true,
                   delay: 75,
