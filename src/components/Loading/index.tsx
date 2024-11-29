@@ -1,4 +1,3 @@
-// src/components/Loading.tsx
 import { CircularProgress, Box } from '@mui/material';
 import { keyframes } from '@emotion/react';
 
@@ -11,7 +10,16 @@ const fadeIn = keyframes`
   }
 `;
 
-const Loading = () => {
+const fadeOut = keyframes`
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+`;
+
+const Loading = ({ isVisible }: { isVisible: boolean }) => {
   return (
     <Box
       sx={{
@@ -21,10 +29,10 @@ const Loading = () => {
         height: '100vh',
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
         backdropFilter: 'blur(5px)',
-        animation: `${fadeIn} 1s ease-in-out`,
+        animation: `${isVisible ? fadeIn : fadeOut} 1s ease-in-out`,
       }}
     >
-      <CircularProgress color="primary" sx={{ animation: `${fadeIn} 1s ease-in-out` }} />
+      <CircularProgress color="primary" sx={{ animation: `${isVisible ? fadeIn : fadeOut} 1s ease-in-out` }} />
     </Box>
   );
 };
