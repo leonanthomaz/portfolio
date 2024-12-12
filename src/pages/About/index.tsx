@@ -46,21 +46,22 @@ export const About: React.FC = () => {
             textAlign: 'left',
           }}
         >
-          <Typography
-            sx={{
-              lineHeight: 1.8,
-              maxWidth: '800px',
-              color: (theme) => theme.palette.text.primary,
-              fontWeight: 400,
-              textAlign: 'left',
-            }}
-          >
-            Sou <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Desenvolvedor Python</span> com foco em automação, análise de dados e integração de APIs. Formado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Análise e Desenvolvimento de Sistemas</span> e pós-graduado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Engenharia de Software</span>, tenho experiência prática com tecnologias como <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Python</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>SQL</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Pandas</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>NumPy</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Matplotlib</span>.  
+        <Typography
+          sx={{
+            lineHeight: 1.8,
+            maxWidth: '800px',
+            color: (theme) => theme.palette.text.primary,
+            fontWeight: 400,
+            textAlign: 'left',
+          }}
+        >
+          Sou <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Desenvolvedor Python</span> com foco em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>automação</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>análise de dados</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>integração de APIs</span>. Formado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Análise e Desenvolvimento de Sistemas</span> e pós-graduado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Engenharia de Software</span>, com ênfase em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Python</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>SQL</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>JavaScript</span>.
 
-            Também possuo experiência em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Java</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Spring</span>, além de conhecimento em Javascript, mais especificamente a biblioteca <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>React</span>, aplicado em projetos que exigem interfaces modernas e dinâmicas.  
+          Além disso, tenho experiência em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Java</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Spring</span>, e conhecimentos em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>React</span>, aplicados em projetos que exigem a construção de interfaces dinâmicas e modernas.
 
-            Atualmente, curso Biomedicina com o objetivo de, no futuro, unir minhas habilidades em tecnologia à área de saúde, explorando aplicações em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>bioinformática</span>. Meu propósito é desenvolver soluções inovadoras que contribuam para o avanço do campo biomédico e impactem positivamente a sociedade.
-          </Typography>
+          Atualmente, estou cursando <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Biomedicina</span>, com o objetivo de combinar minhas habilidades em tecnologia com a área da saúde, especialmente em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>bioinformática</span>. Meu propósito é desenvolver soluções inovadoras para o avanço do campo biomédico, impactando positivamente a sociedade.
+        </Typography>
+
         </Box>
 
         <ScrollLink 
