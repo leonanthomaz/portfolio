@@ -32,21 +32,21 @@ export const Courses: FC = () => {
         "Pós-graduação com ênfase em metodologias ágeis, engenharia de requisitos e arquitetura de software, voltada para soluções modernas.",
       animation: "animate__backInLeft",
     },
-    {
-      icon: <FaUniversity size={24} />,
-      title: "Biomedicina",
-      year: "2024 - 2028",
-      description:
-        "Graduação em andamento, explorando pesquisas e tecnologias aplicadas às áreas de bioinformática e biotecnologia.",
-      animation: "animate__backInRight",  
-    },
+    // {
+    //   icon: <FaUniversity size={24} />,
+    //   title: "Biomedicina",
+    //   year: "2024 - 2028",
+    //   description:
+    //     "Graduação em andamento, explorando pesquisas e tecnologias aplicadas às áreas de bioinformática e biotecnologia.",
+    //   animation: "animate__backInRight",  
+    // },
     {
       icon: <FaCertificate size={24} />,
       title: "Bootcamp de Automação em Python - Dio",
       year: "2024",
       description:
         "Bootcamp cobrindo automação com bibliotecas essenciais como Selenium, BeautifulSoup, Pandas, NumPy e Requests.",
-        animation: "animate__backInLeft",
+        animation: "animate__backInRight",
     },
   ];
 

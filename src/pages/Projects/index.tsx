@@ -48,10 +48,10 @@ export const Projects = () => {
   const renderProjects = () => {
     const sections: (keyof typeof projetosData)[] = [
       'destaque',
-      'biomedicina',
       'python',
       'react',
       'java',
+      'dados',
     ];
     const section = projetosData[sections[activeTab]];
 
@@ -116,29 +116,36 @@ export const Projects = () => {
                 '&:hover': { color: theme.palette.primary.main },
               }}
             />
-            <Tab
+            {/* <Tab
               label="Biomedicina"
+              sx={{
+                color: activeTab === 1 ? theme.palette.primary.main : theme.palette.text.primary,
+                '&:hover': { color: theme.palette.primary.main },
+              }}
+            /> */}
+            <Tab
+              label="Python"
               sx={{
                 color: activeTab === 1 ? theme.palette.primary.main : theme.palette.text.primary,
                 '&:hover': { color: theme.palette.primary.main },
               }}
             />
             <Tab
-              label="Python"
+              label="React"
               sx={{
                 color: activeTab === 2 ? theme.palette.primary.main : theme.palette.text.primary,
                 '&:hover': { color: theme.palette.primary.main },
               }}
             />
             <Tab
-              label="React"
+              label="Java"
               sx={{
                 color: activeTab === 3 ? theme.palette.primary.main : theme.palette.text.primary,
                 '&:hover': { color: theme.palette.primary.main },
               }}
             />
-            <Tab
-              label="Java"
+             <Tab
+              label="Dados"
               sx={{
                 color: activeTab === 4 ? theme.palette.primary.main : theme.palette.text.primary,
                 '&:hover': { color: theme.palette.primary.main },

@@ -80,7 +80,66 @@ export const projetosData = {
     },
   ],
 
-  biomedicina: [
+  // biomedicina: [
+  //   {
+  //     id: 1,
+  //     title: "LabAnalyzer",
+  //     subtitle: "API e Análise de Dados",
+  //     description: "LabAnalyzer é uma aplicação web desenvolvida para facilitar a gestão e análise de dados biomédicos. O sistema permite o cadastro de pacientes, exames e tipos de exames, possibilitando o gerenciamento eficaz de informações clínicas.",
+  //     img: pythonImg,
+  //     date: "Dezembro 2024",
+  //     technology: "Python, Flask, NumPy, pandas, Matplotlib, Seaborn, fpdf",
+  //     github: "https://github.com/leonanthomaz/lab_analyzer",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Análise - Câncer no Brasil",
+  //     subtitle: "Análise de Dados",
+  //     description: "Análise interativa de dados sobre diagnósticos de câncer no Brasil (2000-2019), com visualizações sobre distribuição por faixa etária, gênero e frequência de doenças. Baseado em dados do Kaggle.",
+  //     img: pythonImg,
+  //     date: "Dezembro 2024",
+  //     technology: "Python, Flask, pandas, plotly, kaggle",
+  //     github: "https://github.com/leonanthomaz/analise_dados_cancer_br",
+  //   }
+  //   // {
+  //   //   id: 1,
+  //   //   title: "Análise de Dados Biomédicos",
+  //   //   subtitle: "Estudo de dados hospitalares",
+  //   //   description:
+  //   //     "Projeto focado em explorar dados de saúde pública para identificar padrões de diagnóstico e tratamento utilizando Pandas e Matplotlib.",
+  //   //   img: pythonImg,
+  //   //   date: "Março 2024",
+  //   //   technology: "Python, Pandas, Matplotlib",
+  //   //   url: "https://biomedicina-dados-fake.com",
+  //   //   github: "https://github.com/leonanthomaz/analise-biomedica",
+  //   // },
+  //   // {
+  //   //   id: 2,
+  //   //   title: "Simulação de Epidemias",
+  //   //   subtitle: "Modelo preditivo",
+  //   //   description:
+  //   //     "Aplicação que simula a disseminação de doenças infecciosas em populações, com base em modelos SIR e gráficos interativos.",
+  //   //   img: pythonImg,
+  //   //   date: "Maio 2024",
+  //   //   technology: "Python, NumPy, Plotly",
+  //   //   url: "https://simulacao-epidemias-fake.com",
+  //   //   github: "https://github.com/leonanthomaz/simulacao-epidemias",
+  //   // },
+  //   // {
+  //   //   id: 3,
+  //   //   title: "Automação Laboratorial",
+  //   //   subtitle: "Controle de equipamentos",
+  //   //   description:
+  //   //     "Sistema que automatiza o controle de equipamentos laboratoriais e registra amostras em um banco de dados.",
+  //   //   img: pythonImg,
+  //   //   date: "Fevereiro 2024",
+  //   //   technology: "Python, SQLite",
+  //   //   url: "https://automacao-laboratorial-fake.com",
+  //   //   github: "https://github.com/leonanthomaz/automacao-laboratorial",
+  //   // },
+  // ],
+
+  dados: [
     {
       id: 1,
       title: "LabAnalyzer",
@@ -101,42 +160,6 @@ export const projetosData = {
       technology: "Python, Flask, pandas, plotly, kaggle",
       github: "https://github.com/leonanthomaz/analise_dados_cancer_br",
     }
-    // {
-    //   id: 1,
-    //   title: "Análise de Dados Biomédicos",
-    //   subtitle: "Estudo de dados hospitalares",
-    //   description:
-    //     "Projeto focado em explorar dados de saúde pública para identificar padrões de diagnóstico e tratamento utilizando Pandas e Matplotlib.",
-    //   img: pythonImg,
-    //   date: "Março 2024",
-    //   technology: "Python, Pandas, Matplotlib",
-    //   url: "https://biomedicina-dados-fake.com",
-    //   github: "https://github.com/leonanthomaz/analise-biomedica",
-    // },
-    // {
-    //   id: 2,
-    //   title: "Simulação de Epidemias",
-    //   subtitle: "Modelo preditivo",
-    //   description:
-    //     "Aplicação que simula a disseminação de doenças infecciosas em populações, com base em modelos SIR e gráficos interativos.",
-    //   img: pythonImg,
-    //   date: "Maio 2024",
-    //   technology: "Python, NumPy, Plotly",
-    //   url: "https://simulacao-epidemias-fake.com",
-    //   github: "https://github.com/leonanthomaz/simulacao-epidemias",
-    // },
-    // {
-    //   id: 3,
-    //   title: "Automação Laboratorial",
-    //   subtitle: "Controle de equipamentos",
-    //   description:
-    //     "Sistema que automatiza o controle de equipamentos laboratoriais e registra amostras em um banco de dados.",
-    //   img: pythonImg,
-    //   date: "Fevereiro 2024",
-    //   technology: "Python, SQLite",
-    //   url: "https://automacao-laboratorial-fake.com",
-    //   github: "https://github.com/leonanthomaz/automacao-laboratorial",
-    // },
   ],
 
   python: [

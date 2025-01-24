@@ -1,4 +1,3 @@
-// src/components/Intro/IntroStyles.ts
 import { styled } from '@mui/material/styles';
 import { Box, Button } from '@mui/material';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
@@ -54,12 +53,26 @@ export const LastName = styled('span')`
   color: ${theme.palette.primary.main};
 `;
 
+export const StaticText = styled('span')`
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  z-index: 2;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.4rem;
+  }
+`;
+
 export const TypewriterEffect = styled('div')`
   font-size: 2.5rem;
   font-weight: bold;
-  color: ${theme.palette.primary.main};
+  color: yellow;
   z-index: 2;
-  margin-left: -5px;
 
   @media (max-width: 768px) {
     font-size: 2rem;

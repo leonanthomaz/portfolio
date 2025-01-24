@@ -1,4 +1,3 @@
-// src/components/Intro/index.tsx
 import Typewriter from 'typewriter-effect';
 import { Box } from '@mui/material';
 import { Link as ScrollLink } from 'react-scroll';
@@ -12,7 +11,8 @@ import {
   Left, 
   NameText, 
   FirstName, 
-  LastName 
+  LastName, 
+  StaticText 
 } from './IntroStyles';
 import curriculo from '@/assets/docs/curriculo.pdf';
 
@@ -30,17 +30,14 @@ export const Intro = () => {
       <Box sx={{ textAlign: 'center', zIndex: 2, paddingTop: '20vh', position: 'relative' }}>
         <Left>
           <NameText>
-            <FirstName>Leonan</FirstName> <LastName>Thomaz</LastName>
+            <FirstName>Leonan</FirstName><LastName> Oliveira</LastName>
           </NameText>
           <TitleWrapper>
+            <StaticText>Desenvolvedor</StaticText>
             <TypewriterEffect>
               <Typewriter
                 options={{
-                  strings: [
-                    'Desenvolvedor Python',
-                    'Automação de Processos',
-                    'Análise de Dados',
-                  ],
+                  strings: ['FullStack', 'Backend', 'Frontend'],
                   autoStart: true,
                   delay: 75,
                   loop: true,

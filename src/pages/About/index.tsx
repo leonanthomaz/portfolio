@@ -46,22 +46,39 @@ export const About: React.FC = () => {
             textAlign: 'left',
           }}
         >
-        <Typography
-          sx={{
-            lineHeight: 1.8,
-            maxWidth: '800px',
-            color: (theme) => theme.palette.text.primary,
-            fontWeight: 400,
-            textAlign: 'left',
-          }}
-        >
-          Sou <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Desenvolvedor Python</span> com foco em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>automação</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>análise de dados</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>integração de APIs</span>. Formado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Análise e Desenvolvimento de Sistemas</span> e pós-graduado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Engenharia de Software</span>, com ênfase em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Python</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>SQL</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>JavaScript</span>.
+          <Typography
+            sx={{
+              lineHeight: 1.8,
+              maxWidth: '800px',
+              color: (theme) => theme.palette.text.primary,
+              fontWeight: 400,
+              textAlign: 'left',
+            }}
+          >
+            Sou um <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Desenvolvedor de Software </span> 
+            com foco em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Python</span>, 
+            <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}> Java</span> e 
+            <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}> JavaScript</span> com 
+            <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}> TypeScript</span>. 
+            Tenho sólida experiência em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>automação</span>, 
+            <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}> análise de dados</span> e 
+            <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}> desenvolvimento web</span> utilizando 
+            <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}> React</span> e outras tecnologias modernas.
 
-          Além disso, tenho experiência em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Java</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Spring</span>, e conhecimentos em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>React</span>, aplicados em projetos que exigem a construção de interfaces dinâmicas e modernas.
+            Formado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Análise e Desenvolvimento de Sistemas </span> 
+            e pós-graduado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Engenharia de Software</span>, 
+            tenho experiência em criar soluções robustas e escaláveis, integrando tecnologias back-end e front-end.
 
-          Atualmente, estou cursando <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Biomedicina</span>, com o objetivo de combinar minhas habilidades em tecnologia com a área da saúde, especialmente em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>bioinformática</span>. Meu propósito é desenvolver soluções inovadoras para o avanço do campo biomédico, impactando positivamente a sociedade.
-        </Typography>
+            Minhas habilidades em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Spring Boot</span>, 
+            <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}> Flask</span>, 
+            <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}> APIs REST</span> e 
+            bancos de dados como <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}> SQL Server</span> e 
+            <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}> Oracle</span> me permitem desenvolver 
+            projetos completos que atendam às demandas modernas do mercado.
 
+            Estou constantemente aprimorando minhas habilidades e buscando novos desafios para criar soluções tecnológicas 
+            que fazem a diferença no mercado. Meu objetivo é contribuir para projetos inovadores e entregar valor real através da tecnologia.
+          </Typography>
         </Box>
 
         <ScrollLink 
