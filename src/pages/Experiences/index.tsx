@@ -23,7 +23,7 @@ export const Experiences: React.FC = () => {
       title: "MetrôRio",
       subtitle: "Analista de Sistemas",
       description:
-        "Atuei em um ambiente de alta demanda, lidando com manutenção de bancos de dados SQL, monitoramento de servidores e atualizações de sistemas.",
+        "Atuei em um ambiente de alta demanda, lidando com script em Python, manutenção de bancos de dados SQL, monitoramento de servidores e atualizações de sistemas em Java e C#.",
       animation: "animate__backInLeft",
     },
     {
