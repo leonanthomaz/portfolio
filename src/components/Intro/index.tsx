@@ -30,7 +30,7 @@ export const Intro = () => {
       <Box sx={{ textAlign: 'center', zIndex: 2, paddingTop: '20vh', position: 'relative' }}>
         <Left>
           <NameText>
-            <FirstName>Leonan</FirstName><LastName> Oliveira</LastName>
+            <FirstName>Leonan</FirstName><LastName> Thomaz</LastName>
           </NameText>
           <TitleWrapper>
             <StaticText>Desenvolvedor</StaticText>

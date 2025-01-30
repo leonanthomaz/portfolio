@@ -8,7 +8,7 @@ const Footer = () => {
     <FooterContainer>
       <Container maxWidth="lg">
         <Typography variant="body2" sx={{ fontWeight: 'bold' }}>
-          Copyright: Leonan Oliveira ©{new Date().getFullYear()}
+          Copyright: Leonan Thomaz ©{new Date().getFullYear()}
         </Typography>
         <Typography variant="body2" sx={{ marginTop: '8px', opacity: 0.7 }}>
           Desenvolvido por Leonan |{' '}
