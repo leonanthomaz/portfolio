@@ -46,39 +46,27 @@ export const About: React.FC = () => {
             textAlign: 'left',
           }}
         >
-          <Typography
-            sx={{
-              lineHeight: 1.8,
-              maxWidth: '800px',
-              color: (theme) => theme.palette.text.primary,
-              fontWeight: 400,
-              textAlign: 'left',
-            }}
-          >
-            Sou um <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Desenvolvedor de Software </span> 
-            com foco em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Python</span>, 
-            <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}> Java</span> e 
-            <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}> JavaScript</span> com 
-            <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}> TypeScript</span>. 
-            Tenho sólida experiência em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>automação</span>, 
-            <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}> análise de dados</span> e 
-            <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}> desenvolvimento web</span> utilizando 
-            <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}> React</span> e outras tecnologias modernas.
+        <Typography
+          sx={{
+            lineHeight: 1.8,
+            maxWidth: '800px',
+            color: (theme) => theme.palette.text.primary,
+            fontWeight: 400,
+            textAlign: 'left',
+          }}
+        >
+          Sou um <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Desenvolvedor Fullstack</span> com foco em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Python</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>React</span>, com experiência prática na criação de sistemas web completos, APIs RESTful, automações e integrações com inteligência artificial e meios de pagamento.
 
-            Formado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Análise e Desenvolvimento de Sistemas </span> 
-            e pós-graduado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Engenharia de Software</span>, 
-            tenho experiência em criar soluções robustas e escaláveis, integrando tecnologias back-end e front-end.
+          Tenho atuado em projetos onde fui responsável por toda a stack: <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>backend com FastAPI</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>frontend com React + TypeScript</span>, painel administrativo, controle de pedidos, integração com <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Pix/Mercado Pago</span>, impressão térmica e dashboards com relatórios.
 
-            Minhas habilidades em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Spring Boot</span>, 
-            <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}> Flask</span>, 
-            <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}> APIs REST</span> e 
-            bancos de dados como <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}> SQL Server</span> e 
-            <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}> Oracle</span> me permitem desenvolver 
-            projetos completos que atendam às demandas modernas do mercado.
+          Também desenvolvo automações utilizando <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Python</span> para scraping, processamento de dados e bots com IA, integrando ferramentas como <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>OpenAI, Google APIs</span> e plataformas de mensagens.
 
-            Estou constantemente aprimorando minhas habilidades e buscando novos desafios para criar soluções tecnológicas 
-            que fazem a diferença no mercado. Meu objetivo é contribuir para projetos inovadores e entregar valor real através da tecnologia.
-          </Typography>
+          Sou graduado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Análise e Desenvolvimento de Sistemas</span> e pós-graduado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Engenharia de Software</span>, com domínio em bancos de dados relacionais (<span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>PostgreSQL, SQL Server, Oracle</span>) e deploy de aplicações com <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Docker</span> e serviços em nuvem.
+
+          Tenho perfil autodidata, foco em entrega, boa comunicação e estou sempre buscando evoluir em projetos que entreguem valor real através da tecnologia.
+        </Typography>
+
+
         </Box>
 
         <ScrollLink 

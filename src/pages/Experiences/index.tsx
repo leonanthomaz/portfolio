@@ -1,59 +1,81 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot } from '@mui/lab';
-import { FaLaptop, FaTrain, FaBriefcase, FaUniversity } from 'react-icons/fa';
+import {
+  Timeline,
+  TimelineItem,
+  TimelineSeparator,
+  TimelineConnector,
+  TimelineContent,
+  TimelineDot,
+} from '@mui/lab';
+import {
+  FaCode,
+  FaLaptopCode,
+  FaProjectDiagram,
+  FaRocket,
+  FaLightbulb,
+} from 'react-icons/fa';
 import { Title } from '../../styles/GlobalStyles';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 export const Experiences: React.FC = () => {
-  
   const experiences = [
     {
       id: 1,
-      icon: <FaLaptop size={26} />,
-      title: "Mundiware",
-      subtitle: "Estágio Front-End",
+      icon: <FaCode size={26} />,
+      title: 'Mundiware',
+      subtitle: 'Estágio em Front-End • 2022',
       description:
-        "Trabalhei remotamente no desenvolvimento de sistemas utilizando HTML, CSS e JavaScript. Essa experiência foi fundamental para moldar minhas habilidades em Front-End e aprimorar minha experiência prática.",
-      animation: "animate__backInRight",
+        'Participei do desenvolvimento de aplicações web com HTML, CSS e JavaScript. Trabalhei com boas práticas de SEO e monitoramento com Google Analytics, contribuindo para o desempenho e usabilidade dos sistemas.',
+      animation: 'animate__fadeInRight',
     },
     {
       id: 2,
-      icon: <FaTrain size={26} />,
-      title: "MetrôRio",
-      subtitle: "Analista de Sistemas",
+      icon: <FaLaptopCode size={26} />,
+      title: 'MetrôRio',
+      subtitle: 'Analista de Sistemas Jr. • 2023',
       description:
-        "Atuei em um ambiente de alta demanda, lidando com script em Python, manutenção de bancos de dados SQL, monitoramento de servidores e atualizações de sistemas em Java e C#.",
-      animation: "animate__backInLeft",
+        'Contribuí na integração de pagamentos via Pix ao sistema de bilhetagem. Desenvolvi scripts de automação em Python e batch, atuei com manutenção de dados em Oracle e SQL Server, e participei do monitoramento de servidores e rotinas críticas.',
+      animation: 'animate__fadeInLeft',
     },
     {
       id: 3,
-      icon: <FaBriefcase size={26} />,
-      title: "Trabalho Freelancer",
-      subtitle: "Programação",
+      icon: <FaProjectDiagram size={26} />,
+      title: 'Freelancer',
+      subtitle: 'Programador & Suporte Técnico • 2024',
       description:
-        "Atualmente, desenvolvo projetos com Python, React e outras tecnologias, com foco em análise de dados e automação.",
-      animation: "animate__backInRight",
+        'Atuei em projetos diversos de automação e suporte. Criei scripts Python para scraping de dados, envio de e-mails e manipulação de planilhas. Desenvolvi chatbots com NLP (OpenAI) e automatizações internas. Também atendi comércios locais, atuando no suporte técnico, controle de caixa e operação básica de loja.',
+      animation: 'animate__fadeInRight',
     },
     {
       id: 4,
-      icon: <FaUniversity size={26} />,
-      title: "Aprendendo continuamente!",
-      subtitle: "",
+      icon: <FaRocket size={26} />,
+      title: 'Projeto Thomaggio',
+      subtitle: 'Sistema completo de pedidos • 2025',
       description:
-        "Estou constantemente me desafiando com novos projetos pessoais. A cada projeto, busco aprofundar meu conhecimento e aprimorar minhas habilidades técnicas.",
-      animation: "animate__backInLeft",
+        'Desenvolvi do zero uma aplicação completa para gestão de pedidos, com frontend em React + TypeScript, backend em FastAPI, painel administrativo, integração com Pix (via Mercado Pago) e impressão de comandas em 58mm. Projeto disponível em: https://thomaggio.vercel.app/',
+      animation: 'animate__fadeInLeft',
+    },
+    {
+      id: 5,
+      icon: <FaLightbulb size={26} />,
+      title: 'Sempre aprendendo',
+      subtitle: 'Atualmente',
+      description:
+        'Buscando evoluir constantemente por meio de novos projetos, estudos práticos e desafios reais.',
+      animation: 'animate__fadeInUp',
+      centerText: true,
     },
   ];
 
   return (
-    <Box sx={{ padding: 4, borderRadius: '8px'}}>
-      <AnimationOnScroll animateIn="animate__backInLeft">
+    <Box sx={{ padding: 4, borderRadius: '8px' }}>
+      <AnimationOnScroll animateIn="animate__fadeInLeft">
         <Title>Experiência</Title>
       </AnimationOnScroll>
       <Timeline position="alternate">
-        {experiences.map((experience, index) => (
-          <TimelineItem key={experience.id}>
+        {experiences.map((exp, index) => (
+          <TimelineItem key={exp.id}>
             <TimelineSeparator>
               <TimelineDot
                 color="primary"
@@ -65,29 +87,40 @@ export const Experiences: React.FC = () => {
                   alignItems: 'center',
                 }}
               >
-                {experience.icon}
+                {exp.icon}
               </TimelineDot>
               {index < experiences.length - 1 && <TimelineConnector />}
             </TimelineSeparator>
             <TimelineContent>
-              <AnimationOnScroll animateIn={experience.animation}>
-                <Typography
-                  variant="h6"
-                  sx={{ fontSize: { xs: '1rem', md: '1.25rem' }, fontWeight: 'bold' }}
-                >
-                  {experience.title}
-                </Typography>
-                {experience.subtitle && (
-                  <Typography color="gray" sx={{ fontSize: { xs: '0.875rem', md: '1rem' } }}>
-                    {experience.subtitle}
+              <AnimationOnScroll animateIn={exp.animation}>
+                <Box>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontSize: { xs: '1rem', md: '1.25rem' },
+                      fontWeight: 'bold',
+                    }}
+                  >
+                    {exp.title}
                   </Typography>
-                )}
-                <Typography
-                  variant="body2"
-                  sx={{ marginTop: 1, fontSize: { xs: '0.875rem', md: '1rem' } }}
-                >
-                  {experience.description}
-                </Typography>
+                  {exp.subtitle && (
+                    <Typography
+                      color="gray"
+                      sx={{ fontSize: { xs: '0.875rem', md: '1rem' } }}
+                    >
+                      {exp.subtitle}
+                    </Typography>
+                  )}
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      marginTop: 1,
+                      fontSize: { xs: '0.875rem', md: '1rem' },
+                    }}
+                  >
+                    {exp.description}
+                  </Typography>
+                </Box>
               </AnimationOnScroll>
             </TimelineContent>
           </TimelineItem>
