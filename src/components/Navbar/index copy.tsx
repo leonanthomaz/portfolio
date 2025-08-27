@@ -12,7 +12,7 @@ import {
   useMediaQuery,
   alpha,
   styled,
-  Typography
+  Typography,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
@@ -25,7 +25,9 @@ import BuildIcon from '@mui/icons-material/Build';
 import PortfolioIcon from '@mui/icons-material/FolderOpen';
 import SchoolIcon from '@mui/icons-material/School';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
+import { FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa';
 
+// Array de links de navegação
 const navItems = [
   { label: 'Início', to: 'intro', icon: <HomeIcon /> },
   { label: 'Sobre', to: 'about', icon: <PersonIcon /> },
@@ -36,14 +38,18 @@ const navItems = [
   { label: 'Contato', to: 'contact', icon: <ContactMailIcon /> },
 ];
 
-const StyledAppBar = styled(AppBar)(({ theme }) => ({
-  background: alpha(theme.palette.background.paper, 0.95),
-  backdropFilter: 'blur(10px)',
-  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-  borderBottom: `1px solid ${alpha(theme.palette.primary.main, 0.1)}`,
-  transition: 'all 0.3s ease',
+// Componente estilizado para a AppBar
+const StyledAppBar = styled(AppBar)<{ scrolled: boolean }>(({ theme, scrolled }) => ({
+  background: scrolled ? alpha(theme.palette.background.default, 0.95) : 'transparent',
+  backdropFilter: scrolled ? 'blur(10px)' : 'none',
+  boxShadow: scrolled ? '0 4px 20px rgba(0, 0, 0, 0.2)' : 'none',
+  borderBottom: scrolled ? `1px solid ${alpha(theme.palette.primary.main, 0.1)}` : 'none',
+  transition: 'background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease',
+  top: 0,
+  zIndex: theme.zIndex.appBar,
 }));
 
+// Componente estilizado para os links de navegação
 const NavLink = styled(ScrollLink)(({ theme }) => ({
   color: theme.palette.text.secondary,
   fontSize: '14px',
@@ -58,7 +64,7 @@ const NavLink = styled(ScrollLink)(({ theme }) => ({
   transition: 'all 0.3s ease',
   position: 'relative',
   overflow: 'hidden',
-  
+
   '&:before': {
     content: '""',
     position: 'absolute',
@@ -70,25 +76,26 @@ const NavLink = styled(ScrollLink)(({ theme }) => ({
     transition: 'all 0.3s ease',
     transform: 'translateX(-50%)',
   },
-  
+
   '&:hover': {
     color: theme.palette.primary.main,
     backgroundColor: alpha(theme.palette.primary.main, 0.05),
-    
+
     '&:before': {
       width: '80%',
     },
   },
-  
+
   '&.active': {
     color: theme.palette.primary.main,
-    
+
     '&:before': {
       width: '80%',
     },
   },
 }));
 
+// Componente estilizado para os links do Drawer
 const DrawerLink = styled(ScrollLink)(({ theme }) => ({
   color: theme.palette.text.primary,
   fontSize: '16px',
@@ -102,13 +109,13 @@ const DrawerLink = styled(ScrollLink)(({ theme }) => ({
   alignItems: 'center',
   gap: '16px',
   margin: '4px 0',
-  
+
   '&:hover': {
     color: theme.palette.primary.main,
     backgroundColor: alpha(theme.palette.primary.main, 0.05),
     transform: 'translateX(4px)',
   },
-  
+
   '&.active': {
     color: theme.palette.primary.main,
     backgroundColor: alpha(theme.palette.primary.main, 0.1),
@@ -116,6 +123,7 @@ const DrawerLink = styled(ScrollLink)(({ theme }) => ({
   },
 }));
 
+// Estilização do nome/logo
 const NameTypography = styled(Typography)(({ theme }) => ({
   fontWeight: 700,
   fontSize: '1.2rem',
@@ -124,6 +132,25 @@ const NameTypography = styled(Typography)(({ theme }) => ({
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
   letterSpacing: '1px',
+}));
+
+// Container para os ícones sociais
+const SocialIconsContainer = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  gap: theme.spacing(1),
+  [theme.breakpoints.down('md')]: {
+    display: 'none',
+  },
+}));
+
+const SocialIconButton = styled(IconButton)(({ theme }) => ({
+  color: theme.palette.text.secondary,
+  transition: 'color 0.3s ease, transform 0.3s ease',
+  '&:hover': {
+    color: theme.palette.primary.main,
+    transform: 'scale(1.1)',
+  },
 }));
 
 const Navbar: FC = () => {
@@ -148,60 +175,56 @@ const Navbar: FC = () => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 50;
       setScrolled(isScrolled);
-      
+
+      // Lógica para detectar o link ativo com base na posição da tela
+      let currentActiveLink = '';
       navItems.forEach((item) => {
         const element = document.getElementById(item.to);
         if (element) {
           const rect = element.getBoundingClientRect();
-          if (rect.top <= 100 && rect.bottom >= 100) {
-            setActiveLink(item.to);
+          // Condição melhorada para ativar o link quando a seção está visível na tela
+          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            currentActiveLink = item.to;
           }
         }
       });
+      setActiveLink(currentActiveLink);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Executa ao montar para definir a cor inicial
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
-    <StyledAppBar 
-      position="fixed" 
-      sx={{ 
-        background: scrolled 
-          ? alpha(theme.palette.background.paper, 0.98) 
-          : alpha(theme.palette.background.paper, 0.95),
-        backdropFilter: scrolled ? 'blur(15px)' : 'blur(10px)',
-      }}
-    >
+    <StyledAppBar scrolled={scrolled}>
       <Toolbar
         sx={{
           display: 'flex',
-          justifyContent: { xs: 'space-between', md: 'center' },
+          justifyContent: 'space-between',
           alignItems: 'center',
           padding: '0 20px',
           minHeight: '70px !important',
         }}
       >
-        {/* Logo/Nome + Hamburger para mobile */}
-        <Box sx={{ 
-          display: { xs: 'flex', md: 'none' }, 
-          alignItems: 'center', 
-          gap: 1 
-        }}>
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ 
-              color: theme.palette.text.primary,
-            }}
-            onClick={toggleDrawer(true)}
-          >
-            <MenuIcon />
-          </IconButton>
+        {/* Logo/Nome e Hamburger para mobile */}
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          {isMobile && (
+            <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ color: theme.palette.text.primary }}
+              onClick={toggleDrawer(true)}
+            >
+              <MenuIcon />
+            </IconButton>
+          )}
+          <NameTypography variant="h6" sx={{ display: { xs: 'none', md: 'block' } }}>
+            Leonan Oliveira
+          </NameTypography>
         </Box>
 
         {/* Links para telas maiores */}
@@ -210,7 +233,7 @@ const Navbar: FC = () => {
             display: { xs: 'none', md: 'flex' },
             alignItems: 'center',
             justifyContent: 'center',
-            flexWrap: 'wrap',
+            flexGrow: 1, // Permite que a box ocupe o espaço restante
           }}
         >
           {navItems.map((item) => (
@@ -221,16 +244,41 @@ const Navbar: FC = () => {
               smooth={true}
               duration={500}
               offset={-80}
-              activeClass={activeLink === item.to ? 'active' : ''}
-              onClick={() => handleSetActive(item.to)}
+              activeClass="active"
+              onSetActive={handleSetActive}
             >
               {item.label}
             </NavLink>
           ))}
         </Box>
 
-        {/* Espaço vazio para alinhar no mobile */}
-        <Box sx={{ display: { xs: 'block', md: 'none' }, width: '48px' }} />
+        {/* Ícones sociais para telas maiores */}
+        <SocialIconsContainer>
+          <SocialIconButton
+            href="https://www.linkedin.com/in/leonanoliveira/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin size={24} />
+          </SocialIconButton>
+          <SocialIconButton
+            href="https://github.com/leonanoliveira"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <FaGithub size={24} />
+          </SocialIconButton>
+          <SocialIconButton
+            href="https://wa.me/5521999999999" // Substitua pelo seu número de WhatsApp
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <FaWhatsapp size={24} />
+          </SocialIconButton>
+        </SocialIconsContainer>
 
         {/* Menu Drawer */}
         <Drawer
@@ -245,21 +293,23 @@ const Navbar: FC = () => {
             },
           }}
         >
-          <Box sx={{ 
-            p: 2, 
-            display: 'flex', 
-            justifyContent: 'space-between', 
-            alignItems: 'center',
-            borderBottom: `1px solid ${alpha(theme.palette.primary.main, 0.1)}`
-          }}>
+          <Box
+            sx={{
+              p: 2,
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              borderBottom: `1px solid ${alpha(theme.palette.primary.main, 0.1)}`,
+            }}
+          >
             <NameTypography variant="h6">
               Leonan Oliveira
             </NameTypography>
-            <IconButton onClick={toggleDrawer(false)}>
+            <IconButton onClick={toggleDrawer(false)} sx={{ color: theme.palette.text.primary }}>
               <CloseIcon />
             </IconButton>
           </Box>
-          
+
           <List sx={{ px: 2, pt: 2 }}>
             {navItems.map((item) => (
               <ListItem key={item.to} disablePadding sx={{ mb: 1 }}>
@@ -269,16 +319,18 @@ const Navbar: FC = () => {
                   smooth={true}
                   duration={500}
                   offset={-80}
-                  activeClass={activeLink === item.to ? 'active' : ''}
+                  activeClass="active"
                   onClick={() => handleSetActive(item.to)}
                 >
-                  <Box sx={{ 
-                    color: activeLink === item.to 
-                      ? theme.palette.primary.main 
-                      : theme.palette.text.secondary,
-                    display: 'flex',
-                    alignItems: 'center',
-                  }}>
+                  <Box
+                    sx={{
+                      color: activeLink === item.to
+                        ? theme.palette.primary.main
+                        : theme.palette.text.secondary,
+                      display: 'flex',
+                      alignItems: 'center',
+                    }}
+                  >
                     {item.icon}
                   </Box>
                   {item.label}

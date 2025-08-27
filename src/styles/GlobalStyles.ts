@@ -1,44 +1,48 @@
-import styled, { createGlobalStyle } from 'styled-components';
-import theme from './theme';
+import { styled } from '@mui/material/styles';
+import { Typography } from '@mui/material';
 
-export const GlobalStyles = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+// Componente Title usando MUI styled
+export const Title = styled(Typography)(({ theme }) => ({
+  fontSize: '2rem',
+  fontWeight: 700,
+  marginBottom: '20px',
+  textTransform: 'uppercase',
+  letterSpacing: '2px',
+  color: theme.palette.primary.main,
+  borderBottom: `3px solid ${theme.palette.primary.main}`,
+  paddingBottom: '10px',
+  display: 'inline-block',
+  textAlign: 'left',
+  width: '100%',
 
-  body {
-    font-family: ${({ theme }) => theme.typography.fontFamily};
-    background-color: ${({ theme }) => theme.palette.background.default};
-    color: ${({ theme }) => theme.palette.text.primary};
+  [theme.breakpoints.down('xl')]: {
+    fontSize: '1.5rem',
+  },
 
-    @media (max-width: 600px) {
-      font-size: 70%;
-    }
-  }
+  [theme.breakpoints.down('md')]: {
+    fontSize: '1.25rem',
+    textAlign: 'center',
+  },
+})) as typeof Typography;
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: ${({ theme }) => theme.typography.fontFamily};
-  }
-`;
+// Você pode adicionar outros componentes estilizados aqui conforme necessário
+export const SectionContainer = styled('section')(({ theme }) => ({
+  padding: theme.spacing(8, 0),
+  minHeight: '100vh',
+  display: 'flex',
+  alignItems: 'center',
+  
+  [theme.breakpoints.down('md')]: {
+    padding: theme.spacing(6, 0),
+  },
+}));
 
-
-export const Title = styled.div`
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: ${theme.palette.primary.main};
-  border-bottom: 3px solid ${theme.palette.primary.main};
-  padding-bottom: 10px;
-  display: inline-block;
-  text-align: left;
-  width: 100%;
-
-  @media (max-width: 1200px) {
-    font-size: 1.5rem;
-  }
-`;
-
+export const ContentBox = styled('div')(({ theme }) => ({
+  maxWidth: '1200px',
+  margin: '0 auto',
+  padding: theme.spacing(0, 3),
+  
+  [theme.breakpoints.down('sm')]: {
+    padding: theme.spacing(0, 2),
+  },
+}));

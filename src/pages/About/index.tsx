@@ -1,74 +1,119 @@
 import React from 'react';
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography, Button, styled, useTheme, alpha } from '@mui/material';
 import { Link as ScrollLink } from 'react-scroll';
 import { Title } from '../../styles/GlobalStyles';
-import photo from '@/assets/img/foto-leonan-atual.webp';
+import photo from '@/assets/img/foto-leonan.jpg';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import theme from '../../styles/theme';
+
+// Componente estilizado para o container principal
+const AboutContainer = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  minHeight: '100vh',
+  padding: theme.spacing(4, 2),
+  textAlign: 'center',
+}));
+
+// Componente estilizado para a seção de conteúdo (foto + texto)
+const ContentSection = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: theme.spacing(5),
+  marginTop: theme.spacing(4),
+  [theme.breakpoints.up('md')]: {
+    flexDirection: 'row',
+    textAlign: 'left',
+    alignItems: 'flex-start',
+    gap: theme.spacing(8),
+  },
+}));
+
+// Componente estilizado para a imagem
+const ProfileImage = styled('img')(({ theme }) => ({
+  width: 200,
+  height: 200,
+  borderRadius: '50%',
+  objectFit: 'cover',
+  border: `4px solid ${alpha(theme.palette.primary.main, 0.4)}`,
+  boxShadow: `0 8px 24px ${alpha(theme.palette.primary.main, 0.2)}`,
+  transition: 'transform 0.3s ease-in-out',
+  '&:hover': {
+    transform: 'scale(1.05)',
+  },
+}));
+
+// Componente estilizado para o texto
+const AboutText = styled(Typography)(({ theme }) => ({
+  lineHeight: 1.8,
+  maxWidth: '800px',
+  color: theme.palette.text.primary,
+  fontWeight: 400,
+  textAlign: 'left',
+  [theme.breakpoints.down('md')]: {
+    textAlign: 'center',
+  },
+}));
+
+// Componente estilizado para o botão
+const ContactButton = styled(Button)(({ theme }) => ({
+  marginTop: theme.spacing(4),
+  padding: '12px 28px',
+  fontSize: '1rem',
+  fontWeight: 600,
+  borderRadius: '8px',
+  background: theme.palette.primary.main,
+  color: theme.palette.getContrastText(theme.palette.primary.main),
+  boxShadow: `0 8px 30px ${alpha(theme.palette.primary.main, 0.3)}`,
+  transition: 'all 0.3s ease',
+  textTransform: 'none',
+  fontFamily: "'Poppins', sans-serif",
+  '&:hover': {
+    transform: 'translateY(-3px)',
+    boxShadow: `0 12px 40px ${alpha(theme.palette.primary.main, 0.5)}`,
+    background: theme.palette.primary.dark,
+  },
+}));
 
 export const About: React.FC = () => {
+  const theme = useTheme();
+
   return (
-    <Box sx={{ padding: { xs: 2, md: 4 }, width: '100%' }}>
-      <AnimationOnScroll animateIn="animate__backInLeft">
+    <AboutContainer id="about">
+      <AnimationOnScroll animateIn="animate__fadeInUp">
         <Title>Sobre Mim</Title>
       </AnimationOnScroll>
 
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          color: (theme) => theme.palette.primary.main,
-          textAlign: 'center',
-          minHeight: '100vh',
-        }}
-      >
-        <Box sx={{ margin: '40px 0' }}>
-          <img
-            src={photo ? photo : 'https://via.placeholder.com/200'}
-            alt="Minha foto"
-            style={{
-              width: 200,
-              height: 200,
-              borderRadius: '50%',
-              objectFit: 'cover',
-              border: `5px solid ${theme.palette.primary.main}`,
-            }}
-          />
+      <AnimationOnScroll animateIn="animate__fadeInUp" delay={200}>
+        <ContentSection>
+          <Box sx={{ minWidth: 200 }}>
+            <ProfileImage
+              src={photo ? photo : 'https://via.placeholder.com/200'}
+              alt="Minha foto"
+            />
+          </Box>
+
+        <Box>
+          <AboutText>
+            Sou <strong style={{ color: theme.palette.primary.main }}>Desenvolvedor Fullstack</strong> focado em <strong style={{ color: theme.palette.primary.main }}>Python</strong> e <strong style={{ color: theme.palette.primary.main }}>React</strong>, criando sistemas web completos, APIs RESTful, automações e integrações com inteligência artificial.  
+            <br /><br />
+            Trabalho com toda a stack: <strong style={{ color: theme.palette.primary.main }}>FastAPI</strong> no backend, <strong style={{ color: theme.palette.primary.main }}>React + TypeScript</strong> no frontend, dashboards, controle de pedidos e integrações com <strong style={{ color: theme.palette.primary.main }}>Pix/Mercado Pago</strong>.  
+            <br /><br />
+            Desenvolvo automações em <strong style={{ color: theme.palette.primary.main }}>Python</strong> para scraping, processamento de dados, bots e pipelines com IA, usando <strong style={{ color: theme.palette.primary.main }}>OpenAI, Google APIs</strong> e plataformas de mensagens.  
+            <br /><br />
+            Sou graduado em <strong style={{ color: theme.palette.primary.main }}>Análise e Desenvolvimento de Sistemas</strong> e pós-graduado em <strong style={{ color: theme.palette.primary.main }}>Engenharia de Software</strong>, com experiência em bancos de dados (<strong style={{ color: theme.palette.primary.main }}>PostgreSQL, SQL Server, Oracle</strong>) e deploy com <strong style={{ color: theme.palette.primary.main }}>Docker</strong> e nuvem.  
+            <br /><br />
+            Autodidata, focado em entrega prática e rápida, sempre buscando criar soluções que gerem valor real.
+          </AboutText>
         </Box>
 
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            textAlign: 'left',
-          }}
-        >
-        <Typography
-          sx={{
-            lineHeight: 1.8,
-            maxWidth: '800px',
-            color: (theme) => theme.palette.text.primary,
-            fontWeight: 400,
-            textAlign: 'left',
-          }}
-        >
-          Sou um <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Desenvolvedor Fullstack</span> com foco em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Python</span> e <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>React</span>, com experiência prática na criação de sistemas web completos, APIs RESTful, automações e integrações com inteligência artificial e meios de pagamento.
+        </ContentSection>
+      </AnimationOnScroll>
 
-          Tenho atuado em projetos onde fui responsável por toda a stack: <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>backend com FastAPI</span>, <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>frontend com React + TypeScript</span>, painel administrativo, controle de pedidos, integração com <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Pix/Mercado Pago</span>, impressão térmica e dashboards com relatórios.
-
-          Também desenvolvo automações utilizando <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Python</span> para scraping, processamento de dados e bots com IA, integrando ferramentas como <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>OpenAI, Google APIs</span> e plataformas de mensagens.
-
-          Sou graduado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Análise e Desenvolvimento de Sistemas</span> e pós-graduado em <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Engenharia de Software</span>, com domínio em bancos de dados relacionais (<span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>PostgreSQL, SQL Server, Oracle</span>) e deploy de aplicações com <span style={{ fontWeight: 'bold', color: theme.palette.primary.main }}>Docker</span> e serviços em nuvem.
-
-          Tenho perfil autodidata, foco em entrega, boa comunicação e estou sempre buscando evoluir em projetos que entreguem valor real através da tecnologia.
-        </Typography>
-
-
-        </Box>
-
+      <AnimationOnScroll animateIn="animate__fadeInUp" delay={400}>
         <ScrollLink 
           to="contact" 
           smooth={true} 
@@ -76,24 +121,11 @@ export const About: React.FC = () => {
           spy={true} 
           offset={-80}
         >
-          <Button
-            sx={{
-              backgroundColor: (theme) => theme.palette.primary.main,
-              color: '#121212',
-              fontWeight: 'bold',
-              padding: '10px 20px',
-              borderRadius: '30px',
-              marginTop: '20px',
-              textTransform: 'uppercase',
-              '&:hover': {
-                backgroundColor: (theme) => theme.palette.secondary.main,
-              },
-            }}
-          >
+          <ContactButton>
             Entrar em Contato
-          </Button>
+          </ContactButton>
         </ScrollLink>
-      </Box>
-    </Box>
+      </AnimationOnScroll>
+    </AboutContainer>
   );
 };

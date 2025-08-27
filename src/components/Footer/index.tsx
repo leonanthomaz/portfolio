@@ -18,7 +18,7 @@ const Footer = () => {
         </Typography>
         <SocialLinks>
           <SocialLink
-            href="https://github.com/seu-username"
+            href="https://github.com/leonan.thomaz"
             target="_blank"
             aria-label="GitHub"
             color="inherit"
@@ -26,7 +26,7 @@ const Footer = () => {
             <FaGithub size={28} />
           </SocialLink>
           <SocialLink
-            href="https://linkedin.com/in/seu-username"
+            href="https://linkedin.com/in/leonan.thomaz"
             target="_blank"
             aria-label="LinkedIn"
             color="inherit"
@@ -34,7 +34,7 @@ const Footer = () => {
             <FaLinkedin size={28} />
           </SocialLink>
           <SocialLink
-            href="https://twitter.com/seu-username"
+            href="https://twitter.com/leonan.thomaz"
             target="_blank"
             aria-label="Twitter"
             color="inherit"
@@ -42,7 +42,7 @@ const Footer = () => {
             <FaTwitter size={28} />
           </SocialLink>
           <SocialLink
-            href="https://instagram.com/seu-username"
+            href="https://instagram.com/leonan.thomaz"
             target="_blank"
             aria-label="Instagram"
             color="inherit"

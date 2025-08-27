@@ -18,7 +18,7 @@ export const App = () => {
     const timer = setTimeout(() => {
       setIsExiting(true); 
       setTimeout(() => setLoading(false), 1000);
-    }, 3000);
+    }, 0);
 
     return () => clearTimeout(timer);
   }, []);
@@ -33,7 +33,7 @@ export const App = () => {
   }
 
   return (
-    <div>
+    <Box sx={{ pt: '70px' }}>
       <Navbar />
       <Box id="intro">
         <Intro />
@@ -42,6 +42,6 @@ export const App = () => {
         <Routes />
       </Container>
       <Footer />
-    </div>
+    </Box>
   );
 };
