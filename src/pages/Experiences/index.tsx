@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, styled, useTheme, alpha } from '@mui/material';
+import { Box, Typography, styled, useTheme, alpha, useMediaQuery } from '@mui/material';
 import {
   Timeline,
   TimelineItem,
@@ -26,6 +26,7 @@ const ExperiencesContainer = styled(Box)(({ theme }) => ({
   alignItems: 'center',
   padding: theme.spacing(4, 2),
   width: '100%',
+  overflow: 'hidden',
 }));
 
 // Componente estilizado para o TimelineDot
@@ -111,61 +112,186 @@ const experiences = [
 
 export const Experiences: React.FC = () => {
   const theme = useTheme();
+  const isLargeScreen = useMediaQuery(theme.breakpoints.up('md'));
 
   return (
     <ExperiencesContainer id="experiences">
       <AnimationOnScroll animateIn="animate__fadeInUp">
         <Title>Experiência</Title>
       </AnimationOnScroll>
-      <Timeline position="alternate" sx={{ maxWidth: '1000px', margin: '0 auto' }}>
-        {experiences.map((exp, index) => (
-          <TimelineItem key={exp.id}>
-            <TimelineSeparator>
-              <CustomTimelineDot>
-                {exp.icon}
-              </CustomTimelineDot>
-              {index < experiences.length - 1 && (
-                <TimelineConnector sx={{ backgroundColor: theme.palette.primary.main, width: '2px' }} />
-              )}
-            </TimelineSeparator>
-            <TimelineContent>
-              <AnimationOnScroll animateIn={exp.animation}>
-                <CustomTimelineContent>
-                  <Typography
-                    variant="h6"
+      
+      {isLargeScreen ? (
+        // Layout para telas grandes (web) - cards alternados
+        <Timeline
+          position="alternate"
+          sx={{
+            maxWidth: '1200px',
+            margin: '0 auto',
+            padding: 0,
+            [`& .${timelineOppositeContentClasses.root}`]: {
+              flex: 0.2,
+            },
+          }}
+        >
+          {experiences.map((exp, index) => (
+            <TimelineItem key={exp.id}>
+              <TimelineSeparator>
+                <CustomTimelineDot>{exp.icon}</CustomTimelineDot>
+                {index < experiences.length - 1 && (
+                  <TimelineConnector
+                    sx={{ 
+                      backgroundColor: theme.palette.primary.main, 
+                      width: '2px',
+                      height: '100px'
+                    }}
+                  />
+                )}
+              </TimelineSeparator>
+              <TimelineContent
+                sx={{
+                  width: '100%',
+                  maxWidth: '700px', // aumentei de 500px pra 700px
+                  paddingY: 2,
+                  display: 'flex',
+                  justifyContent: index % 2 === 0 ? 'flex-start' : 'flex-end', // mantém alternado
+                }}
+              >
+                <AnimationOnScroll animateIn={exp.animation}>
+                  <CustomTimelineContent
                     sx={{
-                      fontSize: { xs: '1rem', md: '1.25rem' },
-                      fontWeight: 700,
-                      color: theme.palette.primary.main
+                      width: '100%',
                     }}
                   >
-                    {exp.title}
-                  </Typography>
-                  {exp.subtitle && (
                     <Typography
-                      color="text.secondary"
-                      sx={{ fontSize: { xs: '0.875rem', md: '1rem' } }}
+                      variant="h6"
+                      sx={{
+                        fontSize: '1.25rem',
+                        fontWeight: 700,
+                        color: theme.palette.primary.main,
+                        textAlign: index % 2 === 0 ? 'left' : 'right',
+                      }}
                     >
-                      {exp.subtitle}
+                      {exp.title}
                     </Typography>
+                    {exp.subtitle && (
+                      <Typography
+                        color="text.secondary"
+                        sx={{ 
+                          fontSize: '1rem',
+                          textAlign: index % 2 === 0 ? 'left' : 'right',
+                        }}
+                      >
+                        {exp.subtitle}
+                      </Typography>
+                    )}
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        marginTop: 1.5,
+                        fontSize: '1rem',
+                        color: theme.palette.text.primary,
+                        lineHeight: 1.6,
+                        textAlign: 'left',
+                      }}
+                    >
+                      {exp.description}
+                    </Typography>
+                  </CustomTimelineContent>
+                </AnimationOnScroll>
+              </TimelineContent>
+
+            </TimelineItem>
+          ))}
+        </Timeline>
+      ) : (
+        // Layout para telas pequenas (mobile) - todos os cards à direita
+        <Box sx={{ 
+          width: '100%', 
+          maxWidth: '800px',
+          margin: '0 auto',
+          padding: { xs: '0 16px', sm: '0 24px' }
+        }}>
+          <Timeline
+            sx={{
+              padding: 0,
+              margin: 0,
+              '& .MuiTimelineItem-root:before': {
+                flex: 0,
+                padding: 0,
+              },
+            }}
+          >
+            {experiences.map((exp, index) => (
+              <TimelineItem key={exp.id}>
+                <TimelineSeparator>
+                  <CustomTimelineDot>{exp.icon}</CustomTimelineDot>
+                  {index < experiences.length - 1 && (
+                    <TimelineConnector
+                      sx={{ 
+                        backgroundColor: theme.palette.primary.main, 
+                        width: '2px',
+                        height: '80px'
+                      }}
+                    />
                   )}
-                  <Typography
-                    variant="body2"
-                    sx={{
-                      marginTop: 1.5,
-                      fontSize: { xs: '0.875rem', md: '1rem' },
-                      color: theme.palette.text.primary,
-                      lineHeight: 1.6
-                    }}
-                  >
-                    {exp.description}
-                  </Typography>
-                </CustomTimelineContent>
-              </AnimationOnScroll>
-            </TimelineContent>
-          </TimelineItem>
-        ))}
-      </Timeline>
+                </TimelineSeparator>
+                <TimelineContent
+                  sx={{
+                    padding: '12px 16px',
+                    marginBottom: 2,
+                    flex: 1,
+                    maxWidth: '100%',
+                    marginLeft: 2,
+                  }}
+                >
+                  <AnimationOnScroll animateIn={exp.animation}>
+                    <CustomTimelineContent
+                      sx={{
+                        width: '100%',
+                        maxWidth: '100%',
+                      }}
+                    >
+                      <Typography
+                        variant="h6"
+                        sx={{
+                          fontSize: '1rem',
+                          fontWeight: 700,
+                          color: theme.palette.primary.main,
+                          textAlign: 'left',
+                        }}
+                      >
+                        {exp.title}
+                      </Typography>
+                      {exp.subtitle && (
+                        <Typography
+                          color="text.secondary"
+                          sx={{ 
+                            fontSize: '0.875rem',
+                            marginTop: 0.5
+                          }}
+                        >
+                          {exp.subtitle}
+                        </Typography>
+                      )}
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          marginTop: 1.5,
+                          fontSize: '0.875rem',
+                          color: theme.palette.text.primary,
+                          lineHeight: 1.6,
+                        }}
+                      >
+                        {exp.description}
+                      </Typography>
+                    </CustomTimelineContent>
+                  </AnimationOnScroll>
+                </TimelineContent>
+              </TimelineItem>
+            ))}
+          </Timeline>
+        </Box>
+      )}
     </ExperiencesContainer>
   );
 };

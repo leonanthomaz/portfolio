@@ -7,7 +7,6 @@ import {
   Drawer,
   List,
   ListItem,
-  Divider,
   useTheme,
   useMediaQuery,
   alpha,
@@ -253,9 +252,9 @@ const Navbar: FC = () => {
             borderBottom: `1px solid ${alpha(theme.palette.primary.main, 0.1)}`
           }}>
             <NameTypography variant="h6">
-              Leonan Oliveira
+              Leonan Thomaz
             </NameTypography>
-            <IconButton onClick={toggleDrawer(false)}>
+            <IconButton sx={{ color: theme.palette.primary.light}} onClick={toggleDrawer(false)}>
               <CloseIcon />
             </IconButton>
           </Box>

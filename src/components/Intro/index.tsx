@@ -374,13 +374,21 @@ export const Intro = () => {
           <TypewriterEffect>
             <Typewriter
               options={{
-                strings: ['FullStack', 'Backend', 'Frontend'],
+                strings: [
+                  'Python',
+                  'Automação',
+                  'APIs',
+                  'Dados',
+                  'Web Apps',
+                  'ML',
+                ],
                 autoStart: true,
                 delay: 75,
                 loop: true,
                 deleteSpeed: 50,
               }}
             />
+
           </TypewriterEffect>
         </TitleWrapper>
 

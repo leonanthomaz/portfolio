@@ -15,7 +15,9 @@ import {
   Button,
   styled,
   alpha,
-  useTheme
+  useTheme,
+  Stack,
+  Chip
 } from '@mui/material';
 import { Close as CloseIcon, OpenInNew as OpenInNewIcon, GitHub as GitHubIcon } from '@mui/icons-material';
 import { projetosData, Projeto } from '../../data/portfolio';
@@ -25,7 +27,7 @@ import { AiOutlineRobot } from 'react-icons/ai';
 
 // Componentes estilizados
 const ProjectsContainer = styled(Box)(({ theme }) => ({
-  padding: theme.spacing(4, 2),
+  padding: theme.spacing(6, 2),
   width: '100%',
   minHeight: '100vh',
   display: 'flex',
@@ -36,32 +38,76 @@ const ProjectsContainer = styled(Box)(({ theme }) => ({
 
 const ProjectsGrid = styled(Box)(({ theme }) => ({
   display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+  gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
   justifyContent: 'center',
   alignItems: 'stretch',
   gap: theme.spacing(4),
   width: '100%',
-  maxWidth: 1200,
-  marginTop: theme.spacing(3),
+  maxWidth: 1300,
+  marginTop: theme.spacing(4),
+  padding: theme.spacing(0, 2),
+  
+  [theme.breakpoints.down('md')]: {
+    gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+    gap: theme.spacing(3),
+  },
+  
+  [theme.breakpoints.down('sm')]: {
+    gridTemplateColumns: '1fr',
+    gap: theme.spacing(2.5),
+    padding: theme.spacing(0, 1),
+  },
 }));
 
 const ProjectCard = styled(Card)(({ theme }) => ({
   position: 'relative',
-  background: alpha(theme.palette.background.paper, 0.7),
-  borderRadius: '16px',
-  transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
-  boxShadow: `0 4px 12px ${alpha(theme.palette.background.paper, 0.2)}`,
+  background: `linear-gradient(145deg, ${alpha(theme.palette.background.paper, 0.95)} 0%, ${alpha(theme.palette.background.paper, 0.85)} 100%)`,
+  borderRadius: '20px',
+  transition: 'all 0.3s ease-in-out',
+  boxShadow: `0 8px 25px ${alpha(theme.palette.common.black, 0.1)}`,
+  overflow: 'hidden',
+  height: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  
   '&:hover': {
-    transform: 'translateY(-10px)',
-    boxShadow: `0 12px 30px ${alpha(theme.palette.background.paper, 0.4)}`,
+    transform: 'translateY(-8px)',
+    boxShadow: `0 15px 35px ${alpha(theme.palette.primary.main, 0.15)}`,
+    
+    '& .project-image': {
+      transform: 'scale(1.05)',
+    },
   },
 }));
 
-const ProjectCardMedia = styled(CardMedia)(({}) => ({
+const ProjectCardMedia = styled(CardMedia)(({ theme }) => ({
   height: 200,
   objectFit: 'cover',
-  borderTopLeftRadius: '16px',
-  borderTopRightRadius: '16px',
+  transition: 'transform 0.5s ease',
+  borderTopLeftRadius: '20px',
+  borderTopRightRadius: '20px',
+}));
+
+const StatusChip = styled(Chip)(({ theme }) => ({
+  position: 'absolute',
+  top: 12,
+  right: 12,
+  fontWeight: 'bold',
+  fontSize: '0.7rem',
+  zIndex: 2,
+  backdropFilter: 'blur(10px)',
+  backgroundColor: alpha(theme.palette.background.paper, 0.8),
+}));
+
+const CardContentStyled = styled(CardContent)(({ theme }) => ({
+  padding: theme.spacing(2.5),
+  flexGrow: 1,
+  display: 'flex',
+  flexDirection: 'column',
+  
+  [theme.breakpoints.down('sm')]: {
+    padding: theme.spacing(2),
+  },
 }));
 
 const EmptySection = styled(Box)(({ theme }) => ({
@@ -72,6 +118,7 @@ const EmptySection = styled(Box)(({ theme }) => ({
   height: '50vh',
   color: theme.palette.text.secondary,
   gap: theme.spacing(2),
+  gridColumn: '1 / -1',
 }));
 
 const ModalBox = styled(Box)(({ theme }) => ({
@@ -83,33 +130,40 @@ const ModalBox = styled(Box)(({ theme }) => ({
   maxWidth: 700,
   backgroundColor: theme.palette.background.default,
   border: `2px solid ${alpha(theme.palette.primary.main, 0.2)}`,
-  borderRadius: '16px',
-  boxShadow: `0 8px 30px ${alpha(theme.palette.primary.main, 0.3)}`,
+  borderRadius: '20px',
+  boxShadow: `0 15px 40px ${alpha(theme.palette.primary.main, 0.25)}`,
   padding: theme.spacing(4),
   overflow: 'hidden',
   display: 'flex',
   flexDirection: 'column',
   maxHeight: '90vh',
+  
+  [theme.breakpoints.down('sm')]: {
+    padding: theme.spacing(3),
+    width: '95%',
+  },
 }));
 
 const ModalImage = styled('img')(({ theme }) => ({
   width: '100%',
-  borderRadius: '12px',
-  marginBottom: theme.spacing(2),
+  borderRadius: '16px',
+  marginBottom: theme.spacing(3),
   objectFit: 'cover',
-  maxHeight: '350px',
+  maxHeight: '320px',
+  boxShadow: `0 5px 15px ${alpha(theme.palette.common.black, 0.1)}`,
 }));
 
 const ModalHeader = styled(Box)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'flex-start',
-  marginBottom: theme.spacing(2),
+  marginBottom: theme.spacing(3),
+  gap: theme.spacing(1),
 }));
 
 const ModalContent = styled(Box)(({ theme }) => ({
   overflowY: 'auto',
-  paddingRight: theme.spacing(1),
+  paddingRight: theme.spacing(1.5),
   '&::-webkit-scrollbar': {
     width: '8px',
   },
@@ -122,16 +176,23 @@ const ModalContent = styled(Box)(({ theme }) => ({
   },
 }));
 
-const ModalActions = styled(Box)(({ theme }) => ({
+const ModalActions = styled(Stack)(({ theme }) => ({
   marginTop: theme.spacing(3),
-  display: 'flex',
   gap: theme.spacing(2),
   justifyContent: 'center',
+  
   [theme.breakpoints.down('sm')]: {
     flexDirection: 'column',
   },
 }));
 
+const TechnologyPill = styled(Chip)(({ theme }) => ({
+  margin: theme.spacing(0.5),
+  backgroundColor: alpha(theme.palette.primary.main, 0.1),
+  color: theme.palette.primary.main,
+  fontWeight: '500',
+  fontSize: '0.75rem',
+}));
 
 export const Projects = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -153,17 +214,26 @@ export const Projects = () => {
     setActiveTab(newValue);
   };
 
-  const renderProjects = () => {
-    const sections: (keyof typeof projetosData)[] = [
-      'destaque',
-      'java',
-      'python',
-      'react',
-      'dados'
+  const getProjectsByTab = () => {
+    const tabMapping: (keyof typeof projetosData)[] = [
+      'features',
+      'backend',
+      'dados',
+      'automacao',
+      'ia',
     ];
-    const section = projetosData[sections[activeTab]];
+    
+    if (activeTab === 5) {
+      return [...projetosData.features, ...projetosData.backend, ...projetosData.dados];
+    }
+    
+    return projetosData[tabMapping[activeTab]] || [];
+  };
 
-    if (!section || section.length === 0) {
+  const renderProjects = () => {
+    const projects = getProjectsByTab() as Projeto[];
+
+    if (!projects || projects.length === 0) {
       return (
         <EmptySection>
           <AiOutlineRobot size={70} color={theme.palette.primary.main} />
@@ -177,38 +247,53 @@ export const Projects = () => {
       );
     }
 
-    return section?.map((projeto: Projeto, index: number) => (
-      <AnimationOnScroll 
-        key={projeto.id} 
-        animateIn="animate__fadeInUp" 
-        delay={100 * (index % 3)}
-      >
-        <ProjectCard onClick={() => handleOpen(projeto)}>
-          <CardActionArea>
+    return projects.map((projeto, index) => (
+       <ProjectCard>
+          {projeto.status && (
+            <StatusChip 
+              label={projeto.status === 'finalizado' ? 'Finalizado' : 'Em construção'} 
+              size="small"
+              color={projeto.status === 'finalizado' ? 'success' : 'warning'}
+            />
+          )}
+          <CardActionArea onClick={() => handleOpen(projeto)} sx={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'stretch' }}>
             <ProjectCardMedia
+              className="project-image"
               image={projeto.img}
               title={projeto.title}
             />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 'bold' }}>
+            <CardContentStyled>
+              <Typography gutterBottom variant="h6" component="div" sx={{ fontWeight: 'bold', color: theme.palette.text.primary }}>
                 {projeto.title}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="text.secondary" sx={{ mb: 1.5, flexGrow: 1 }}>
                 {projeto.subtitle}
               </Typography>
-              <Typography variant="caption" display="block" color="text.disabled" sx={{ marginTop: 1 }}>
-                {projeto.date}
-              </Typography>
-            </CardContent>
+              <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mt: 'auto' }}>
+                <Typography variant="caption" color="text.disabled">
+                  {projeto.date}
+                </Typography>
+                {projeto.technology && (
+                  <Typography variant="caption" color="primary" sx={{ fontWeight: 'medium' }}>
+                    {projeto.technology.split(', ')[0]}
+                  </Typography>
+                )}
+              </Box>
+            </CardContentStyled>
           </CardActionArea>
         </ProjectCard>
-      </AnimationOnScroll>
+    ));
+  };
+
+  const renderTechnologyChips = (technologyString: string) => {
+    return technologyString.split(', ').map((tech, index) => (
+      <TechnologyPill key={index} label={tech} size="small" />
     ));
   };
 
   return (
     <ProjectsContainer id="projects">
-      <AnimationOnScroll animateIn="animate__fadeInUp">
+      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
         <Title>Meus Projetos</Title>
       </AnimationOnScroll>
 
@@ -217,10 +302,12 @@ export const Projects = () => {
         sx={{
           backgroundColor: 'transparent',
           boxShadow: 'none',
-          marginBottom: theme.spacing(3),
+          marginBottom: theme.spacing(4),
+          maxWidth: 1000,
+          width: '100%',
         }}
       >
-        <Toolbar sx={{ justifyContent: 'center' }}>
+        <Toolbar sx={{ justifyContent: 'center', px: { xs: 0, sm: 2 } }}>
           <Tabs
             value={activeTab}
             onChange={handleTabChange}
@@ -229,27 +316,39 @@ export const Projects = () => {
             sx={{
               '& .MuiTabs-indicator': {
                 backgroundColor: theme.palette.primary.main,
+                height: 3,
+                borderRadius: 3,
               },
               '& .MuiTab-root': {
                 color: theme.palette.text.secondary,
                 fontWeight: 'bold',
                 textTransform: 'none',
+                fontSize: '1rem',
+                minWidth: 'auto',
+                px: 2.5,
+                py: 1.5,
                 '&.Mui-selected': {
                   color: theme.palette.primary.main,
+                },
+                '&:hover': {
+                  color: theme.palette.primary.main,
+                  backgroundColor: alpha(theme.palette.primary.main, 0.05),
+                  borderRadius: '8px',
                 },
               },
             }}
           >
             <Tab label="Destaque" />
-            <Tab label="Python" />
+            <Tab label="Backend" />
             <Tab label="Dados" />
-            <Tab label="React" />
-            <Tab label="Java" />
+            <Tab label="Automação" />
+            <Tab label="IA" />
+            <Tab label="Full Stack" />
           </Tabs>
         </Toolbar>
       </AppBar>
 
-      <ProjectsGrid>
+      <ProjectsGrid key={activeTab}>
         {renderProjects()}
       </ProjectsGrid>
 
@@ -258,76 +357,107 @@ export const Projects = () => {
           {selectedProjeto && (
             <>
               <ModalHeader>
-                <Box>
-                  <Typography variant="h5" component="h2" sx={{ fontWeight: 'bold', color: theme.palette.text.primary }}>
+                <Box sx={{ flex: 1 }}>
+                  <Typography variant="h4" component="h2" sx={{ fontWeight: 'bold', color: theme.palette.text.primary, mb: 0.5 }}>
                     {selectedProjeto.title}
                   </Typography>
-                  <Typography variant="subtitle1" color="text.secondary">
+                  <Typography variant="h6" color="primary" sx={{ fontWeight: 'medium' }}>
                     {selectedProjeto.subtitle}
                   </Typography>
+                  <Typography variant="body2" color="text.disabled" sx={{ mt: 1 }}>
+                    {selectedProjeto.date}
+                  </Typography>
                 </Box>
-                <IconButton onClick={handleClose} aria-label="Fechar modal" sx={{ color: theme.palette.text.secondary }}>
+                <IconButton 
+                  onClick={handleClose} 
+                  aria-label="Fechar modal"
+                  sx={{ 
+                    color: theme.palette.text.secondary,
+                    backgroundColor: alpha(theme.palette.text.secondary, 0.1),
+                    '&:hover': {
+                      backgroundColor: alpha(theme.palette.text.secondary, 0.2),
+                    }
+                  }}
+                >
                   <CloseIcon />
                 </IconButton>
               </ModalHeader>
-              
-              <ModalImage src={selectedProjeto.img2 || selectedProjeto.img} alt={selectedProjeto.title} />
+
+              {selectedProjeto.img && (
+                <ModalImage 
+                  src={selectedProjeto.img} 
+                  alt={selectedProjeto.title}
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                  }}
+                />
+              )}
 
               <ModalContent>
-                <Typography variant="body1" sx={{ color: theme.palette.text.primary, lineHeight: 1.6 }}>
+                <Typography variant="body1" sx={{ color: theme.palette.text.primary, lineHeight: 1.7, mb: 3 }}>
                   {selectedProjeto.description}
                 </Typography>
-                <Typography variant="body2" color="text.secondary" sx={{ marginTop: 2, fontWeight: 'bold' }}>
-                  Tecnologias: <span style={{ fontWeight: 'normal' }}>{selectedProjeto.technology}</span>
-                </Typography>
+                
+                {selectedProjeto.technology && (
+                  <Box>
+                    <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 1.5 }}>
+                      Tecnologias utilizadas
+                    </Typography>
+                    <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+                      {renderTechnologyChips(selectedProjeto.technology)}
+                    </Box>
+                  </Box>
+                )}
               </ModalContent>
-              
-              <ModalActions>
+
+              <ModalActions direction={{ xs: 'column', sm: 'row' }}>
                 {selectedProjeto.url && (
-                  <Button 
-                    variant="contained" 
+                  <Button
+                    variant="contained"
                     startIcon={<OpenInNewIcon />}
-                    href={selectedProjeto.url} 
+                    href={selectedProjeto.url}
                     target="_blank"
                     sx={{
                       fontWeight: 600,
                       textTransform: 'none',
-                      borderRadius: '8px',
-                      padding: '10px 20px',
-                      transition: 'transform 0.2s ease-in-out',
+                      borderRadius: '10px',
+                      padding: '12px 24px',
+                      fontSize: '1rem',
+                      transition: 'all 0.2s ease-in-out',
                       '&:hover': {
-                        transform: 'scale(1.05)',
-                        backgroundColor: theme.palette.primary.dark
+                        transform: 'translateY(-2px)',
+                        boxShadow: `0 6px 15px ${alpha(theme.palette.primary.main, 0.3)}`,
                       },
-                      backgroundColor: theme.palette.primary.main,
-                      color: theme.palette.getContrastText(theme.palette.primary.main),
                     }}
                   >
-                    Ver Site
+                    Ver Projeto
                   </Button>
                 )}
                 {selectedProjeto.github && (
-                  <Button 
-                    variant="outlined" 
+                  <Button
+                    variant="outlined"
                     startIcon={<GitHubIcon />}
-                    href={selectedProjeto.github} 
+                    href={selectedProjeto.github}
                     target="_blank"
                     sx={{
                       fontWeight: 600,
                       textTransform: 'none',
-                      borderRadius: '8px',
-                      padding: '10px 20px',
-                      transition: 'transform 0.2s ease-in-out',
-                      '&:hover': { 
-                        transform: 'scale(1.05)',
-                        borderColor: theme.palette.primary.main, 
-                        color: theme.palette.primary.main 
+                      borderRadius: '10px',
+                      padding: '12px 24px',
+                      fontSize: '1rem',
+                      transition: 'all 0.2s ease-in-out',
+                      borderWidth: '2px',
+                      '&:hover': {
+                        transform: 'translateY(-2px)',
+                        borderWidth: '2px',
+                        borderColor: theme.palette.primary.main,
+                        backgroundColor: alpha(theme.palette.primary.main, 0.05),
+                        boxShadow: `0 4px 12px ${alpha(theme.palette.primary.main, 0.2)}`,
                       },
-                      borderColor: theme.palette.text.secondary,
-                      color: theme.palette.text.secondary,
                     }}
                   >
-                    Ver GitHub
+                    Ver Código
                   </Button>
                 )}
               </ModalActions>
