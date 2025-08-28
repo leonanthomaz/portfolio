@@ -18,7 +18,7 @@ export const App = () => {
     const timer = setTimeout(() => {
       setIsExiting(true); 
       setTimeout(() => setLoading(false), 1000);
-    }, 0);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);

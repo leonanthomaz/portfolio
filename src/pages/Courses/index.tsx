@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Typography, styled, useTheme, alpha, useMediaQuery } from '@mui/material';
 import {
   Timeline,

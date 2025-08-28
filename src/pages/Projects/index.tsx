@@ -80,7 +80,7 @@ const ProjectCard = styled(Card)(({ theme }) => ({
   },
 }));
 
-const ProjectCardMedia = styled(CardMedia)(({ theme }) => ({
+const ProjectCardMedia = styled(CardMedia)(({}) => ({
   height: 200,
   objectFit: 'cover',
   transition: 'transform 0.5s ease',
@@ -247,7 +247,7 @@ export const Projects = () => {
       );
     }
 
-    return projects.map((projeto, index) => (
+    return projects.map((projeto) => (
        <ProjectCard>
           {projeto.status && (
             <StatusChip 
