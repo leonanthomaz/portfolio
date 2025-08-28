@@ -211,9 +211,10 @@ export const Projects = () => {
       'dados',
       'automacao',
       'ia',
+      'frontend'
     ];
     
-    if (activeTab === 5) {
+    if (activeTab === 6) {
       return [...projetosData.features, ...projetosData.backend, ...projetosData.dados];
     }
     
@@ -337,7 +338,7 @@ export const Projects = () => {
               <Tab label="Dados" />
               <Tab label="Automação" />
               <Tab label="IA" />
-              <Tab label="Full Stack" />
+              <Tab label="Frontend" />
             </Tabs>
           </Toolbar>
         </AppBar>

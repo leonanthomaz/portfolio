@@ -3,10 +3,7 @@ import firecloudImg from '@/assets/img/portfolio/firecloud.png';
 import pythonImg from '@/assets/img/portfolio/python.webp';
 
 const ACCESS_PROJECT_HASH = import.meta.env.VITE_ACCESS_PROJECT_HASH;
-// const URL_BASE = import.meta.env.VITE_ENVIRONMENT === 'production'
-//   ? import.meta.env.VITE_SANDBOX_URL_PROD
-//   : import.meta.env.VITE_SANDBOX_URL_TEST;
-const URL_BASE = import.meta.env.VITE_SANDBOX_BASE_URL
+const URL_BASE = import.meta.env.VITE_SANDBOX_BASE_URL;
 
 export interface Projeto {
   id: number;
@@ -52,28 +49,17 @@ export const projetosData = {
   automacao: [
     {
       id: 3,
-      title: "Tainá - Sistema de Inteligência Artificial",
-      subtitle: "Automação e IA",
-      description: "Sistema de IA em Python que executa comandos via voz e integra múltiplas APIs para respostas inteligentes.",
-      img: pythonImg,
-      date: "2024",
-      technology: "Python, ChatGPT API, Selenium, gTTS, SpeechRecognition, pygame",
-      github: "https://github.com/leonanthomaz/projeto-taina",
-      status: 'em_construcao',
-    },
-    {
-      id: 4,
       title: "Envio de E-mails Personalizados",
       subtitle: "Automação de E-mails",
       description: "Automatiza o envio de e-mails personalizados com base em dados de um arquivo Excel.",
       img: pythonImg,
       date: "2024",
       technology: "Python, pandas, openpyxl, smtplib",
-      github: "https://github.com/leonanthomaz/bot-envio-emails ",
+      github: "https://github.com/leonanthomaz/bot-envio-emails",
       status: 'finalizado',
     },
     {
-      id: 5,
+      id: 4,
       title: "YouTube Music Player",
       subtitle: "Player de Música",
       description: "Player de música que baixa e reproduz músicas do YouTube com Python.",
@@ -83,22 +69,11 @@ export const projetosData = {
       github: "https://github.com/leonanthomaz/music_player_py",
       status: 'finalizado',
     },
-    {
-      id: 6,
-      title: "ChatBot",
-      subtitle: "Bot de Atendimento",
-      description: "Bot desacoplado do FireCloud, capaz de responder perguntas de clientes via chat.",
-      img: pythonImg,
-      date: "2024",
-      technology: "Python, FastAPI, WebSocket",
-      github: "https://github.com/leonanthomaz/chatbot",
-      status: 'em_construcao',
-    },
   ],
 
   dados: [
     {
-      id: 7,
+      id: 5,
       title: "LabAnalyzer",
       subtitle: "Análise de Dados Biomédicos",
       description: "Sistema para cadastro e análise de exames e pacientes, com geração de relatórios e gráficos.",
@@ -109,7 +84,7 @@ export const projetosData = {
       status: 'finalizado',
     },
     {
-      id: 8,
+      id: 6,
       title: "Análise - Câncer no Brasil",
       subtitle: "Visualização de Dados",
       description: "Análise interativa de diagnósticos de câncer no Brasil (2000-2019), com gráficos e visualizações detalhadas.",
@@ -120,7 +95,7 @@ export const projetosData = {
       status: 'finalizado',
     },
     {
-      id: 9,
+      id: 7,
       title: "Visualização de Vendas",
       subtitle: "Gráficos e Dashboard",
       description: "Web app que lê CSV de vendas e apresenta gráficos interativos para análise de performance.",
@@ -134,7 +109,7 @@ export const projetosData = {
 
   backend: [
     {
-      id: 10,
+      id: 8,
       title: "CRUD Flask + MySQL",
       subtitle: "API RESTful",
       description: "API para operações CRUD em banco MySQL, gerenciando registros de médicos.",
@@ -148,7 +123,18 @@ export const projetosData = {
 
   ia: [
     {
-      id: 11,
+      id: 9,
+      title: "ChatBot",
+      subtitle: "Bot de Atendimento",
+      description: "Bot desacoplado do FireCloud, capaz de responder perguntas de clientes via chat.",
+      img: pythonImg,
+      date: "2024",
+      technology: "Python, FastAPI, WebSocket",
+      github: "https://github.com/leonanthomaz/chatbot",
+      status: 'em_construcao',
+    },
+    {
+      id: 10,
       title: "Tainá - Inteligência Artificial",
       subtitle: "IA e Comandos por Voz",
       description: "Versão destacada da Tainá mostrando capacidade de IA e integração com APIs.",
@@ -162,13 +148,36 @@ export const projetosData = {
 
   opencv: [
     {
-      id: 12,
+      id: 11,
       title: "Image Analyzer (Placeholder)",
       subtitle: "Análise de Imagem",
       description: "Projeto inicial de análise de imagens usando OpenCV, ainda em desenvolvimento.",
       img: pythonImg,
       date: "2024",
       technology: "Python, OpenCV, NumPy",
+      status: 'em_construcao',
+    },
+  ],
+
+  frontend: [
+    {
+      id: 12,
+      title: "Blog Pessoal (Placeholder)",
+      subtitle: "Frontend React",
+      description: "Projeto inicial do blog em React, ainda em desenvolvimento.",
+      img: pythonImg,
+      date: "2024",
+      technology: "React, TypeScript, MUI, React Router",
+      status: 'em_construcao',
+    },
+    {
+      id: 13,
+      title: "Catálogo de Filmes (Placeholder)",
+      subtitle: "Frontend React",
+      description: "Aplicativo de catálogo de filmes em React, consumindo API externa.",
+      img: pythonImg,
+      date: "2024",
+      technology: "React, TypeScript, Axios, TMDB API",
       status: 'em_construcao',
     },
   ],
