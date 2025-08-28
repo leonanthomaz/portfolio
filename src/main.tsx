@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { ThemeProvider as MUIThemeProvider } from '@mui/material/styles';
-import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from './styles/theme';
 import { App } from './App';
@@ -10,7 +9,6 @@ import { ToastContainer } from 'react-toastify';
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <MUIThemeProvider theme={theme}>
-      <StyledThemeProvider theme={theme}>
         <CssBaseline />
         <App />
         <ToastContainer
@@ -24,7 +22,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
           draggable
           pauseOnHover
         />
-      </StyledThemeProvider>
     </MUIThemeProvider>
   </React.StrictMode>
 );
