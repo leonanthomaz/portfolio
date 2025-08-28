@@ -5,7 +5,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import theme from './styles/theme';
 import { App } from './App';
 import { ToastContainer } from 'react-toastify';
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -23,7 +22,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
           draggable
           pauseOnHover
         />
-        <SpeedInsights />
     </MUIThemeProvider>
   </React.StrictMode>
 );

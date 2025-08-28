@@ -18,7 +18,6 @@
     "@mui/material": "^6.1.7",
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.34",
-    "@vercel/speed-insights": "^1.2.0",
     "react": "^18.3.1",
     "react-animation-on-scroll": "^5.1.0",
     "react-dom": "^18.3.1",
