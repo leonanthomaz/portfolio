@@ -1,50 +1,66 @@
-# React + TypeScript + Vite
+# 👨‍💻 Leonan Thomaz de Oliveira – Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao meu **portfolio landing page**! Aqui você encontra meus projetos, experiências, estudos e habilidades em **Python**, **React** e automação, tudo em uma única página para navegação fácil e direta.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📝 Seções da Landing Page
 
-## Expanding the ESLint configuration
+- **Intro** – Quem eu sou e o que faço  
+- **Sobre mim** – Experiência, formação e visão de carreira  
+- **Skills** – Tecnologias, linguagens e ferramentas que domino  
+- **Experiência** – Projetos e trabalhos anteriores  
+- **Cursos** – Aprendizados relevantes e certificações  
+- **Projetos** – Destaques de sistemas, bots e automações  
+- **Contato** – E-mail, GitHub e LinkedIn  
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## 🛠 Tecnologias & Skills
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Backend:** Python, FastAPI, Flask, PostgreSQL, SQLAlchemy  
+- **Frontend:** React, TypeScript, Styled Components, Material UI  
+- **Automação & IA:** Bots, Web scraping, Pandas (em evolução: Numpy, TensorFlow, Scikit-Learn, OpenCV)  
+- **Ferramentas:** Git, Docker, Vite, VSCode  
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 🚀 Projetos Destacados
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### 1️⃣ **Thomaggio – Sistema para pizzaria**
+- Site + gestão de pedidos simples
+- WebSocket para comandas em tempo real
+- Pagamento via Mercado Pago (Pix)
+- Integração com Google Maps  
+
+### 2️⃣ **FireCloud – Bots de automação**
+- Bots personalizados para tarefas repetitivas
+- Monitoramento e alertas automáticos
+- Estrutura modular para novos bots  
+
+---
+
+## ⚡ Highlights do Portfolio
+
+- React 18 + TypeScript  
+- MUI v6 com componentes modernos e responsivos  
+- Navegação única, fluida e otimizada  
+- Build rápida e performática com Vite  
+
+---
+
+## 📫 Contato
+
+- **Email:** [leonan.thomaz@gmail.com](mailto:leonan.thomaz@gmail.com)  
+- **GitHub:** [https://github.com/LeonanThomaz](https://github.com/LeonanThomaz)  
+- **LinkedIn:** [https://www.linkedin.com/in/leonanthomaz/](https://www.linkedin.com/in/leonanthomaz/)  
+
+---
+
+## 📝 Licença
+
+Este projeto está licenciado sob a **MIT License** – veja o arquivo [LICENSE.md](LICENSE.md) para detalhes.
+
+---
+
+> “Code is like humor. When you have to explain it, it’s bad.” – Cory House
