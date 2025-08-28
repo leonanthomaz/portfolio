@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Container, Box } from '@mui/material';
+import { Box } from '@mui/material';
 import { Intro } from './components/Intro';
 import { Routes } from './routes';
 import Footer from './components/Footer';

@@ -1,4 +1,4 @@
-import { Box, Typography, styled, useTheme, alpha, useMediaQuery, Container } from '@mui/material';
+import { Box, Typography, styled, useTheme, alpha, useMediaQuery } from '@mui/material';
 import {
   Timeline,
   TimelineItem,
@@ -12,22 +12,6 @@ import { FaUniversity, FaCertificate } from 'react-icons/fa';
 import { ContentBox, SectionContainer, Title } from '../../styles/GlobalStyles';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { FloatingBackgroundCourses } from '../../utils/FloatingEffect/FloatingBackgroundCourses';
-
-// Componente estilizado para o container principal
-
-const CoursesWrapper = styled(Container)(({ theme }) => ({
-  padding: theme.spacing(4, 2),
-}));
-
-const CoursesContainer = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  padding: theme.spacing(4, 2),
-  width: '100%',
-  overflow: 'hidden',
-  backgroundColor: theme.palette.background.default,
-}));
 
 // Componente estilizado para o TimelineDot (fundo amarelo com ícones pretos)
 const CustomTimelineDot = styled(TimelineDot)(({ theme }) => ({
