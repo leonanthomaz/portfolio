@@ -232,6 +232,7 @@ export const Intro = () => {
                   'de Automação',
                   'de APIs',
                   'Web',
+                  'e Analista de Dados'
                 ],
                 autoStart: true,
                 delay: 75,

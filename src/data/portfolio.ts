@@ -2,6 +2,8 @@ import thomaggioImg from '@/assets/img/portfolio/thomaggio.png';
 import firecloudImg from '@/assets/img/portfolio/firecloud.png';
 import pythonImg from '@/assets/img/portfolio/python.webp';
 
+const VITE_ACCESS_PROJECT_HASH = import.meta.env.VITE_ACCESS_PROJECT_HASH;
+
 export interface Projeto {
   id: number;
   title: string;
@@ -24,6 +26,7 @@ export const projetosData = {
       description: "Sistema de delivery completo com gestão de pedidos, integração com Google Maps e pagamento via Pix.",
       img: thomaggioImg,
       date: "2023",
+      url: `https://leonanthomaz-sandbox.vercel.app/thomaggio/${VITE_ACCESS_PROJECT_HASH}`,
       technology: "Python, FastAPI, WebSocket, React, Mercado Pago",
       github: "https://github.com/leonanthomaz/thomaggio",
       status: 'finalizado',
@@ -35,6 +38,7 @@ export const projetosData = {
       description: "Plataforma de automação e bots para empresas, com gestão de usuários e dashboards.",
       img: firecloudImg,
       date: "2024",
+      url: `https://leonanthomaz-sandbox.vercel.app/firecloud/${VITE_ACCESS_PROJECT_HASH}`,
       technology: "Python, FastAPI, React, WebSocket",
       github: "https://github.com/leonanthomaz/firecloud",
       status: 'finalizado',
