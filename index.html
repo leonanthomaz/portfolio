@@ -1,16 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Portfólio profissional de Leonan Thomaz, Desenvolvedor Python especializado em automação, análise de dados e APIs." />
     <meta name="keywords" content="Leonan Thomaz, desenvolvedor Python, automação, análise de dados, APIs, backend, Flask, Pandas, NumPy, Matplotlib, SQL, React, Java, Spring, web scraping, integração de APIs, visualização de dados" />
+    <meta name="author" content="Leonan Thomaz" />
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow" />
-    <link rel="icon" type="image/webp" href="/src/assets/img/script.png" />
+    
+    <!-- Favicon em múltiplos formatos para melhor compatibilidade -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/src/assets/img/script.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/src/assets/img/script.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/assets/img/script.png">
+    <link rel="shortcut icon" href="/src/assets/img/script.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://leonanthomaz.vercel.app/" />
+    <meta property="og:title" content="Leonan Thomaz | Desenvolvedor Python e Automação" />
+    <meta property="og:description" content="Portfólio profissional de Leonan Thomaz, Desenvolvedor Python especializado em automação, análise de dados e APIs." />
+    <meta property="og:image" content="https://leonanthomaz.vercel.app/src/assets/img/foto-leonan.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://leonanthomaz.vercel.app/" />
+    <meta property="twitter:title" content="Leonan Thomaz | Desenvolvedor Python e Automação" />
+    <meta property="twitter:description" content="Portfólio profissional de Leonan Thomaz, Desenvolvedor Python especializado em automação, análise de dados e APIs." />
+    <meta property="twitter:image" content="https://leonanthomaz.vercel.app/src/assets/img/foto-leonan.png" />
+
     <title>Leonan Thomaz | Desenvolvedor Python e Automação</title>
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts com preconnect para melhor performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link 
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500;700&family=Dancing+Script:wght@400;700&display=swap" 
       rel="stylesheet"
@@ -34,7 +57,12 @@
     </script>
   </head>
   <body>
-    <noscript>Por favor, habilite o JavaScript para utilizar este site.</noscript>
+    <noscript>
+      <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+        <h1>JavaScript Necessário</h1>
+        <p>Por favor, habilite o JavaScript para utilizar este site.</p>
+      </div>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

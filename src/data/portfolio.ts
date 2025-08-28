@@ -69,7 +69,7 @@ export const projetosData = {
       img: pythonImg,
       date: "2024",
       technology: "Python, pandas, openpyxl, smtplib",
-      github: "https://github.com/leonanthomaz/bot_envio_emails",
+      github: "https://github.com/leonanthomaz/bot-envio-emails ",
       status: 'finalizado',
     },
     {
