@@ -1,4 +1,4 @@
-import { Box, Typography, styled, useTheme, alpha, useMediaQuery } from '@mui/material';
+import { Box, Typography, styled, useTheme, alpha, useMediaQuery, Container } from '@mui/material';
 import {
   Timeline,
   TimelineItem,
@@ -9,10 +9,16 @@ import {
   timelineOppositeContentClasses,
 } from '@mui/lab';
 import { FaUniversity, FaCertificate } from 'react-icons/fa';
-import { Title } from '../../styles/GlobalStyles';
+import { ContentBox, SectionContainer, Title } from '../../styles/GlobalStyles';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import { FloatingBackgroundCourses } from '../../utils/FloatingEffect/FloatingBackgroundCourses';
 
 // Componente estilizado para o container principal
+
+const CoursesWrapper = styled(Container)(({ theme }) => ({
+  padding: theme.spacing(4, 2),
+}));
+
 const CoursesContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
@@ -90,182 +96,187 @@ export const Courses = () => {
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('md'));
 
   return (
-    <CoursesContainer id="courses">
-      <AnimationOnScroll animateIn="animate__fadeInUp">
+    <SectionContainer id="courses">
+
+      <FloatingBackgroundCourses />
+
+      <ContentBox sx={{ zIndex: 2}}>
+        <AnimationOnScroll animateIn="animate__fadeInUp">
         <Title>Formação</Title>
-      </AnimationOnScroll>
-      
-      {isLargeScreen ? (
-        // Layout para telas grandes (web) - cards alternados
-        <Timeline
-          position="alternate"
-          sx={{
-            maxWidth: '1200px',
-            margin: '0 auto',
-            padding: 0,
-            [`& .${timelineOppositeContentClasses.root}`]: {
-              flex: 0.2,
-            },
-          }}
-        >
-          {courses.map((course, index) => (
-            <TimelineItem key={course.id}>
-              <TimelineSeparator>
-                <CustomTimelineDot>{course.icon}</CustomTimelineDot>
-                {index < courses.length - 1 && (
-                  <TimelineConnector
-                    sx={{ 
-                      backgroundColor: theme.palette.warning.main, 
-                      width: '2px',
-                      height: '100px'
-                    }}
-                  />
-                )}
-              </TimelineSeparator>
-              <TimelineContent
-                sx={{
-                  width: '100%',
-                  maxWidth: '700px',
-                  paddingY: 2,
-                  display: 'flex',
-                  justifyContent: index % 2 === 0 ? 'flex-start' : 'flex-end',
-                }}
-              >
-                <AnimationOnScroll animateIn={course.animation}>
-                  <CustomTimelineContent
+        </AnimationOnScroll>
+
+        {isLargeScreen ? (
+            // Layout para telas grandes (web) - cards alternados
+            <Timeline
+              position="alternate"
+              sx={{
+                maxWidth: '1200px',
+                margin: '0 auto',
+                padding: 0,
+                [`& .${timelineOppositeContentClasses.root}`]: {
+                  flex: 0.2,
+                },
+              }}
+            >
+              {courses.map((course, index) => (
+                <TimelineItem key={course.id}>
+                  <TimelineSeparator>
+                    <CustomTimelineDot>{course.icon}</CustomTimelineDot>
+                    {index < courses.length - 1 && (
+                      <TimelineConnector
+                        sx={{ 
+                          backgroundColor: theme.palette.warning.main, 
+                          width: '2px',
+                          height: '100px'
+                        }}
+                      />
+                    )}
+                  </TimelineSeparator>
+                  <TimelineContent
                     sx={{
                       width: '100%',
+                      maxWidth: '700px',
+                      paddingY: 2,
+                      display: 'flex',
+                      justifyContent: index % 2 === 0 ? 'flex-start' : 'flex-end',
                     }}
                   >
-                    <Typography
-                      variant="h6"
-                      sx={{
-                        fontSize: '1.25rem',
-                        fontWeight: 700,
-                        color: theme.palette.text.primary,
-                        textAlign: index % 2 === 0 ? 'left' : 'right',
-                      }}
-                    >
-                      {course.title}
-                    </Typography>
-                    {course.year && (
-                      <Typography
-                        color="text.secondary"
-                        sx={{ 
-                          fontSize: '1rem',
-                          textAlign: index % 2 === 0 ? 'left' : 'right',
-                        }}
-                      >
-                        {course.year}
-                      </Typography>
-                    )}
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        marginTop: 1.5,
-                        fontSize: '1rem',
-                        color: theme.palette.text.primary,
-                        lineHeight: 1.6,
-                        textAlign: 'left',
-                      }}
-                    >
-                      {course.description}
-                    </Typography>
-                  </CustomTimelineContent>
-                </AnimationOnScroll>
-              </TimelineContent>
-            </TimelineItem>
-          ))}
-        </Timeline>
-      ) : (
-        // Layout para telas pequenas (mobile) - todos os cards à direita
-        <Box sx={{ 
-          width: '100%', 
-          maxWidth: '800px',
-          margin: '0 auto',
-          padding: { xs: '0 16px', sm: '0 24px' }
-        }}>
-          <Timeline
-            sx={{
-              padding: 0,
-              margin: 0,
-              '& .MuiTimelineItem-root:before': {
-                flex: 0,
-                padding: 0,
-              },
-            }}
-          >
-            {courses.map((course, index) => (
-              <TimelineItem key={course.id}>
-                <TimelineSeparator>
-                  <CustomTimelineDot>{course.icon}</CustomTimelineDot>
-                  {index < courses.length - 1 && (
-                    <TimelineConnector
-                      sx={{ 
-                        backgroundColor: theme.palette.warning.main, 
-                        width: '2px',
-                        height: '80px'
-                      }}
-                    />
-                  )}
-                </TimelineSeparator>
-                <TimelineContent
-                  sx={{
-                    padding: '12px 16px',
-                    marginBottom: 2,
-                    flex: 1,
-                    maxWidth: '100%',
-                    marginLeft: 2,
-                  }}
-                >
-                  <AnimationOnScroll animateIn={course.animation}>
-                    <CustomTimelineContent
-                      sx={{
-                        width: '100%',
-                        maxWidth: '100%',
-                      }}
-                    >
-                      <Typography
-                        variant="h6"
+                    <AnimationOnScroll animateIn={course.animation}>
+                      <CustomTimelineContent
                         sx={{
-                          fontSize: '1rem',
-                          fontWeight: 700,
-                          color: theme.palette.text.primary,
-                          textAlign: 'left',
+                          width: '100%',
                         }}
                       >
-                        {course.title}
-                      </Typography>
-                      {course.year && (
                         <Typography
-                          color="text.secondary"
-                          sx={{ 
-                            fontSize: '0.875rem',
-                            marginTop: 0.5
+                          variant="h6"
+                          sx={{
+                            fontSize: '1.25rem',
+                            fontWeight: 700,
+                            color: theme.palette.text.primary,
+                            textAlign: index % 2 === 0 ? 'left' : 'right',
                           }}
                         >
-                          {course.year}
+                          {course.title}
                         </Typography>
-                      )}
-                      <Typography
-                        variant="body2"
+                        {course.year && (
+                          <Typography
+                            color="text.secondary"
+                            sx={{ 
+                              fontSize: '1rem',
+                              textAlign: index % 2 === 0 ? 'left' : 'right',
+                            }}
+                          >
+                            {course.year}
+                          </Typography>
+                        )}
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            marginTop: 1.5,
+                            fontSize: '1rem',
+                            color: theme.palette.text.primary,
+                            lineHeight: 1.6,
+                            textAlign: 'left',
+                          }}
+                        >
+                          {course.description}
+                        </Typography>
+                      </CustomTimelineContent>
+                    </AnimationOnScroll>
+                  </TimelineContent>
+                </TimelineItem>
+              ))}
+            </Timeline>
+        ) : (
+          // Layout para telas pequenas (mobile) - todos os cards à direita
+          <Box sx={{ 
+            width: '100%', 
+            maxWidth: '800px',
+            margin: '0 auto',
+            padding: { xs: '0 16px', sm: '0 24px' }
+          }}>
+            <Timeline
+              sx={{
+                padding: 0,
+                margin: 0,
+                '& .MuiTimelineItem-root:before': {
+                  flex: 0,
+                  padding: 0,
+                },
+              }}
+            >
+              {courses.map((course, index) => (
+                <TimelineItem key={course.id}>
+                  <TimelineSeparator>
+                    <CustomTimelineDot>{course.icon}</CustomTimelineDot>
+                    {index < courses.length - 1 && (
+                      <TimelineConnector
+                        sx={{ 
+                          backgroundColor: theme.palette.warning.main, 
+                          width: '2px',
+                          height: '80px'
+                        }}
+                      />
+                    )}
+                  </TimelineSeparator>
+                  <TimelineContent
+                    sx={{
+                      padding: '12px 16px',
+                      marginBottom: 2,
+                      flex: 1,
+                      maxWidth: '100%',
+                      marginLeft: 2,
+                    }}
+                  >
+                    <AnimationOnScroll animateIn={course.animation}>
+                      <CustomTimelineContent
                         sx={{
-                          marginTop: 1.5,
-                          fontSize: '0.875rem',
-                          color: theme.palette.text.primary,
-                          lineHeight: 1.6,
+                          width: '100%',
+                          maxWidth: '100%',
                         }}
                       >
-                        {course.description}
-                      </Typography>
-                    </CustomTimelineContent>
-                  </AnimationOnScroll>
-                </TimelineContent>
-              </TimelineItem>
-            ))}
-          </Timeline>
-        </Box>
-      )}
-    </CoursesContainer>
+                        <Typography
+                          variant="h6"
+                          sx={{
+                            fontSize: '1rem',
+                            fontWeight: 700,
+                            color: theme.palette.text.primary,
+                            textAlign: 'left',
+                          }}
+                        >
+                          {course.title}
+                        </Typography>
+                        {course.year && (
+                          <Typography
+                            color="text.secondary"
+                            sx={{ 
+                              fontSize: '0.875rem',
+                              marginTop: 0.5
+                            }}
+                          >
+                            {course.year}
+                          </Typography>
+                        )}
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            marginTop: 1.5,
+                            fontSize: '0.875rem',
+                            color: theme.palette.text.primary,
+                            lineHeight: 1.6,
+                          }}
+                        >
+                          {course.description}
+                        </Typography>
+                      </CustomTimelineContent>
+                    </AnimationOnScroll>
+                  </TimelineContent>
+                </TimelineItem>
+              ))}
+            </Timeline>
+          </Box>
+        )}
+      </ContentBox>
+    </SectionContainer>
   );
 };

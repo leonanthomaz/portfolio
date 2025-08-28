@@ -5,8 +5,9 @@ import emailjs from '@emailjs/browser';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import { Title } from '../../styles/GlobalStyles';
-import { useTheme } from '@mui/material/styles'; // Importando o hook useTheme
+import { ContentBox, SectionContainer, Title } from '../../styles/GlobalStyles';
+import { useTheme } from '@mui/material/styles';
+import { FloatingBackgroundContact } from '../../utils/FloatingEffect/FloatingBackgroundContact';
 
 export const Contact: React.FC = () => {
   const theme = useTheme(); // Obtendo o tema atual
@@ -82,121 +83,126 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <Box sx={{ padding: 4, borderRadius: '8px'}}>
-      <AnimationOnScroll animateIn="animate__backInLeft">
-        <Title>Contato</Title>
-      </AnimationOnScroll>
+    <SectionContainer id="contact">
 
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: { xs: 'column', md: 'row' },
-          justifyContent: 'space-between',
-          gap: 4,
-        }}
-      >
-        <Box sx={{ flex: 1 }}>
-          <form ref={form} onSubmit={sendEmail}>
-            <TextField
-              label="Nome"
-              name="name"
-              fullWidth
-              margin="normal"
-              inputRef={n}
-              required
-              sx={{
-                input: { color: theme.palette.text.primary },
-                '& .MuiInputLabel-root': { color: theme.palette.text.primary },
-                '& .MuiOutlinedInput-root': {
-                  '& fieldset': { borderColor: theme.palette.primary.main },
-                  '&:hover fieldset': { borderColor: theme.palette.primary.main },
-                  '&.Mui-focused fieldset': { borderColor: theme.palette.primary.main },
-                },
-              }}
-            />
-            <TextField
-              label="Telefone (com DDD)"
-              name="telephone"
-              fullWidth
-              margin="normal"
-              inputRef={t}
-              required
-              sx={{
-                input: { color: theme.palette.text.primary },
-                '& .MuiInputLabel-root': { color: theme.palette.text.primary },
-                '& .MuiOutlinedInput-root': {
-                  '& fieldset': { borderColor: theme.palette.primary.main },
-                  '&:hover fieldset': { borderColor: theme.palette.primary.main },
-                  '&.Mui-focused fieldset': { borderColor: theme.palette.primary.main },
-                },
-              }}
-            />
-            <TextField
-              label="Mensagem"
-              name="message"
-              fullWidth
-              multiline
-              rows={4}
-              margin="normal"
-              inputRef={m}
-              required
-              sx={{
-                textarea: { color: theme.palette.text.primary },
-                '& .MuiInputLabel-root': { color: theme.palette.text.primary },
-                '& .MuiOutlinedInput-root': {
-                  '& fieldset': { borderColor: theme.palette.primary.main },
-                  '&:hover fieldset': { borderColor: theme.palette.primary.main },
-                  '&.Mui-focused fieldset': { borderColor: theme.palette.primary.main },
-                },
-              }}
-            />
-            <Button
-              type="submit"
-              variant="contained"
-              fullWidth
-              sx={{ marginTop: 2, backgroundColor: theme => theme.palette.primary.main,
-                '&:hover': {
-                  backgroundColor: theme => theme.palette.secondary.main, 
-                },
-              }}
-              disabled={loading}
-            >
-              {loading ? <CircularProgress size={24} sx={{ color: theme.palette.primary.contrastText }} /> : 'Enviar Mensagem'}
-            </Button>
-          </form>
-        </Box>
+      <FloatingBackgroundContact/>
+
+      <ContentBox sx={{ zIndex: 2}}>
+        <AnimationOnScroll animateIn="animate__backInLeft">
+          <Title>Contato</Title>
+        </AnimationOnScroll>
 
         <Box
           sx={{
-            flex: 1,
             display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: 2,
+            flexDirection: { xs: 'column', md: 'row' },
+            justifyContent: 'space-between',
+            gap: 4,
           }}
         >
-          <Typography variant="h6" sx={{ color: theme.palette.primary.main, marginBottom: 2 }}>
-            Minhas Redes Sociais
-          </Typography>
-          <Box sx={{ display: 'flex', gap: 3 }}>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <FaFacebook size={40} color={theme.palette.primary.main} />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin size={40} color={theme.palette.primary.main} />
-            </a>
-            <a href="https://github.com/leonanthomaz" target="_blank" rel="noopener noreferrer">
-              <FaGithub size={40} color={theme.palette.primary.main} />
-            </a>
-            <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noopener noreferrer">
-              <FaWhatsapp size={40} color={theme.palette.primary.main} />
-            </a>
+          <Box sx={{ flex: 1 }}>
+            <form ref={form} onSubmit={sendEmail}>
+              <TextField
+                label="Nome"
+                name="name"
+                fullWidth
+                margin="normal"
+                inputRef={n}
+                required
+                sx={{
+                  input: { color: theme.palette.text.primary },
+                  '& .MuiInputLabel-root': { color: theme.palette.text.primary },
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': { borderColor: theme.palette.primary.main },
+                    '&:hover fieldset': { borderColor: theme.palette.primary.main },
+                    '&.Mui-focused fieldset': { borderColor: theme.palette.primary.main },
+                  },
+                }}
+              />
+              <TextField
+                label="Telefone (com DDD)"
+                name="telephone"
+                fullWidth
+                margin="normal"
+                inputRef={t}
+                required
+                sx={{
+                  input: { color: theme.palette.text.primary },
+                  '& .MuiInputLabel-root': { color: theme.palette.text.primary },
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': { borderColor: theme.palette.primary.main },
+                    '&:hover fieldset': { borderColor: theme.palette.primary.main },
+                    '&.Mui-focused fieldset': { borderColor: theme.palette.primary.main },
+                  },
+                }}
+              />
+              <TextField
+                label="Mensagem"
+                name="message"
+                fullWidth
+                multiline
+                rows={4}
+                margin="normal"
+                inputRef={m}
+                required
+                sx={{
+                  textarea: { color: theme.palette.text.primary },
+                  '& .MuiInputLabel-root': { color: theme.palette.text.primary },
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': { borderColor: theme.palette.primary.main },
+                    '&:hover fieldset': { borderColor: theme.palette.primary.main },
+                    '&.Mui-focused fieldset': { borderColor: theme.palette.primary.main },
+                  },
+                }}
+              />
+              <Button
+                type="submit"
+                variant="contained"
+                fullWidth
+                sx={{ marginTop: 2, backgroundColor: theme => theme.palette.primary.main,
+                  '&:hover': {
+                    backgroundColor: theme => theme.palette.secondary.main, 
+                  },
+                }}
+                disabled={loading}
+              >
+                {loading ? <CircularProgress size={24} sx={{ color: theme.palette.primary.contrastText }} /> : 'Enviar Mensagem'}
+              </Button>
+            </form>
+          </Box>
+
+          <Box
+            sx={{
+              flex: 1,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 2,
+            }}
+          >
+            <Typography variant="h6" sx={{ color: theme.palette.primary.main, marginBottom: 2 }}>
+              Minhas Redes Sociais
+            </Typography>
+            <Box sx={{ display: 'flex', gap: 3 }}>
+              <a href="https://facebook.com/https://www.facebook.com/leonan.t.oliveira" target="_blank" rel="noopener noreferrer">
+                <FaFacebook size={40} color={theme.palette.primary.main} />
+              </a>
+              <a href="https://linkedin.com/in/leonanthomaz" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={40} color={theme.palette.primary.main} />
+              </a>
+              <a href="https://github.com/leonanthomaz" target="_blank" rel="noopener noreferrer">
+                <FaGithub size={40} color={theme.palette.primary.main} />
+              </a>
+              <a href="https://wa.me/5521998090928" target="_blank" rel="noopener noreferrer">
+                <FaWhatsapp size={40} color={theme.palette.primary.main} />
+              </a>
+            </Box>
           </Box>
         </Box>
-      </Box>
 
-      <ToastContainer />
-    </Box>
+        <ToastContainer />
+      </ContentBox>
+    </SectionContainer>
   );
 };

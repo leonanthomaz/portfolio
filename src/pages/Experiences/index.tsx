@@ -16,18 +16,9 @@ import {
   FaRocket,
   FaLightbulb,
 } from 'react-icons/fa';
-import { Title } from '../../styles/GlobalStyles';
+import { ContentBox, SectionContainer, Title } from '../../styles/GlobalStyles';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-
-// Componente estilizado para o container principal
-const ExperiencesContainer = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  padding: theme.spacing(4, 2),
-  width: '100%',
-  overflow: 'hidden',
-}));
+import { FloatingBackgroundExperience } from '../../utils/FloatingEffect/FloatingBackgroundExperience';
 
 // Componente estilizado para o TimelineDot
 const CustomTimelineDot = styled(TimelineDot)(({ theme }) => ({
@@ -82,20 +73,20 @@ const experiences = [
   },
   {
     id: 3,
-    icon: <FaProjectDiagram />,
-    title: 'Freelancer',
-    subtitle: 'Programador & Suporte Técnico • 2024',
+    icon: <FaRocket />,
+    title: 'Projeto Thomaggio',
+    subtitle: 'Sistema completo de pedidos • 2024-2025',
     description:
-      'Atuei em projetos diversos de automação e suporte. Criei scripts Python para scraping de dados, envio de e-mails e manipulação de planilhas. Desenvolvi chatbots com NLP (OpenAI) e automatizações internas. Também atendi comércios locais, atuando no suporte técnico, controle de caixa e operação básica de loja.',
+      'Desenvolvi do zero uma aplicação completa para gestão de pedidos, com frontend em React + TypeScript, backend em FastAPI, painel administrativo, integração com Pix (via Mercado Pago) e impressão de comandas em 58mm. Projeto disponível em: https://thomaggio.vercel.app/',
     animation: 'animate__fadeInRight',
   },
   {
     id: 4,
-    icon: <FaRocket />,
-    title: 'Projeto Thomaggio',
-    subtitle: 'Sistema completo de pedidos • 2025',
+    icon: <FaProjectDiagram />,
+    title: 'FireCloud',
+    subtitle: 'Plataforma de Bots e Automação • 2025',
     description:
-      'Desenvolvi do zero uma aplicação completa para gestão de pedidos, com frontend em React + TypeScript, backend em FastAPI, painel administrativo, integração com Pix (via Mercado Pago) e impressão de comandas em 58mm. Projeto disponível em: https://thomaggio.vercel.app/',
+      'Criei uma plataforma completa de bots para automação de tarefas, integração com APIs externas e pipelines de dados, usando Python (FastAPI), WebSockets e Docker. Sistema projetado para escalabilidade e integração em tempo real com múltiplos serviços.',
     animation: 'animate__fadeInLeft',
   },
   {
@@ -110,114 +101,31 @@ const experiences = [
   },
 ];
 
+
 export const Experiences: React.FC = () => {
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('md'));
 
   return (
-    <ExperiencesContainer id="experiences">
-      <AnimationOnScroll animateIn="animate__fadeInUp">
-        <Title>Experiência</Title>
-      </AnimationOnScroll>
+    <SectionContainer id="experiences">
       
-      {isLargeScreen ? (
-        // Layout para telas grandes (web) - cards alternados
-        <Timeline
-          position="alternate"
-          sx={{
-            maxWidth: '1200px',
-            margin: '0 auto',
-            padding: 0,
-            [`& .${timelineOppositeContentClasses.root}`]: {
-              flex: 0.2,
-            },
-          }}
-        >
-          {experiences.map((exp, index) => (
-            <TimelineItem key={exp.id}>
-              <TimelineSeparator>
-                <CustomTimelineDot>{exp.icon}</CustomTimelineDot>
-                {index < experiences.length - 1 && (
-                  <TimelineConnector
-                    sx={{ 
-                      backgroundColor: theme.palette.primary.main, 
-                      width: '2px',
-                      height: '100px'
-                    }}
-                  />
-                )}
-              </TimelineSeparator>
-              <TimelineContent
-                sx={{
-                  width: '100%',
-                  maxWidth: '700px', // aumentei de 500px pra 700px
-                  paddingY: 2,
-                  display: 'flex',
-                  justifyContent: index % 2 === 0 ? 'flex-start' : 'flex-end', // mantém alternado
-                }}
-              >
-                <AnimationOnScroll animateIn={exp.animation}>
-                  <CustomTimelineContent
-                    sx={{
-                      width: '100%',
-                    }}
-                  >
-                    <Typography
-                      variant="h6"
-                      sx={{
-                        fontSize: '1.25rem',
-                        fontWeight: 700,
-                        color: theme.palette.primary.main,
-                        textAlign: index % 2 === 0 ? 'left' : 'right',
-                      }}
-                    >
-                      {exp.title}
-                    </Typography>
-                    {exp.subtitle && (
-                      <Typography
-                        color="text.secondary"
-                        sx={{ 
-                          fontSize: '1rem',
-                          textAlign: index % 2 === 0 ? 'left' : 'right',
-                        }}
-                      >
-                        {exp.subtitle}
-                      </Typography>
-                    )}
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        marginTop: 1.5,
-                        fontSize: '1rem',
-                        color: theme.palette.text.primary,
-                        lineHeight: 1.6,
-                        textAlign: 'left',
-                      }}
-                    >
-                      {exp.description}
-                    </Typography>
-                  </CustomTimelineContent>
-                </AnimationOnScroll>
-              </TimelineContent>
+      <FloatingBackgroundExperience/>
 
-            </TimelineItem>
-          ))}
-        </Timeline>
-      ) : (
-        // Layout para telas pequenas (mobile) - todos os cards à direita
-        <Box sx={{ 
-          width: '100%', 
-          maxWidth: '800px',
-          margin: '0 auto',
-          padding: { xs: '0 16px', sm: '0 24px' }
-        }}>
+      <ContentBox sx={{ zIndex: 2}}>
+        <AnimationOnScroll animateIn="animate__fadeInUp">
+          <Title>Experiências</Title>
+        </AnimationOnScroll>
+        
+        {isLargeScreen ? (
+          // Layout para telas grandes (web) - cards alternados
           <Timeline
+            position="alternate"
             sx={{
+              maxWidth: '1200px',
+              margin: '0 auto',
               padding: 0,
-              margin: 0,
-              '& .MuiTimelineItem-root:before': {
-                flex: 0,
-                padding: 0,
+              [`& .${timelineOppositeContentClasses.root}`]: {
+                flex: 0.2,
               },
             }}
           >
@@ -230,34 +138,33 @@ export const Experiences: React.FC = () => {
                       sx={{ 
                         backgroundColor: theme.palette.primary.main, 
                         width: '2px',
-                        height: '80px'
+                        height: '100px'
                       }}
                     />
                   )}
                 </TimelineSeparator>
                 <TimelineContent
                   sx={{
-                    padding: '12px 16px',
-                    marginBottom: 2,
-                    flex: 1,
-                    maxWidth: '100%',
-                    marginLeft: 2,
+                    width: '100%',
+                    maxWidth: '700px', // aumentei de 500px pra 700px
+                    paddingY: 2,
+                    display: 'flex',
+                    justifyContent: index % 2 === 0 ? 'flex-start' : 'flex-end', // mantém alternado
                   }}
                 >
                   <AnimationOnScroll animateIn={exp.animation}>
                     <CustomTimelineContent
                       sx={{
                         width: '100%',
-                        maxWidth: '100%',
                       }}
                     >
                       <Typography
                         variant="h6"
                         sx={{
-                          fontSize: '1rem',
+                          fontSize: '1.25rem',
                           fontWeight: 700,
                           color: theme.palette.primary.main,
-                          textAlign: 'left',
+                          textAlign: index % 2 === 0 ? 'left' : 'right',
                         }}
                       >
                         {exp.title}
@@ -266,8 +173,8 @@ export const Experiences: React.FC = () => {
                         <Typography
                           color="text.secondary"
                           sx={{ 
-                            fontSize: '0.875rem',
-                            marginTop: 0.5
+                            fontSize: '1rem',
+                            textAlign: index % 2 === 0 ? 'left' : 'right',
                           }}
                         >
                           {exp.subtitle}
@@ -277,9 +184,10 @@ export const Experiences: React.FC = () => {
                         variant="body2"
                         sx={{
                           marginTop: 1.5,
-                          fontSize: '0.875rem',
+                          fontSize: '1rem',
                           color: theme.palette.text.primary,
                           lineHeight: 1.6,
+                          textAlign: 'left',
                         }}
                       >
                         {exp.description}
@@ -287,11 +195,100 @@ export const Experiences: React.FC = () => {
                     </CustomTimelineContent>
                   </AnimationOnScroll>
                 </TimelineContent>
+
               </TimelineItem>
             ))}
           </Timeline>
-        </Box>
-      )}
-    </ExperiencesContainer>
+        ) : (
+          // Layout para telas pequenas (mobile) - todos os cards à direita
+          <Box sx={{ 
+            width: '100%', 
+            maxWidth: '800px',
+            margin: '0 auto',
+            padding: { xs: '0 16px', sm: '0 24px' }
+          }}>
+            <Timeline
+              sx={{
+                padding: 0,
+                margin: 0,
+                '& .MuiTimelineItem-root:before': {
+                  flex: 0,
+                  padding: 0,
+                },
+              }}
+            >
+              {experiences.map((exp, index) => (
+                <TimelineItem key={exp.id}>
+                  <TimelineSeparator>
+                    <CustomTimelineDot>{exp.icon}</CustomTimelineDot>
+                    {index < experiences.length - 1 && (
+                      <TimelineConnector
+                        sx={{ 
+                          backgroundColor: theme.palette.primary.main, 
+                          width: '2px',
+                          height: '80px'
+                        }}
+                      />
+                    )}
+                  </TimelineSeparator>
+                  <TimelineContent
+                    sx={{
+                      padding: '12px 16px',
+                      marginBottom: 2,
+                      flex: 1,
+                      maxWidth: '100%',
+                      marginLeft: 2,
+                    }}
+                  >
+                    <AnimationOnScroll animateIn={exp.animation}>
+                      <CustomTimelineContent
+                        sx={{
+                          width: '100%',
+                          maxWidth: '100%',
+                        }}
+                      >
+                        <Typography
+                          variant="h6"
+                          sx={{
+                            fontSize: '1rem',
+                            fontWeight: 700,
+                            color: theme.palette.primary.main,
+                            textAlign: 'left',
+                          }}
+                        >
+                          {exp.title}
+                        </Typography>
+                        {exp.subtitle && (
+                          <Typography
+                            color="text.secondary"
+                            sx={{ 
+                              fontSize: '0.875rem',
+                              marginTop: 0.5
+                            }}
+                          >
+                            {exp.subtitle}
+                          </Typography>
+                        )}
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            marginTop: 1.5,
+                            fontSize: '0.875rem',
+                            color: theme.palette.text.primary,
+                            lineHeight: 1.6,
+                          }}
+                        >
+                          {exp.description}
+                        </Typography>
+                      </CustomTimelineContent>
+                    </AnimationOnScroll>
+                  </TimelineContent>
+                </TimelineItem>
+              ))}
+            </Timeline>
+          </Box>
+        )}
+      </ContentBox>
+    </SectionContainer>
   );
 };

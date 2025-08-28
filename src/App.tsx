@@ -38,9 +38,7 @@ export const App = () => {
       <Box id="intro">
         <Intro />
       </Box>
-      <Container>
-        <Routes />
-      </Container>
+      <Routes />
       <Footer />
     </Box>
   );

@@ -1,20 +1,10 @@
 import React from 'react';
 import { Box, Typography, Button, styled, useTheme, alpha } from '@mui/material';
 import { Link as ScrollLink } from 'react-scroll';
-import { Title } from '../../styles/GlobalStyles';
+import { ContentBox, SectionContainer, Title } from '../../styles/GlobalStyles';
 import photo from '@/assets/img/foto-leonan.jpg';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-
-// Componente estilizado para o container principal
-const AboutContainer = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  minHeight: '100vh',
-  padding: theme.spacing(4, 2),
-  textAlign: 'center',
-}));
+import { FloatingBackgroundAbout } from '../../utils/FloatingEffect/FloatingBackgroundAbout';
 
 // Componente estilizado para a seção de conteúdo (foto + texto)
 const ContentSection = styled(Box)(({ theme }) => ({
@@ -82,50 +72,54 @@ export const About: React.FC = () => {
   const theme = useTheme();
 
   return (
-    <AboutContainer id="about">
-      <AnimationOnScroll animateIn="animate__fadeInUp">
+    <SectionContainer id="about">
+
+      <FloatingBackgroundAbout/>
+
+      <ContentBox sx={{ zIndex: 2}}>
+        <AnimationOnScroll animateIn="animate__fadeInUp">
         <Title>Sobre Mim</Title>
-      </AnimationOnScroll>
+        </AnimationOnScroll>
 
-      <AnimationOnScroll animateIn="animate__fadeInUp" delay={200}>
-        <ContentSection>
-          <Box sx={{ minWidth: 200 }}>
-            <ProfileImage
-              src={photo ? photo : 'https://via.placeholder.com/200'}
-              alt="Minha foto"
-            />
-          </Box>
+        <AnimationOnScroll animateIn="animate__fadeInUp" delay={200}>
+          <ContentSection>
+            <Box sx={{ minWidth: 200 }}>
+              <ProfileImage
+                src={photo ? photo : 'https://via.placeholder.com/200'}
+                alt="Minha foto"
+              />
+            </Box>
 
-        <Box>
-          <AboutText>
-            Sou <strong style={{ color: theme.palette.primary.main }}>Desenvolvedor Fullstack</strong> focado em <strong style={{ color: theme.palette.primary.main }}>Python</strong> e <strong style={{ color: theme.palette.primary.main }}>React</strong>, criando sistemas web completos, APIs RESTful, automações e integrações com inteligência artificial.  
-            <br /><br />
-            Trabalho com toda a stack: <strong style={{ color: theme.palette.primary.main }}>FastAPI</strong> no backend, <strong style={{ color: theme.palette.primary.main }}>React + TypeScript</strong> no frontend, dashboards, controle de pedidos e integrações com <strong style={{ color: theme.palette.primary.main }}>Pix/Mercado Pago</strong>.  
-            <br /><br />
-            Desenvolvo automações em <strong style={{ color: theme.palette.primary.main }}>Python</strong> para scraping, processamento de dados, bots e pipelines com IA, usando <strong style={{ color: theme.palette.primary.main }}>OpenAI, Google APIs</strong> e plataformas de mensagens.  
-            <br /><br />
-            Sou graduado em <strong style={{ color: theme.palette.primary.main }}>Análise e Desenvolvimento de Sistemas</strong> e pós-graduado em <strong style={{ color: theme.palette.primary.main }}>Engenharia de Software</strong>, com experiência em bancos de dados (<strong style={{ color: theme.palette.primary.main }}>PostgreSQL, SQL Server, Oracle</strong>) e deploy com <strong style={{ color: theme.palette.primary.main }}>Docker</strong> e nuvem.  
-            <br /><br />
-            Autodidata, focado em entrega prática e rápida, sempre buscando criar soluções que gerem valor real.
-          </AboutText>
-        </Box>
+            <Box>
+              <AboutText>
+                Sou <strong style={{ color: theme.palette.primary.main }}>Leonan Thomaz</strong>, formado em <strong style={{ color: theme.palette.primary.main }}>Análise e Desenvolvimento de Sistemas</strong> e pós-graduado em <strong style={{ color: theme.palette.primary.main }}>Engenharia de Software</strong>. Comecei minha carreira como <strong style={{ color: theme.palette.primary.main }}>Analista de Sistemas</strong>, trabalhando com bancos de dados como <strong style={{ color: theme.palette.primary.main }}>SQL Server e Oracle</strong> e desenvolvendo scripts de automação.  
+                <br /><br />
+                Ao longo dos anos, foquei em criar soluções práticas e eficientes, desenvolvendo <strong style={{ color: theme.palette.primary.main }}>bots inteligentes</strong>, <strong style={{ color: theme.palette.primary.main }}>integrações com IA</strong> e sistemas web completos com <strong style={{ color: theme.palette.primary.main }}>Python, FastAPI e React</strong>.  
+                <br /><br />
+                Sou apaixonado por automação, APIs e tecnologia aplicada para resolver problemas reais, sempre buscando aprender e entregar valor de forma rápida e prática.
+              </AboutText>
+            </Box>
 
-        </ContentSection>
-      </AnimationOnScroll>
 
-      <AnimationOnScroll animateIn="animate__fadeInUp" delay={400}>
-        <ScrollLink 
-          to="contact" 
-          smooth={true} 
-          duration={500} 
-          spy={true} 
-          offset={-80}
-        >
-          <ContactButton>
-            Entrar em Contato
-          </ContactButton>
-        </ScrollLink>
-      </AnimationOnScroll>
-    </AboutContainer>
+
+
+          </ContentSection>
+        </AnimationOnScroll>
+
+        <AnimationOnScroll animateIn="animate__fadeInUp" delay={400}>
+          <ScrollLink 
+            to="contact" 
+            smooth={true} 
+            duration={500} 
+            spy={true} 
+            offset={-80}
+          >
+            <ContactButton>
+              Entrar em Contato
+            </ContactButton>
+          </ScrollLink>
+        </AnimationOnScroll>
+      </ContentBox>
+    </SectionContainer>
   );
 };

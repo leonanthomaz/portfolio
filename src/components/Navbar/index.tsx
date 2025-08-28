@@ -11,36 +11,64 @@ import {
   useMediaQuery,
   alpha,
   styled,
-  Typography
+  Typography,
+  Tooltip,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import {
   Link as ScrollLink
 } from 'react-scroll';
+
+// Ícones de navegação
 import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
 import BuildIcon from '@mui/icons-material/Build';
-import PortfolioIcon from '@mui/icons-material/FolderOpen';
+import FolderOpenIcon from '@mui/icons-material/FolderOpen';
 import SchoolIcon from '@mui/icons-material/School';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
+import WorkIcon from '@mui/icons-material/Work';
+
+// Ícones para redes sociais e blog
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import XIcon from '@mui/icons-material/X';
+import RssFeedIcon from '@mui/icons-material/RssFeed';
 
 const navItems = [
   { label: 'Início', to: 'intro', icon: <HomeIcon /> },
   { label: 'Sobre', to: 'about', icon: <PersonIcon /> },
   { label: 'Skills', to: 'skills', icon: <BuildIcon /> },
-  { label: 'Experiência', to: 'experiences', icon: <SchoolIcon /> },
-  { label: 'Projetos', to: 'projects', icon: <PortfolioIcon /> },
+  { label: 'Experiência', to: 'experiences', icon: <WorkIcon /> },
+  { label: 'Projetos', to: 'projects', icon: <FolderOpenIcon /> },
   { label: 'Cursos', to: 'courses', icon: <SchoolIcon /> },
   { label: 'Contato', to: 'contact', icon: <ContactMailIcon /> },
 ];
 
-const StyledAppBar = styled(AppBar)(({ theme }) => ({
-  background: alpha(theme.palette.background.paper, 0.95),
-  backdropFilter: 'blur(10px)',
-  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-  borderBottom: `1px solid ${alpha(theme.palette.primary.main, 0.1)}`,
+const socialLinks = [
+  { name: 'GitHub', url: 'https://github.com/leonanthomaz', icon: <GitHubIcon /> },
+  { name: 'LinkedIn', url: 'https://linkedin.com/in/leonanthomaz', icon: <LinkedInIcon /> },
+  { name: 'X (Twitter)', url: 'https://twitter.com/leonan.thomaz', icon: <XIcon /> },
+  { name: 'Blog', url: 'https://leonanthomaz-blog.vercel.app', icon: <RssFeedIcon /> },
+];
+
+interface StyledAppBarProps {
+  scrolled?: boolean;
+}
+
+const StyledAppBar = styled(AppBar, {
+  shouldForwardProp: (prop) => prop !== 'scrolled',
+})<StyledAppBarProps>(({ theme, scrolled }) => ({
+  background: scrolled 
+    ? alpha(theme.palette.background.paper, 0.98) 
+    : 'transparent', // Fundo transparente no topo
+  backdropFilter: scrolled ? 'blur(15px)' : 'none', // Sem blur no topo
+  boxShadow: scrolled ? '0 4px 20px rgba(0, 0, 0, 0.15)' : 'none', // Sem sombra no topo
+  borderBottom: scrolled 
+    ? `1px solid ${alpha(theme.palette.divider, 0.2)}`
+    : 'none', // Sem borda no topo
   transition: 'all 0.3s ease',
+  minHeight: '70px',
 }));
 
 const NavLink = styled(ScrollLink)(({ theme }) => ({
@@ -61,19 +89,17 @@ const NavLink = styled(ScrollLink)(({ theme }) => ({
   '&:before': {
     content: '""',
     position: 'absolute',
-    bottom: 0,
+    bottom: '0',
     left: '50%',
-    width: 0,
+    width: '0',
     height: '2px',
     backgroundColor: theme.palette.primary.main,
-    transition: 'all 0.3s ease',
+    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
     transform: 'translateX(-50%)',
   },
   
   '&:hover': {
     color: theme.palette.primary.main,
-    backgroundColor: alpha(theme.palette.primary.main, 0.05),
-    
     '&:before': {
       width: '80%',
     },
@@ -81,10 +107,27 @@ const NavLink = styled(ScrollLink)(({ theme }) => ({
   
   '&.active': {
     color: theme.palette.primary.main,
-    
     '&:before': {
       width: '80%',
     },
+  },
+}));
+
+const SocialIconsContainer = styled(Box)(({ }) => ({
+  display: 'flex',
+  gap: '8px',
+  alignItems: 'center',
+  paddingLeft: '16px',
+}));
+
+// Corrigindo o erro do TypeScript
+const SocialIconButton = styled(IconButton)(({ theme }) => ({
+  color: theme.palette.text.secondary,
+  transition: 'all 0.3s ease',
+  '&:hover': {
+    color: theme.palette.primary.main,
+    backgroundColor: alpha(theme.palette.primary.main, 0.05),
+    transform: 'translateY(-2px)',
   },
 }));
 
@@ -118,6 +161,7 @@ const DrawerLink = styled(ScrollLink)(({ theme }) => ({
 const NameTypography = styled(Typography)(({ theme }) => ({
   fontWeight: 700,
   fontSize: '1.2rem',
+  fontFamily: 'Dancing Script, cursive', // Fonte de assinatura
   background: `linear-gradient(45deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
   backgroundClip: 'text',
   WebkitBackgroundClip: 'text',
@@ -168,48 +212,42 @@ const Navbar: FC = () => {
   return (
     <StyledAppBar 
       position="fixed" 
-      sx={{ 
-        background: scrolled 
-          ? alpha(theme.palette.background.paper, 0.98) 
-          : alpha(theme.palette.background.paper, 0.95),
-        backdropFilter: scrolled ? 'blur(15px)' : 'blur(10px)',
-      }}
+      scrolled={scrolled} // Adicione a prop aqui
     >
       <Toolbar
         sx={{
           display: 'flex',
-          justifyContent: { xs: 'space-between', md: 'center' },
+          justifyContent: 'space-between',
           alignItems: 'center',
           padding: '0 20px',
           minHeight: '70px !important',
         }}
       >
-        {/* Logo/Nome + Hamburger para mobile */}
-        <Box sx={{ 
-          display: { xs: 'flex', md: 'none' }, 
-          alignItems: 'center', 
-          gap: 1 
-        }}>
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ 
-              color: theme.palette.text.primary,
-            }}
-            onClick={toggleDrawer(true)}
-          >
-            <MenuIcon />
-          </IconButton>
+        <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
+          {isMobile && (
+            <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ color: theme.palette.text.primary, mr: 1 }}
+              onClick={toggleDrawer(true)}
+            >
+              <MenuIcon />
+            </IconButton>
+          )}
+          <ScrollLink to="intro" spy smooth duration={500} offset={-80} style={{ textDecoration: 'none' }}>
+            <NameTypography variant="h6">
+              Leonan Thomaz
+            </NameTypography>
+          </ScrollLink>
         </Box>
 
-        {/* Links para telas maiores */}
         <Box
           sx={{
             display: { xs: 'none', md: 'flex' },
             alignItems: 'center',
             justifyContent: 'center',
-            flexWrap: 'wrap',
+            flexGrow: 2,
           }}
         >
           {navItems.map((item) => (
@@ -228,10 +266,24 @@ const Navbar: FC = () => {
           ))}
         </Box>
 
-        {/* Espaço vazio para alinhar no mobile */}
-        <Box sx={{ display: { xs: 'block', md: 'none' }, width: '48px' }} />
+        <SocialIconsContainer sx={{ display: { xs: 'none', md: 'flex' } }}>
+          {socialLinks.map((link) => (
+            <Tooltip key={link.name} title={link.name} arrow>
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={link.name}
+                style={{ display: 'inline-flex' }}
+              >
+                <SocialIconButton>
+                  {link.icon}
+                </SocialIconButton>
+              </a>
+            </Tooltip>
+          ))}
+        </SocialIconsContainer>
 
-        {/* Menu Drawer */}
         <Drawer
           anchor="left"
           open={drawerOpen}
@@ -249,12 +301,12 @@ const Navbar: FC = () => {
             display: 'flex', 
             justifyContent: 'space-between', 
             alignItems: 'center',
-            borderBottom: `1px solid ${alpha(theme.palette.primary.main, 0.1)}`
+            borderBottom: `1px solid ${alpha(theme.palette.divider, 0.2)}`
           }}>
             <NameTypography variant="h6">
               Leonan Thomaz
             </NameTypography>
-            <IconButton sx={{ color: theme.palette.primary.light}} onClick={toggleDrawer(false)}>
+            <IconButton sx={{ color: theme.palette.text.secondary}} onClick={toggleDrawer(false)}>
               <CloseIcon />
             </IconButton>
           </Box>
@@ -285,6 +337,29 @@ const Navbar: FC = () => {
               </ListItem>
             ))}
           </List>
+
+          <Box sx={{ p: 2, mt: 2, borderTop: `1px solid ${alpha(theme.palette.divider, 0.2)}` }}>
+            <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
+              Redes Sociais
+            </Typography>
+            <SocialIconsContainer>
+              {socialLinks.map((link) => (
+                <Tooltip key={link.name} title={link.name} arrow>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={link.name}
+                    style={{ display: 'inline-flex' }}
+                  >
+                    <SocialIconButton>
+                      {link.icon}
+                    </SocialIconButton>
+                  </a>
+                </Tooltip>
+              ))}
+            </SocialIconsContainer>
+          </Box>
         </Drawer>
       </Toolbar>
     </StyledAppBar>

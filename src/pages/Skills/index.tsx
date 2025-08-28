@@ -2,20 +2,10 @@ import React from 'react';
 import { Box, Typography, styled, alpha } from '@mui/material';
 import { SiTypescript, SiDocker, SiPostgresql, SiFastapi } from 'react-icons/si';
 import { FaPython, FaJsSquare, FaHtml5, FaCss3Alt, FaReact } from 'react-icons/fa';
-import { Title } from '../../styles/GlobalStyles';
+import { ContentBox, SectionContainer, Title } from '../../styles/GlobalStyles';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { BsFiletypeSql } from "react-icons/bs";
-
-// Componente estilizado para o container principal
-const SkillsSection = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  minHeight: '100vh',
-  padding: theme.spacing(4, 2),
-  textAlign: 'center',
-}));
+import { FloatingBackgroundSkills } from '../../utils/FloatingEffect/FloatingBackgroundSkills';
 
 // Container para os cartões de skills
 const SkillsGrid = styled(Box)(({ theme }) => ({
@@ -23,7 +13,6 @@ const SkillsGrid = styled(Box)(({ theme }) => ({
   gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
   gap: theme.spacing(3),
   width: '100%',
-  maxWidth: '1000px',
   marginTop: theme.spacing(5),
 }));
 
@@ -72,45 +61,50 @@ const skillsData = [
 
 export const Skills: React.FC = () => {
   return (
-    <SkillsSection id="skills">
-      <AnimationOnScroll animateIn="animate__fadeInUp">
+    <SectionContainer id="skills">
+      <FloatingBackgroundSkills />
+    
+      <ContentBox sx={{ zIndex: 2 }}>
+        <AnimationOnScroll animateIn="animate__fadeInUp">
         <Title>Minhas Skills</Title>
-      </AnimationOnScroll>
-      
-      <AnimationOnScroll animateIn="animate__fadeInUp" delay={200}>
-        <Typography
-          variant="h6"
-          sx={{ marginBottom: '40px', color: 'text.secondary', fontSize: '1.2rem', fontWeight: 400 }}
-        >
-          Aqui estão as tecnologias e ferramentas com as quais tenho conhecimento:
-        </Typography>
-      </AnimationOnScroll>
-
-      <SkillsGrid>
-        {skillsData.map((skill, index) => (
-          <AnimationOnScroll 
-            key={index} 
-            animateIn="animate__fadeInUp" 
-            delay={100 * index}
+        </AnimationOnScroll>
+        
+        <AnimationOnScroll animateIn="animate__fadeInUp" delay={200}>
+          <Typography
+            variant="h6"
+            sx={{ marginBottom: '40px', color: 'text.secondary', fontSize: '1.2rem', fontWeight: 400 }}
           >
-            <SkillCard>
-              <SkillIcon>{skill.icon}</SkillIcon>
-              <Typography variant="body1" sx={{ fontWeight: 600 }}>
-                {skill.label}
-              </Typography>
-            </SkillCard>
-          </AnimationOnScroll>
-        ))}
-      </SkillsGrid>
+            Aqui estão as tecnologias e ferramentas com as quais tenho conhecimento:
+          </Typography>
+        </AnimationOnScroll>
 
-      <AnimationOnScroll animateIn="animate__fadeInUp" delay={100 * skillsData.length}>
-        <Typography
-          variant="h6"
-          sx={{ marginTop: '40px', color: 'text.secondary', fontSize: '1rem', fontWeight: 400 }}
-        >
-          Eu busco sempre melhorar minhas habilidades e aprender novas ferramentas que se encaixem com meu perfil e paixão por <strong style={{ color: alpha('#FFEB3B', 1) }}>soluções eficazes</strong>.
-        </Typography>
-      </AnimationOnScroll>
-    </SkillsSection>
+        <SkillsGrid>
+          {skillsData.map((skill, index) => (
+            <AnimationOnScroll 
+              key={index} 
+              animateIn="animate__fadeInUp" 
+              delay={100 * index}
+            >
+              <SkillCard>
+                <SkillIcon>{skill.icon}</SkillIcon>
+                <Typography variant="body1" sx={{ fontWeight: 600 }}>
+                  {skill.label}
+                </Typography>
+              </SkillCard>
+            </AnimationOnScroll>
+          ))}
+        </SkillsGrid>
+
+        <AnimationOnScroll animateIn="animate__fadeInUp" delay={100 * skillsData.length}>
+          <Typography
+            variant="h6"
+            sx={{ marginTop: '40px', color: 'text.secondary', fontSize: '1rem', fontWeight: 400 }}
+          >
+            Eu busco sempre melhorar minhas habilidades e aprender novas ferramentas que se encaixem com meu perfil e paixão por <strong style={{ color: alpha('#FFEB3B', 1) }}>soluções eficazes</strong>.
+          </Typography>
+        </AnimationOnScroll>
+      </ContentBox>
+    
+    </SectionContainer>
   );
 };

@@ -13,20 +13,7 @@ import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrow
 import curriculo from '@/assets/docs/curriculo.pdf';
 
 // Importando os ícones
-import { 
-  FaPython, 
-  FaReact, 
-  FaDocker,
-  FaNodeJs,
-  FaGitAlt,
-  FaHtml5,
-  FaCss3Alt,
-} from 'react-icons/fa';
-import {
-  SiTypescript,
-  SiPostgresql,
-  SiFastapi
-} from 'react-icons/si';
+import { FloatingBackgroundIntro } from '../../utils/FloatingEffect/FloatingBackgroundIntro';
 
 // Animações
 const fadeInUp = keyframes`
@@ -52,22 +39,6 @@ const float = keyframes`
   }
 `;
 
-const moveParticle = keyframes`
-  0%, 100% {
-    transform: translate(var(--x-start), var(--y-start)) rotate(var(--rotate-start, 0deg));
-  }
-  25% {
-    transform: translate(var(--x-mid1), var(--y-mid1)) rotate(var(--rotate-mid1, 5deg));
-  }
-  50% {
-    transform: translate(var(--x-mid2), var(--y-mid2)) rotate(var(--rotate-mid2, -5deg));
-  }
-  75% {
-    transform: translate(var(--x-mid3), var(--y-mid3)) rotate(var(--rotate-mid3, 2deg));
-  }
-`;
-
-
 // Componentes estilizados
 const IntroContainer = styled(Box)(({ theme }) => ({
   minHeight: '100vh',
@@ -90,115 +61,6 @@ const IntroContainer = styled(Box)(({ theme }) => ({
       radial-gradient(circle at 40% 80%, ${alpha(theme.palette.secondary.main, 0.1)} 0%, transparent 50%)
     `,
     zIndex: 1,
-  },
-}));
-
-const FloatingIcon = styled(Box)(({ theme }) => ({
-  position: 'absolute',
-  color: alpha(theme.palette.secondary.main, 0.08),
-  fontSize: 'clamp(5rem, 15vw, 12rem)',
-  zIndex: 0,
-  animation: `${moveParticle} var(--animation-duration, 15s) infinite ease-in-out`,
-  // Definições de variáveis CSS para cada ícone
-  '&:nth-of-type(1)': { // Python
-    top: '15%',
-    left: '10%',
-    '--x-start': '0px', '--y-start': '0px',
-    '--x-mid1': '20px', '--y-mid1': '-30px',
-    '--x-mid2': '-10px', '--y-mid2': '10px',
-    '--x-mid3': '30px', '--y-mid3': '-20px',
-    '--animation-duration': '18s',
-    animationDelay: '0s',
-  },
-  '&:nth-of-type(2)': { // TypeScript
-    top: '25%',
-    right: '10%',
-    '--x-start': '0px', '--y-start': '0px',
-    '--x-mid1': '-25px', '--y-mid1': '15px',
-    '--x-mid2': '15px', '--y-mid2': '-5px',
-    '--x-mid3': '-10px', '--y-mid3': '20px',
-    '--animation-duration': '16s',
-    animationDelay: '2s',
-  },
-  '&:nth-of-type(3)': { // React
-    top: '60%',
-    left: '5%',
-    '--x-start': '0px', '--y-start': '0px',
-    '--x-mid1': '10px', '--y-mid1': '-20px',
-    '--x-mid2': '-30px', '--y-mid2': '5px',
-    '--x-mid3': '20px', '--y-mid3': '-15px',
-    '--animation-duration': '20s',
-    animationDelay: '4s',
-  },
-  '&:nth-of-type(4)': { // FastAPI
-    top: '70%',
-    right: '20%',
-    '--x-start': '0px', '--y-start': '0px',
-    '--x-mid1': '-15px', '--y-mid1': '25px',
-    '--x-mid2': '20px', '--y-mid2': '-10px',
-    '--x-mid3': '-5px', '--y-mid3': '30px',
-    '--animation-duration': '17s',
-    animationDelay: '6s',
-  },
-  '&:nth-of-type(5)': { // Docker
-    bottom: '10%',
-    left: '20%',
-    '--x-start': '0px', '--y-start': '0px',
-    '--x-mid1': '25px', '--y-mid1': '-10px',
-    '--x-mid2': '-5px', '--y-mid2': '20px',
-    '--x-mid3': '15px', '--y-mid3': '-25px',
-    '--animation-duration': '19s',
-    animationDelay: '8s',
-  },
-  '&:nth-of-type(6)': { // PostgreSQL
-    bottom: '20%',
-    right: '5%',
-    '--x-start': '0px', '--y-start': '0px',
-    '--x-mid1': '-20px', '--y-mid1': '5px',
-    '--x-mid2': '10px', '--y-mid2': '-25px',
-    '--x-mid3': '-30px', '--y-mid3': '10px',
-    '--animation-duration': '15s',
-    animationDelay: '10s',
-  },
-  '&:nth-of-type(7)': { // Node.js
-    top: '30%',
-    left: '40%',
-    '--x-start': '0px', '--y-start': '0px',
-    '--x-mid1': '5px', '--y-mid1': '-15px',
-    '--x-mid2': '-20px', '--y-mid2': '10px',
-    '--x-mid3': '10px', '--y-mid3': '-5px',
-    '--animation-duration': '16s',
-    animationDelay: '12s',
-  },
-  '&:nth-of-type(8)': { // Git
-    top: '5%',
-    left: '70%',
-    '--x-start': '0px', '--y-start': '0px',
-    '--x-mid1': '-10px', '--y-mid1': '20px',
-    '--x-mid2': '25px', '--y-mid2': '-5px',
-    '--x-mid3': '-15px', '--y-mid3': '10px',
-    '--animation-duration': '21s',
-    animationDelay: '14s',
-  },
-  '&:nth-of-type(9)': { // HTML5
-    bottom: '5%',
-    left: '60%',
-    '--x-start': '0px', '--y-start': '0px',
-    '--x-mid1': '30px', '--y-mid1': '-10px',
-    '--x-mid2': '-10px', '--y-mid2': '20px',
-    '--x-mid3': '20px', '--y-mid3': '-5px',
-    '--animation-duration': '17s',
-    animationDelay: '16s',
-  },
-  '&:nth-of-type(10)': { // CSS3
-    top: '45%',
-    right: '30%',
-    '--x-start': '0px', '--y-start': '0px',
-    '--x-mid1': '-5px', '--y-mid1': '25px',
-    '--x-mid2': '15px', '--y-mid2': '-15px',
-    '--x-mid3': '-20px', '--y-mid3': '5px',
-    '--animation-duration': '18s',
-    animationDelay: '18s',
   },
 }));
 
@@ -352,16 +214,7 @@ export const Intro = () => {
 
   return (
     <IntroContainer id="intro">
-      <FloatingIcon><FaPython /></FloatingIcon>
-      <FloatingIcon><SiTypescript /></FloatingIcon>
-      <FloatingIcon><FaReact /></FloatingIcon>
-      <FloatingIcon><SiFastapi /></FloatingIcon>
-      <FloatingIcon><FaDocker /></FloatingIcon>
-      <FloatingIcon><SiPostgresql /></FloatingIcon>
-      <FloatingIcon><FaNodeJs /></FloatingIcon>
-      <FloatingIcon><FaGitAlt /></FloatingIcon>
-      <FloatingIcon><FaHtml5 /></FloatingIcon>
-      <FloatingIcon><FaCss3Alt /></FloatingIcon>
+      <FloatingBackgroundIntro  />
       
       <ContentWrapper>
         <NameText>
@@ -376,11 +229,9 @@ export const Intro = () => {
               options={{
                 strings: [
                   'Python',
-                  'Automação',
-                  'APIs',
-                  'Dados',
-                  'Web Apps',
-                  'ML',
+                  'de Automação',
+                  'de APIs',
+                  'Web',
                 ],
                 autoStart: true,
                 delay: 75,
