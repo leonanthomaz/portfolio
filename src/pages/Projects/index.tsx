@@ -238,7 +238,7 @@ export const Projects = () => {
     }
 
     return projects.map((projeto) => (
-       <ProjectCard>
+       <ProjectCard key={projeto.id}>
           {projeto.status && (
             <StatusChip 
               label={projeto.status === 'finalizado' ? 'Finalizado' : 'Em construção'} 

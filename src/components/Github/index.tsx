@@ -1,12 +1,12 @@
 import GitHubCalendar from 'react-github-calendar';
 import { Box, Container } from '@mui/material';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import { Title } from '../../styles/GlobalStyles';
+import { ContentBox, SectionContainer, Title } from '../../styles/GlobalStyles';
 
 const GitHub = () => {
   return (
-    <Container>
-      <Box sx={{ padding: 4, borderRadius: '8px'}}>
+    <SectionContainer>
+      <ContentBox>
         <AnimationOnScroll animateIn="animate__backInLeft">
           <Title>Tempo de código</Title>
         </AnimationOnScroll>
@@ -17,8 +17,8 @@ const GitHub = () => {
           blockMargin={5}
           fontSize={16}
         />
-      </Box>
-    </Container>
+      </ContentBox>
+    </SectionContainer>
   );
 };
 

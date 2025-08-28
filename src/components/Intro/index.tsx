@@ -223,7 +223,7 @@ export const Intro = () => {
         </NameText>
 
         <TitleWrapper>
-          <StaticText>Desenvolvedor</StaticText>
+          <StaticText>Dev</StaticText>
           <TypewriterEffect>
             <Typewriter
               options={{
@@ -232,7 +232,8 @@ export const Intro = () => {
                   'de Automação',
                   'de APIs',
                   'Web',
-                  'e Analista de Dados'
+                  'de Dados',
+                  'FullStack'
                 ],
                 autoStart: true,
                 delay: 75,
