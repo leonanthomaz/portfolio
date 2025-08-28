@@ -1,5 +1,4 @@
 import GitHubCalendar from 'react-github-calendar';
-import { Box, Container } from '@mui/material';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { ContentBox, SectionContainer, Title } from '../../styles/GlobalStyles';
 
