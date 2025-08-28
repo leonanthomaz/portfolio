@@ -69,6 +69,7 @@ const StyledAppBar = styled(AppBar, {
     : 'none', // Sem borda no topo
   transition: 'all 0.3s ease',
   minHeight: '70px',
+  padding: theme.spacing(1, 2),
 }));
 
 const NavLink = styled(ScrollLink)(({ theme }) => ({
@@ -137,7 +138,7 @@ const DrawerLink = styled(ScrollLink)(({ theme }) => ({
   fontWeight: 500,
   textDecoration: 'none',
   cursor: 'pointer',
-  padding: '12px 24px',
+  padding: '10px 22px',
   borderRadius: '8px',
   transition: 'all 0.3s ease',
   display: 'flex',
@@ -167,6 +168,8 @@ const NameTypography = styled(Typography)(({ theme }) => ({
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
   letterSpacing: '1px',
+  padding: theme.spacing(0, 1),
+
 }));
 
 const Navbar: FC = () => {
@@ -339,7 +342,7 @@ const Navbar: FC = () => {
           </List>
 
           <Box sx={{ p: 2, mt: 2, borderTop: `1px solid ${alpha(theme.palette.divider, 0.2)}` }}>
-            <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
+            <Typography variant="body2" color="text.secondary" sx={{ mb: 1, ml: 2 }}>
               Redes Sociais
             </Typography>
             <SocialIconsContainer>
