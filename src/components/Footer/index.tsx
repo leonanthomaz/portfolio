@@ -15,9 +15,9 @@ import {
   Instagram,
   Email,
   KeyboardArrowUp,
-  X
 } from '@mui/icons-material';
 import { SiPython } from 'react-icons/si';
+import LogoHandler from '../Navbar/LogoHandler';
 
 const Footer = () => {
   const theme = useTheme();
@@ -73,12 +73,9 @@ const Footer = () => {
           >
             {/* Informações de copyright */}
             <Stack spacing={2} alignItems={{ xs: 'center', md: 'flex-start' }} sx={{ maxWidth: 400 }}>
-              <Typography variant="h6" sx={{ fontWeight: 'bold', color: theme.palette.primary.main }}>
-                Leonan Thomaz
-              </Typography>
+              <LogoHandler />
               <Typography variant="body2" sx={{ opacity: 0.8, textAlign: { xs: 'center', md: 'left' } }}>
                 Desenvolvedor Python especializado em criar soluções eficientes e escaláveis. 
-                Transformando ideias em código de qualidade.
               </Typography>
               <Typography variant="body2" sx={{ opacity: 0.7 }}>
                 © {new Date().getFullYear()} - Todos os direitos reservados
@@ -122,22 +119,6 @@ const Footer = () => {
                   }}
                 >
                   <LinkedIn fontSize="medium" />
-                </IconButton>
-                <IconButton
-                  href="https://x.com/leonan.thomaz"
-                  target="_blank"
-                  aria-label="X (Twitter)"
-                  sx={{ 
-                    color: 'white',
-                    backgroundColor: alpha('#1DA1F2', 0.2),
-                    '&:hover': {
-                      backgroundColor: '#1DA1F2',
-                      transform: 'translateY(-2px)'
-                    },
-                    transition: 'all 0.2s ease'
-                  }}
-                >
-                  <X fontSize="medium" />
                 </IconButton>
                 <IconButton
                   href="https://instagram.com/leonan.thomaz"

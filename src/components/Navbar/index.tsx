@@ -17,6 +17,9 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import {
+  Instagram,
+} from '@mui/icons-material';
+import {
   Link as ScrollLink
 } from 'react-scroll';
 
@@ -30,10 +33,11 @@ import ContactMailIcon from '@mui/icons-material/ContactMail';
 import WorkIcon from '@mui/icons-material/Work';
 
 // Ícones para redes sociais e blog
-import GitHubIcon from '@mui/icons-material/GitHub';
+// import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import XIcon from '@mui/icons-material/X';
-import RssFeedIcon from '@mui/icons-material/RssFeed';
+import { FaWhatsapp } from 'react-icons/fa';
+import LogoHandler from './LogoHandler';
+// import RssFeedIcon from '@mui/icons-material/RssFeed';
 
 const navItems = [
   { label: 'Início', to: 'intro', icon: <HomeIcon /> },
@@ -46,10 +50,10 @@ const navItems = [
 ];
 
 const socialLinks = [
-  { name: 'GitHub', url: 'https://github.com/leonanthomaz', icon: <GitHubIcon /> },
   { name: 'LinkedIn', url: 'https://linkedin.com/in/leonanthomaz', icon: <LinkedInIcon /> },
-  { name: 'X (Twitter)', url: 'https://twitter.com/leonan.thomaz', icon: <XIcon /> },
-  { name: 'Blog', url: 'https://leonanthomaz-blog.vercel.app', icon: <RssFeedIcon /> },
+  { name: 'Instagram', url: 'https://instagram.com/leonan.thomaz', icon: <Instagram /> },
+  { name: 'Whatsapp', url: 'https://wa.me/5521998090928', icon: <FaWhatsapp /> },
+  // { name: 'Blog', url: 'https://leonanthomaz-blog.vercel.app', icon: <RssFeedIcon /> },
 ];
 
 interface StyledAppBarProps {
@@ -159,18 +163,6 @@ const DrawerLink = styled(ScrollLink)(({ theme }) => ({
   },
 }));
 
-const NameTypography = styled(Typography)(({ theme }) => ({
-  fontWeight: 700,
-  fontSize: '1.2rem',
-  fontFamily: 'Dancing Script, cursive', // Fonte de assinatura
-  background: `linear-gradient(45deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
-  backgroundClip: 'text',
-  WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
-  letterSpacing: '1px',
-  padding: theme.spacing(0, 1),
-
-}));
 
 const Navbar: FC = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -238,11 +230,7 @@ const Navbar: FC = () => {
               <MenuIcon />
             </IconButton>
           )}
-          <ScrollLink to="intro" spy smooth duration={500} offset={-80} style={{ textDecoration: 'none' }}>
-            <NameTypography variant="h6">
-              Leonan Thomaz
-            </NameTypography>
-          </ScrollLink>
+          <LogoHandler />
         </Box>
 
         <Box
@@ -306,9 +294,7 @@ const Navbar: FC = () => {
             alignItems: 'center',
             borderBottom: `1px solid ${alpha(theme.palette.divider, 0.2)}`
           }}>
-            <NameTypography variant="h6">
-              Leonan Thomaz
-            </NameTypography>
+            <LogoHandler />
             <IconButton sx={{ color: theme.palette.text.secondary}} onClick={toggleDrawer(false)}>
               <CloseIcon />
             </IconButton>

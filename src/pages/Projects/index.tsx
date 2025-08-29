@@ -207,10 +207,10 @@ export const Projects = () => {
   const getProjectsByTab = () => {
     const tabMapping: (keyof typeof projetosData)[] = [
       'features',
-      'backend',
-      'dados',
       'automacao',
       'ia',
+      'dados',
+      'backend',
       'frontend'
     ];
     
@@ -347,10 +347,10 @@ export const Projects = () => {
               }}
             >
               <Tab label="Destaque" />
-              <Tab label="Backend" />
-              <Tab label="Dados" />
               <Tab label="Automação" />
-              <Tab label="IA" />
+              <Tab label="IA/Chatbot" />
+              <Tab label="Dados" />
+              <Tab label="Backend" />
               <Tab label="Frontend" />
             </Tabs>
           </Toolbar>
