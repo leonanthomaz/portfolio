@@ -5,7 +5,6 @@ import { Experiences } from '../pages/Experiences';
 import { Projects } from '../pages/Projects';
 import { Courses } from '../pages/Courses';
 import { Contact } from '../pages/Contact';
-import GitHub from '../components/Github';
 import { keyframes } from '@emotion/react';
 
 const fadeIn = keyframes`
@@ -39,7 +38,7 @@ export const Routes = () => (
     </Section>
     <Section id="skills" delay="0.4s">
       <Skills />
-      <GitHub />
+      {/* <GitHub /> */}
     </Section>
     <Section id="experiences" delay="0.6s">
       <Experiences />
