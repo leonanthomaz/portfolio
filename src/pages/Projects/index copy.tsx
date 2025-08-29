@@ -241,25 +241,12 @@ export const Projects = () => {
     return projects.map((projeto) => (
        <ProjectCard key={projeto.id}>
           {projeto.status && (
-              <StatusChip 
-                label={
-                  projeto.status === 'finalizado'
-                    ? 'Finalizado'
-                    : projeto.status === 'em_construcao'
-                    ? 'Em construção'
-                    : 'Em análise'
-                }
-                size="small"
-                color={
-                  projeto.status === 'finalizado'
-                    ? 'success'
-                    : projeto.status === 'em_construcao'
-                    ? 'warning'
-                    : 'info'
-                }
-              />
-            )}
-
+            <StatusChip 
+              label={projeto.status === 'finalizado' ? 'Finalizado' : 'Em construção'} 
+              size="small"
+              color={projeto.status === 'finalizado' ? 'success' : 'warning'}
+            />
+          )}
           <CardActionArea onClick={() => handleOpen(projeto)} sx={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'stretch' }}>
             <ProjectCardMedia
               className="project-image"

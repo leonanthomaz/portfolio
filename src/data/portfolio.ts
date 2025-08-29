@@ -15,7 +15,7 @@ export interface Projeto {
   technology?: string;
   url?: string;
   github?: string;
-  status?: 'em_construcao' | 'finalizado';
+  status?: 'em_construcao' | 'finalizado' | 'em_analise';
 }
 
 export const projetosData = {
@@ -29,8 +29,8 @@ export const projetosData = {
       date: "2023",
       url: `${URL_BASE}/thomaggio/${ACCESS_PROJECT_HASH}`,
       technology: "Python, FastAPI, WebSocket, React, Mercado Pago",
-      github: "https://github.com/leonanthomaz/thomaggio",
-      status: 'finalizado',
+      github: "https://github.com/leonanthomaz/projeto-thomaggio",
+      status: 'em_analise',
     },
     {
       id: 2,
@@ -41,8 +41,8 @@ export const projetosData = {
       date: "2024",
       url: `${URL_BASE}/firecloud/${ACCESS_PROJECT_HASH}`,
       technology: "Python, FastAPI, React, WebSocket",
-      github: "https://github.com/leonanthomaz/firecloud",
-      status: 'finalizado',
+      github: "https://github.com/leonanthomaz/projeto-firecloud",
+      status: 'em_analise',
     },
   ],
 
