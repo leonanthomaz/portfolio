@@ -205,7 +205,7 @@ export const projetosData = {
       status: 'em_construcao'
     }
   ],
-  
+
   frontend: [
     {
       id: 17,
@@ -226,6 +226,8 @@ export const projetosData = {
       description: "Aplicativo de catálogo de filmes em React, consumindo API externa.",
       img: reactImg,
       date: "2024",
+      url: "https://leonanfilmes.vercel.app",
+      github: "https://github.com/leonanthomaz/catalogo-filmes-tmdb",
       technology: "React, TypeScript, Axios, TMDB API",
       status: 'em_construcao',
     },
