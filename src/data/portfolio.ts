@@ -53,6 +53,7 @@ export const projetosData = {
       img: pythonImg,
       date: "2025",
       technology: "Python, Click, PIP",
+      url: "https://pypi.org/project/fastbuild",
       github: "https://github.com/leonanthomaz/fastbuild",
       status: 'finalizado',
     }
