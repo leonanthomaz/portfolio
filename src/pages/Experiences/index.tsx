@@ -77,7 +77,7 @@ const experiences = [
     title: 'Projeto Thomaggio',
     subtitle: 'Sistema completo de pedidos • 2024-2025',
     description:
-      'Desenvolvi do zero uma aplicação completa para gestão de pedidos, com frontend em React + TypeScript, backend em FastAPI, painel administrativo, integração com Pix (via Mercado Pago) e impressão de comandas em 58mm. Projeto disponível em: https://thomaggio.vercel.app/',
+      'Desenvolvi do zero uma aplicação completa para gestão de pedidos, com frontend em React + TypeScript, backend em FastAPI, painel administrativo, integração com Pix (via Mercado Pago) e impressão de comandas em 58mm.',
     animation: 'animate__fadeInRight',
   },
   {
@@ -86,7 +86,7 @@ const experiences = [
     title: 'FireCloud',
     subtitle: 'Plataforma de Bots e Automação • 2025',
     description:
-      'Criei uma plataforma completa de bots para automação de tarefas, integração com APIs externas e pipelines de dados, usando Python (FastAPI), WebSockets e Docker. Sistema projetado para escalabilidade e integração em tempo real com múltiplos serviços.',
+      'Atualmente estou trabalhando nesse projeto, que é uma plataforma completa de bots para automação de tarefas, integração com APIs externas e pipelines de dados, usando Python (FastAPI), WebSockets e Docker. Sistema projetado para escalabilidade e integração em tempo real com múltiplos serviços.',
     animation: 'animate__fadeInLeft',
   },
   {

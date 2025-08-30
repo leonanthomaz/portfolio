@@ -20,12 +20,21 @@ import {
 import { SiPython } from 'react-icons/si';
 import LogoHandler from '../Navbar/LogoHandler';
 
-// Animação pro Python “navegar”
-const floatPython = keyframes`
+// Animação para o Python à direita “navegar”
+const floatPythonRight = keyframes`
   0% { transform: translate(0, 0) rotate(0deg); }
   25% { transform: translate(20px, -30px) rotate(10deg); }
   50% { transform: translate(-10px, -60px) rotate(-5deg); }
   75% { transform: translate(-25px, -20px) rotate(15deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+`;
+
+// Animação para o Python à esquerda “navegar”
+const floatPythonLeft = keyframes`
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(-20px, -30px) rotate(-10deg); }
+  50% { transform: translate(10px, -60px) rotate(5deg); }
+  75% { transform: translate(25px, -20px) rotate(-15deg); }
   100% { transform: translate(0, 0) rotate(0deg); }
 `;
 
@@ -57,7 +66,7 @@ const Footer = () => {
         }
       }}
     >
-      {/* Python decorativo flutuante */}
+      {/* Python decorativo flutuante à direita */}
       <Box
         sx={{
           position: 'absolute',
@@ -67,7 +76,24 @@ const Footer = () => {
           fontSize: '18rem',
           color: theme.palette.primary.main,
           zIndex: 0,
-          animation: `${floatPython} 25s ease-in-out infinite alternate`,
+          animation: `${floatPythonRight} 25s ease-in-out infinite alternate`,
+          pointerEvents: 'none',
+        }}
+      >
+        <SiPython />
+      </Box>
+      
+      {/* Python decorativo flutuante à esquerda */}
+      <Box
+        sx={{
+          position: 'absolute',
+          bottom: -50,
+          left: -50,
+          opacity: 0.05,
+          fontSize: '18rem',
+          color: theme.palette.primary.main,
+          zIndex: 0,
+          animation: `${floatPythonLeft} 25s ease-in-out infinite alternate`,
           pointerEvents: 'none',
         }}
       >

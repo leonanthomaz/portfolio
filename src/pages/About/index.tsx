@@ -100,9 +100,6 @@ export const About: React.FC = () => {
               </AboutText>
             </Box>
 
-
-
-
           </ContentSection>
         </AnimationOnScroll>
 

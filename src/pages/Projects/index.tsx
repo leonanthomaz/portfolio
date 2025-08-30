@@ -20,11 +20,12 @@ import {
   Chip
 } from '@mui/material';
 import { Close as CloseIcon, OpenInNew as OpenInNewIcon, GitHub as GitHubIcon } from '@mui/icons-material';
-import { projetosData, Projeto } from '../../data/portfolio';
+import { projetosData } from '../../data/portfolio';
 import { ContentBox, SectionContainer, Title } from '../../styles/GlobalStyles';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { AiOutlineRobot } from 'react-icons/ai';
 import { FloatingBackgroundProjects } from '../../utils/FloatingEffect/FloatingBackgroundProjects';
+import { Projeto } from '../../types/projects';
 
 const ProjectsGrid = styled(Box)(({ theme }) => ({
   display: 'grid',
@@ -78,16 +79,36 @@ const ProjectCardMedia = styled(CardMedia)(({}) => ({
   borderTopRightRadius: '20px',
 }));
 
-const StatusChip = styled(Chip)(({ theme }) => ({
-  position: 'absolute',
-  top: 12,
-  right: 12,
-  fontWeight: 'bold',
-  fontSize: '0.7rem',
-  zIndex: 2,
-  backdropFilter: 'blur(10px)',
-  backgroundColor: alpha(theme.palette.background.paper, 0.8),
-}));
+const StatusChip = styled(Chip, {
+  shouldForwardProp: (prop) => prop !== 'status',
+})<{ status: string }>(({ theme, status }) => {
+  let bg = alpha(theme.palette.background.paper, 0.8);
+  let color = theme.palette.text.primary;
+
+  if (status === 'finalizado') {
+    bg = theme.palette.success.main;
+    color = theme.palette.common.white;
+  } else if (status === 'em_construcao') {
+    bg = theme.palette.warning.main;
+    color = theme.palette.common.white;
+  } else if (status === 'em_analise') {
+    bg = theme.palette.info.main;
+    color = theme.palette.common.white;
+  }
+
+  return {
+    position: 'absolute',
+    top: 12,
+    right: 12,
+    fontWeight: 'bold',
+    fontSize: '0.7rem',
+    zIndex: 2,
+    backdropFilter: 'blur(10px)',
+    backgroundColor: bg,
+    color: color,
+  };
+});
+
 
 const CardContentStyled = styled(CardContent)(({ theme }) => ({
   padding: theme.spacing(2.5),
@@ -139,7 +160,7 @@ const ModalImage = styled('img')(({ theme }) => ({
   borderRadius: '16px',
   marginBottom: theme.spacing(3),
   objectFit: 'cover',
-  maxHeight: '320px',
+  maxHeight: '200px',
   boxShadow: `0 5px 15px ${alpha(theme.palette.common.black, 0.1)}`,
 }));
 
@@ -208,14 +229,14 @@ export const Projects = () => {
     const tabMapping: (keyof typeof projetosData)[] = [
       'features',
       'automacao',
+      'api',
       'ia',
       'dados',
-      'backend',
       'frontend'
     ];
     
     if (activeTab === 6) {
-      return [...projetosData.features, ...projetosData.backend, ...projetosData.dados];
+      return [...projetosData.features, ...projetosData.api, ...projetosData.dados];
     }
     
     return projetosData[tabMapping[activeTab]] || [];
@@ -241,7 +262,7 @@ export const Projects = () => {
     return projects.map((projeto) => (
        <ProjectCard key={projeto.id}>
           {projeto.status && (
-              <StatusChip 
+             <StatusChip 
                 label={
                   projeto.status === 'finalizado'
                     ? 'Finalizado'
@@ -250,14 +271,9 @@ export const Projects = () => {
                     : 'Em análise'
                 }
                 size="small"
-                color={
-                  projeto.status === 'finalizado'
-                    ? 'success'
-                    : projeto.status === 'em_construcao'
-                    ? 'warning'
-                    : 'info'
-                }
+                status={projeto.status}
               />
+
             )}
 
           <CardActionArea onClick={() => handleOpen(projeto)} sx={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'stretch' }}>
@@ -348,9 +364,9 @@ export const Projects = () => {
             >
               <Tab label="Destaque" />
               <Tab label="Automação" />
+              <Tab label="API's" />
               <Tab label="IA/Chatbot" />
               <Tab label="Dados" />
-              <Tab label="Backend" />
               <Tab label="Frontend" />
             </Tabs>
           </Toolbar>

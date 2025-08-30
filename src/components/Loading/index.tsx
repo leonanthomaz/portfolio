@@ -74,9 +74,9 @@ const Loading = ({ isVisible }: { isVisible: boolean }) => {
   );
 
   const pythonCode = [
-    ">>> import portfolio",
+    ">>> import portfolio_leonan",
     ">>> portfolio.load()",
-    ">>> print('Portfolio pronto!')"
+    ">>> print('Portfolio do Leonan pronto!')"
   ];
 
   useEffect(() => {

@@ -1,54 +1,66 @@
 import thomaggioImg from '@/assets/img/portfolio/thomaggio.png';
 import firecloudImg from '@/assets/img/portfolio/firecloud.png';
 import pythonImg from '@/assets/img/portfolio/python.webp';
+import reactImg from '@/assets/img/portfolio/react.webp'
 
 const ACCESS_PROJECT_HASH = import.meta.env.VITE_ACCESS_PROJECT_HASH;
 const URL_BASE = import.meta.env.VITE_SANDBOX_BASE_URL;
 
-export interface Projeto {
-  id: number;
-  title: string;
-  subtitle: string;
-  description: string;
-  img?: string;
-  date: string;
-  technology?: string;
-  url?: string;
-  github?: string;
-  status?: 'em_construcao' | 'finalizado' | 'em_analise';
-}
-
 export const projetosData = {
   features: [
-    {
+     {
       id: 1,
-      title: "Thomaggio",
-      subtitle: "Sistema Fullstack de Pizzaria",
-      description: "Sistema de delivery completo com gestão de pedidos, integração com Google Maps e pagamento via Pix.",
-      img: thomaggioImg,
-      date: "2023",
-      url: `${URL_BASE}/thomaggio/${ACCESS_PROJECT_HASH}`,
-      technology: "Python, FastAPI, WebSocket, React, Mercado Pago",
-      github: "https://github.com/leonanthomaz/thomaggio",
-      status: 'em_analise',
-    },
-    {
-      id: 2,
       title: "FireCloud",
       subtitle: "Portal de Bots",
       description: "Plataforma de automação e bots para empresas, com gestão de usuários e dashboards.",
       img: firecloudImg,
       date: "2024",
       url: `${URL_BASE}/firecloud/${ACCESS_PROJECT_HASH}`,
-      technology: "Python, FastAPI, React, WebSocket",
+      technology: "FullStack, Python, FastAPI, React, TypeScript, MUI, Mercado Pago, WebSocket",
       github: "https://github.com/leonanthomaz/firecloud",
       status: 'em_analise',
     },
+    {
+      id: 2,
+      title: "Thomaggio",
+      subtitle: "Sistema Fullstack de Pizzaria",
+      description: "Sistema de delivery completo com gestão de pedidos, integração com Google Maps e pagamento via Pix.",
+      img: thomaggioImg,
+      date: "2023",
+      url: `${URL_BASE}/thomaggio/${ACCESS_PROJECT_HASH}`,
+      technology: "FullStack, Python, FastAPI, WebSocket, React, TypeScript, MUI, Mercado Pago",
+      github: "https://github.com/leonanthomaz/thomaggio",
+      status: 'em_analise',
+    },
+   
+    {
+      id: 3,
+      title: "Modelo ChatBot",
+      subtitle: "Bot de Atendimento",
+      description: "Modelo V1 do meu Bot desacoplado do FireCloud, capaz de responder perguntas de clientes via chat.",
+      img: pythonImg,
+      date: "2024",
+      technology: "Python, FastAPI, WebSocket",
+      url: `${URL_BASE}/chatbot/${ACCESS_PROJECT_HASH}`,
+      github: "https://github.com/leonanthomaz/chatbot",
+      status: 'em_construcao',
+    },
+    {
+      id: 4,
+      title: "FastBuild",
+      subtitle: "Gerador de Templates FastAPI",
+      description: "Biblioteca própria que acelera a criação de projetos FastAPI, com templates prontos e integração com frontend e banco de dados.",
+      img: pythonImg,
+      date: "2025",
+      technology: "Python, Click, PIP",
+      github: "https://github.com/leonanthomaz/fastbuild",
+      status: 'finalizado',
+    }
   ],
 
   automacao: [
     {
-      id: 3,
+      id: 5,
       title: "Envio de E-mails Personalizados",
       subtitle: "Automação de E-mails",
       description: "Automatiza o envio de e-mails personalizados com base em dados de um arquivo Excel.",
@@ -59,7 +71,7 @@ export const projetosData = {
       status: 'finalizado',
     },
     {
-      id: 4,
+      id: 6,
       title: "YouTube Music Player",
       subtitle: "Player de Música",
       description: "Player de música que baixa e reproduz músicas do YouTube com Python.",
@@ -69,11 +81,23 @@ export const projetosData = {
       github: "https://github.com/leonanthomaz/music_player_py",
       status: 'finalizado',
     },
+    {
+      id: 7,
+      title: "Gerador de Hash",
+      subtitle: "Gerador e Validador de Hash",
+      description: "Dashboard simples que permite gerar e validar hashes, útil para automações e testes de segurança.",
+      img: pythonImg,
+      date: "2025",
+      url: `${URL_BASE}/sandbox-backend/${ACCESS_PROJECT_HASH}`,
+      technology: "Python, FastAPI, React, Material UI",
+      github: "https://github.com/leonanthomaz/sandbox-backend",
+      status: 'em_analise',
+    }
   ],
 
   dados: [
     {
-      id: 5,
+      id: 8,
       title: "LabAnalyzer",
       subtitle: "Análise de Dados Biomédicos",
       description: "Sistema para cadastro e análise de exames e pacientes, com geração de relatórios e gráficos.",
@@ -84,7 +108,7 @@ export const projetosData = {
       status: 'finalizado',
     },
     {
-      id: 6,
+      id: 9,
       title: "Análise - Câncer no Brasil",
       subtitle: "Visualização de Dados",
       description: "Análise interativa de diagnósticos de câncer no Brasil (2000-2019), com gráficos e visualizações detalhadas.",
@@ -95,7 +119,7 @@ export const projetosData = {
       status: 'finalizado',
     },
     {
-      id: 7,
+      id: 10,
       title: "Visualização de Vendas",
       subtitle: "Gráficos e Dashboard",
       description: "Web app que lê CSV de vendas e apresenta gráficos interativos para análise de performance.",
@@ -107,9 +131,9 @@ export const projetosData = {
     },
   ],
 
-  backend: [
+  api: [
     {
-      id: 8,
+      id: 11,
       title: "CRUD Flask + MySQL",
       subtitle: "API RESTful",
       description: "API para operações CRUD em banco MySQL, gerenciando registros de médicos.",
@@ -119,67 +143,103 @@ export const projetosData = {
       github: "https://github.com/leonanthomaz/crud_flask",
       status: 'finalizado',
     },
+    {
+      id: 12,
+      title: "CRUD FastAPI + PostgreSQL",
+      subtitle: "API RESTful",
+      description: "API para operações CRUD em banco de dados, migrando funcionalidades que já existiam no Flask para FastAPI.",
+      img: pythonImg,
+      date: "2025",
+      technology: "Python, FastAPI, SQLAlchemy, PostgreSQL",
+      url: `${URL_BASE}/crud-fastapi/${ACCESS_PROJECT_HASH}`,
+      github: "https://github.com/leonanthomaz/crud-fastapi",
+      status: 'em_construcao',
+    },
+    {
+      id: 13,
+      title: "API de Monitoramento",
+      subtitle: "Serviço de Logs",
+      description: "API backend para coleta e monitoramento de logs de sistemas e automações em tempo real.",
+      img: pythonImg,
+      date: "2025",
+      technology: "Python, FastAPI, WebSocket, PostgreSQL",
+      url: `${URL_BASE}/api-monitoramento/${ACCESS_PROJECT_HASH}`,
+      github: "https://github.com/leonanthomaz/api-monitoramento",
+      status: 'em_construcao',
+    },
   ],
 
   ia: [
     {
-      id: 9,
-      title: "ChatBot",
+      id: 14,
+      title: "Modelo ChatBot",
       subtitle: "Bot de Atendimento",
-      description: "Bot desacoplado do FireCloud, capaz de responder perguntas de clientes via chat.",
+      description: "Modelo V1 do meu Bot desacoplado do FireCloud, capaz de responder perguntas de clientes via chat.",
       img: pythonImg,
       date: "2024",
       technology: "Python, FastAPI, WebSocket",
       url: `${URL_BASE}/chatbot/${ACCESS_PROJECT_HASH}`,
       github: "https://github.com/leonanthomaz/chatbot",
-      status: 'em_construcao',
+      status: 'em_analise',
     },
     {
-      id: 10,
+      id: 15,
       title: "Tainá - Inteligência Artificial",
       subtitle: "IA e Comandos por Voz",
       description: "Versão destacada da Tainá mostrando capacidade de IA e integração com APIs.",
       img: pythonImg,
       date: "2024",
-      technology: "Python, ChatGPT API, Selenium, gTTS, SpeechRecognition, pygame",
+      technology: "Python, ChatGPT API, Selenium, gTTS, SpeechRecognition, PyGame",
       github: "https://github.com/leonanthomaz/projeto-taina",
-      status: 'em_construcao',
+      status: 'em_analise',
     },
-  ],
-
-  opencv: [
     {
-      id: 11,
-      title: "Image Analyzer (Placeholder)",
-      subtitle: "Análise de Imagem",
-      description: "Projeto inicial de análise de imagens usando OpenCV, ainda em desenvolvimento.",
+      id: 16,
+      title: "Detector de Emoções - OpenCV",
+      subtitle: "Detecção de Emoções em Fotos",
+      description: "Projeto que detecta rostos em fotos e identifica emoções básicas (feliz, triste, neutro, surpreso) usando OpenCV e técnicas de ML. Ideal para demonstração de reconhecimento facial e análise de expressões.",
       img: pythonImg,
-      date: "2024",
-      technology: "Python, OpenCV, NumPy",
-      status: 'em_construcao',
-    },
+      date: "2025",
+      technology: "Python, OpenCV, NumPy, face_recognition/deepface",
+      github: "https://github.com/leonanthomaz/detector-sentimentos-opencv",
+      status: 'em_construcao'
+    }
   ],
-
+  
   frontend: [
     {
-      id: 12,
-      title: "Blog Pessoal (Placeholder)",
+      id: 17,
+      title: "Blog Pessoal",
       subtitle: "Frontend React",
       description: "Projeto inicial do blog em React, ainda em desenvolvimento.",
-      img: pythonImg,
+      img: reactImg,
       date: "2024",
       technology: "React, TypeScript, MUI, React Router",
+      url: "https://leonanthomaz-blog.vercel.app",
+      github: "https://github.com/leonanthomaz/blog",
+      status: 'em_analise',
+    },
+    {
+      id: 18,
+      title: "Catálogo de Filmes",
+      subtitle: "Frontend React",
+      description: "Aplicativo de catálogo de filmes em React, consumindo API externa.",
+      img: reactImg,
+      date: "2024",
+      technology: "React, TypeScript, Axios, TMDB API",
       status: 'em_construcao',
     },
-    // {
-    //   id: 13,
-    //   title: "Catálogo de Filmes (Placeholder)",
-    //   subtitle: "Frontend React",
-    //   description: "Aplicativo de catálogo de filmes em React, consumindo API externa.",
-    //   img: pythonImg,
-    //   date: "2024",
-    //   technology: "React, TypeScript, Axios, TMDB API",
-    //   status: 'em_construcao',
-    // },
+    {
+      id: 19,
+      title: "Dashboard de Automação",
+      subtitle: "Painel de Controle",
+      description: "Dashboard web para visualização e gerenciamento de tarefas de automação, integração com APIs, geração de hash e monitoramento em tempo real.",
+      img: reactImg,
+      date: "2025",
+      technology: "Python, FastAPI, React, TypeScript, MUI",
+      url: `${URL_BASE}/dashboard/${ACCESS_PROJECT_HASH}`,
+      github: "https://github.com/leonanthomaz/dashboard",
+      status: 'em_construcao',
+    }
   ],
 };
