@@ -20,21 +20,21 @@ import {
 import { SiPython } from 'react-icons/si';
 import LogoHandler from '../Navbar/LogoHandler';
 
-// Animação para o Python à direita “navegar”
+// Animação para o Python à direita, subindo em diagonal
 const floatPythonRight = keyframes`
   0% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(20px, -30px) rotate(10deg); }
-  50% { transform: translate(-10px, -60px) rotate(-5deg); }
-  75% { transform: translate(-25px, -20px) rotate(15deg); }
+  25% { transform: translate(30px, -30px) rotate(10deg); }
+  50% { transform: translate(15px, -60px) rotate(-5deg); }
+  75% { transform: translate(40px, -20px) rotate(15deg); }
   100% { transform: translate(0, 0) rotate(0deg); }
 `;
 
-// Animação para o Python à esquerda “navegar”
+// Animação para o Python à esquerda, subindo em diagonal
 const floatPythonLeft = keyframes`
   0% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(-20px, -30px) rotate(-10deg); }
-  50% { transform: translate(10px, -60px) rotate(5deg); }
-  75% { transform: translate(25px, -20px) rotate(-15deg); }
+  25% { transform: translate(-30px, -30px) rotate(-10deg); }
+  50% { transform: translate(-15px, -60px) rotate(5deg); }
+  75% { transform: translate(-40px, -20px) rotate(-15deg); }
   100% { transform: translate(0, 0) rotate(0deg); }
 `;
 
@@ -66,7 +66,7 @@ const Footer = () => {
         }
       }}
     >
-      {/* Python decorativo flutuante à direita */}
+      {/* Python decorativo flutuante à direita (visível apenas em telas grandes) */}
       <Box
         sx={{
           position: 'absolute',
@@ -78,12 +78,14 @@ const Footer = () => {
           zIndex: 0,
           animation: `${floatPythonRight} 25s ease-in-out infinite alternate`,
           pointerEvents: 'none',
+          // O ícone da direita será escondido em telas menores que 'md'
+          display: { xs: 'none', md: 'block' },
         }}
       >
         <SiPython />
       </Box>
       
-      {/* Python decorativo flutuante à esquerda */}
+      {/* Python decorativo flutuante à esquerda (sempre visível) */}
       <Box
         sx={{
           position: 'absolute',
