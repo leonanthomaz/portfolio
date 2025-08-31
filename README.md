@@ -20,7 +20,7 @@ Bem-vindo ao meu **portfolio landing page**! Aqui você encontra meus projetos, 
 
 - **Backend:** Python, FastAPI, Flask, PostgreSQL, SQLAlchemy  
 - **Frontend:** React, TypeScript, Styled Components, Material UI  
-- **Automação & IA:** Bots, Web scraping, Pandas (em evolução: Numpy, TensorFlow, Scikit-Learn, OpenCV)  
+- **Automação & IA:** Bots, Web scraping e integração com provedores de IA. 
 - **Ferramentas:** Git, Docker, Vite, VSCode  
 
 ---
