@@ -1,6 +1,4 @@
-import { alpha, Box, Button, Typography } from "@mui/material";
-import styled from "styled-components";
-
+import { alpha, Box, Button, styled, Typography } from "@mui/material";
 
 export const ContentSection = styled(Box)(({ theme }) => ({
   display: 'flex',
