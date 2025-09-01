@@ -15,7 +15,7 @@ import { HelpDialog } from '../../components/HelpDialog';
 import { ProjectsTabs } from '../../components/ProjectsTabs';
 import { EmptyProjects } from '../../components/EmptyProjects';
 
-// Styled Components
+// Estilos
 import { ProjectsGrid } from '../../styles/ProjectsStyles';
 
 export const Projects: React.FC = () => {
