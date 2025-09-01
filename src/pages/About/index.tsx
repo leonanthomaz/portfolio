@@ -1,72 +1,11 @@
 import React from 'react';
-import { Box, Typography, Button, styled, useTheme, alpha } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 import { Link as ScrollLink } from 'react-scroll';
 import { ContentBox, SectionContainer, Title } from '../../styles/GlobalStyles';
 import photo from '@/assets/img/foto-leonan.jpg';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { FloatingBackgroundAbout } from '../../utils/FloatingEffect/FloatingBackgroundAbout';
-
-// Componente estilizado para a seção de conteúdo (foto + texto)
-const ContentSection = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  gap: theme.spacing(5),
-  marginTop: theme.spacing(4),
-  [theme.breakpoints.up('md')]: {
-    flexDirection: 'row',
-    textAlign: 'left',
-    alignItems: 'flex-start',
-    gap: theme.spacing(8),
-  },
-}));
-
-// Componente estilizado para a imagem
-const ProfileImage = styled('img')(({ theme }) => ({
-  width: 200,
-  height: 200,
-  borderRadius: '50%',
-  objectFit: 'cover',
-  border: `4px solid ${alpha(theme.palette.primary.main, 0.4)}`,
-  boxShadow: `0 8px 24px ${alpha(theme.palette.primary.main, 0.2)}`,
-  transition: 'transform 0.3s ease-in-out',
-  '&:hover': {
-    transform: 'scale(1.05)',
-  },
-}));
-
-// Componente estilizado para o texto
-const AboutText = styled(Typography)(({ theme }) => ({
-  lineHeight: 1.8,
-  maxWidth: '800px',
-  color: theme.palette.text.primary,
-  fontWeight: 400,
-  textAlign: 'left',
-  [theme.breakpoints.down('md')]: {
-    textAlign: 'center',
-  },
-}));
-
-// Componente estilizado para o botão
-const ContactButton = styled(Button)(({ theme }) => ({
-  marginTop: theme.spacing(4),
-  padding: '12px 28px',
-  fontSize: '1rem',
-  fontWeight: 600,
-  borderRadius: '8px',
-  background: theme.palette.primary.main,
-  color: theme.palette.getContrastText(theme.palette.primary.main),
-  boxShadow: `0 8px 30px ${alpha(theme.palette.primary.main, 0.3)}`,
-  transition: 'all 0.3s ease',
-  textTransform: 'none',
-  fontFamily: "'Poppins', sans-serif",
-  '&:hover': {
-    transform: 'translateY(-3px)',
-    boxShadow: `0 12px 40px ${alpha(theme.palette.primary.main, 0.5)}`,
-    background: theme.palette.primary.dark,
-  },
-}));
+import { AboutText, ContactButton, ContentSection, ProfileImage } from '../../styles/AboutStyles';
 
 export const About: React.FC = () => {
   const theme = useTheme();
