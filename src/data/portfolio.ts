@@ -3,7 +3,6 @@ import firecloudImg from '@/assets/img/portfolio/firecloud.png';
 import pythonImg from '@/assets/img/portfolio/python.webp';
 import reactImg from '@/assets/img/portfolio/react.webp'
 
-const ACCESS_PROJECT_HASH = import.meta.env.VITE_ACCESS_PROJECT_HASH;
 const URL_BASE = import.meta.env.VITE_SANDBOX_BASE_URL;
 
 export const projetosData = {
@@ -15,7 +14,7 @@ export const projetosData = {
       description: "Plataforma de automação e bots para empresas, com gestão de usuários e dashboards.",
       img: firecloudImg,
       date: "2024",
-      url: `${URL_BASE}/firecloud/${ACCESS_PROJECT_HASH}`,
+      url: `${URL_BASE}/project/firecloud`,
       technology: "FullStack, Python, FastAPI, React, TypeScript, MUI, Mercado Pago, WebSocket",
       github: "https://github.com/leonanthomaz/firecloud",
       status: 'em_analise',
@@ -27,7 +26,7 @@ export const projetosData = {
       description: "Sistema de delivery completo com gestão de pedidos, integração com Google Maps e pagamento via Pix.",
       img: thomaggioImg,
       date: "2023",
-      url: `${URL_BASE}/thomaggio/${ACCESS_PROJECT_HASH}`,
+      url: `${URL_BASE}/project/thomaggio`,
       technology: "FullStack, Python, FastAPI, WebSocket, React, TypeScript, MUI, Mercado Pago",
       github: "https://github.com/leonanthomaz/thomaggio",
       status: 'em_analise',
@@ -41,7 +40,7 @@ export const projetosData = {
       img: pythonImg,
       date: "2024",
       technology: "Python, FastAPI, WebSocket",
-      url: `${URL_BASE}/chatbot/${ACCESS_PROJECT_HASH}`,
+      url: `${URL_BASE}/project/chatbot`,
       github: "https://github.com/leonanthomaz/chatbot",
       status: 'em_construcao',
     },
@@ -89,7 +88,7 @@ export const projetosData = {
       description: "Dashboard simples que permite gerar e validar hashes, útil para automações e testes de segurança.",
       img: pythonImg,
       date: "2025",
-      url: `${URL_BASE}/sandbox-backend/${ACCESS_PROJECT_HASH}`,
+      url: `${URL_BASE}/project/sandbox-backend`,
       technology: "Python, FastAPI, React, Material UI",
       github: "https://github.com/leonanthomaz/sandbox-backend",
       status: 'em_analise',
@@ -152,7 +151,7 @@ export const projetosData = {
       img: pythonImg,
       date: "2025",
       technology: "Python, FastAPI, SQLAlchemy, PostgreSQL",
-      url: `${URL_BASE}/crud-fastapi/${ACCESS_PROJECT_HASH}`,
+      url: `${URL_BASE}/project/crud-fastapi`,
       github: "https://github.com/leonanthomaz/crud-fastapi",
       status: 'em_construcao',
     },
@@ -164,7 +163,7 @@ export const projetosData = {
       img: pythonImg,
       date: "2025",
       technology: "Python, FastAPI, WebSocket, PostgreSQL",
-      url: `${URL_BASE}/api-monitoramento/${ACCESS_PROJECT_HASH}`,
+      url: `${URL_BASE}/project/api-monitoramento`,
       github: "https://github.com/leonanthomaz/api-monitoramento",
       status: 'em_construcao',
     },
@@ -179,7 +178,7 @@ export const projetosData = {
       img: pythonImg,
       date: "2024",
       technology: "Python, FastAPI, WebSocket",
-      url: `${URL_BASE}/chatbot/${ACCESS_PROJECT_HASH}`,
+      url: `${URL_BASE}/project/chatbot`,
       github: "https://github.com/leonanthomaz/chatbot",
       status: 'em_analise',
     },
@@ -240,7 +239,7 @@ export const projetosData = {
       img: reactImg,
       date: "2025",
       technology: "Python, FastAPI, React, TypeScript, MUI",
-      url: `${URL_BASE}/dashboard/${ACCESS_PROJECT_HASH}`,
+      url: `${URL_BASE}/project/dashboard`,
       github: "https://github.com/leonanthomaz/dashboard",
       status: 'em_construcao',
     }
