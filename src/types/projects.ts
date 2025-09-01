@@ -1,4 +1,5 @@
 export interface Projeto {
+  isSandbox: any;
   id: number;
   title: string;
   subtitle: string;

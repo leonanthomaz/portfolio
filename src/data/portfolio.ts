@@ -14,10 +14,11 @@ export const projetosData = {
       description: "Plataforma de automação e bots para empresas, com gestão de usuários e dashboards.",
       img: firecloudImg,
       date: "2024",
+      isSandbox: true,
       url: `${URL_BASE}/project/firecloud`,
       technology: "FullStack, Python, FastAPI, React, TypeScript, MUI, Mercado Pago, WebSocket",
       github: "https://github.com/leonanthomaz/firecloud",
-      status: 'em_analise',
+      status: 'em_construcao',
     },
     {
       id: 2,
@@ -26,6 +27,7 @@ export const projetosData = {
       description: "Sistema de delivery completo com gestão de pedidos, integração com Google Maps e pagamento via Pix.",
       img: thomaggioImg,
       date: "2023",
+      isSandbox: true,
       url: `${URL_BASE}/project/thomaggio`,
       technology: "FullStack, Python, FastAPI, WebSocket, React, TypeScript, MUI, Mercado Pago",
       github: "https://github.com/leonanthomaz/thomaggio",
@@ -39,6 +41,7 @@ export const projetosData = {
       description: "Modelo V1 do meu Bot desacoplado do FireCloud, capaz de responder perguntas de clientes via chat.",
       img: pythonImg,
       date: "2024",
+      isSandbox: true,
       technology: "Python, FastAPI, WebSocket",
       url: `${URL_BASE}/project/chatbot`,
       github: "https://github.com/leonanthomaz/chatbot",
@@ -91,7 +94,7 @@ export const projetosData = {
       url: `${URL_BASE}/project/sandbox-backend`,
       technology: "Python, FastAPI, React, Material UI",
       github: "https://github.com/leonanthomaz/sandbox-backend",
-      status: 'em_analise',
+      status: 'em_construcao',
     }
   ],
 
@@ -180,7 +183,7 @@ export const projetosData = {
       technology: "Python, FastAPI, WebSocket",
       url: `${URL_BASE}/project/chatbot`,
       github: "https://github.com/leonanthomaz/chatbot",
-      status: 'em_analise',
+      status: 'em_construcao',
     },
     {
       id: 15,
@@ -191,7 +194,7 @@ export const projetosData = {
       date: "2024",
       technology: "Python, ChatGPT API, Selenium, gTTS, SpeechRecognition, PyGame",
       github: "https://github.com/leonanthomaz/projeto-taina",
-      status: 'em_analise',
+      status: 'em_construcao',
     },
     {
       id: 16,
@@ -217,7 +220,7 @@ export const projetosData = {
       technology: "React, TypeScript, MUI, React Router",
       url: "https://leonanthomaz-blog.vercel.app",
       github: "https://github.com/leonanthomaz/blog",
-      status: 'em_analise',
+      status: 'finalizado',
     },
     {
       id: 18,
@@ -229,7 +232,7 @@ export const projetosData = {
       url: "https://leonanfilmes.vercel.app",
       github: "https://github.com/leonanthomaz/catalogo-filmes-tmdb",
       technology: "React, TypeScript, Axios, TMDB API",
-      status: 'em_construcao',
+      status: 'finalizado',
     },
     {
       id: 19,
