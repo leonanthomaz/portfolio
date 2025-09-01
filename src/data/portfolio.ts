@@ -91,7 +91,6 @@ export const projetosData = {
       description: "Dashboard simples que permite gerar e validar hashes, útil para automações e testes de segurança.",
       img: pythonImg,
       date: "2025",
-      url: `${URL_BASE}/project/sandbox-backend`,
       technology: "Python, FastAPI, React, Material UI",
       github: "https://github.com/leonanthomaz/sandbox-backend",
       status: 'em_construcao',
