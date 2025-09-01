@@ -31,7 +31,7 @@ export const projetosData = {
       url: `${URL_BASE}/project/thomaggio`,
       technology: "FullStack, Python, FastAPI, WebSocket, React, TypeScript, MUI, Mercado Pago",
       github: "https://github.com/leonanthomaz/thomaggio",
-      status: 'em_analise',
+      status: 'em_construcao',
     },
    
     {
@@ -93,7 +93,7 @@ export const projetosData = {
       date: "2025",
       technology: "Python, FastAPI, React, Material UI",
       github: "https://github.com/leonanthomaz/gerador-hash",
-      status: 'em_construcao',
+      status: 'finalizado',
     }
   ],
 
@@ -154,7 +154,7 @@ export const projetosData = {
       date: "2025",
       technology: "Python, FastAPI, SQLAlchemy, PostgreSQL",
       github: "https://github.com/leonanthomaz/crud-fastapi",
-      status: 'em_construcao',
+      status: 'finalizado',
     },
     {
       id: 13,
@@ -226,8 +226,8 @@ export const projetosData = {
       description: "Aplicativo de catálogo de filmes em React, consumindo API externa.",
       img: reactImg,
       date: "2024",
-      url: "https://leonanfilmes.vercel.app",
-      github: "https://github.com/leonanthomaz/catalogo-filmes-tmdb",
+      url: "https://movie.vercel.app",
+      github: "https://github.com/leonanthomaz/movie",
       technology: "React, TypeScript, Axios, TMDB API",
       status: 'finalizado',
     },
