@@ -92,7 +92,7 @@ export const projetosData = {
       img: pythonImg,
       date: "2025",
       technology: "Python, FastAPI, React, Material UI",
-      github: "https://github.com/leonanthomaz/sandbox-backend",
+      github: "https://github.com/leonanthomaz/gerador-hash",
       status: 'em_construcao',
     }
   ],
