@@ -37,7 +37,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { FaWhatsapp } from 'react-icons/fa';
 import LogoHandler from './LogoHandler';
-// import RssFeedIcon from '@mui/icons-material/RssFeed';
+import RssFeedIcon from '@mui/icons-material/RssFeed';
 
 const navItems = [
   { label: 'Início', to: 'intro', icon: <HomeIcon /> },
@@ -53,7 +53,7 @@ const socialLinks = [
   { name: 'LinkedIn', url: 'https://linkedin.com/in/leonanthomaz', icon: <LinkedInIcon /> },
   { name: 'Instagram', url: 'https://instagram.com/leonan.thomaz', icon: <Instagram /> },
   { name: 'Whatsapp', url: 'https://wa.me/5521998090928', icon: <FaWhatsapp /> },
-  // { name: 'Blog', url: 'https://leonanthomaz-blog.vercel.app', icon: <RssFeedIcon /> },
+  { name: 'Blog', url: 'https://leonanthomaz-blog.vercel.app', icon: <RssFeedIcon /> },
 ];
 
 interface StyledAppBarProps {

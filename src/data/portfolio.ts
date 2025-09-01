@@ -106,7 +106,7 @@ export const projetosData = {
       img: pythonImg,
       date: "2024",
       technology: "Python, Flask, NumPy, pandas, Matplotlib, Seaborn, fpdf",
-      github: "https://github.com/leonanthomaz/lab_analyzer",
+      // github: "https://github.com/leonanthomaz/lab_analyzer",
       status: 'finalizado',
     },
     {
@@ -122,7 +122,7 @@ export const projetosData = {
     },
     {
       id: 10,
-      title: "Visualização de Vendas",
+      title: "Fundamentos em Dados",
       subtitle: "Gráficos e Dashboard",
       description: "Web app que lê CSV de vendas e apresenta gráficos interativos para análise de performance.",
       img: pythonImg,
@@ -153,7 +153,6 @@ export const projetosData = {
       img: pythonImg,
       date: "2025",
       technology: "Python, FastAPI, SQLAlchemy, PostgreSQL",
-      url: `${URL_BASE}/project/crud-fastapi`,
       github: "https://github.com/leonanthomaz/crud-fastapi",
       status: 'em_construcao',
     },
@@ -165,7 +164,6 @@ export const projetosData = {
       img: pythonImg,
       date: "2025",
       technology: "Python, FastAPI, WebSocket, PostgreSQL",
-      url: `${URL_BASE}/project/api-monitoramento`,
       github: "https://github.com/leonanthomaz/api-monitoramento",
       status: 'em_construcao',
     },
@@ -192,7 +190,7 @@ export const projetosData = {
       img: pythonImg,
       date: "2024",
       technology: "Python, ChatGPT API, Selenium, gTTS, SpeechRecognition, PyGame",
-      github: "https://github.com/leonanthomaz/projeto-taina",
+      // github: "https://github.com/leonanthomaz/projeto-taina",
       status: 'em_construcao',
     },
     {
@@ -203,7 +201,7 @@ export const projetosData = {
       img: pythonImg,
       date: "2025",
       technology: "Python, OpenCV, NumPy, face_recognition/deepface",
-      github: "https://github.com/leonanthomaz/detector-sentimentos-opencv",
+      // github: "https://github.com/leonanthomaz/detector-sentimentos-opencv",
       status: 'em_construcao'
     }
   ],
@@ -241,8 +239,8 @@ export const projetosData = {
       img: reactImg,
       date: "2025",
       technology: "Python, FastAPI, React, TypeScript, MUI",
-      url: `${URL_BASE}/project/dashboard`,
-      github: "https://github.com/leonanthomaz/dashboard",
+      // url: `${URL_BASE}/project/dashboard-template`,
+      github: "https://github.com/leonanthomaz/dashboard-template",
       status: 'em_construcao',
     }
   ],

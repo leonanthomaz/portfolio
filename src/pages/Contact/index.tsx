@@ -68,7 +68,7 @@ export const Contact: React.FC = () => {
           autoClose: 5000,
           theme: 'light',
         });
-        form.current?.reset(); // Limpa o formulário
+        form.current?.reset();
       })
       .catch(() => {
         toast.error('Erro ao enviar mensagem. Por favor, tente novamente.', {

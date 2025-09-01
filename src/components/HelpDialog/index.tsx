@@ -49,7 +49,7 @@ export const HelpDialog: React.FC<HelpDialogProps> = ({ open, onClose }) => {
             <VpnKey color="primary" sx={{ fontSize: 40 }} />
             <Typography variant="subtitle1" fontWeight="bold">O que é</Typography>
             <Typography variant="body2" color="text.secondary" sx={{ maxWidth: 120 }}>
-              <strong>Sandbox</strong> é um ambiente de testes seguro e controlado.
+              <strong>Sandbox</strong> é um ambiente de testes seguro. Está em fase de desenvolvimento.
             </Typography>
           </Stack>
 
