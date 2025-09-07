@@ -1,0 +1,42 @@
+# Node.js
+node_modules/
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Editor Directories and Files
+.idea/
+.vscode/
+*.swp
+
+# Dependency directories
+.pnpm-debug.log*
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+
+# Next.js (caso o projeto utilize)
+.next/
+
+# Coverage
+coverage/
+
+# React Native (caso utilize para mobile)
+.expo/
+.expo-shared/
+
+# Parcel
+.cache/
+
+# TypeScript
+*.tsbuildinfo
