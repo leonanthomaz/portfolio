@@ -3,7 +3,11 @@ import firecloudImg from '@/assets/img/portfolio/firecloud.png';
 import pythonImg from '@/assets/img/portfolio/python.webp';
 import reactImg from '@/assets/img/portfolio/react.webp'
 
-const SANDBOX_URL_BASE = "https://leonanthomaz-sandbox.vercel.app"
+const URL_BASE = "https://leonanthomaz-sandbox.vercel.app"
+
+// const URL_BASE = import.meta.env.VITE_ENVIRONMENT === "production" 
+// ? import.meta.env.VITE_SANDBOX_BASE_URL 
+// : import.meta.env.VITE_SANDBOX_BASE_URL_DEV
 
 export const projetosData = {
   features: [
@@ -15,7 +19,7 @@ export const projetosData = {
       img: firecloudImg,
       date: "2024",
       isSandbox: true,
-      url: `${SANDBOX_URL_BASE}/project/firecloud`,
+      url: `${URL_BASE}/project/firecloud`,
       technology: "FullStack, Python, FastAPI, React, TypeScript, MUI, Mercado Pago, WebSocket",
       status: 'ajustando',
     },
@@ -27,7 +31,7 @@ export const projetosData = {
       img: thomaggioImg,
       date: "2023",
       isSandbox: true,
-      url: `${SANDBOX_URL_BASE}/project/thomaggio`,
+      url: `${URL_BASE}/project/thomaggio`,
       technology: "FullStack, Python, FastAPI, WebSocket, React, TypeScript, MUI, Mercado Pago",
       status: 'ajustando',
     },
@@ -40,7 +44,7 @@ export const projetosData = {
       date: "2024",
       isSandbox: true,
       technology: "Python, FastAPI, WebSocket",
-      url: `${SANDBOX_URL_BASE}/project/chatbot`,
+      url: `${URL_BASE}/project/chatbot`,
       status: 'em_construcao',
     },
     {
@@ -63,7 +67,7 @@ export const projetosData = {
       img: pythonImg,
       date: "2024",
       isSandbox: true,
-      url: `${SANDBOX_URL_BASE}/project/leonanflix`,
+      url: `${URL_BASE}/project/leonanflix`,
       technology: "React, TypeScript, Axios, TMDB API, Scraping, VidSrc",
       status: 'ajustando',
     },
@@ -75,7 +79,7 @@ export const projetosData = {
       img: pythonImg,
       date: "2024",
       isSandbox: true,
-      url: `${SANDBOX_URL_BASE}/project/leonanmusic`,
+      url: `${URL_BASE}/project/leonanmusic`,
       technology: "Python, FastAPI, React, TypeScript, YouTube API, Spotify API",
       status: 'finalizado',
     }
@@ -197,7 +201,7 @@ export const projetosData = {
       img: pythonImg,
       date: "2024",
       technology: "Python, FastAPI, WebSocket",
-      url: `${SANDBOX_URL_BASE}/project/chatbot`,
+      url: `${URL_BASE}/project/chatbot`,
       github: "https://github.com/leonanthomaz/chatbot",
       status: 'ajustando',
     },
