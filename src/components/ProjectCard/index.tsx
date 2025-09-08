@@ -10,7 +10,7 @@ import {
   alpha
 } from '@mui/material';
 import { AiOutlineRobot } from 'react-icons/ai';
-import { Projeto } from '../../types/projects';
+import { Projeto, ProjetoStatus } from '../../types/projects';
 import { StatusChip, ProjectCardMedia, CardContentStyled } from '../../styles/ProjectsStyles';
 
 interface ProjectCardProps {
@@ -20,6 +20,16 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ projeto, onOpen }) => {
   const theme = useTheme();
+
+  const statusLabels: Record<ProjetoStatus, string> = {
+    finalizado: 'Finalizado',
+    em_construcao: 'Em construção',
+    ajustando: 'Ajustando',
+    em_analise: 'Em análise',
+    planejando: 'Planejando',
+    obsoleto: 'Obsoleto',
+    descontinuado: 'Descontinuado',
+  };
 
   return (
     <Card sx={{
@@ -58,11 +68,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ projeto, onOpen }) => 
       )}
 
       {projeto.status && (
-        <StatusChip 
-          label={
-            projeto.status === 'finalizado' ? 'Finalizado' :
-            projeto.status === 'em_construcao' ? 'Em construção' : 'Em análise'
-          }
+        <StatusChip
+          label={statusLabels[projeto.status]}
           size="small"
           status={projeto.status}
         />

@@ -2,6 +2,7 @@
 import { Box, alpha, styled } from '@mui/material';
 import { Chip } from '@mui/material';
 import { CardMedia } from '@mui/material';
+import { ProjetoStatus } from '../types/projects';
 
 export const ProjectsGrid = styled(Box)(({ theme }) => ({
   display: 'grid',
@@ -28,19 +29,41 @@ export const ProjectsGrid = styled(Box)(({ theme }) => ({
 
 export const StatusChip = styled(Chip, {
   shouldForwardProp: (prop) => prop !== 'status',
-})<{ status: string }>(({ theme, status }) => {
+})<{ status: ProjetoStatus }>(({ theme, status }) => {
   let bg = alpha(theme.palette.background.paper, 0.8);
   let color = theme.palette.text.primary;
 
-  if (status === 'finalizado') {
-    bg = theme.palette.success.main;
-    color = theme.palette.common.white;
-  } else if (status === 'em_construcao') {
-    bg = theme.palette.warning.main;
-    color = theme.palette.common.white;
-  } else if (status === 'em_analise') {
-    bg = theme.palette.info.main;
-    color = theme.palette.common.white;
+  switch (status) {
+    case 'finalizado':
+      bg = theme.palette.success.main;
+      color = theme.palette.common.white;
+      break;
+    case 'em_construcao':
+      bg = theme.palette.error.main;
+      color = theme.palette.common.white;
+      break;
+    case 'ajustando':
+      bg = theme.palette.info.main;
+      color = theme.palette.common.white;
+      break;
+    case 'planejando':
+      bg = theme.palette.warning.dark;
+      color = theme.palette.common.white;
+      break;
+    case 'em_analise':
+      bg = alpha(theme.palette.warning.main, 0.3);
+      color = theme.palette.warning.main;
+      break;
+    case 'obsoleto':
+      bg = theme.palette.error.main;
+      color = theme.palette.common.white;
+      break;
+    case 'descontinuado':
+      bg = theme.palette.grey[600];
+      color = theme.palette.common.white;
+      break;
+    default:
+      break;
   }
 
   return {
@@ -55,6 +78,7 @@ export const StatusChip = styled(Chip, {
     color: color,
   };
 });
+
 
 export const ProjectCardMedia = styled(CardMedia)<{ image?: string }>(({}) => ({
   height: 200,

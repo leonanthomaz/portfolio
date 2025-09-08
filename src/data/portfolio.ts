@@ -3,11 +3,11 @@ import firecloudImg from '@/assets/img/portfolio/firecloud.png';
 import pythonImg from '@/assets/img/portfolio/python.webp';
 import reactImg from '@/assets/img/portfolio/react.webp'
 
-const URL_BASE = import.meta.env.VITE_SANDBOX_BASE_URL;
+const SANDBOX_URL_BASE = "https://leonanthomaz-sandbox.vercel.app"
 
 export const projetosData = {
   features: [
-     {
+    {
       id: 1,
       title: "FireCloud",
       subtitle: "Portal de Bots",
@@ -15,10 +15,9 @@ export const projetosData = {
       img: firecloudImg,
       date: "2024",
       isSandbox: true,
-      url: `${URL_BASE}/project/firecloud`,
+      url: `${SANDBOX_URL_BASE}/project/firecloud`,
       technology: "FullStack, Python, FastAPI, React, TypeScript, MUI, Mercado Pago, WebSocket",
-      github: "https://github.com/leonanthomaz/firecloud",
-      status: 'em_construcao',
+      status: 'ajustando',
     },
     {
       id: 2,
@@ -28,23 +27,20 @@ export const projetosData = {
       img: thomaggioImg,
       date: "2023",
       isSandbox: true,
-      url: `${URL_BASE}/project/thomaggio`,
+      url: `${SANDBOX_URL_BASE}/project/thomaggio`,
       technology: "FullStack, Python, FastAPI, WebSocket, React, TypeScript, MUI, Mercado Pago",
-      github: "https://github.com/leonanthomaz/thomaggio",
-      status: 'em_construcao',
+      status: 'ajustando',
     },
-   
     {
       id: 3,
-      title: "Modelo ChatBot",
+      title: "ChatBot V2",
       subtitle: "Bot de Atendimento",
-      description: "Modelo V1 do meu Bot desacoplado do FireCloud, capaz de responder perguntas de clientes via chat.",
+      description: "Modelo V2 do meu Bot desacoplado do FireCloud, capaz de responder perguntas de clientes via chat.",
       img: pythonImg,
       date: "2024",
       isSandbox: true,
       technology: "Python, FastAPI, WebSocket",
-      url: `${URL_BASE}/project/chatbot`,
-      github: "https://github.com/leonanthomaz/chatbot",
+      url: `${SANDBOX_URL_BASE}/project/chatbot`,
       status: 'em_construcao',
     },
     {
@@ -58,12 +54,36 @@ export const projetosData = {
       url: "https://pypi.org/project/fastbuild",
       github: "https://github.com/leonanthomaz/fastbuild",
       status: 'finalizado',
+    },
+    {
+      id: 5,
+      title: "Catálogo de Filmes Avançado",
+      subtitle: "Scraping + APIs",
+      description: "Catálogo de filmes com backend próprio, scraping de canais de TV e vídeos via VidSrc. Frontend em React com player incorporado.",
+      img: pythonImg,
+      date: "2024",
+      isSandbox: true,
+      url: `${SANDBOX_URL_BASE}/project/leonanflix`,
+      technology: "React, TypeScript, Axios, TMDB API, Scraping, VidSrc",
+      status: 'ajustando',
+    },
+    {
+      id: 6,
+      title: "Player de Música",
+      subtitle: "Spotify + YouTube",
+      description: "Player que busca músicas do Spotify, imagens do iTunes e executa via YouTube no backend. Frontend em React com player customizado.",
+      img: pythonImg,
+      date: "2024",
+      isSandbox: true,
+      url: `${SANDBOX_URL_BASE}/project/leonanmusic`,
+      technology: "Python, FastAPI, React, TypeScript, YouTube API, Spotify API",
+      status: 'finalizado',
     }
   ],
 
   automacao: [
     {
-      id: 5,
+      id: 7,
       title: "Envio de E-mails Personalizados",
       subtitle: "Automação de E-mails",
       description: "Automatiza o envio de e-mails personalizados com base em dados de um arquivo Excel.",
@@ -74,18 +94,18 @@ export const projetosData = {
       status: 'finalizado',
     },
     {
-      id: 6,
-      title: "YouTube Music Player",
-      subtitle: "Player de Música",
-      description: "Player de música que baixa e reproduz músicas do YouTube com Python.",
+      id: 8,
+      title: "Music Player - Tinker",
+      subtitle: "Player de Música (obsoleto)",
+      description: "Player de música que antes baixava e reproduzia músicas do YouTube via Python. Hoje está obsoleto devido a mudanças nas políticas do YouTube, mantido apenas para referência técnica e aprendizado.",
       img: pythonImg,
       date: "2024",
       technology: "Python, yt-dlp, pygame",
       github: "https://github.com/leonanthomaz/music_player_py",
-      status: 'finalizado',
+      status: 'descontinuado',
     },
     {
-      id: 7,
+      id: 9,
       title: "Gerador de Hash",
       subtitle: "Gerador e Validador de Hash",
       description: "Dashboard simples que permite gerar e validar hashes, útil para automações e testes de segurança.",
@@ -99,18 +119,17 @@ export const projetosData = {
 
   dados: [
     {
-      id: 8,
+      id: 10,
       title: "LabAnalyzer",
       subtitle: "Análise de Dados Biomédicos",
       description: "Sistema para cadastro e análise de exames e pacientes, com geração de relatórios e gráficos.",
       img: pythonImg,
       date: "2024",
       technology: "Python, Flask, NumPy, pandas, Matplotlib, Seaborn, fpdf",
-      // github: "https://github.com/leonanthomaz/lab_analyzer",
       status: 'finalizado',
     },
     {
-      id: 9,
+      id: 11,
       title: "Análise - Câncer no Brasil",
       subtitle: "Visualização de Dados",
       description: "Análise interativa de diagnósticos de câncer no Brasil (2000-2019), com gráficos e visualizações detalhadas.",
@@ -121,7 +140,7 @@ export const projetosData = {
       status: 'finalizado',
     },
     {
-      id: 10,
+      id: 12,
       title: "Fundamentos em Dados",
       subtitle: "Gráficos e Dashboard",
       description: "Web app que lê CSV de vendas e apresenta gráficos interativos para análise de performance.",
@@ -135,7 +154,7 @@ export const projetosData = {
 
   api: [
     {
-      id: 11,
+      id: 13,
       title: "CRUD Flask + MySQL",
       subtitle: "API RESTful",
       description: "API para operações CRUD em banco MySQL, gerenciando registros de médicos.",
@@ -146,7 +165,7 @@ export const projetosData = {
       status: 'finalizado',
     },
     {
-      id: 12,
+      id: 14,
       title: "CRUD FastAPI + PostgreSQL",
       subtitle: "API RESTful",
       description: "API para operações CRUD em banco de dados, migrando funcionalidades que já existiam no Flask para FastAPI.",
@@ -157,7 +176,7 @@ export const projetosData = {
       status: 'finalizado',
     },
     {
-      id: 13,
+      id: 15,
       title: "API de Monitoramento",
       subtitle: "Serviço de Logs",
       description: "API backend para coleta e monitoramento de logs de sistemas e automações em tempo real.",
@@ -165,83 +184,81 @@ export const projetosData = {
       date: "2025",
       technology: "Python, FastAPI, WebSocket, PostgreSQL",
       github: "https://github.com/leonanthomaz/api-monitoramento",
-      status: 'em_construcao',
+      status: 'planejando',
     },
   ],
 
   ia: [
     {
-      id: 14,
-      title: "Modelo ChatBot",
+      id: 16,
+      title: "ChatBot V1",
       subtitle: "Bot de Atendimento",
-      description: "Modelo V1 do meu Bot desacoplado do FireCloud, capaz de responder perguntas de clientes via chat.",
+      description: "Modelo versão 1 do meu Bot desacoplado do FireCloud, capaz de responder perguntas de clientes via chat.",
       img: pythonImg,
       date: "2024",
       technology: "Python, FastAPI, WebSocket",
-      url: `${URL_BASE}/project/chatbot`,
+      url: `${SANDBOX_URL_BASE}/project/chatbot`,
       github: "https://github.com/leonanthomaz/chatbot",
-      status: 'em_construcao',
+      status: 'ajustando',
     },
     {
-      id: 15,
+      id: 17,
       title: "Tainá - Inteligência Artificial",
       subtitle: "IA e Comandos por Voz",
       description: "Versão destacada da Tainá mostrando capacidade de IA e integração com APIs.",
       img: pythonImg,
       date: "2024",
       technology: "Python, ChatGPT API, Selenium, gTTS, SpeechRecognition, PyGame",
-      // github: "https://github.com/leonanthomaz/projeto-taina",
-      status: 'em_construcao',
+      github: "https://github.com/leonanthomaz/projeto-taina",
+      status: 'ajustando',
     },
     {
-      id: 16,
+      id: 18,
       title: "Detector de Emoções - OpenCV",
       subtitle: "Detecção de Emoções em Fotos",
       description: "Projeto que detecta rostos em fotos e identifica emoções básicas (feliz, triste, neutro, surpreso) usando OpenCV e técnicas de ML. Ideal para demonstração de reconhecimento facial e análise de expressões.",
       img: pythonImg,
       date: "2025",
       technology: "Python, OpenCV, NumPy, face_recognition/deepface",
-      // github: "https://github.com/leonanthomaz/detector-sentimentos-opencv",
-      status: 'em_construcao'
+      status: 'planejando'
     }
   ],
 
   frontend: [
     {
-      id: 17,
+      id: 19,
       title: "Blog Pessoal",
       subtitle: "Frontend React",
       description: "Projeto inicial do blog em React, ainda em desenvolvimento.",
       img: reactImg,
       date: "2024",
       technology: "React, TypeScript, MUI, React Router",
-      url: "https://leonanthomaz-blog.vercel.app",
+      url: "https://leonanthomaz.github.io/blog",
       github: "https://github.com/leonanthomaz/blog",
       status: 'finalizado',
     },
     {
-      id: 18,
+      id: 20,
       title: "Catálogo de Filmes",
       subtitle: "Frontend React",
-      description: "Aplicativo de catálogo de filmes em React, consumindo API externa.",
+      description: "Demonstrativo de catálogo de filmes em React, consumindo API externa para trailers.",
       img: reactImg,
       date: "2024",
-      url: "https://movie.vercel.app",
+      url: "https://leonanthomaz.github.io/movie",
       github: "https://github.com/leonanthomaz/movie",
       technology: "React, TypeScript, Axios, TMDB API",
-      status: 'finalizado',
+      status: 'ajustando',
     },
     {
-      id: 19,
+      id: 21,
       title: "Dashboard de Automação",
       subtitle: "Painel de Controle",
       description: "Dashboard web para visualização e gerenciamento de tarefas de automação, integração com APIs, geração de hash e monitoramento em tempo real.",
       img: reactImg,
       date: "2025",
       technology: "Python, FastAPI, React, TypeScript, MUI",
-      // url: `${URL_BASE}/project/dashboard-template`,
       github: "https://github.com/leonanthomaz/dashboard-template",
-      status: 'em_construcao',
+      status: 'planejando',
     }
   ],
 };

@@ -9,5 +9,14 @@ export interface Projeto {
   technology?: string;
   url?: string;
   github?: string;
-  status?: 'em_construcao' | 'finalizado' | 'em_analise';
+  status?: ProjetoStatus;
 }
+
+export type ProjetoStatus =
+  | 'planejando'       // ainda pensando ou estruturando
+  | 'em_construcao'    // desenvolvimento ativo
+  | 'ajustando'        // funcionando mas recebendo melhorias/bugs
+  | 'em_analise'         // versão inicial, precisa de refinamentos (ex: Tainá, ChatBot)
+  | 'finalizado'       // concluído e estável
+  | 'obsoleto'         // não funciona mais / não é recomendável usar
+  | 'descontinuado';   // projeto parado, não será mais mantido
