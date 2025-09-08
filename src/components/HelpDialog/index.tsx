@@ -40,7 +40,7 @@ export const HelpDialog: React.FC<HelpDialogProps> = ({ open, onClose }) => {
         mb: 3
       }}>
         <Science sx={{ verticalAlign: 'middle', mr: 1 }} />
-        Sandbox - Guia Rápido
+        DevBox - Guia Rápido
       </DialogTitle>
       
       <DialogContent sx={{ p: 4, textAlign: 'center' }}>
@@ -49,7 +49,7 @@ export const HelpDialog: React.FC<HelpDialogProps> = ({ open, onClose }) => {
             <VpnKey color="primary" sx={{ fontSize: 40 }} />
             <Typography variant="subtitle1" fontWeight="bold">O que é</Typography>
             <Typography variant="body2" color="text.secondary" sx={{ maxWidth: 120 }}>
-              <strong>Sandbox</strong> é um ambiente de testes seguro. Está em fase de desenvolvimento.
+              <strong>DevBox</strong> é um ambiente de testes seguro. Está em fase de desenvolvimento.
             </Typography>
           </Stack>
 
@@ -71,7 +71,7 @@ export const HelpDialog: React.FC<HelpDialogProps> = ({ open, onClose }) => {
         </Stack>
 
         <Typography variant="h6" component="h3" sx={{ mt: 2, mb: 2, fontWeight: 'bold', color: theme.palette.primary.dark }}>
-          O Que Você Encontrará no Sandbox
+          O Que Você Encontrará no DevBox
         </Typography>
 
         <Stack spacing={2} sx={{ textAlign: 'left' }}>
