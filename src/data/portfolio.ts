@@ -4,8 +4,8 @@ import pythonImg from '@/assets/img/portfolio/python.webp';
 import reactImg from '@/assets/img/portfolio/react.webp'
 
 const URL_BASE = import.meta.env.VITE_ENVIRONMENT === "production" 
-? import.meta.env.VITE_SANDBOX_BASE_URL 
-: import.meta.env.VITE_SANDBOX_BASE_URL_DEV
+? import.meta.env.VITE_DEVBOX_APP_WEB_URL 
+: import.meta.env.VITE_DEVBOX_APP_WEB_URL_DEV
 
 export const projetosData = {
   features: [
@@ -200,7 +200,6 @@ export const projetosData = {
       date: "2024",
       technology: "Python, FastAPI, WebSocket",
       url: `${URL_BASE}/project/chatbot`,
-      github: "https://github.com/leonanthomaz/chatbot",
       status: 'ajustando',
     },
     {
@@ -211,7 +210,7 @@ export const projetosData = {
       img: pythonImg,
       date: "2024",
       technology: "Python, ChatGPT API, Selenium, gTTS, SpeechRecognition, PyGame",
-      github: "https://github.com/leonanthomaz/projeto-taina",
+      url: `${URL_BASE}/project/taina`,
       status: 'ajustando',
     },
     {
@@ -235,7 +234,7 @@ export const projetosData = {
       img: reactImg,
       date: "2024",
       technology: "React, TypeScript, MUI, React Router",
-      url: "https://leonanthomaz.github.io/blog",
+      url: "https://leonanthomaz-blog.vercel.app",
       github: "https://github.com/leonanthomaz/blog",
       status: 'finalizado',
     },
