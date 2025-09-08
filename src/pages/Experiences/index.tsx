@@ -92,6 +92,15 @@ const experiences = [
   {
     id: 5,
     icon: <FaLightbulb />,
+    title: 'Chatbot Cyrax',
+    subtitle: 'Assistente conversacional • 2025',
+    description:
+      'Atualmente estou dando upgrade nesse projeto de chatbot, com backend em FastAPI, frontend em React e integração com modelos de IA via API. Usei JWT, WebSockets e Redis para sessões em tempo real. Além disso, desenvolvi projetos paralelos com scraping de filmes e música para exercitar coleta e exibição de dados em aplicações web.',
+    animation: 'animate__fadeInRight',
+  },
+  {
+    id: 6,
+    icon: <FaLightbulb />,
     title: 'Sempre aprendendo',
     subtitle: 'Atualmente',
     description:
