@@ -3,11 +3,9 @@ import firecloudImg from '@/assets/img/portfolio/firecloud.png';
 import pythonImg from '@/assets/img/portfolio/python.webp';
 import reactImg from '@/assets/img/portfolio/react.webp'
 
-const URL_BASE = "https://leonanthomaz-sandbox.vercel.app"
-
-// const URL_BASE = import.meta.env.VITE_ENVIRONMENT === "production" 
-// ? import.meta.env.VITE_SANDBOX_BASE_URL 
-// : import.meta.env.VITE_SANDBOX_BASE_URL_DEV
+const URL_BASE = import.meta.env.VITE_ENVIRONMENT === "production" 
+? import.meta.env.VITE_SANDBOX_BASE_URL 
+: import.meta.env.VITE_SANDBOX_BASE_URL_DEV
 
 export const projetosData = {
   features: [
