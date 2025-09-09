@@ -53,7 +53,7 @@ const socialLinks = [
   { name: 'LinkedIn', url: 'https://linkedin.com/in/leonanthomaz', icon: <LinkedInIcon /> },
   { name: 'Instagram', url: 'https://instagram.com/leonan.thomaz', icon: <Instagram /> },
   { name: 'Whatsapp', url: 'https://wa.me/5521998090928', icon: <FaWhatsapp /> },
-  { name: 'Blog', url: 'https://leonanthomaz-blog.vercel.app', icon: <RssFeedIcon /> },
+  { name: 'Blog', url: 'https://leonanthomaz-blog.netlify.app', icon: <RssFeedIcon /> },
 ];
 
 interface StyledAppBarProps {

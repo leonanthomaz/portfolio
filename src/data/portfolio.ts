@@ -233,7 +233,7 @@ export const projetosData = {
       img: reactImg,
       date: "2024",
       technology: "React, TypeScript, MUI, React Router",
-      url: "https://leonanthomaz-blog.vercel.app",
+      url: "https://leonanthomaz-blog.netlify.app",
       github: "https://github.com/leonanthomaz/blog",
       status: 'finalizado',
     },
