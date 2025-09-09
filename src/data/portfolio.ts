@@ -37,7 +37,7 @@ export const projetosData = {
       id: 3,
       title: "ChatBot V2",
       subtitle: "Bot de Atendimento",
-      description: "Modelo V2 do meu Bot desacoplado do FireCloud, capaz de responder perguntas de clientes via chat.",
+      description: "Modelo V2 do meu Bot desacoplado do FireCloud, capaz de responder perguntas de clientes via chat, com análise de sentimento e histórico do contexto da conversa.",
       img: pythonImg,
       date: "2024",
       isSandbox: true,
