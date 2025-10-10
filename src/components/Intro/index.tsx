@@ -88,34 +88,35 @@ const NameText = styled(Box)(({ theme }) => ({
 }));
 
 const FirstName = styled(Typography)(({ theme }) => ({
-  fontSize: 'clamp(2.5rem, 8vw, 5rem)',
+  fontSize: 'clamp(2rem, 8vw, 4rem)', // menor do que antes
   fontWeight: 900,
   color: theme.palette.primary.main,
   textTransform: 'uppercase',
-  letterSpacing: '4px',
+  letterSpacing: '3px', // menos que 4px
   display: 'inline',
   marginRight: theme.spacing(1),
-  textShadow: `0 0 20px ${alpha(theme.palette.primary.main, 0.7)}`,
+  textShadow: `0 0 15px ${alpha(theme.palette.primary.main, 0.7)}`,
   fontFamily: "'Poppins', sans-serif",
   [theme.breakpoints.down('sm')]: {
-    letterSpacing: '2px',
+    fontSize: '2.2rem', // força um tamanho fixo menor
+    letterSpacing: '1.5px',
   },
 }));
 
 const LastName = styled(Typography)(({ theme }) => ({
-  fontSize: 'clamp(2.5rem, 8vw, 5rem)',
+  fontSize: 'clamp(2rem, 8vw, 4rem)',
   fontWeight: 900,
   color: theme.palette.secondary.main,
   textTransform: 'uppercase',
-  letterSpacing: '4px',
+  letterSpacing: '3px',
   display: 'inline',
-  textShadow: `0 0 15px ${alpha(theme.palette.secondary.main, 0.5)}`,
+  textShadow: `0 0 12px ${alpha(theme.palette.secondary.main, 0.5)}`,
   fontFamily: "'Poppins', sans-serif",
   [theme.breakpoints.down('sm')]: {
-    letterSpacing: '2px',
+    fontSize: '2.2rem',
+    letterSpacing: '1.5px',
   },
 }));
-
 const TitleWrapper = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
@@ -127,21 +128,21 @@ const TitleWrapper = styled(Box)(({ theme }) => ({
 }));
 
 const StaticText = styled(Typography)(({ theme }) => ({
-  fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
+  fontSize: 'clamp(1.2rem, 3.5vw, 2rem)', // menor para celular
   fontWeight: 400,
   color: theme.palette.text.secondary,
   fontFamily: "'Poppins', sans-serif",
 }));
 
 const TypewriterEffect = styled(Box)(({ theme }) => ({
-  fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
+  fontSize: 'clamp(1.2rem, 3.5vw, 2rem)',
   fontWeight: 700,
   color: theme.palette.primary.main,
-  minHeight: '3rem',
+  minHeight: '2.5rem', // menor que antes
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  textShadow: `0 0 12px ${alpha(theme.palette.primary.main, 0.5)}`,
+  textShadow: `0 0 10px ${alpha(theme.palette.primary.main, 0.5)}`,
   fontFamily: "'Poppins', sans-serif",
 }));
 
@@ -228,12 +229,11 @@ export const Intro = () => {
             <Typewriter
               options={{
                 strings: [
-                  'Python',
-                  'de Automação',
-                  'de APIs',
-                  'Web',
-                  'de Dados',
-                  'FullStack'
+                  'Python & FastAPI',
+                  'Automação Inteligente',
+                  'APIs RESTful',
+                  'React + TypeScript',
+                  'Chatbots com IA',
                 ],
                 autoStart: true,
                 delay: 75,
@@ -241,9 +241,9 @@ export const Intro = () => {
                 deleteSpeed: 50,
               }}
             />
-
           </TypewriterEffect>
         </TitleWrapper>
+
 
         <ButtonGroup>
           <DownloadButton

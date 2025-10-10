@@ -15,6 +15,7 @@ import {
   FaProjectDiagram,
   FaRocket,
   FaLightbulb,
+  FaRobot,
 } from 'react-icons/fa';
 import { ContentBox, SectionContainer, Title } from '../../styles/GlobalStyles';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
@@ -59,7 +60,7 @@ const experiences = [
     title: 'Mundiware',
     subtitle: 'Estágio em Front-End • 2022',
     description:
-      'Participei do desenvolvimento de aplicações web com HTML, CSS e JavaScript. Trabalhei com boas práticas de SEO e monitoramento com Google Analytics, contribuindo para o desempenho e usabilidade dos sistemas.',
+      'Desenvolvimento de aplicações web com HTML, CSS e JavaScript. Implementação de boas práticas de SEO e monitoramento com Google Analytics para otimização de performance e usabilidade.',
     animation: 'animate__fadeInRight',
   },
   {
@@ -68,48 +69,47 @@ const experiences = [
     title: 'MetrôRio',
     subtitle: 'Analista de Sistemas Jr. • 2023',
     description:
-      'Contribuí na integração de pagamentos via Pix ao sistema de bilhetagem. Desenvolvi scripts de automação em Python e batch, atuei com manutenção de dados em Oracle e SQL Server, e participei do monitoramento de servidores e rotinas críticas.',
+      'Integração de pagamentos Pix no sistema de bilhetagem. Desenvolvimento de scripts de automação em Python, manutenção de bancos Oracle e SQL Server, e monitoramento de servidores e rotinas críticas.',
     animation: 'animate__fadeInLeft',
   },
   {
     id: 3,
-    icon: <FaRocket />,
-    title: 'Projeto Thomaggio',
-    subtitle: 'Sistema completo de pedidos • 2024-2025',
+    icon: <FaRobot />,
+    title: 'ChatBot V1',
+    subtitle: 'Motor Conversacional Base • 2024',
     description:
-      'Desenvolvi do zero uma aplicação completa para gestão de pedidos, com frontend em React + TypeScript, backend em FastAPI, painel administrativo, integração com Pix (via Mercado Pago) e impressão de comandas em 58mm.',
+      'Primeira versão do motor conversacional com arquitetura modular em FastAPI. Implementação de processamento NLP, contexto persistente, cache com Redis e integração com múltiplos provedores de IA.',
     animation: 'animate__fadeInRight',
   },
   {
     id: 4,
-    icon: <FaProjectDiagram />,
-    title: 'FireCloud',
-    subtitle: 'Plataforma de Bots e Automação • 2025',
+    icon: <FaRocket />,
+    title: 'ChatBot V2',
+    subtitle: 'Motor com Voz e Multimodalidade • 2024-2025',
     description:
-      'Atualmente estou trabalhando nesse projeto, que é uma plataforma completa de bots para automação de tarefas, integração com APIs externas e pipelines de dados, usando Python (FastAPI), WebSockets e Docker. Sistema projetado para escalabilidade e integração em tempo real com múltiplos serviços.',
+      'Evolução do chatbot com entrada/saída de áudio, análise de sentimentos e execução de ações automatizadas. Integração com serviços externos (clima, notícias, Spotify) usando WebSockets e STT/TTS.',
     animation: 'animate__fadeInLeft',
   },
   {
     id: 5,
-    icon: <FaLightbulb />,
-    title: 'Chatbot V2',
-    subtitle: 'Assistente conversacional • 2025',
+    icon: <FaProjectDiagram />,
+    title: 'ChatBot V3',
+    subtitle: 'Plataforma Completa • 2025',
     description:
-      'Atualmente estou dando upgrade nesse projeto de chatbot, com backend em FastAPI, frontend em React e integração com modelos de IA via API. Usei JWT, WebSockets e Redis para sessões em tempo real. Além disso, desenvolvi projetos paralelos com scraping de filmes e música para exercitar coleta e exibição de dados em aplicações web.',
+      'Versão avançada com processamento de arquivos, multimodalidade completa e arquitetura escalável. Desenvolvimento de frontend em React, backend em FastAPI e integração com Docker e Redis.',
     animation: 'animate__fadeInRight',
   },
   {
     id: 6,
     icon: <FaLightbulb />,
-    title: 'Sempre aprendendo',
-    subtitle: 'Atualmente',
+    title: 'Evolução Contínua',
+    subtitle: 'Sempre aprendendo',
     description:
-      'Buscando evoluir constantemente por meio de novos projetos, estudos práticos e desafios reais.',
+      'Foco contínuo em evoluir através de projetos desafiadores, estudos práticos e implementação de tecnologias emergentes no desenvolvimento de soluções inovadoras.',
     animation: 'animate__fadeInUp',
     centerText: true,
   },
 ];
-
 
 export const Experiences: React.FC = () => {
   const theme = useTheme();
@@ -117,10 +117,9 @@ export const Experiences: React.FC = () => {
 
   return (
     <SectionContainer id="experiences">
-      
       <FloatingBackgroundExperience/>
-
-      <ContentBox sx={{ zIndex: 2}}>
+      
+      <ContentBox sx={{ zIndex: 2 }}>
         <AnimationOnScroll animateIn="animate__fadeInUp">
           <Title>Experiências</Title>
         </AnimationOnScroll>
@@ -155,10 +154,10 @@ export const Experiences: React.FC = () => {
                 <TimelineContent
                   sx={{
                     width: '100%',
-                    maxWidth: '700px', // aumentei de 500px pra 700px
+                    maxWidth: '700px',
                     paddingY: 2,
                     display: 'flex',
-                    justifyContent: index % 2 === 0 ? 'flex-start' : 'flex-end', // mantém alternado
+                    justifyContent: index % 2 === 0 ? 'flex-start' : 'flex-end',
                   }}
                 >
                   <AnimationOnScroll animateIn={exp.animation}>
@@ -204,12 +203,11 @@ export const Experiences: React.FC = () => {
                     </CustomTimelineContent>
                   </AnimationOnScroll>
                 </TimelineContent>
-
               </TimelineItem>
             ))}
           </Timeline>
         ) : (
-          // Layout para telas pequenas (mobile) - todos os cards à direita
+          // Layout para telas pequenas (mobile)
           <Box sx={{ 
             width: '100%', 
             maxWidth: '800px',
@@ -262,7 +260,6 @@ export const Experiences: React.FC = () => {
                             fontSize: '1rem',
                             fontWeight: 700,
                             color: theme.palette.primary.main,
-                            textAlign: 'left',
                           }}
                         >
                           {exp.title}
@@ -283,7 +280,6 @@ export const Experiences: React.FC = () => {
                           sx={{
                             marginTop: 1.5,
                             fontSize: '0.875rem',
-                            color: theme.palette.text.primary,
                             lineHeight: 1.6,
                           }}
                         >

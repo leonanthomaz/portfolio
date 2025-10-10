@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, styled, alpha } from '@mui/material';
-import { SiTypescript, SiDocker, SiPostgresql, SiFastapi } from 'react-icons/si';
+import { SiTypescript, SiDocker, SiPostgresql, SiFastapi, SiFlask, SiGithub } from 'react-icons/si';
 import { FaPython, FaJsSquare, FaHtml5, FaCss3Alt, FaReact } from 'react-icons/fa';
 import { ContentBox, SectionContainer, Title } from '../../styles/GlobalStyles';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
@@ -52,11 +52,13 @@ const skillsData = [
   { icon: <SiTypescript />, label: 'TypeScript' },
   { icon: <FaReact />, label: 'React' },
   { icon: <SiFastapi />, label: 'FastAPI' },
+  { icon: <SiFlask />, label: 'Flask' },         
   { icon: <BsFiletypeSql />, label: 'SQL' },
   { icon: <SiPostgresql />, label: 'PostgreSQL' },
   { icon: <SiDocker />, label: 'Docker' },
   { icon: <FaHtml5 />, label: 'HTML5' },
   { icon: <FaCss3Alt />, label: 'CSS3' },
+  { icon: <SiGithub />, label: 'Git/GitHub' },  
 ];
 
 export const Skills: React.FC = () => {

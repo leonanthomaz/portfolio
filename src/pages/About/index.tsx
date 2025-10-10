@@ -32,30 +32,34 @@ export const About: React.FC = () => {
             <Box>
               <AboutText>
                 Sou <strong style={{ color: theme.palette.primary.main }}>Leonan Thomaz</strong>, formado em 
-                <strong style={{ color: theme.palette.primary.main }}> Análise e Desenvolvimento de Sistemas </strong> e 
-                pós-graduado em <strong style={{ color: theme.palette.primary.main }}>Engenharia de Software </strong>.  
+                <strong style={{ color: theme.palette.primary.main }}> Análise e Desenvolvimento de Sistemas </strong> 
+                e pós-graduado em <strong style={{ color: theme.palette.primary.main }}>Engenharia de Software</strong>.
 
-                <br /><br />
-                Iniciei minha carreira como <strong style={{ color: theme.palette.primary.main }}>Analista de Sistemas </strong> 
-                em empresa pública, atuando com <strong style={{ color: theme.palette.primary.main }}>SQL Server, Oracle </strong> 
-                e automações em Python.  
+                <br />
 
-                <br /><br />
-                Hoje foco no desenvolvimento de <strong style={{ color: theme.palette.primary.main }}>APIs RESTful </strong>, 
-                <strong style={{ color: theme.palette.primary.main }}> automação de processos </strong> e 
-                <strong style={{ color: theme.palette.primary.main }}> integrações entre sistemas </strong> com 
-                <strong style={{ color: theme.palette.primary.main }}> Python (FastAPI, Flask) </strong>.  
-                Também desenvolvo frontends modernos com 
-                <strong style={{ color: theme.palette.primary.main }}> React e TypeScript </strong>, quando necessário 
-                para entregar soluções completas.  
+                Tenho sólida experiência em desenvolvimento <strong style={{ color: theme.palette.primary.main }}>Python</strong>, 
+                com foco em <strong style={{ color: theme.palette.primary.main }}>APIs RESTful, automações e integrações</strong>, 
+                utilizando <strong style={{ color: theme.palette.primary.main }}>FastAPI</strong> e <strong style={{ color: theme.palette.primary.main }}>Flask</strong>. 
+                Também desenvolvo frontends modernos com <strong style={{ color: theme.palette.primary.main }}>React e TypeScript</strong>, 
+                garantindo soluções completas end-to-end.
 
-                <br /><br />
-                Sou apaixonado por tecnologia aplicada para resolver problemas reais, 
-                com experiência em <strong style={{ color: theme.palette.primary.main }}> bots inteligentes</strong>, 
-                <strong style={{ color: theme.palette.primary.main }}> integrações com IA </strong>, 
-                e sistemas web robustos, como o projeto <strong style={{ color: theme.palette.primary.main }}>FireCloud </strong>, 
-                uma plataforma SaaS que desenvolvo do zero.
+                <br />
+
+                Atualmente, foco em <strong style={{ color: theme.palette.primary.main }}>chatbots empresariais inteligentes </strong> 
+                (V1, V2 e V3), integrando NLP, análise de sentimentos, reconhecimento de voz e múltiplos provedores de IA 
+                (<strong style={{ color: theme.palette.primary.main }}>OpenAI, DeepSeek, Grok, Gemini e LLaMA</strong>), 
+                com histórico persistente e automações complexas.  
+
+                <br />
+
+                Como próximos passos (V4), planejo expandir para <strong style={{ color: theme.palette.primary.main }}>análise de vídeo </strong> 
+                usando <strong style={{ color: theme.palette.primary.main }}>OpenCV</strong> e memória de longo prazo para interações multimodais.
+
+                <br />
+                Sou movido por tecnologia aplicada para resolver problemas reais, criando sistemas robustos e escaláveis 
+                que unem inteligência artificial, automação e experiência do usuário.
               </AboutText>
+
             </Box>
 
 
