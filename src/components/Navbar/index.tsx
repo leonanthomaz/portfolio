@@ -27,7 +27,7 @@ import {
 import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
 import BuildIcon from '@mui/icons-material/Build';
-import FolderOpenIcon from '@mui/icons-material/FolderOpen';
+// import FolderOpenIcon from '@mui/icons-material/FolderOpen';
 import SchoolIcon from '@mui/icons-material/School';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import WorkIcon from '@mui/icons-material/Work';
@@ -37,7 +37,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { FaWhatsapp } from 'react-icons/fa';
 import LogoHandler from './LogoHandler';
-import RssFeedIcon from '@mui/icons-material/RssFeed';
+// import RssFeedIcon from '@mui/icons-material/RssFeed';
 
 const navItems = [
   { label: 'Início', to: 'intro', icon: <HomeIcon /> },

@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 import { About } from '../pages/About';
 import { Skills } from '../pages/Skills';
 import { Experiences } from '../pages/Experiences';
-import { Projects } from '../pages/Projects';
+// import { Projects } from '../pages/Projects';
 import { Courses } from '../pages/Courses';
 import { Contact } from '../pages/Contact';
 import { keyframes } from '@emotion/react';
