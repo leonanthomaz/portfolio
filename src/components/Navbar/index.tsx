@@ -44,7 +44,7 @@ const navItems = [
   { label: 'Sobre', to: 'about', icon: <PersonIcon /> },
   { label: 'Skills', to: 'skills', icon: <BuildIcon /> },
   { label: 'Experiência', to: 'experiences', icon: <WorkIcon /> },
-  { label: 'Projetos', to: 'projects', icon: <FolderOpenIcon /> },
+  // { label: 'Projetos', to: 'projects', icon: <FolderOpenIcon /> },
   { label: 'Cursos', to: 'courses', icon: <SchoolIcon /> },
   { label: 'Contato', to: 'contact', icon: <ContactMailIcon /> },
 ];
@@ -53,7 +53,7 @@ const socialLinks = [
   { name: 'LinkedIn', url: 'https://linkedin.com/in/leonanthomaz', icon: <LinkedInIcon /> },
   { name: 'Instagram', url: 'https://instagram.com/leonan.thomaz', icon: <Instagram /> },
   { name: 'Whatsapp', url: 'https://wa.me/5521998090928', icon: <FaWhatsapp /> },
-  { name: 'Blog', url: 'https://leonanthomaz-blog.netlify.app', icon: <RssFeedIcon /> },
+  // { name: 'Blog', url: 'https://leonanthomaz-blog.netlify.app', icon: <RssFeedIcon /> },
 ];
 
 interface StyledAppBarProps {

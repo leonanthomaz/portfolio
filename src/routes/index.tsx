@@ -43,9 +43,9 @@ export const Routes = () => (
     <Section id="experiences" delay="0.6s">
       <Experiences />
     </Section>
-    <Section id="projects" delay="0.8s">
+    {/* <Section id="projects" delay="0.8s">
       <Projects />
-    </Section>
+    </Section> */}
     <Section id="courses" delay="1s">
       <Courses />
     </Section>

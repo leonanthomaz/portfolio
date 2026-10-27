@@ -13,9 +13,7 @@ import {
   FaCode,
   FaLaptopCode,
   FaProjectDiagram,
-  FaRocket,
   FaLightbulb,
-  FaRobot,
 } from 'react-icons/fa';
 import { ContentBox, SectionContainer, Title } from '../../styles/GlobalStyles';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
@@ -60,53 +58,35 @@ const experiences = [
     title: 'Mundiware',
     subtitle: 'Estágio em Front-End • 2022',
     description:
-      'Desenvolvimento de aplicações web com HTML, CSS e JavaScript. Implementação de boas práticas de SEO e monitoramento com Google Analytics para otimização de performance e usabilidade.',
+      'Desenvolvimento de aplicações web com HTML, CSS e JavaScript, com foco em interfaces responsivas e integração com APIs externas. Implementação de SEO e monitoramento com Google Analytics para otimização de performance e usabilidade.',
     animation: 'animate__fadeInRight',
   },
   {
     id: 2,
     icon: <FaLaptopCode />,
     title: 'MetrôRio',
-    subtitle: 'Analista de Sistemas Jr. • 2023',
+    subtitle: 'Analista de Sistemas • 2023',
     description:
-      'Integração de pagamentos Pix no sistema de bilhetagem. Desenvolvimento de scripts de automação em Python, manutenção de bancos Oracle e SQL Server, e monitoramento de servidores e rotinas críticas.',
+      'Integração de pagamentos Pix no sistema de bilhetagem. Automação de tarefas críticas com Python e Windows Batch, além de gestão e otimização de grandes volumes de dados em SQL Server e Oracle.',
     animation: 'animate__fadeInLeft',
   },
   {
     id: 3,
-    icon: <FaRobot />,
-    title: 'ChatBot V1',
-    subtitle: 'Motor Conversacional Base • 2024',
+    icon: <FaProjectDiagram />,
+    title: 'FedCorp',
+    subtitle: 'Desenvolvedor Fullstack • 2025 – 2026',
     description:
-      'Primeira versão do motor conversacional com arquitetura modular em FastAPI. Implementação de processamento NLP, contexto persistente, cache com Redis e integração com múltiplos provedores de IA.',
+      'Desenvolvimento de sistemas corporativos com Python (FastAPI e Django), React e Firebird. Criação do FedHub (gateway de integração com sistemas legados) e do FedCorp Pay (plataforma de integrações bancárias, webhooks e boletos). Liderança da integração com o Santander via certificado digital A1 (mTLS/OAuth), com suporte multiempresa e atuação em produção.',
     animation: 'animate__fadeInRight',
   },
   {
     id: 4,
-    icon: <FaRocket />,
-    title: 'ChatBot V2',
-    subtitle: 'Motor com Voz e Multimodalidade • 2024-2025',
-    description:
-      'Evolução do chatbot com entrada/saída de áudio, análise de sentimentos e execução de ações automatizadas. Integração com serviços externos (clima, notícias, Spotify) usando WebSockets e STT/TTS.',
-    animation: 'animate__fadeInLeft',
-  },
-  {
-    id: 5,
-    icon: <FaProjectDiagram />,
-    title: 'ChatBot V3',
-    subtitle: 'Plataforma Completa • 2025',
-    description:
-      'Versão avançada com processamento de arquivos, multimodalidade completa e arquitetura escalável. Desenvolvimento de frontend em React, backend em FastAPI e integração com Docker e Redis.',
-    animation: 'animate__fadeInRight',
-  },
-  {
-    id: 6,
     icon: <FaLightbulb />,
     title: 'Evolução Contínua',
     subtitle: 'Sempre aprendendo',
     description:
-      'Foco contínuo em evoluir através de projetos desafiadores, estudos práticos e implementação de tecnologias emergentes no desenvolvimento de soluções inovadoras.',
-    animation: 'animate__fadeInUp',
+      'Foco contínuo em evoluir através de projetos desafiadores, estudos práticos e implementação de tecnologias emergentes.',
+    animation: 'animate__fadeInLeft',
     centerText: true,
   },
 ];
@@ -117,7 +97,7 @@ export const Experiences: React.FC = () => {
 
   return (
     <SectionContainer id="experiences">
-      <FloatingBackgroundExperience/>
+      <FloatingBackgroundExperience />
       
       <ContentBox sx={{ zIndex: 2 }}>
         <AnimationOnScroll animateIn="animate__fadeInUp">
@@ -125,7 +105,7 @@ export const Experiences: React.FC = () => {
         </AnimationOnScroll>
         
         {isLargeScreen ? (
-          // Layout para telas grandes (web) - cards alternados
+          // Layout para telas grandes (web) - cards alternados (zig zag)
           <Timeline
             position="alternate"
             sx={{
